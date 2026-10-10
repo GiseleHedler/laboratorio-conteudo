@@ -25,7 +25,8 @@ import urllib.error
 API_VERSION = "v21.0"
 BASE = "https://graph.facebook.com/" + API_VERSION
 
-PERFIS = ["giselehedler", "tay.ldantas", "analisboa", "eltoneuler"]
+PERFIL_PROPRIO = "giselehedler"
+PERFIS = [PERFIL_PROPRIO, "tay.ldantas", "analisboa", "eltoneuler"]
 POSTS_POR_PERFIL = 150
 
 CAMPOS_POST = "caption,media_type,media_product_type,like_count,comments_count,timestamp,permalink"
@@ -63,6 +64,22 @@ def chamar(ig_user_id, token, perfil, cursor=None):
     return buscar(ig_user_id, {"fields": campos}, token)["business_discovery"]
 
 
+def coletar_proprio(ig_user_id, token):
+    """O próprio perfil é lido direto da conta, sem Business Discovery."""
+    info = buscar(ig_user_id, {"fields": "username,name,biography,followers_count,media_count"}, token)
+    info.pop("id", None)
+    posts, params = [], {"fields": CAMPOS_POST, "limit": 50}
+    while len(posts) < POSTS_POR_PERFIL:
+        pagina = buscar(ig_user_id + "/media", params, token)
+        posts += pagina.get("data", [])
+        cursor = pagina.get("paging", {}).get("cursors", {}).get("after")
+        if not cursor or not pagina.get("data"):
+            break
+        params = dict(params, after=cursor)
+    info["posts"] = posts[:POSTS_POR_PERFIL]
+    return info
+
+
 def coletar(ig_user_id, token, perfil):
     posts, cursor, info = [], None, None
     while len(posts) < POSTS_POR_PERFIL:
@@ -84,6 +101,9 @@ def descobrir_ig_user_id(token):
     contas = [p["instagram_business_account"] for p in paginas if p.get("instagram_business_account")]
     for c in contas:
         print("Conta do Instagram encontrada: @%s (id %s)" % (c.get("username"), c["id"]))
+    for c in contas:
+        if c.get("username") == PERFIL_PROPRIO:
+            return c["id"]
     return contas[0]["id"] if contas else None
 
 
@@ -108,12 +128,15 @@ def main():
     os.makedirs("dados", exist_ok=True)
     for perfil in PERFIS:
         try:
-            info = coletar(ig_user_id, token, perfil)
+            if perfil == PERFIL_PROPRIO:
+                info = coletar_proprio(ig_user_id, token)
+            else:
+                info = coletar(ig_user_id, token, perfil)
         except urllib.error.HTTPError as e:
             erro = e.read().decode("utf-8", "ignore")[:300]
             print("@%s: erro %s — %s" % (perfil, e.code, erro))
             if "permission" in erro.lower() or e.code in (400, 403):
-                print("   -> O token precisa de instagram_basic, ou o perfil não é comercial/criador.")
+                print("   -> A Meta não liberou este app para ver outros perfis (Business Discovery).")
             continue
         except urllib.error.URLError as e:
             print("Não consegui chegar na Meta (%s)." % e.reason)
