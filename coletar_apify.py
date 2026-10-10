@@ -23,9 +23,9 @@ import urllib.error
 API = "https://api.apify.com/v2"
 ATOR = "apify~instagram-scraper"
 
-PERFIS = ["tay.ldantas", "analisboa", "eltoneuler"]
+PERFIS = ["tay.ldantas", "analisboa", "eltoneuler", "camilavieira", "luanacarolina.s"]
 POSTS_POR_PERFIL = 150
-TETO_USD = 1.50  # o Apify para a execução se o custo passar disso
+TETO_USD = 1.00  # o Apify para a execução se o custo passar disso
 
 TIPOS = {"Video": "VIDEO", "Image": "IMAGE", "Sidecar": "CAROUSEL_ALBUM"}
 
