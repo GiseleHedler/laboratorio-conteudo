@@ -30,3 +30,11 @@ Voltam como área de trabalho. As regras abaixo passam a ser obrigatórias em tu
 - Moderação pronta para quando alguém escrever "minha doença veio da minha crença" (roteiro curto que devolve ao cuidado médico).
 - Triagem do curso continua: tratamento clínico ativo e luto agudo pedem cuidado extra.
 - Anúncios de saúde na Meta: sem antes/depois, sem promessa de resultado no corpo.
+
+## Bio final (escolhida pela Gisele em 10/10/2026)
+> Madames 40+ 👑 vida morna não combina com soberania.
+> Mente, corpo e prosperidade.
+> Founder @fsa_saudeavancada @npnaturalpure
+> 👇 aulas às quintas, 18:59
+- Nome do perfil não foi alterado (conta verificada).
+- Linguagem: "madame" é a versão que acorda (não a mulher em dor). Tom de crescimento, sem pieguice ("próxima versão" foi descartado).
