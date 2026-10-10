@@ -23,7 +23,7 @@ import urllib.error
 API_VERSION = "v21.0"
 BASE = "https://graph.facebook.com/" + API_VERSION
 
-PERFIS = ["tay.ldantas", "analisboa", "eltoneuler"]
+PERFIS = ["giselehedler", "tay.ldantas", "analisboa", "eltoneuler"]
 POSTS_POR_PERFIL = 150
 
 CAMPOS_POST = "caption,media_type,media_product_type,like_count,comments_count,timestamp,permalink"
