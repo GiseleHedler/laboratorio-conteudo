@@ -26,8 +26,8 @@ ATOR = "apify~instagram-scraper"
 
 PERFIS = ["tay.ldantas", "analisboa", "eltoneuler", "camilavieira", "luanacarolina.s",
           "abarbaratorres", "psifernandosegredo"]
-POSTS_POR_PERFIL = 150
-TETO_USD_POR_PERFIL = 0.50  # o Apify para a execução se o custo passar disso
+POSTS_POR_PERFIL = int(os.environ.get("POSTS_POR_PERFIL", 150))
+TETO_USD_POR_PERFIL = float(os.environ.get("TETO_USD_POR_PERFIL", 0.50))  # o Apify para a execução se o custo passar disso
 
 TIPOS = {"Video": "VIDEO", "Image": "IMAGE", "Sidecar": "CAROUSEL_ALBUM"}
 
