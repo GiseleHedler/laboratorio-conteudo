@@ -44,3 +44,10 @@ posicionamento — para começar a vender pelo Instagram, que hoje quase não ve
 
 ## Chaves (segredos do ambiente)
 Segredos de rede "Bearer" no ambiente: um para api.typesafe.ai (Jev) e um para graph.facebook.com (Meta). Os scripts não leem as chaves: o proxy anexa o cabeçalho Authorization sozinho. No computador, use TYPESAFE_API_KEY e META_TOKEN no .env.
+
+## Atualizações (10/10/2026)
+- Escada: Quinta da Mente (grátis, ao vivo) → Integra (R$ 39/mês, ~100 aulas gravadas, ~10 assinantes) → Curso 12 semanas → TDL (~R$ 7 mil, presencial) → Mentoria R$ 20 mil (aplicação) → formação (futuro). Desafio "A Frase" como isca antes da Quinta.
+- Livro: depois do curso, a partir do conteúdo do curso.
+- Corpo e saúde VOLTAM ao curso e ao conteúdo, com as regras de POSICIONAMENTO.md.
+- História da Gisele em metodo/HISTORIA_GISELE.md. Frase-mãe candidata: "Eu herdei a doença do meu pai. Não a história dele."
+- Pendências: print das assinaturas INTEGRAL (central), lista dos títulos das ~100 aulas da Integra, ARQUITETURA_MODULOS_v3 e PROTOCOLO_SEGURANCA_CURSO.
