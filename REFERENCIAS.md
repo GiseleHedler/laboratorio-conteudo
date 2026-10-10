@@ -75,3 +75,23 @@ Quinta da Mente (gratuito) → curso (em criação) → TDL presencial (~R$ 7 mi
 2. Anúncios concentrados em janelas de lançamento.
 3. Anúncio amplifica conteúdo que já funciona (lives do Elton, posts virais da Tay).
 4. Uma ponte gratuita ao vivo (aulão da Ana, lives do Elton) antes da oferta.
+
+## Reels transcritos (19 reels, US$ 0,13 — transcrever_reels.py)
+### Ana (10 campeões)
+- 4 dos 10 campeões NÃO têm fala: 6 a 15 segundos, música + texto na tela, 500 mil a 1,4 milhão de plays.
+- Os falados (40–95 s): monólogo em 1ª pessoa, voz calma, uma metáfora concreta do começo ao fim.
+  - "Eu tô em obra, tô em obra por dentro..." (1,43 mi plays): crescimento como reforma (barulho, britadeira, lixo fora). Dor vira construção.
+  - "No fim das contas, ter paz é deixar as pessoas acharem o que elas quiserem": conclusão primeiro, depois o próprio processo, fecho curto ("É dormir tranquilo").
+  - "Ainda não tenho tudo o que eu quero. Mas tenho tudo o que desejei três anos atrás": progresso e gratidão.
+  - Bienal: fato do dia + dado + pergunta para pais.
+- Quase sem CTA nos campeões.
+
+### Tay (vídeo do cigarro e campeões)
+- Estrutura do vídeo do cigarro: (1) opinião polêmica + imagem que quebra o padrão; (2) "e tem um excelente motivo"; (3) teoria com nome de autor (pêndulo social, Schlesinger); (4) exemplos culturais (estética messy, Diesel); (5) o que isso significa para a sua marca; (6) CTA seletivo: "se a gente gostar de você, vai ser um prazer trabalhar para ti".
+- Provoca no coletivo ("nós somos a geração mais fraca", "a gente tá ficando tão burro"), sem acusar a pessoa: depois acolhe ("você não é retrógrado", "tá tudo bem").
+- "Se eu fosse criar uma pasta de dente, é assim que eu faria": demonstra o método em público e termina no CTA.
+- Ganchos de notícia/cultura do momento (Epstein, Hollywood, IA).
+
+### Convergência com os dados
+- Caso real/cultura lida por uma lente: Fernando (3,2x), Tay, e o melhor gancho da Gisele (1,7x).
+- Reels curtos sem fala com frase na tela: forte na Ana, quase inexistente na Gisele.
