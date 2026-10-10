@@ -6,7 +6,7 @@ Desempenho = engajamento comparado à mediana do próprio perfil.
 - 1,8 post/semana. Reels 1,30x, carrossel 0,45x.
 - Gancho campeão: pergunta direta para a "senhora" (top 3: 109x, 75x, 23x).
 - Rende: público mulher madura 1,3x, família 1,7x, alívio 1,2x, provocação 1,7x. Não rende: empreendedores 0,1x, dinheiro 0,6x.
-- Escada de produtos: aulão gratuito "PPP" (Profissão, Propósito e Prosperidade) → Pré-Formação ao vivo (grupos + Zoom/YouTube, "possibilidade de ser constelada") → Formação (Turma 2, "viver o Novo") → Expedições 2027 (20 mulheres, com aplicação e seleção).
+- Escada de produtos (visível no feed): aulão gratuito "PPP" (Profissão, Propósito e Prosperidade) → Pré-Formação ao vivo (grupos + Zoom/YouTube, "possibilidade de ser constelada") → Formação (Turma 2, "viver o Novo") → Expedições 2027 (20 mulheres, com aplicação e seleção). Mentoria e mastermind, mais caros, provavelmente vendidos nos eventos presenciais, fora do feed.
 - Mecanismo: "Comente PALAVRA" (NOVO, LEALDADE, FORMAÇÃO, EXPEDIÇÃO, PPP) → DM automática → grupo/formulário.
 - Negócios entram como "profissão, propósito e prosperidade" curados por dentro ("lealdades invisíveis"), nunca como "dinheiro".
 - Posts de venda que rendem (3,5x) abrem como conteúdo e só no fim oferecem.
@@ -38,3 +38,11 @@ Desempenho = engajamento comparado à mediana do próprio perfil.
 - 34/semana nos 27 dias coletados: lançamento "Plano Perfeito do Milhão" + eleição.
 - Convite gratuito 33% dos posts; "Comente MAPA"; gamificação (#aliadomilionario).
 - Serve para estudar mecânica de lançamento, não conteúdo de rotina.
+
+## Escada da Gisele (correção)
+Quinta da Mente (gratuito) → curso (em criação) → TDL presencial (~R$ 7 mil, nível das Expedições) → mentoria (R$ 20 mil).
+
+## Biblioteca de Anúncios
+- coletar_anuncios.py busca anúncios ativos no Brasil por palavra-chave.
+- "Ana Lisboa" achou a página "Ana Carolina M Lisboa", que NÃO é ela (pós em psicanálise do Grupo Altis).
+- Falta o ID da página da Ana para puxar os anúncios dela.
