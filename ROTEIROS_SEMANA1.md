@@ -1,5 +1,7 @@
 # Semana 1: Herança na MENTE (roteiros prontos para gravar, v1)
 
+> **Versão atual com justificativa por post: semana-1.html** (https://claude.ai/artifact/E22YDwbxSMofLvL4Kg2WdF). Mudanças: segunda virou carrossel, terça usa o molde "Te disseram que", sexta é teste do molde da Tay com Bowen. Este arquivo é a v1.
+
 Revisar cada gancho com a skill de ganchos antes de gravar.
 Vocabulário da bio: madame, vida morna, soberania, mente, corpo, prosperidade.
 

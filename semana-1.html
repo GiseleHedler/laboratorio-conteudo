@@ -1,0 +1,361 @@
+<title>Semana 1 Herança</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: uma coluna de leitura. Topo = por que postar; depois um cartão por dia com roteiro e justificativa; no fim moldes e funil */
+:root{
+  --bg:#f7f2f0; --surface:#ffffff; --fg:#231a1c; --muted:#6e5f62; --line:#e7dcda;
+  --rosa:#b8566a; --rosa-soft:#f6e3e7; --ok:#3d6b45; --mid:#9a6a1f; --low:#a3452f;
+  --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#151112; --surface:#1f191a; --fg:#f2e9ea; --muted:#b3a3a6; --line:#3a2f31;
+  --rosa:#e39aa9; --rosa-soft:#3a2328; --ok:#94c99c; --mid:#e2b56a; --low:#f0a48f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151112; --surface:#1f191a; --fg:#f2e9ea; --muted:#b3a3a6; --line:#3a2f31;
+  --rosa:#e39aa9; --rosa-soft:#3a2328; --ok:#94c99c; --mid:#e2b56a; --low:#f0a48f; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:28px 64px}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.2rem,7vw,3.2rem);line-height:1.05}
+h1 em,h2 em{color:var(--rosa);font-style:italic;font-weight:500}
+h2{font-size:clamp(1.6rem,5vw,2.1rem);margin-bottom:10px}
+.lead{color:var(--muted);max-width:62ch;margin:12px 0 0}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:600;color:var(--rosa)}
+section{margin-top:44px}
+p{margin:0 0 10px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
+.stack{display:flex;flex-direction:column;gap:10px}
+.big{font-family:var(--display);font-size:1.25rem;line-height:1.3}
+.num{font-weight:600;color:var(--rosa);white-space:nowrap}
+nav.days{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;margin-top:28px;border-bottom:1px solid var(--line);display:flex;gap:8px;overflow-x:auto}
+nav.days a{flex:0 0 auto;text-decoration:none;color:var(--fg);border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-size:.88rem;font-weight:500}
+nav.days a:hover,nav.days a:focus-visible{border-color:var(--rosa);color:var(--rosa);outline:none}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 18px 8px;margin-top:16px;scroll-margin-top:70px}
+.post-top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.dia{font-family:var(--display);font-size:1.6rem;font-weight:600;color:var(--rosa);line-height:1;margin-right:4px}
+.tag{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.conf{border-color:currentColor}
+.conf.alta{color:var(--ok)} .conf.media{color:var(--mid)} .conf.baixa{color:var(--low)}
+.job{font-size:.95rem;margin:0 0 10px}
+.job b{color:var(--rosa)}
+.hook{font-family:var(--display);font-size:1.4rem;line-height:1.25;font-weight:600;margin:0}
+.hook2{font-family:var(--display);font-style:italic;font-size:1.15rem;line-height:1.3;color:var(--muted);margin:2px 0 12px}
+details{border-top:1px solid var(--line);padding-block:10px}
+summary{cursor:pointer;font-weight:600;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--rosa);font-weight:600}
+details[open] summary::after{content:"–"}
+summary:focus-visible{outline:2px solid var(--rosa);outline-offset:3px;border-radius:4px}
+.script{white-space:pre-line;margin-top:10px;font-size:.98rem}
+.script .label{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:10px}
+ul.why{margin:10px 0 0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;font-size:.95rem}
+.risk{font-size:.88rem;background:var(--rosa-soft);border-radius:8px;padding:8px 12px;margin:10px 0 4px}
+.risk b{font-weight:600}
+.molde{display:grid;gap:4px}
+.molde .ex{color:var(--muted);font-style:italic;font-size:.93rem}
+.molde .seu{font-family:var(--display);font-size:1.15rem;font-weight:600}
+.molde .src{font-size:.78rem;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.etapa h3{font-size:1.35rem}
+.etapa .src{font-size:.82rem;color:var(--muted);margin-top:6px}
+ol.steps{margin:8px 0 0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+ul.check{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-direction:column;gap:8px}
+ul.check li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;display:flex;gap:10px;align-items:flex-start}
+ul.check input{margin-top:4px;accent-color:var(--rosa);width:18px;height:18px;flex:0 0 auto}
+footer{margin-top:40px;color:var(--muted);font-size:.85rem}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Gisele Hedler · Semana 1 de teste</div>
+  <h1>Herança na <em>mente</em></h1>
+  <p class="lead">Seis posts, cada um com o roteiro completo, a legenda, o molde de onde veio e a justificativa com os números. Critique à vontade: a semana 2 só sai depois da sua revisão.</p>
+</header>
+
+<section>
+  <div class="eyebrow">Antes de tudo</div>
+  <h2>Por que a gente está <em>postando</em></h2>
+  <div class="stack">
+    <div class="box">
+      <p class="big">Post não vende a Integra. Post faz a madame certa te encontrar, confiar em você e levantar a mão.</p>
+      <p>A venda acontece depois: no direct, na live e na trilha. Os números mostram isso em você e nas referências:</p>
+      <ul class="why">
+        <li>Seus posts que <b>anunciam a Integra</b> rendem <span class="num">0,48x</span> a sua mediana (56 posts). Os de intenção "vender" ficam em <span class="num">0,56x</span>. Os de intenção "engajar" ficam em <span class="num">1,24x</span>.</li>
+        <li>Na Ana acontece igual: post que fala da comunidade rende <span class="num">0,14x</span> e aviso de live <span class="num">0,25x</span>. Ela vende por conteúdo, anúncio e evento, nunca pelo aviso no feed.</li>
+        <li>O exemplo mais claro é o seu: <i>"Mais uma aula disponível para os membros da Integra: Herança emocional"</i> rendeu <span class="num">0,32x</span>. O resumo da mesma aula contado como conteúdo rendeu <span class="num">1,29x</span>. É a mesma aula com outra embalagem.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <p><b>Cada post da semana tem um trabalho:</b></p>
+      <ul class="why">
+        <li><b>Atrair</b> (segunda e sexta): chegar em quem ainda não te segue, com um caso ou uma teoria que a madame compartilha.</li>
+        <li><b>Gerar confiança</b> (terça e quarta): ela se reconhece e vê que você atravessou isso de verdade.</li>
+        <li><b>Converter</b> (quinta e sábado): a live entrega a aula, e o fim leva para a Integra.</li>
+      </ul>
+      <p style="margin-top:10px">Todo post fecha em <b>comenta HERANÇA</b>. O comentário dispara a mensagem automática com o link. Assim o post não precisa vender: ele só pede a mão levantada.</p>
+    </div>
+    <div class="box">
+      <p><b>Ponto cego que eu preciso te mostrar:</b> nos seus posts, a palavra herança rende <span class="num">0,67x</span> (23 posts). Isso não derruba o tema. Quase todos os fracos eram de venda ("Em 4 dias, você vai desbloquear…", "Mais uma aula disponível…"). Os de conteúdo foram bem: o do Dia das Mães (<span class="num">4,7x</span>), "a água escura descendo pela linhagem" (<span class="num">1,9x</span>) e "tem coisas que nossos filhos aprenderam no silêncio" (<span class="num">1,5x</span>). O tema funciona quando é conversa e cai quando vira oferta.</p>
+    </div>
+    <div class="box">
+      <p><b>De onde vêm os números:</b> 412 posts seus e 1.056 das 7 referências, rotulados pelo Jev. O desempenho é curtidas + 3× comentários, comparado à mediana de cada perfil: 1,0x é um post normal daquele perfil e 2,0x é o dobro.</p>
+      <p style="margin:0"><b>Limites:</b> o Jev lê a legenda, não o vídeo. Curtida não é venda. Os outliers gigantes (458x, 134x, 21x, com centenas de milhares ou milhões de views) provavelmente foram impulsionados. Confira no seu painel antes de tratar como regra.</p>
+    </div>
+  </div>
+</section>
+
+<nav class="days" aria-label="Dias">
+  <a href="#seg">Seg</a><a href="#ter">Ter</a><a href="#qua">Qua</a><a href="#qui">Qui</a><a href="#sex">Sex</a><a href="#sab">Sáb</a><a href="#moldes">Moldes</a><a href="#funil">Funil</a>
+</nav>
+
+<!-- SEGUNDA -->
+<article class="post" id="seg">
+  <div class="post-top"><span class="dia">Seg</span><span class="tag">Carrossel</span><span class="tag">Caso real</span><span class="tag conf alta">Evidência forte</span></div>
+  <p class="job"><b>Trabalho:</b> atrair quem não te segue. Ela compartilha porque o assunto é de um famoso, e fica porque a leitura é sua.</p>
+  <p class="hook">O príncipe Harry escreveu um livro inteiro sobre herança.</p>
+  <p class="hook2">E a parte mais pesada não tinha nada a ver com a coroa.</p>
+  <details open><summary>Roteiro completo (7 telas)</summary>
+    <div class="script"><span class="label">Tela 1 (capa)</span>O príncipe Harry escreveu um livro inteiro sobre herança.
+E a parte mais pesada não tinha nada a ver com a coroa.
+<span class="label">Tela 2</span>Em 2023 ele lançou O Que Sobra.
+No livro, ele conta que passou anos sem conseguir chorar a morte da mãe.
+<span class="label">Tela 3</span>Ele aprendeu, dentro de casa, que sentimento a gente engole.
+E só adulto, na terapia, isso começou a destravar.
+<span class="label">Tela 4</span>Numa entrevista, ele disse que queria quebrar o ciclo de dor que passou de geração em geração na família dele.
+Pelos filhos.
+<span class="label">Tela 5</span>Olha o tamanho disso.
+Um homem que herdou palácio, título e dinheiro.
+E o que pesava era uma regra que ninguém precisou falar em voz alta.
+<span class="label">Tela 6</span>Toda família tem uma regra dessas, dita ou não dita.
+Herdar vem com a família. Passar adiante é escolha.
+<span class="label">Tela 7</span>A trilha Herança da Integra começa exatamente aqui.
+Comenta HERANÇA que eu te mando.</div>
+  </details>
+  <details><summary>Legenda</summary>
+    <div class="script">Até quem herda um palácio herda também os silêncios da família.
+Qual regra da sua casa ninguém precisava falar em voz alta?
+Comenta HERANÇA que eu te mando a aula inteira.</div>
+  </details>
+  <details open><summary>Por que esse post</summary>
+    <ul class="why">
+      <li><b>Nos seus dados:</b> os seus casos de outra pessoa são os que mais furam a bolha. Neymar rendeu <span class="num">37x</span>, Frida <span class="num">7,6x</span> e "o Brasil perdeu e elegeu culpados" <span class="num">5,1x</span>. Gancho com caso de outra pessoa dá <span class="num">1,70x</span> na média.</li>
+      <li><b>Por que carrossel:</b> esses três campeões eram carrossel ou imagem. Os reels sobre o Neymar renderam <span class="num">0,6x</span> e <span class="num">4,2x</span>, contra <span class="num">37x</span> no carrossel. Os seus carrosséis de "engajar" rendem <span class="num">1,19x</span>.</li>
+      <li><b>Nas referências:</b> é o molde do Fernando (ano + nome + fato que dá para conferir). Nele, posts sobre mãe, pai e família rendem <span class="num">4,9x</span>. Na Camila, família rende <span class="num">1,5x</span>. Na Ana, <span class="num">1,4x</span>.</li>
+      <li><b>Cruzamento:</b> o seu formato que funciona (caso famoso em carrossel) com o tema que mais rende nas referências (família) e o tema da trilha.</li>
+    </ul>
+    <p class="risk"><b>Risco:</b> o Fernando faz isso em reel e lá rende <span class="num">4,6x</span>. Em você, o carrossel ganhou. Fico com o que funciona em você. Antes de postar, confira as duas frases do Harry nas entrevistas de 2023.</p>
+  </details>
+</article>
+
+<!-- TERÇA -->
+<article class="post" id="ter">
+  <div class="post-top"><span class="dia">Ter</span><span class="tag">Reel curto, só texto</span><span class="tag">Te disseram que</span><span class="tag conf media">Evidência média</span></div>
+  <p class="job"><b>Trabalho:</b> fazer a madame se reconhecer em 8 segundos e mandar para a irmã. É o post mais barato da semana.</p>
+  <p class="hook">Te disseram que filha boa é a que não dá trabalho.</p>
+  <p class="hook2">Aí você cresceu cuidando de todo mundo e virou a última da própria lista.</p>
+  <details open><summary>Roteiro completo</summary>
+    <div class="script"><span class="label">Tela 1 (0 a 3 s)</span>Te disseram que filha boa é a que não dá trabalho.
+<span class="label">Tela 2 (3 a 8 s)</span>Aí você cresceu cuidando de todo mundo
+e virou a última da própria lista.
+<span class="label">Cena</span>Você em silêncio, se arrumando com calma ou olhando pela janela. Piano calmo. Sem fala.</div>
+  </details>
+  <details><summary>Legenda</summary>
+    <div class="script">A menina que não dava trabalho virou a mulher que não pede nada.
+Qual frase você recebeu pronta na infância?
+Comenta HERANÇA que eu te mando a aula.</div>
+  </details>
+  <details open><summary>Por que esse post</summary>
+    <ul class="why">
+      <li><b>Nos seus dados:</b> é o seu molde campeão. "Te disseram que depois de um ano de luto você já tinha que estar melhor" rendeu <span class="num">458x</span> (557 mil views). "Ela era tão boazinha…" rendeu <span class="num">134x</span>. O tema da menina boazinha é seu e tem prova.</li>
+      <li><b>Nas referências:</b> é a frase curta da Ana e da Bárbara. Frase afirmativa e provocativa rende <span class="num">1,3x</span> na Bárbara e <span class="num">1,2x</span> na Ana.</li>
+      <li><b>Por que mudei:</b> a versão anterior ("Tem frase que você repete desde os sete anos") não tinha molde seu por trás. Esta usa o seu molde vencedor no tema da semana.</li>
+    </ul>
+    <p class="risk"><b>Risco:</b> se o 458x e o 134x foram impulsionados, a força do molde está inflada. Mesmo assim é o teste de menor custo da semana. Cuidado também: frase de inspiração ("vida morna", "soberania") rende <span class="num">0,60x</span> em você. Por isso esta abre em identificação, não em ambição.</p>
+  </details>
+</article>
+
+<!-- QUARTA -->
+<article class="post" id="qua">
+  <div class="post-top"><span class="dia">Qua</span><span class="tag">Reel falando para a câmera</span><span class="tag">Monólogo, sua história</span><span class="tag conf alta">Evidência mais forte da semana</span></div>
+  <p class="job"><b>Trabalho:</b> gerar confiança. É aqui que a madame entende que você não ensina teoria: você atravessou.</p>
+  <p class="hook">Eu herdei muita coisa da minha família sem nunca ter assinado nada.</p>
+  <p class="hook2">Algumas eu guardo com orgulho. Outras eu levei anos para perceber que carregava.</p>
+  <details open><summary>Roteiro completo (45 a 70 s)</summary>
+    <div class="script"><span class="label">Gancho</span>Eu herdei muita coisa da minha família sem nunca ter assinado nada.
+(pausa)
+Algumas eu guardo com orgulho. Outras eu levei anos para perceber que carregava.
+<span class="label">Miolo</span>É como herdar a casa da família. Os móveis vêm junto. O lugar de cada coisa vem junto. Até o jeito de fechar a porta. E a gente mora ali por anos achando que aquela decoração é a gente.
+Comigo veio uma frase: comigo vai ser igual. Ela veio junto com a doença do meu pai, e eu morei anos dentro dela.
+Soberania, para mim, é andar por essa casa com calma e escolher. Isso fica. Isso eu agradeço e tiro da sala.
+<span class="label">Fecho</span>Herdar a casa não te obriga a manter a decoração.
+A trilha Herança da Integra começa exatamente aqui. Comenta HERANÇA.</div>
+  </details>
+  <details><summary>Legenda</summary>
+    <div class="script">Herdar a casa não te obriga a manter a decoração.
+O que você herdou e ainda não escolheu se fica?
+Comenta HERANÇA que eu te mando a trilha.</div>
+  </details>
+  <details open><summary>Por que esse post</summary>
+    <ul class="why">
+      <li><b>O dado mais forte que eu achei:</b> os seus <b>reels contando a sua própria história</b> rendem <span class="num">3,25x</span> (31 reels). Os seus reels no geral rendem só <span class="num">0,79x</span>. A sua história é o que salva o seu vídeo.</li>
+      <li><b>Nos seus dados:</b> "Eu e o meu pai tivemos a mesma doença" rendeu <span class="num">11,6x</span>. Este post retoma essa história pelo lado da frase herdada ("comigo vai ser igual") e não pelo lado da doença.</li>
+      <li><b>Nas referências:</b> na Ana, história pessoal rende <span class="num">1,72x</span>, e o vídeo dela rende <span class="num">1,30x</span> contra <span class="num">0,45x</span> do carrossel. Você conta história em 17% dos posts e ela em 8%. Essa vantagem é sua.</li>
+      <li><b>Molde:</b> o monólogo da Ana ("Eu tô em obra"): primeira pessoa, uma metáfora só, tom calmo de soberania.</li>
+    </ul>
+    <p class="risk"><b>Regra de saúde:</b> a doença é um fato e a frase é a conclusão que você tirou dela. Não diga que a frase causou ou curou nada. Se a frase verdadeira que você herdou for outra, troque. Mantenha uma frase, uma metáfora e o fecho.</p>
+  </details>
+</article>
+
+<!-- QUINTA -->
+<article class="post" id="qui">
+  <div class="post-top"><span class="dia">Qui</span><span class="tag">Live 18:59</span><span class="tag">Quinta da Mente</span><span class="tag conf media">Evidência média</span></div>
+  <p class="job"><b>Trabalho:</b> converter. É o único momento da semana em que você oferece a Integra por inteiro, para quem já ficou uma hora com você.</p>
+  <p class="hook">Herança emocional: por que você age como sua mãe, mesmo tentando não ser.</p>
+  <p class="hook2">Aviso só nos stories. O feed não anuncia a live.</p>
+  <details open><summary>Roteiro da live (cerca de 50 min)</summary>
+    <div class="script"><span class="label">Stories de manhã</span>Hoje, 18:59, ao vivo e aberto: por que a gente age como a mãe, mesmo tentando não ser. Depois, a gravação fica só na Integra.
+<span class="label">0 a 5 min · abrir com elas</span>"Escreve aqui no chat uma frase da sua mãe que hoje sai da sua boca." Leia algumas em voz alta, enquanto entra gente.
+<span class="label">5 a 20 min · o mecanismo</span>A diferença entre o fato e a conclusão. O fato: a mãe fazia assim. A conclusão: "então é assim que se faz", ou "então eu sou assim". A gente herda a conclusão, não o fato.
+<span class="label">20 a 30 min · a sua travessia</span>"Comigo vai ser igual." Como você percebeu que essa era uma conclusão herdada e o que escolheu fazer com ela.
+<span class="label">30 a 40 min · exercício ao vivo</span>Ela escreve a frase herdada e responde duas perguntas: "isso é fato ou conclusão de alguém?" e "se fosse minha, eu escolheria?".
+<span class="label">40 a 50 min · convite</span>"Isso foi a aula 1 da trilha Herança. São 8 aulas, na ordem, dentro da Integra, por R$ 39 por mês. Comenta HERANÇA no meu último post que eu te mando o link agora."
+<span class="label">Durante</span>Anote o minuto da frase mais forte. Esse trecho vira o post de sábado.</div>
+  </details>
+  <details open><summary>Por que esse post</summary>
+    <ul class="why">
+      <li><b>Nos seus dados:</b> post de feed que fala de live rende <span class="num">0,74x</span>. Por isso o aviso fica nos stories. Na Ana, aviso de live rende <span class="num">0,25x</span>, e ela também não usa o feed para isso.</li>
+      <li><b>Nas referências:</b> o Elton paga anúncio "estou ao vivo" durante a live (R$ 20 a 50 por live). A live é o momento de venda dele, não o post.</li>
+      <li><b>Cruzamento:</b> a Integra vende quando o conteúdo vem antes. A live é conteúdo de uma hora, e o convite entra no fim, para quem ficou até ali.</li>
+    </ul>
+    <p class="risk"><b>Risco:</b> não tenho dado de quantas pessoas assistem as suas lives nem de quanto elas convertem. Anote três números nesta quinta: pico de pessoas ao vivo, quantos HERANÇA chegaram até sexta e quantas assinaturas novas entraram.</p>
+  </details>
+</article>
+
+<!-- SEXTA -->
+<article class="post" id="sex">
+  <div class="post-top"><span class="dia">Sex</span><span class="tag">Reel falando</span><span class="tag">Tendência com teoria</span><span class="tag conf baixa">Teste: evidência fraca</span></div>
+  <p class="job"><b>Trabalho:</b> atrair pelo lado da autoridade. A madame que gosta de entender o porquê, e não só de sentir.</p>
+  <p class="hook">Tem briga na sua casa que começou antes de você nascer.</p>
+  <p class="hook2">E existe uma teoria inteira sobre isso.</p>
+  <details open><summary>Roteiro completo (60 a 80 s)</summary>
+    <div class="script"><span class="label">Gancho</span>Tem briga na sua casa que começou antes de você nascer.
+(pausa)
+E existe uma teoria inteira sobre isso.
+<span class="label">Miolo</span>Murray Bowen foi um psiquiatra americano que passou décadas estudando famílias. Ele deu nome a uma coisa que quase toda mulher reconhece: transmissão multigeracional. O jeito de lidar com conflito, com ansiedade e com dinheiro passa de uma geração para outra quase intacto.
+É a avó que nunca falava de dinheiro. A mãe que engolia tudo para não ter briga. E a filha que, adulta, explode por pouco ou some dentro das relações. Três mulheres, um padrão só, trocando de roupa.
+Para Bowen, a saída começa quando alguém da família consegue enxergar o padrão sem precisar brigar com ele. Essa pessoa pode ser você.
+<span class="label">Fecho</span>Quem enxerga é quem para de repassar.
+Na trilha Herança eu mostro como. Comenta HERANÇA.</div>
+  </details>
+  <details><summary>Legenda</summary>
+    <div class="script">Três mulheres, um padrão só, trocando de roupa.
+A avó, a mãe e a filha.
+Comenta HERANÇA que eu te mando a aula.</div>
+  </details>
+  <details open><summary>Por que esse post</summary>
+    <ul class="why">
+      <li><b>Nas referências:</b> é o molde da Tay (teoria com nome de autor, como o vídeo do cigarro). Os vídeos dela rendem <span class="num">1,21x</span>, e pergunta direta rende <span class="num">1,23x</span>.</li>
+      <li><b>Nos seus dados:</b> o conteúdo já foi testado por você em outro formato. "Você viu a água escura descer pela linhagem. Sua avó recebeu assim e deu pra sua mãe…" rendeu <span class="num">1,9x</span>. O Bowen dá nome e autoridade a algo que já funcionou com a sua audiência.</li>
+    </ul>
+    <p class="risk"><b>Por que é teste:</b> você nunca postou teoria com nome de autor, então não tenho dado seu. E na Tay, família rende <span class="num">0,65x</span>, porque o público dela é outro. Se render abaixo de 1x, a gente tira esse formato e põe um segundo caso real no lugar.</p>
+  </details>
+</article>
+
+<!-- SÁBADO -->
+<article class="post" id="sab">
+  <div class="post-top"><span class="dia">Sáb</span><span class="tag">Reel recorte da live</span><span class="tag conf media">Evidência média</span></div>
+  <p class="job"><b>Trabalho:</b> ser a ponte. Mostra para quem não estava na live o que perdeu e leva para a Integra.</p>
+  <p class="hook">A frase mais forte da sua quinta.</p>
+  <p class="hook2">Abrindo o vídeo, sem introdução.</p>
+  <details open><summary>Como montar</summary>
+    <div class="script">Pegue de 45 a 75 segundos com uma ideia só, com começo e fim claros.
+Capa: o título da aula.
+A primeira frase precisa prender sozinha. Se não prender, grave uma frase de abertura por cima, no molde "Te disseram que…".
+<span class="label">Legenda</span>(a frase central do trecho)
+A aula inteira, de uma hora, está na trilha Herança da Integra.
+Comenta HERANÇA que eu te mando.</div>
+  </details>
+  <details open><summary>Por que esse post</summary>
+    <ul class="why">
+      <li><b>Nos seus dados:</b> o resumo da Quinta sobre herança emocional rendeu <span class="num">1,29x</span>, contra <span class="num">0,32x</span> do aviso "mais uma aula disponível". Mostrar o conteúdo vende a aula. Anunciar a aula, não.</li>
+      <li><b>Cruzamento:</b> reel com a sua voz e a sua história (<span class="num">3,25x</span>) costuma render mais do que reel de aula. Se a live tiver um trecho seu pessoal, escolha esse.</li>
+    </ul>
+  </details>
+</article>
+
+<!-- MOLDES -->
+<section id="moldes">
+  <div class="eyebrow">Banco de ganchos</div>
+  <h2>Moldes que eu tirei <em>das referências</em></h2>
+  <p class="lead">O número é quanto o post original rendeu sobre a mediana daquele perfil. Os da Ana, do Fernando e os seus são os que mais conversam com a madame 40+.</p>
+  <div class="grid2" style="margin-top:14px">
+    <div class="box molde"><span class="src">Ana Lisboa · 109x · pergunta para ela</span><span class="ex">"Para quem você ainda sente que precisa provar que é uma boa pessoa?"</span><span class="seu">Para quem você ainda pede licença para ocupar espaço, madame?</span></div>
+    <div class="box molde"><span class="src">Ana Lisboa · 17x · permissão</span><span class="ex">"Você não é responsável pelo que os seus pais receberam…"</span><span class="seu">Você pode honrar a sua mãe sem repetir a vida dela.</span></div>
+    <div class="box molde"><span class="src">Fernando Segredo · 103x · caso com ano e nome</span><span class="ex">"Em 2019, Bruno Gouveia publicou a autobiografia…"</span><span class="seu">Em 1953, perguntaram para Elza Soares de que planeta ela vinha.</span></div>
+    <div class="box molde"><span class="src">Fernando Segredo · 145x · detalhe pequeno de história grande</span><span class="ex">"Na casa nova, o pai fez um pedido simples: queria limpar a piscina do filho."</span><span class="seu">No dia mais difícil da minha vida, eu passei perfume antes de sair de casa.</span></div>
+    <div class="box molde"><span class="src">Tay Dantas · 9x · provocação no coletivo</span><span class="ex">"A gente tá ficando tão burro que os filmes estão tendo que piorar."</span><span class="seu">A gente aprendeu a chamar exaustão de amor.</span></div>
+    <div class="box molde"><span class="src">Tay Dantas · teoria com nome de autor</span><span class="ex">"A teoria do pêndulo social de Arthur Schlesinger diz que…"</span><span class="seu">Murray Bowen deu nome a uma coisa que quase toda mulher reconhece.</span></div>
+    <div class="box molde"><span class="src">Tay Dantas · 16x · desafio para testar</span><span class="ex">"Se alguém testar essa técnica conta aqui nos comentários."</span><span class="seu">Testa hoje: conta quantas vezes você diz "eu sempre" contra si mesma. Volta aqui e me conta o número.</span></div>
+    <div class="box molde"><span class="src">Camila Vieira · 18x · conselhos de quem já viveu</span><span class="ex">"Esses 10 conselhos eu dei para a minha filha antes de ela se casar."</span><span class="seu">7 coisas que eu diria para mim aos 30, sabendo o que eu sei aos 44.</span></div>
+    <div class="box molde"><span class="src">Camila Vieira · 599x · chamado direto ao grupo</span><span class="ex">"Pais, cuidem da estrutura emocional dos seus filhos."</span><span class="seu">Madames, parem de pedir desculpa por descansar.</span></div>
+    <div class="box molde"><span class="src">Bárbara Torres · 11x · frase curta afiada</span><span class="ex">"a necessidade por atenção fede."</span><span class="seu">Vida morna não combina com soberania.</span></div>
+    <div class="box molde"><span class="src">Elton Euler · 11x · dilema (passe no filtro do dedo)</span><span class="ex">"Você quer 1 milhão ou só gosta da ideia de ganhar 1 milhão?"</span><span class="seu">Você quer outra vida ou gosta da ideia de outra vida?</span></div>
+    <div class="box molde"><span class="src">Você · 458x · "Te disseram que…"</span><span class="ex">"Te disseram que depois de um ano de luto você já tinha que estar melhor."</span><span class="seu">Te disseram que depois dos 50 a mulher tem que sossegar.</span></div>
+    <div class="box molde"><span class="src">Você · 134x · "Ela era tão…"</span><span class="ex">"Ela era tão boazinha… até que a madame veio e a resgatou."</span><span class="seu">Ela era tão forte para todo mundo… até que a madame acordou para ela mesma.</span></div>
+  </div>
+</section>
+
+<!-- FUNIL -->
+<section id="funil">
+  <div class="eyebrow">Funil</div>
+  <h2>Como eu montaria o <em>seu funil</em></h2>
+  <p class="lead">É o padrão que as três referências repetem: conteúdo grátis, uma ponte ao vivo, uma assinatura barata e uma porta de aplicação para o produto caro. Copio a estrutura delas, não os resultados, porque a Biblioteca de Anúncios não mostra gasto nem conversão.</p>
+  <div class="stack" style="margin-top:14px">
+    <div class="box etapa">
+      <h3>1. Topo: ela te encontra</h3>
+      <p>Caso real, tendência, a sua história e frase curta, como nesta semana. No domingo, olhe qual post da semana rendeu mais e impulsione só esse, com R$ 30 a 50.</p>
+      <p class="src">De onde vem: a Tay e a Ana anunciam o que já funcionou no orgânico, não um criativo novo.</p>
+    </div>
+    <div class="box etapa">
+      <h3>2. Meio: ela levanta a mão</h3>
+      <p>Comentário HERANÇA → mensagem automática no direct (ManyChat) → link da trilha. Depois, uma isca: o quiz "Qual herança governa a sua vida: mente, corpo ou dinheiro?", que pede o WhatsApp no fim. E a Quinta da Mente, toda semana, como aula aberta.</p>
+      <p class="src">De onde vem: o diagnóstico gratuito da Ana e a live semanal do Elton, com anúncio "estou ao vivo".</p>
+    </div>
+    <div class="box etapa">
+      <h3>3. Fundo: ela compra</h3>
+      <p><b>Integra, R$ 39:</b> oferecida no fim de toda Quinta e por trilhas, nunca por aviso no feed.<br>
+      <b>Curso de 12 semanas:</b> em lançamento, 2 vezes por ano, com anúncio concentrado nessas janelas.<br>
+      <b>TDL, cerca de R$ 7 mil:</b> o evento é onde a mentoria se vende, como faz a Ana.<br>
+      <b>Mentoria, R$ 20 mil:</b> formulário de aplicação fixo no link da bio, nunca preço no post.</p>
+      <p class="src">De onde vem: as três referências vendem o produto caro por aplicação ou em evento. Nenhuma põe o preço no feed.</p>
+    </div>
+    <div class="box">
+      <p><b>Ordem de montagem</b> (o que fazer antes de gravar a semana):</p>
+      <ol class="steps">
+        <li>Automação do HERANÇA funcionando. Sem ela, o post desta semana pede a mão e ninguém pega.</li>
+        <li>Trilha Herança organizada dentro da Integra, com "comece pela aula 1".</li>
+        <li>Formulário de aplicação da mentoria no link da bio.</li>
+        <li>Depois de 2 a 3 semanas com números: o quiz e o anúncio da live.</li>
+      </ol>
+      <p class="risk" style="margin-top:12px"><b>Ponto cego:</b> com cerca de 10 assinantes, o seu dinheiro hoje está na mentoria e no TDL, não na Integra. A Integra é a porta de entrada que alimenta os dois. Não meça esta semana pelo faturamento da Integra. Meça por quantas mãos levantaram.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Antes de segunda</div>
+  <h2>Checklist e o que medir</h2>
+  <ul class="check">
+    <li><input type="checkbox" id="k1"><label for="k1">Mensagem automática do HERANÇA testada (comente você mesma de outra conta).</label></li>
+    <li><input type="checkbox" id="k2"><label for="k2">Trilha Herança montada na Integra.</label></li>
+    <li><input type="checkbox" id="k3"><label for="k3">Número de assinantes da INTEGRAL anotado no domingo.</label></li>
+    <li><input type="checkbox" id="k4"><label for="k4">No domingo seguinte: comentários HERANÇA por post, pico da live e assinaturas novas. Me manda que eu cruzo com estes números.</label></li>
+  </ul>
+</section>
+
+<footer>Semana 1 de 4 · versão para revisão. A semana 2 sai depois da sua crítica.</footer>
+</div>
