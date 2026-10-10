@@ -55,3 +55,23 @@ Quinta da Mente (gratuito) → curso (em criação) → TDL presencial (~R$ 7 mi
 6. Agora (set–out/2026): anúncios para conversa no WhatsApp: pós em psicanálise reconhecida pelo MEC e "padrão não se desfaz lendo, se desfaz sendo ouvida".
 - Autoridade: "Feminino Moderno®", "62 mil alunas em 43 países", "empresária, mentora, escritora e terapeuta".
 - Limites: a biblioteca não mostra gasto nem resultado no Brasil; o coletor traz até 250 anúncios.
+
+## Funil pago do Elton (página 107938522178248, 94 anúncios)
+- 71 anúncios "ESTOU AO VIVO, clica em Saiba mais" (jun–ago/2026): impulsiona as próprias lives.
+- Agora: "Ficha de interesse aberta, vagas limitadas" para a Aliança Divergente (19 ativos) → formulário em sf.omeugps.com.br.
+- Antes: produtos de entrada ("O Resgate dos Otimistas", "O Ponto Cego").
+
+## Funil pago da Tay (página 459468207242644, 75 anúncios)
+- Fev/2026: lançamento do curso de Marca Pessoal (Vinci Society), 43 anúncios em 3 dias + catálogo.
+- Agora: consultoria de marca e receita (alto valor) → aplicação por Typeform (14 ativos).
+- 17 anúncios ativos sem link: impulsiona posts orgânicos que já funcionam (inclusive o viral "Tu compraria essa pasta?").
+
+## Camila e Fernando
+- Camila: não tem página própria de anúncios; aparece a página do Paulo Vieira (Febracis).
+- Fernando Segredo: nenhuma página encontrada; provavelmente não anuncia.
+
+## Padrão comum (Ana, Tay, Elton)
+1. Produto caro sempre por aplicação/ficha (Typeform ou formulário), nunca checkout direto.
+2. Anúncios concentrados em janelas de lançamento.
+3. Anúncio amplifica conteúdo que já funciona (lives do Elton, posts virais da Tay).
+4. Uma ponte gratuita ao vivo (aulão da Ana, lives do Elton) antes da oferta.
