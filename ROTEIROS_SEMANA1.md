@@ -5,25 +5,24 @@ Vocabulário da bio: madame, vida morna, soberania, mente, corpo, prosperidade.
 
 ---
 
-## SEGUNDA: Leitura (60 a 80 s)
-**Capa:** O filme do Oscar que fala de mãe e filha
+## SEGUNDA: Leitura (50 a 70 s)
+**Capa:** A frase que a sua família te entregou
 
-**Gancho (1º tempo):** O filme do Oscar de 2023 é sobre mãe e filha.
-*(pausa de um segundo)*
-**2º tempo:** E sobre uma frase que passa de uma para a outra sem ninguém perceber.
+**Gancho (1º tempo):** Toda família passa uma frase adiante.
+*(pausa)*
+**2º tempo:** Mulher tem que dar conta. Ninguém se separa. Dinheiro não dá em árvore.
 
 **Miolo:**
-Tudo em Todo Lugar ao Mesmo Tempo. A Evelyn passou a vida tentando agradar o pai, que nunca aceitou a escolha dela de casar. E, sem perceber, ela faz com a filha, a Joy, exatamente o que o pai fazia com ela. Cobra, corrige, esconde a filha do avô.
-O filme mostra milhares de versões da vida da Evelyn, uma para cada escolha diferente. E a virada vem num momento simples: quando ela para de repetir com a filha a frase que recebeu do pai.
-Toda família passa uma frase adiante. Mulher tem que dar conta. Na nossa família ninguém se separa. Dinheiro não dá em árvore. A gente recebe pronta e trata como fato.
+A gente recebe essas frases antes de saber ler. E cresce tratando cada uma como fato, como se fosse a regra do mundo, e não a regra de uma casa.
+Elas aparecem nas horas importantes: quando você pensa em pedir ajuda, em sair de uma relação, em cobrar mais pelo seu trabalho. A frase chega primeiro e decide por você.
 Herdar a frase vem com a família. Repetir é escolha.
 
 **Fecho:** Na trilha Herança da Integra tem uma aula inteira sobre isso: por que a gente age como a mãe, mesmo tentando não ser. Comenta HERANÇA que eu te mando.
 
 **Legenda:**
-O filme do Oscar de 2023 é sobre mãe e filha. E sobre a frase que uma herda da outra.
-Qual frase da sua família você recebeu pronta?
-Comenta HERANÇA que eu te mando a aula inteira sobre isso.
+Toda família passa uma frase adiante.
+Qual foi a frase que você recebeu pronta?
+Comenta HERANÇA que eu te mando a aula inteira.
 
 ---
 

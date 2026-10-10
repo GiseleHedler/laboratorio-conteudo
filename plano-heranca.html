@@ -1,0 +1,181 @@
+<title>Plano Trilha Herança</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: uma coluna de leitura; navegação fixa das 4 semanas; um cartão por dia, empilhado como uma agenda */
+:root{
+  --bg:#f7f2f0; --surface:#ffffff; --fg:#231a1c; --muted:#6e5f62; --line:#e7dcda;
+  --rosa:#b8566a; --rosa-soft:#f6e3e7;
+  --chip-l:#2f5e73; --chip-m:#7a4a8c; --chip-f:#9a6a1f; --chip-v:#3d6b45;
+  --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#151112; --surface:#1f191a; --fg:#f2e9ea; --muted:#b3a3a6; --line:#3a2f31;
+  --rosa:#e39aa9; --rosa-soft:#3a2328;
+  --chip-l:#8cc0d6; --chip-m:#c9a2db; --chip-f:#e2b56a; --chip-v:#94c99c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151112; --surface:#1f191a; --fg:#f2e9ea; --muted:#b3a3a6; --line:#3a2f31;
+  --rosa:#e39aa9; --rosa-soft:#3a2328;
+  --chip-l:#8cc0d6; --chip-m:#c9a2db; --chip-f:#e2b56a; --chip-v:#94c99c; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:28px 64px}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.2rem,7vw,3.2rem);line-height:1.05}
+h1 em{color:var(--rosa);font-style:italic;font-weight:500}
+.lead{color:var(--muted);max-width:60ch;margin:12px 0 0}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:600;color:var(--rosa)}
+section{margin-top:40px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
+.box h3{font-size:1.25rem;margin-bottom:4px}
+.box p{margin:0;color:var(--muted);font-size:.93rem}
+nav.weeks{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;margin-top:28px;border-bottom:1px solid var(--line);display:flex;gap:8px;overflow-x:auto}
+nav.weeks a{flex:0 0 auto;text-decoration:none;color:var(--fg);border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-size:.88rem;font-weight:500}
+nav.weeks a:focus-visible,nav.weeks a:hover{border-color:var(--rosa);color:var(--rosa);outline:none}
+.week{margin-top:36px;scroll-margin-top:70px}
+.week-head{display:flex;flex-direction:column;gap:4px;margin-bottom:14px}
+.week-head h2{font-size:clamp(1.7rem,5vw,2.2rem)}
+.week-head h2 span{color:var(--rosa);font-style:italic;font-weight:500}
+.quinta{font-size:.92rem;color:var(--muted)}
+.quinta b{color:var(--fg);font-weight:600}
+.days{display:flex;flex-direction:column;gap:10px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:52px 1fr;gap:12px}
+.day .d{font-family:var(--display);font-size:1.5rem;font-weight:600;color:var(--rosa);line-height:1}
+.day .body{min-width:0;display:flex;flex-direction:column;gap:6px}
+.chip{align-self:flex-start;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1px solid currentColor}
+.c-l{color:var(--chip-l)} .c-m{color:var(--chip-m)} .c-f{color:var(--chip-f)} .c-v{color:var(--chip-v)}
+.hook{font-family:var(--display);font-size:1.32rem;line-height:1.25;font-weight:600;margin:0}
+.hook2{font-family:var(--display);font-style:italic;font-size:1.12rem;line-height:1.3;color:var(--muted);margin:0}
+.meta{font-size:.9rem;color:var(--muted);margin:0}
+.meta b{color:var(--fg);font-weight:600}
+.note{font-size:.82rem;background:var(--rosa-soft);color:var(--fg);border-radius:8px;padding:6px 10px;margin:0}
+.anchor .hook{color:var(--rosa)}
+ul.check{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-direction:column;gap:8px}
+ul.check li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;display:flex;gap:10px;align-items:flex-start}
+ul.check input{margin-top:4px;accent-color:var(--rosa);width:18px;height:18px;flex:0 0 auto}
+ul.check label{min-width:0}
+ol.measure{margin:12px 0 0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+footer{margin-top:40px;color:var(--muted);font-size:.85rem}
+@media (max-width:420px){.day{grid-template-columns:1fr}.day .d{font-size:1.25rem}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Gisele Hedler · 30 dias</div>
+    <h1>Trilha <em>Herança</em></h1>
+    <p class="lead">Um tema por 30 dias. Cada semana passa por uma palavra da bio: mente, corpo, prosperidade e soberania. Todo post termina no mesmo convite: comenta HERANÇA.</p>
+  </header>
+
+  <section>
+    <div class="eyebrow">Os quatro formatos</div>
+    <div class="grid2">
+      <div class="box"><span class="chip c-l">Leitura</span><h3>Um tema da vida real</h3><p>60 a 80 s. Um comportamento que a gente vive, lido pela sua lente. Provoca no "a gente", nunca acusa.</p></div>
+      <div class="box"><span class="chip c-m">Monólogo</span><h3>Primeira pessoa</h3><p>45 a 70 s. Sua história, uma metáfora só, tom de soberania.</p></div>
+      <div class="box"><span class="chip c-f">Frase</span><h3>Sem fala</h3><p>6 a 10 s. Uma frase forte na tela, música, você em cena.</p></div>
+      <div class="box"><span class="chip c-v">Ao vivo</span><h3>Quinta da Mente</h3><p>18:59, aberta. O trecho mais forte vira o recorte de sábado.</p></div>
+    </div>
+  </section>
+
+  <nav class="weeks" aria-label="Semanas">
+    <a href="#s1">1 · Mente</a><a href="#s2">2 · Corpo</a><a href="#s3">3 · Prosperidade</a><a href="#s4">4 · Soberania</a><a href="#antes">Antes de começar</a>
+  </nav>
+
+  <div id="semanas"></div>
+
+  <section id="antes" class="week">
+    <div class="eyebrow">Antes de começar</div>
+    <h2>Checklist</h2>
+    <ul class="check">
+      <li><input type="checkbox" id="c1"><label for="c1">Trilha Herança montada na Integra: 8 aulas em ordem e mensagem de boas-vindas "comece pela aula 1".</label></li>
+      <li><input type="checkbox" id="c2"><label for="c2">Mensagem automática: quem comenta HERANÇA recebe o link da Integra.</label></li>
+      <li><input type="checkbox" id="c3"><label for="c3">Link da bio levando para a Quinta da Mente ou para a Integra.</label></li>
+      <li><input type="checkbox" id="c4"><label for="c4">Anotar quantas assinantes a INTEGRAL tem hoje (central de comando).</label></li>
+      <li><input type="checkbox" id="c5"><label for="c5">Opcional: anúncio de "estou ao vivo" nas quintas, de R$ 20 a R$ 50 por live.</label></li>
+    </ul>
+  </section>
+
+  <section class="week">
+    <div class="eyebrow">No fim dos 30 dias</div>
+    <h2>O que medir</h2>
+    <ol class="measure">
+      <li><b>Assinantes da INTEGRAL</b> antes e depois. É o número que importa.</li>
+      <li>Comentários com HERANÇA em cada post.</li>
+      <li>Salvamentos e compartilhamentos, se o token da Meta ganhar a permissão de insights.</li>
+      <li>Rodar o Jev nos posts novos e comparar com os 412 anteriores.</li>
+    </ol>
+  </section>
+
+  <footer>Regras de sempre: o dedo aponta para o padrão, nunca para a pessoa. Na saúde, doença e tratamento são fatos; o que muda é a travessia. Revise cada gancho com a sua skill antes de gravar.</footer>
+</div>
+
+<script>
+const SEMANAS = [
+ {id:"s1", n:"1", palavra:"Mente", sub:"as frases que você recebeu prontas",
+  quinta:"Herança emocional: por que você age como sua mãe, mesmo tentando não ser",
+  dias:[
+   {d:"Seg",f:"l",h:"Toda família passa uma frase adiante.",h2:"Mulher tem que dar conta. Ninguém se separa. Dinheiro não dá em árvore.",m:"A gente recebe pronta e trata como fato. Herdar a frase vem com a família; repetir é escolha.",a:"Herança emocional"},
+   {d:"Ter",f:"f",h:"Tem frase que você repete desde os sete anos.",h2:"E ela nem era sua.",m:"Você em silêncio, olhando pela janela. Piano calmo.",a:"Feridas de infância"},
+   {d:"Qua",f:"m",h:"Eu herdei muita coisa da minha família sem nunca ter assinado nada.",h2:"Algumas eu guardo com orgulho. Outras eu levei anos para perceber que carregava.",m:"A casa herdada, com os móveis no mesmo lugar. A frase \"comigo vai ser igual\". Herdar a casa não obriga a manter a decoração.",a:"Herança emocional"},
+   {d:"Qui",f:"v",h:"Quinta da Mente ao vivo",m:"Stories de manhã: \"hoje, 18:59, aberto; depois a gravação fica só na Integra\". Guarde o minuto da frase mais forte."},
+   {d:"Sex",f:"f",h:"A madame herdou a casa.",h2:"A decoração, ela escolhe.",m:"Você entrando num ambiente bonito. Música elegante.",a:"Como te programaram"},
+   {d:"Sáb",f:"v",h:"Recorte da live",m:"O trecho mais forte da quinta, com o título da aula na capa."}
+  ]},
+ {id:"s2", n:"2", palavra:"Corpo", sub:"a sua história",
+  quinta:"Neurociência do Natal: por que a família ativa os circuitos de quando você tinha 7 anos",
+  dias:[
+   {d:"Seg",f:"m",anchor:true,h:"Eu vi meu pai fazer hemodiálise por treze anos.",h2:"Anos depois, eu entrei na mesma sala.",m:"A mesma doença, a mesma máquina, outra travessia. O carro a caminho do hospital. Fecha sem promessa: a doença veio, o tratamento veio, o que mudou foi como eu atravessei.",a:"Herança emocional",note:"Post-âncora do mês."},
+   {d:"Ter",f:"f",h:"O corpo herda.",h2:"A forma de atravessar, você escolhe.",m:"Frase na tela e música."},
+   {d:"Qua",f:"l",h:"Me disseram que doença de família era destino.",h2:"Ninguém me falou o que fazer com o resto da herança.",m:"O que vem no corpo é fato e se cuida com médico. O que vem junto (o medo, a frase \"comigo vai ser igual\") é o que dá para escolher.",a:"Como te programaram"},
+   {d:"Qui",f:"v",h:"Quinta da Mente ao vivo",m:"Mesmo roteiro de stories."},
+   {d:"Sex",f:"m",h:"Eu me arrumava para a hemodiálise como quem vai a um evento.",h2:"Perfume, escova, música clássica.",m:"Isso não era negação: era escolher quem entrava naquela sala. Corpo e tratamento sempre como fatos."},
+   {d:"Sáb",f:"v",h:"Recorte da live",m:"Fecha com HERANÇA."}
+  ]},
+ {id:"s3", n:"3", palavra:"Prosperidade", sub:"a herança no dinheiro",
+  quinta:"O padrão que te mantém sem dinheiro e como quebrar",
+  dias:[
+   {d:"Seg",f:"l",h:"Na casa da maioria de nós, dinheiro era assunto proibido.",h2:"E o que não se fala vira regra.",m:"As regras de família sobre dinheiro e merecimento que a gente leva para a vida adulta.",a:"O padrão sem dinheiro"},
+   {d:"Ter",f:"f",h:"Prosperidade também se herda.",h2:"A escassez, também.",m:"Frase na tela e música."},
+   {d:"Qua",f:"m",h:"Construir duas empresas me mostrou o que eu herdei sobre dinheiro.",h2:"[a frase que você ouvia em casa sobre dinheiro]",m:"Você como fundadora é a prova. A frase herdada e a escolha de outra.",a:"O padrão sem dinheiro",note:"Complete com a sua vivência real."},
+   {d:"Qui",f:"v",h:"Quinta da Mente ao vivo",m:"Mesmo roteiro de stories."},
+   {d:"Sex",f:"l",h:"Tem mulher que sabe fazer conta e se endivida mesmo assim.",h2:"O problema nunca foi matemática.",m:"A conclusão sobre si que decide o gasto.",a:"Sabe fazer conta e se endivida"},
+   {d:"Sáb",f:"v",h:"Recorte da live",m:"Fecha com HERANÇA ou PROSPERIDADE."}
+  ]},
+ {id:"s4", n:"4", palavra:"Soberania", sub:"escolher o que fica",
+  quinta:"Como ter um melhor relacionamento com seus pais, independente da sua idade",
+  dias:[
+   {d:"Seg",f:"m",h:"Vida morna é herança também.",h2:"A gente recebe pronta e chama de sorte.",m:"Soberania é escolher o que fica e o que sai da herança. Tom de obra, não de lamento.",a:"Como te programaram"},
+   {d:"Ter",f:"f",h:"Soberania é escolher o que fica.",m:"Frase na tela e música."},
+   {d:"Qua",f:"l",h:"Quando você visita sua mãe e sai esgotada sem saber por quê.",h2:"Tem um motivo, e ele começou antes de você nascer.",m:"Os papéis de família que voltam na visita.",a:"Visita à mãe"},
+   {d:"Qui",f:"v",h:"Quinta da Mente ao vivo",m:"Mesmo roteiro de stories."},
+   {d:"Sex",f:"m",h:"Perdoar não foi esquecer o que meu pai viveu.",h2:"Foi parar de carregar o medo dele como se fosse meu.",m:"Fecha o mês e convida para a trilha completa.",a:"Por que você ainda não conseguiu perdoar",note:"Ajuste com a sua vivência."},
+   {d:"Sáb",f:"v",h:"Recorte da live",m:"Fecha com HERANÇA."}
+  ]}
+];
+const NOMES={l:"Leitura",m:"Monólogo",f:"Frase",v:"Ao vivo"};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+document.getElementById("semanas").innerHTML=SEMANAS.map(w=>`
+ <section class="week" id="${w.id}">
+  <div class="week-head">
+   <div class="eyebrow">Semana ${w.n}</div>
+   <h2>Herança na <span>${esc(w.palavra.toLowerCase())}</span>: ${esc(w.sub)}</h2>
+   <div class="quinta">Quinta da Mente: <b>${esc(w.quinta)}</b></div>
+  </div>
+  <div class="days">${w.dias.map(x=>`
+   <article class="day${x.anchor?" anchor":""}">
+    <div class="d">${x.d}</div>
+    <div class="body">
+     <span class="chip c-${x.f}">${NOMES[x.f]}</span>
+     <p class="hook">${esc(x.h)}</p>
+     ${x.h2?`<p class="hook2">${esc(x.h2)}</p>`:""}
+     <p class="meta">${esc(x.m)}</p>
+     ${x.a?`<p class="meta"><b>Aula da trilha:</b> ${esc(x.a)}</p>`:""}
+     ${x.note?`<p class="note">${esc(x.note)}</p>`:""}
+    </div>
+   </article>`).join("")}
+  </div>
+ </section>`).join("");
+document.querySelector('#s4 .week-head h2').innerHTML='<span>Soberania</span>: escolher o que fica';
+</script>

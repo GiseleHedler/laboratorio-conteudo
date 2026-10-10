@@ -6,7 +6,7 @@
 - "Madame" e "vida morna" aparecem como assinatura da voz, não em todo post.
 - 5 posts por semana + a Quinta da Mente ao vivo. Avisos de aula só nos stories.
 - Três formatos:
-  - **L = Leitura** (Tay/Fernando): um caso, filme ou tendência lido pela lente "o que você conclui sobre você". 60 a 90 s.
+  - **L = Leitura** (Tay/Fernando): um comportamento coletivo, caso ou tendência lido pela lente "o que você conclui sobre você". 60 a 90 s.
   - **M = Monólogo** (Ana): primeira pessoa, uma metáfora só, tom de obra e soberania. 40 a 70 s.
   - **F = Frase** (Ana): 6 a 15 s, sem fala, frase forte na tela + música. Os títulos das aulas viram frases.
 - Fechamento padrão: "A aula inteira está na trilha Herança da Integra. Comenta HERANÇA que eu te mando."
@@ -15,7 +15,7 @@
 - Filtro do dedo (skill de ganchos): contradizer uma certeza, nunca apontar defeito. Provocação no coletivo ("a gente", "nós") ou em terceira pessoa.
 - Primeiro tempo do gancho até 12 palavras. Nada de "não é X, é Y", hedge, travessão, palavras barradas.
 - Saúde: doença e tratamento são fatos; o que muda é a travessia e a conclusão sobre si. Nunca "cura", nunca causa emocional da doença.
-- Filmes e casos: só fatos verificáveis. Notícia da semana entra no lugar de um L quando houver uma boa.
+- Sem filmes. Leitura = um comportamento coletivo ou caso do momento lido pela lente ("a gente"), com fatos verificáveis.
 
 ---
 
@@ -24,9 +24,9 @@ Quinta da Mente: "Herança emocional: por que você age como sua mãe, mesmo ten
 
 | Dia | Formato | Gancho (1º tempo / 2º tempo) | Miolo | Aula da trilha |
 |---|---|---|---|---|
-| Seg | L | "Tudo em Todo Lugar ao Mesmo Tempo é um filme sobre mãe e filha." / "E sobre a frase que uma herda da outra sem perceber." | A mãe que repete na filha o que ouviu do pai. Lente: a frase herdada tratada como fato. Fecha: qual frase você recebeu pronta? | Herança emocional |
+| Seg | L | "Toda família passa uma frase adiante." / "Mulher tem que dar conta. Ninguém se separa. Dinheiro não dá em árvore." | A gente recebe pronta e trata como fato. Herdar a frase vem com a família; repetir é escolha. | Herança emocional |
 | Ter | F | "Tem frase que você repete desde os sete anos." | Tela: "e ela nem era sua." | Feridas de infância |
-| Qua | M | "Eu jurei que nunca ia ser como a minha mãe." / "Aos 40 eu ouvi a voz dela saindo da minha boca." | Metáfora: a casa herdada com os móveis no mesmo lugar. Herdar a casa não obriga a manter a decoração. | Herança emocional |
+| Qua | M | "Eu herdei muita coisa da minha família sem nunca ter assinado nada." / "Algumas eu guardo com orgulho. Outras eu levei anos para perceber que carregava." | Metáfora: a casa herdada com os móveis no mesmo lugar. A frase "comigo vai ser igual". Herdar a casa não obriga a manter a decoração. | Herança emocional |
 | Qui | Live | Quinta da Mente | Stories antes e depois. Recorte de 60 s vira o post de sábado. | |
 | Sex | F | "A madame herdou a casa. A decoração, ela escolhe." | Frase + música. | Como te programaram |
 | Sáb | L (recorte da live) | Trecho mais forte da Quinta | Fecha com HERANÇA. | |
@@ -48,9 +48,9 @@ Quinta da Mente: "O padrão que te mantém sem dinheiro e como quebrar".
 
 | Dia | Formato | Gancho | Miolo | Aula |
 |---|---|---|---|---|
-| Seg | L | "Encanto, da Disney, é um filme sobre herança." / "A avó cobra da família um preço que ninguém escolheu pagar." | Abuela Alma e as expectativas que viram regra. Lente: regras de família sobre dinheiro e merecimento. | Família é difícil |
+| Seg | L | "Na casa da maioria de nós, dinheiro era assunto proibido." / "E o que não se fala vira regra." | As regras de família sobre dinheiro e merecimento que a gente leva para a vida adulta. | O padrão sem dinheiro |
 | Ter | F | "Prosperidade também se herda. A escassez, também." | Frase + música. | |
-| Qua | M | "Eu construí duas empresas ouvindo uma frase da minha infância." / "E levei anos para perceber que ela não era minha." | Fundadora como prova. A frase herdada sobre dinheiro e a escolha de outra. | O padrão sem dinheiro (trilha Prosperidade) |
+| Qua | M | "Construir duas empresas me mostrou o que eu herdei sobre dinheiro." / [a frase que você ouvia em casa sobre dinheiro] | Fundadora como prova. A frase herdada sobre dinheiro e a escolha de outra. Ajustar com a vivência real. | O padrão sem dinheiro (trilha Prosperidade) |
 | Qui | Live | Quinta da Mente | | |
 | Sex | L | "Tem mulher que sabe fazer conta e se endivida mesmo assim." / "O problema nunca foi matemática." | Usa a aula homônima. Lente: a conclusão sobre si que decide o gasto. | Sabe fazer conta e se endivida |
 | Sáb | L (recorte da live) | Trecho mais forte | HERANÇA ou PROSPERIDADE. | |
