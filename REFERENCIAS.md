@@ -44,5 +44,14 @@ Quinta da Mente (gratuito) → curso (em criação) → TDL presencial (~R$ 7 mi
 
 ## Biblioteca de Anúncios
 - coletar_anuncios.py busca anúncios ativos no Brasil por palavra-chave.
-- "Ana Lisboa" achou a página "Ana Carolina M Lisboa", que NÃO é ela (pós em psicanálise do Grupo Altis).
-- Falta o ID da página da Ana para puxar os anúncios dela.
+- A página de anúncios da Ana é "Ana Carolina M Lisboa" (id 387087041810736), ligada ao Grupo Altis (@altislisboa).
+
+## Funil pago da Ana (250 anúncios, dez/2023–out/2026)
+1. Isca: "Teste Sistêmico" de 3 minutos, "descubra qual das 3 sombras te governa" (prosperidade, relacionamentos, autoestima; padrões da mãe, da avó, da linhagem).
+2. Aulão gratuito ao vivo no YouTube (01/06, 20h): "iluminar a sombra que te trava na prosperidade". 153 anúncios em 11 dias (84 vídeos, 69 imagens): muito teste de criativo, concentrado na janela do lançamento (178 anúncios em mai/2026).
+3. Oferta: formação "O Novo Sistema: como se tornar um profissional que prospera", com certificação internacional e reconhecimento do MEC (via Grupo Altis). Inscrição por formulário (Typeform).
+4. Sempre ligado: anúncios de catálogo apontando para o formulário (ago/2025–jul/2026).
+5. Sazonal: "Black Sistêmica" (nov/2025, "um ano de rainha") para altislisboa.com.br.
+6. Agora (set–out/2026): anúncios para conversa no WhatsApp: pós em psicanálise reconhecida pelo MEC e "padrão não se desfaz lendo, se desfaz sendo ouvida".
+- Autoridade: "Feminino Moderno®", "62 mil alunas em 43 países", "empresária, mentora, escritora e terapeuta".
+- Limites: a biblioteca não mostra gasto nem resultado no Brasil; o coletor traz até 250 anúncios.
