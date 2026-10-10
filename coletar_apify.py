@@ -12,9 +12,10 @@ Token do Apify:
   - no computador: APIFY_TOKEN no .env
 
 Salva em dados/posts_<perfil>.json, no mesmo formato do coletar_posts.py.
-Rodar:  python3 coletar_apify.py
+Rodar:  python3 coletar_apify.py [perfil ...]   (sem argumentos, coleta todos)
 """
 import os
+import sys
 import json
 import time
 import urllib.request
@@ -23,9 +24,10 @@ import urllib.error
 API = "https://api.apify.com/v2"
 ATOR = "apify~instagram-scraper"
 
-PERFIS = ["tay.ldantas", "analisboa", "eltoneuler", "camilavieira", "luanacarolina.s"]
+PERFIS = ["tay.ldantas", "analisboa", "eltoneuler", "camilavieira", "luanacarolina.s",
+          "abarbaratorres", "psifernandosegredo"]
 POSTS_POR_PERFIL = 150
-TETO_USD = 1.00  # o Apify para a execução se o custo passar disso
+TETO_USD_POR_PERFIL = 0.50  # o Apify para a execução se o custo passar disso
 
 TIPOS = {"Video": "VIDEO", "Image": "IMAGE", "Sidecar": "CAROUSEL_ALBUM"}
 
@@ -71,15 +73,16 @@ def normalizar(item):
 
 
 def main():
+    perfis = sys.argv[1:] or PERFIS
     token = os.environ.get("APIFY_TOKEN") or carregar_env().get("APIFY_TOKEN")
     entrada = {
-        "directUrls": ["https://www.instagram.com/%s/" % p for p in PERFIS],
+        "directUrls": ["https://www.instagram.com/%s/" % p for p in perfis],
         "resultsType": "posts",
         "resultsLimit": POSTS_POR_PERFIL,
         "addParentData": False,
     }
     try:
-        run = chamar("POST", "/acts/%s/runs?maxTotalChargeUsd=%s" % (ATOR, TETO_USD), token, entrada)["data"]
+        run = chamar("POST", "/acts/%s/runs?maxTotalChargeUsd=%s" % (ATOR, TETO_USD_POR_PERFIL * len(perfis)), token, entrada)["data"]
     except urllib.error.HTTPError as e:
         print("Erro %s ao iniciar o Apify: %s" % (e.code, e.read().decode("utf-8", "ignore")[:300]))
         return
@@ -97,7 +100,7 @@ def main():
         itens = itens.get("data", [])
 
     os.makedirs("dados", exist_ok=True)
-    for perfil in PERFIS:
+    for perfil in perfis:
         posts = [normalizar(i) for i in itens if (i.get("ownerUsername") or "").lower() == perfil]
         posts.sort(key=lambda p: p["timestamp"] or "", reverse=True)
         with open("dados/posts_%s.json" % perfil, "w", encoding="utf-8") as f:
