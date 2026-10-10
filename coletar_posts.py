@@ -9,7 +9,7 @@ Só funciona com perfis comerciais ou de criador.
 
 Lê do .env:
   META_TOKEN       token com permissão instagram_basic (+ pages_show_list)
-  META_IG_USER_ID  ID da SUA conta comercial do Instagram (não é o @)
+  META_IG_USER_ID  (opcional) ID da sua conta comercial; se faltar, é descoberto pelo token
 
 Salva em dados/posts_<perfil>.json
 Rodar:  python3 coletar_posts.py
@@ -68,13 +68,38 @@ def coletar(ig_user_id, token, perfil):
     return info
 
 
+def descobrir_ig_user_id(token):
+    """Acha o ID da conta comercial do Instagram ligada às páginas do token."""
+    url = "%s/me/accounts?%s" % (BASE, urllib.parse.urlencode({
+        "fields": "instagram_business_account{id,username}", "access_token": token}))
+    with urllib.request.urlopen(url, timeout=30) as r:
+        paginas = json.loads(r.read().decode("utf-8")).get("data", [])
+    contas = [p["instagram_business_account"] for p in paginas if p.get("instagram_business_account")]
+    for c in contas:
+        print("Conta do Instagram encontrada: @%s (id %s)" % (c.get("username"), c["id"]))
+    return contas[0]["id"] if contas else None
+
+
 def main():
     env = carregar_env()
     token = os.environ.get("META_TOKEN") or env.get("META_TOKEN")
-    ig_user_id = os.environ.get("META_IG_USER_ID") or env.get("META_IG_USER_ID")
-    if not token or not ig_user_id:
-        print("Faltam no .env: META_TOKEN e/ou META_IG_USER_ID.")
+    if not token:
+        print("Falta META_TOKEN (no .env ou nos segredos do ambiente).")
         return
+    ig_user_id = os.environ.get("META_IG_USER_ID") or env.get("META_IG_USER_ID")
+    if not ig_user_id:
+        try:
+            ig_user_id = descobrir_ig_user_id(token)
+        except urllib.error.HTTPError as e:
+            print("Erro %s ao buscar a conta do Instagram: %s" % (e.code, e.read().decode("utf-8", "ignore")[:300]))
+            return
+        except urllib.error.URLError as e:
+            print("Não consegui chegar na Meta (%s)." % e.reason)
+            return
+        if not ig_user_id:
+            print("Nenhuma conta comercial do Instagram ligada a este token.")
+            print("-> Confira se o Instagram está ligado a uma Página do Facebook e se deu permissão a ela.")
+            return
 
     os.makedirs("dados", exist_ok=True)
     for perfil in PERFIS:
