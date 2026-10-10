@@ -26,8 +26,9 @@ API_VERSION = "v21.0"
 BASE = "https://graph.facebook.com/" + API_VERSION
 
 PERFIL_PROPRIO = "giselehedler"
-PERFIS = [PERFIL_PROPRIO, "tay.ldantas", "analisboa", "eltoneuler"]
-POSTS_POR_PERFIL = 150
+# Referências vêm do coletar_apify.py (a Meta não liberou Business Discovery para este app).
+PERFIS = [PERFIL_PROPRIO]
+POSTS_POR_PERFIL = 500
 
 CAMPOS_POST = "caption,media_type,media_product_type,like_count,comments_count,timestamp,permalink"
 
