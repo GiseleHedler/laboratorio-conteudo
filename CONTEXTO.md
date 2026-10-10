@@ -43,4 +43,4 @@ posicionamento — para começar a vender pelo Instagram, que hoje quase não ve
 - Curso para transformação pessoal ou formação para aplicar com outros?
 
 ## Chaves (segredos do ambiente)
-META_TOKEN, TYPESAFE_API_KEY. Rede liberada: graph.facebook.com, typesafe.ai.
+Segredos de rede "Bearer" no ambiente: um para api.typesafe.ai (Jev) e um para graph.facebook.com (Meta). Os scripts não leem as chaves: o proxy anexa o cabeçalho Authorization sozinho. No computador, use TYPESAFE_API_KEY e META_TOKEN no .env.

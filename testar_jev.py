@@ -9,7 +9,10 @@ Manda 6 comentários de exemplo pro Jev e mostra, pra cada um:
   - urgência de resposta (nota 0 a 2)
 Objetivo: você conferir se o Jev decide igual você decidiria.
 
-Lê a chave de TYPESAFE_API_KEY (variável de ambiente ou .env).
+Chave do Jev:
+  - na nuvem do Claude: segredo de rede "Bearer" para api.typesafe.ai
+    (a chave é anexada sozinha; o script não precisa vê-la)
+  - no computador: TYPESAFE_API_KEY no .env
 Rodar:  python3 testar_jev.py
 """
 import os
@@ -80,7 +83,8 @@ def perguntar_jev(api_key, comentario):
         "questions": PERGUNTAS,
     }).encode("utf-8")
     req = urllib.request.Request(API_URL, data=corpo, method="POST")
-    req.add_header("Authorization", "Bearer " + api_key)
+    if api_key:
+        req.add_header("Authorization", "Bearer " + api_key)
     req.add_header("Content-Type", "application/json")
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read().decode("utf-8"))
@@ -88,9 +92,6 @@ def perguntar_jev(api_key, comentario):
 
 def main():
     api_key = os.environ.get("TYPESAFE_API_KEY") or carregar_env().get("TYPESAFE_API_KEY")
-    if not api_key:
-        print("Falta TYPESAFE_API_KEY (no .env ou nas variáveis do ambiente).")
-        return
 
     for comentario in COMENTARIOS:
         try:
@@ -98,7 +99,7 @@ def main():
         except urllib.error.HTTPError as e:
             print("Erro %s do Jev: %s" % (e.code, e.read().decode("utf-8", "ignore")[:200]))
             if e.code in (401, 403):
-                print("-> Chave recusada. Confira se colou a chave inteira, sem espaços.")
+                print("-> Chave recusada ou ausente. Confira o segredo de rede (api.typesafe.ai) ou o .env.")
             return
         except urllib.error.URLError as e:
             print("Não consegui chegar no Jev (%s)." % e.reason)

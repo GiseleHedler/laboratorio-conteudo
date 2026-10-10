@@ -7,8 +7,10 @@ Puxa os últimos posts de cada perfil via Business Discovery:
 legenda, formato, data, curtidas, comentários e link.
 Só funciona com perfis comerciais ou de criador.
 
-Lê do .env:
-  META_TOKEN       token com permissão instagram_basic (+ pages_show_list)
+Token da Meta (permissão instagram_basic + pages_show_list):
+  - na nuvem do Claude: segredo de rede "Bearer" para graph.facebook.com
+    (o token é anexado sozinho; o script não precisa vê-lo)
+  - no computador: META_TOKEN no .env
   META_IG_USER_ID  (opcional) ID da sua conta comercial; se faltar, é descoberto pelo token
 
 Salva em dados/posts_<perfil>.json
@@ -44,13 +46,21 @@ def carregar_env(caminho=".env"):
     return env
 
 
+def buscar(caminho, params, token):
+    """GET na Graph API. Sem token, conta com o segredo de rede da nuvem."""
+    url = "%s/%s?%s" % (BASE, caminho, urllib.parse.urlencode(params))
+    req = urllib.request.Request(url)
+    if token:
+        req.add_header("Authorization", "Bearer " + token)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
 def chamar(ig_user_id, token, perfil, cursor=None):
     media = "media.after(%s).limit(50)" % cursor if cursor else "media.limit(50)"
     campos = "business_discovery.username(%s){username,name,biography,followers_count,media_count,%s{%s}}" % (
         perfil, media, CAMPOS_POST)
-    url = "%s/%s?%s" % (BASE, ig_user_id, urllib.parse.urlencode({"fields": campos, "access_token": token}))
-    with urllib.request.urlopen(url, timeout=30) as r:
-        return json.loads(r.read().decode("utf-8"))["business_discovery"]
+    return buscar(ig_user_id, {"fields": campos}, token)["business_discovery"]
 
 
 def coletar(ig_user_id, token, perfil):
@@ -70,10 +80,7 @@ def coletar(ig_user_id, token, perfil):
 
 def descobrir_ig_user_id(token):
     """Acha o ID da conta comercial do Instagram ligada às páginas do token."""
-    url = "%s/me/accounts?%s" % (BASE, urllib.parse.urlencode({
-        "fields": "instagram_business_account{id,username}", "access_token": token}))
-    with urllib.request.urlopen(url, timeout=30) as r:
-        paginas = json.loads(r.read().decode("utf-8")).get("data", [])
+    paginas = buscar("me/accounts", {"fields": "instagram_business_account{id,username}"}, token).get("data", [])
     contas = [p["instagram_business_account"] for p in paginas if p.get("instagram_business_account")]
     for c in contas:
         print("Conta do Instagram encontrada: @%s (id %s)" % (c.get("username"), c["id"]))
@@ -83,9 +90,6 @@ def descobrir_ig_user_id(token):
 def main():
     env = carregar_env()
     token = os.environ.get("META_TOKEN") or env.get("META_TOKEN")
-    if not token:
-        print("Falta META_TOKEN (no .env ou nos segredos do ambiente).")
-        return
     ig_user_id = os.environ.get("META_IG_USER_ID") or env.get("META_IG_USER_ID")
     if not ig_user_id:
         try:
