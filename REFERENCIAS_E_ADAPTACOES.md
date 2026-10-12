@@ -95,3 +95,8 @@ Os roteiros completos estão no banco de conteúdos: conteudos.html (https://cla
 ## Ainda falta você descrever
 - Ana, 6 s, "Voltar para casa por vezes é voltar para si": https://www.instagram.com/reel/DbX7mCzBfvj/
 - Ana, 21 s, "Quando não existem palavras": https://www.instagram.com/reel/DbMJmYExmcn/
+
+## 10. Carol Rache (export do Viral Finder)
+- **Análise completa:** analises/carol-rache.md. **Ganchos transcritos:** GANCHOS.md (moldes 1 a 6, 11 e 12).
+- **Campeões:** "Só é ofensa se eu pegar para mim" (https://www.instagram.com/p/C_tw3n5O5Yj), teoria do velcro (https://www.instagram.com/p/DDN0QnYPMIb), "O ciúme é um sintoma" (https://www.instagram.com/p/DF2pOOiuwFV), carrossel "Ele não vai mudar" (https://www.instagram.com/p/DAMfchdO--9).
+- **O que a gente criou:** teoria do ímã, "Culpa é igual boleto no nome dos outros", "Você não é cansada. Você é viciada em ser necessária", "Comenta TREINÁVEL".
