@@ -73,7 +73,7 @@ footer{margin-top:48px;color:var(--muted);font-size:.82rem}
 </header>
 
 <nav class="toc" aria-label="Seções">
-  <a href="#central">Ideia central</a><a href="#semana">Semana 1</a><a href="#prontos">Prontos</a><a href="#gravar">Para gravar</a><a href="#rever">Para rever</a><a href="#ideias">Ideias</a><a href="#ganchos">Ganchos</a><a href="#refs">Referências</a><a href="#links">Links pendentes</a>
+  <a href="#central">Ideia central</a><a href="#semana">Semana 1</a><a href="#prontos">Prontos</a><a href="#gravar">Para gravar</a><a href="#rever">Para rever</a><a href="#ideias">Ideias</a><a href="#ganchos">Ganchos</a><a href="#collab">Collab</a><a href="#refs">Referências</a><a href="#links">Links pendentes</a>
 </nav>
 
 <section id="central">
@@ -483,6 +483,23 @@ Um menino que herdou palácio, título e dinheiro. E o que mais pesava era uma r
   </div>
 </section>
 
+<section id="collab">
+  <h2>Estratégia de collab</h2>
+  <div class="central">
+    <p style="margin:0 0 6px"><b>Como funciona:</b> contar a história real de alguém maior que você, que conversa com a madame, e convidar a pessoa para collab. O post aparece nos dois perfis.</p>
+    <ol>
+      <li>A história vem da própria pessoa (entrevista, post, livro), com um detalhe pequeno.</li>
+      <li>Roteiro no molde Fernando, com a virada sua e sem distorcer o que ela quis dizer.</li>
+      <li>Mandar o vídeo pronto por direct antes de postar.</li>
+      <li>Aceitou: posta como collab. Não respondeu: posta sem marcar como collab, só citando.</li>
+    </ol>
+    <p style="margin:12px 0 4px"><b>Mensagem para o direct:</b></p>
+    <div class="txt" id="dm-collab" style="margin-top:4px">Oi, [nome]! Sou a Gisele Hedler. Ouvi você contar [a história] em [onde] e ela me tocou muito. Fiz um vídeo contando do meu jeito, com todo o respeito e só com o que você mesma contou. Te mando aqui para você ver antes. Se você gostar, seria uma honra postar em collab com você.</div>
+    <button class="copy" data-copy="dm-collab" type="button">Copiar mensagem</button>
+    <p class="meta">Escolher perfis de 500 mil a 5 milhões com público parecido (mulheres 35+, família, empresa, fé, travessias de vida). Concorrente direta quase nunca aceita. Ter de 3 a 5 convites andando ao mesmo tempo.</p>
+  </div>
+</section>
+
 <section id="refs">
   <h2>Referências e o que criamos</h2>
   <div class="tablewrap"><table>
@@ -528,7 +545,8 @@ Um menino que herdou palácio, título e dinheiro. E o que mais pesava era uma r
 document.querySelectorAll('.copy').forEach(function(b){
   b.addEventListener('click',function(){
     var el=document.getElementById(b.dataset.copy); var t=el.innerText;
-    var done=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar legenda'},1500)};
+    var label=b.dataset.label||(b.dataset.label=b.textContent);
+    var done=function(){b.textContent='Copiado';setTimeout(function(){b.textContent=label},1500)};
     var fallback=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selecionado, copie';};
     try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
   });
