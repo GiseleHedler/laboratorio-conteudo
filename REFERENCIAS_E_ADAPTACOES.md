@@ -59,6 +59,7 @@ Os roteiros completos estão no banco de conteúdos: conteudos.html (https://cla
 - **O que a gente criou:**
   - **Quem mais briga com a mãe é quem mais vira ela** (Bowen e o corte emocional; virada: "a madame não está à mercê da mãe nem quando foge dela"). Para rever.
   - **"Eu me amo" no espelho pode te deixar pior** (estudo de Joanne Wood, 2009; virada: olhar primeiro a frase que você já repete). Para rever.
+  - **Mulher depois dos 50 tem que sossegar** (o truque do cigarro: abrir defendendo a frase como se fosse sua e revelar que é a besteira que a gente escuta e repete; dado da expectativa de vida de 1940; contraponto: crença com prazo de validade). Para gravar.
   - **Tentar ficar calma é o jeito mais rápido de explodir** (urso branco de Daniel Wegner, 1987; virada: a madame não precisa ser calma, precisa ser inteira). Para rever.
 
 ## 8. Fernando Segredo: casos reais
