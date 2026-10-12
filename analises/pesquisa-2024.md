@@ -45,3 +45,41 @@ Palavra mais comum: **Cansada** (36 respostas de uma palavra só; 86 citam cansa
 2. Corpo/saúde é o objetivo número 1 e dinheiro o número 2. O banco de conteúdos tem zero roteiro dos dois.
 3. Dois terços querem uma formação online: o curso de 12 semanas tem demanda declarada.
 4. Renda baixa na maioria: a Integra a R$39 combina; a mentoria de R$20 mil é para uma fatia pequena (cerca de 7% acima de R$10 mil).
+
+---
+
+# Pesquisas de 2026 (Typebot, exportadas em 12/10/2026)
+Arquivos brutos com nome e e-mail: ficam fora do repositório. Aqui só os números.
+
+## Teste completo: bloqueios herdados (207 respostas com itens marcados)
+| % | situação que ela reconhece |
+|---|---|
+| 65% | Sempre deixa projetos importantes "para depois" ou nunca termina |
+| 62% | Não consegue relaxar porque sempre tem algo "para resolver" |
+| 61% | Evita situações onde pode ser julgada ou criticada |
+| 56% | Evita se destacar ou receber reconhecimento |
+| 54% | Tem dificuldade para confiar ou se entregar |
+| 49% | Ganha dinheiro mas ele sempre "escapa" |
+| 49% | Atrai pessoas que precisam ser "consertadas" ou "salvas" |
+| 47% | Não consegue cobrar o que realmente vale |
+| 44% | Se cobra para ser perfeita em tudo |
+| 36% | Sempre ajuda financeiramente os outros, mas nunca sobra para ela |
+| 35% | Se sente responsável pela felicidade de todo mundo |
+
+## Mapeamento dos bloqueios emocionais (138 respostas)
+- Idade: 45 a 54 (44), 35 a 44 (35), 55 a 64 (34).
+- Anos que sente ter "perdido": mais de 15 anos (58 de 122, 48%).
+- Casa da infância: tensa com conflitos (39), fria com pouco afeto (35), amorosa com muita cobrança (28), equilibrada (18).
+- Máscara do dia a dia: **"a pessoa forte que nunca precisa de ajuda" (49 de 128, 38%)**; a alegre que nunca tem problemas (20); a ocupada que tem tudo sob controle (18).
+- Quando alguém próximo prospera: feliz e inspirada (39), **comparando com a própria situação (35)**, genuinamente alegre (30), **com inveja disfarçada (15)**. 40% admitem comparação ou inveja.
+- "Merecimento": paz (50), confusão (39), desconforto (14), culpa por querer mais (13).
+- "Na minha família, para ser amada eu precisava…": a resposta mais repetida é **obedecer** ("ser boazinha e obediente", "jamais contrariar meus pais", "não incomodar").
+- Último "não" importante: muitas "não lembro"; quem lembra quase sempre conta culpa antes do alívio.
+- Medo de se tornar: "uma velha amarga", "rabugenta", "sozinha que ninguém quer", "dependente dos outros", "doente e incapaz".
+
+## Temas que quase ninguém trata e que elas confessaram
+1. Inveja da amiga que prosperou (40% comparam ou invejam).
+2. Medo de virar a velha amarga (e dependente).
+3. A forte que nunca precisa de ajuda (máscara número 1).
+4. Ajudar todo mundo com dinheiro e não sobrar nada (36%).
+5. Ser amada = obedecer.
