@@ -14,6 +14,18 @@ Scripts da raiz são reaproveitados; tudo que for salvo em dados/ vira resumo ve
 - Instagram: cerca de 11 mil seguidores (painel da Central de Comando).
 - Meta Ads: cerca de R$ 2.730 investidos em agosto. Vendas pela Shopify.
 
+## Respostas da Gisele (12/10/2026)
+- Quem aparece nos vídeos: Gisele, Gabriel e uma nutricionista da equipe.
+- O tráfego pago manda para o site (npnatural.com.br, loja Shopify).
+- Poucos anúncios hoje. Quer melhorar o trabalho na Meta.
+- Sente que a marca está "mais do mesmo": o objetivo central é diferenciação.
+
+## Achados de 12/10/2026
+- O site não aparece na busca do Google para "Natural Pure biopreciosos" nem para "npnatural.com.br".
+  Quem ouve falar da marca e procura no Google não encontra.
+- O token da Meta da Central de Comando venceu em 10/10/2026. Sem ele não dá para ver o custo por
+  compra dos anúncios da NP.
+
 ## O que falta (passo 1)
 - Preços e oferta principal do momento.
 - Quem compra x quem só segue.
