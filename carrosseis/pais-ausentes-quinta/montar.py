@@ -184,11 +184,11 @@ im=limpa.crop((0,200,1400,1950))
 img=im.resize((W,H),Image.LANCZOS)
 img=gradiente(img,de=0.20,forca=248)
 d=ImageDraw.Draw(img)
-y=titulo_cursiva(d,700,['VOCÊ NÃO PRECISA','PROVAR'],'que merece ficar',tsz=74,csz=100)
+y=titulo_cursiva(d,650,['VOCÊ NÃO PRECISA','PROVAR'],'que merece ficar',tsz=74,csz=100)
 y+=24
 d.text((W/2,y),'Aula desta quinta, 18:59, ao vivo e de graça:',font=f(REG,34),fill=BRANCO,anchor='ms'); y+=66
-for l in ['POR QUE VOCÊ ESCOLHE','QUEM VAI EMBORA']:
-    d.text((W/2,y),l,font=f(BLK,52),fill=ROSE,anchor='ms'); y+=62
+for l in ['COMO RECEBER AMOR','SEM MEDO DE QUE','ELE VÁ EMBORA']:
+    d.text((W/2,y),l,font=f(BLK,50),fill=ROSE,anchor='ms'); y+=60
 y+=22
 d.text((W/2,y),'Comenta 5524 que eu te mando o link.',font=f(B8,40),fill=BRANCO,anchor='ms')
 d.text((W/2,H-45),'@giselehedler',font=f(ITA,24),fill='#d8d2e0',anchor='ms')
