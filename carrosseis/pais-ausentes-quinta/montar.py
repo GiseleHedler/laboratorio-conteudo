@@ -53,10 +53,12 @@ def foto(path,foco_y=0.3):
     return im.crop((x,y,x+W,y+H))
 
 # 1 capa
-img=gradiente(foto(IM+'12.jpg',0.0),de=0.40); d=ImageDraw.Draw(img)
-y=titulo_cursiva(d,930,['POR QUE FILHAS','DE PAIS AUSENTES'],'se atraem',tsz=74,csz=100)
-bloco(d,y+40,'pelos homens que vão abandoná-las?',f(REG,40),BRANCO)
-d.text((W/2,H-55),'@giselehedler',font=f(ITA,24),fill='#d8d2e0',anchor='ms')
+img=gradiente(foto(IM+'12.jpg',0.0),de=0.22,forca=245); d=ImageDraw.Draw(img)
+y=titulo_cursiva(d,800,['POR QUE FILHAS','DE PAIS AUSENTES'],'se atraem',tsz=90,csz=124)
+y+=40
+for l in ['pelos homens que vão','abandoná-las?']:
+    d.text((W/2,y),l,font=f(B8,54),fill=BRANCO,anchor='ms'); y+=70
+d.text((W/2,H-50),'@giselehedler',font=f(ITA,24),fill='#d8d2e0',anchor='ms')
 img.save(OUT+'01.png')
 
 # 2 teste 1
@@ -173,12 +175,18 @@ assina(d,9); img.save(OUT+'09.png')
 im=Image.open(IM+'13.jpg').convert('RGB').crop((60,440,1260,1940))
 r=W/im.width; im=im.resize((W,int(im.height*r)),Image.LANCZOS)
 img=Image.new('RGB',(W,H),'#000'); img.paste(im.crop((0,0,W,min(H,im.height))),(0,0))
-img=gradiente(img,de=0.30,forca=245); d=ImageDraw.Draw(img)
-y=titulo_cursiva(d,860,['VOCÊ NÃO PRECISA PROVAR'],'que merece ficar',tsz=54,csz=88)
-y+=20
-y=bloco(d,y,'Na Quinta da Mente eu aprofundo isso, ao vivo e de graça. Quinta, 18:59.',f(REG,34),BRANCO)
-y+=10
-bloco(d,y,'Comenta 5524 que eu te mando o link.',f(B8,40),ROSE)
+img=gradiente(img,de=0.20,forca=248)
+topo=Image.new('L',(1,H))
+for yy in range(H): topo.putpixel((0,yy),int(255*max(0,1-yy/170)))
+img.paste(Image.new('RGB',(W,H),'#000'),(0,0),topo.resize((W,H)))
+d=ImageDraw.Draw(img)
+y=titulo_cursiva(d,760,['VOCÊ NÃO PRECISA','PROVAR'],'que merece ficar',tsz=82,csz=112)
+y+=30
+for l in ['Na Quinta da Mente eu aprofundo isso,','ao vivo e de graça. Quinta, 18:59.']:
+    d.text((W/2,y),l,font=f(REG,40),fill=BRANCO,anchor='ms'); y+=54
+y+=24
+for l in ['Comenta 5524','que eu te mando o link.']:
+    d.text((W/2,y),l,font=f(BLK,50),fill=ROSE,anchor='ms'); y+=64
 d.text((W/2,H-45),'@giselehedler',font=f(ITA,24),fill='#d8d2e0',anchor='ms')
 img.save(OUT+'10.png')
 
