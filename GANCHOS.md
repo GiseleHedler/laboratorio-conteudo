@@ -54,9 +54,9 @@ Abre acusando quem lê. Explica depois.
   - "Alerta de sobrecarga! Se você faz tudo, quem está ao seu redor aprende a não fazer nada." **31x.** https://www.instagram.com/p/DHS9zjQuKzM
   - "Você não sabe amar." **17x.** https://www.instagram.com/p/DAWylbROjSA
 - **Suas versões:**
-  - "Você não é cansada. Você é viciada em ser necessária."
+  - "Você é a mais forte da sua casa. E é por isso que ninguém mais lá dentro precisa ser." (elogio que acusa: cobra o custo, não a pessoa)
   - "Sua mãe não vai mudar. E você não precisa que ela mude."
-  - "Você não é boazinha. Você tem medo."
+- **Trava (skill ganchos-gisele):** a Carol acusa a pessoa; você não. O dedo aponta para o padrão, nunca para um defeito dela. Se ela puder responder "tá me chamando de quê?", reescreve.
 
 ## 7. Pergunta com vocativo
 Pergunta íntima terminando com um apelido do público.
@@ -103,7 +103,7 @@ Abre mandando o corpo fazer algo. A pessoa obedece e fica.
 - **Original:** "Joga os ombros pra trás. Levanta o queixo. O corpo importa." **11x, 930 mil.** https://www.instagram.com/p/C_xgbjsumDy
 - **Suas versões (para o pilar CORPO, que está faltando):**
   - "Solta a mandíbula. Agora. Você nem sabia que estava apertando."
-  - "Repara como você está sentada. Na pontinha da cadeira, pronta para levantar."
+  - "Olha como você está sentada agora. Na pontinha da cadeira, pronta para levantar."
 
 ## 13. Notícia lida pela sua lente (o seu molde mais repetível)
 Pega o assunto da semana e mostra o que ele revela sobre a mulher que está assistindo.
@@ -174,6 +174,13 @@ Pergunta que junta uma origem (o tipo de família) com um comportamento de hoje 
 - **Trava:** a capa e o teste podem falar da origem, mas a virada precisa dizer que acreditar nisso hoje é escolha ("não foi escolha; continuar acreditando, é"). Nada de "isso moldou TUDO em você" ou "você não consegue".
 
 ---
+
+## Travas da casa (da skill ganchos-gisele, valem para todos os moldes)
+- Sem antítese "não é X, é Y" no gancho nem no fecho. Liberado: "tem uma ___ pior que ___".
+- Sem estudo, credencial ou laboratório antes do segundo 10 (o estudo entra depois do gancho).
+- Traição, abuso, abandono, violência: abrir em terceira pessoa e trazer o "você" só depois, como agência.
+- Léxico fora: repara, ressignifique, empoderada, vibração, manifeste, mindset, querida, linda; no falado, "dói" e "invisível".
+- 12 palavras no primeiro tempo; o segundo tempo sobe um degrau.
 
 ## Fecho com palavra-chave (não é gancho, mas gera comentários)
 - **Original:** "Comente NEURO" teve 11,5 mil comentários. https://www.instagram.com/p/DcGp5MNO9Wt
