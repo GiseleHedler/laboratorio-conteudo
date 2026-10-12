@@ -105,6 +105,29 @@ Abre mandando o corpo fazer algo. A pessoa obedece e fica.
   - "Solta a mandíbula. Agora. Você nem sabia que estava apertando."
   - "Repara como você está sentada. Na pontinha da cadeira, pronta para levantar."
 
+## 13. Notícia lida pela sua lente (o seu molde mais repetível)
+Pega o assunto da semana e mostra o que ele revela sobre a mulher que está assistindo.
+- **Seus originais:**
+  - "Tu viu o que aconteceu entre a Luana Piovani e a Virginia?" **9,8x.** https://www.instagram.com/p/DXt_4SeAJbV
+  - "Ficou sabendo a última? A Virginia terminou com o Vini Jr." **7,1x, 269 comentários.** https://www.instagram.com/p/DYYcrQ4gGWC
+  - "Maduro foi capturado. Mas o que isso tem a ver com a gente?" **7x.** https://www.instagram.com/p/DTDy4MwjoVj
+  - Carrossel "Neymar, super criticado e julgado, deu uma aula sobre POSICIONAMENTO." **23x.** https://www.instagram.com/p/DalGH63jlKe
+- **Fórmula:** "Tu viu o que aconteceu com ___? Todo mundo está falando de ___. Ninguém está falando de ___."
+- **Regra:** a notícia é a porta, não o assunto. Em 10 segundos você já está falando da madame.
+
+## 14. Lista de filmes para a mulher 40+
+- **Seus originais:**
+  - "Tem quatro filmes que toda mulher acima dos 40 deveria parar tudo pra assistir. Porque eles explicam o que tua mãe e a mãe da tua mãe passou pra ti sem dizer uma palavra." **18x, 2.318 comentários.** https://www.instagram.com/p/DY2i4gvpu6o
+  - "Cinco filmes e documentário para iluminar sua mente e sua fé." **34x.** https://www.instagram.com/p/DG-e183sTMa
+- **Por que funciona:** é salvável, é comentável e você pode repetir o formato todo mês com um tema diferente (herança, dinheiro, corpo, luto).
+- **Próximas:** "3 filmes que mostram que nunca é tarde (depois dos 50)", "4 filmes sobre mulher e dinheiro", "3 filmes sobre a mãe que a gente não escolheu".
+
+## 15. Da sua própria história
+- "Eu só consegui chegar até aqui porque parei de me enganar." **10x.** https://www.instagram.com/p/DTG1o2RgKwZ
+- "Você que tá vivendo um luto, sabe quando tu sente a presença da pessoa que se foi? E tu se chama de louca?" **11,5x.** https://www.instagram.com/p/DYsvPOHgyxf
+- "Quer que o seu filho tenha inteligência emocional? Comece pelo prato sujo." **53x** (estudo de Harvard, molde Tay). https://www.instagram.com/p/DB8onB0MZUj
+- "Sabia que sua mente acredita e realiza tudo aquilo que você diz?" + "escreva PODER". **153x, 4.297 comentários.** https://www.instagram.com/p/DAcKS31PUup
+
 ---
 
 ## Fecho com palavra-chave (não é gancho, mas gera comentários)
