@@ -25,3 +25,21 @@ Todos são de satisfação, nenhum tem antes e depois concreto. No próximo TDL,
 5. O que você diria para uma mulher que está onde você estava?
 
 Autorização por escrito: "Posso usar seu depoimento no Instagram e na divulgação do curso? Prefere com seu nome e rosto ou anônimo?"
+
+## TDL: vídeos (YouTube Shorts embutidos na página, transcritos em 12/10/2026)
+
+| Vídeo | Quem | O essencial (palavras dela) | Uso |
+|---|---|---|---|
+| https://youtube.com/shorts/5OE9EQPwAf8 | Maria Cristina, 55 | "Eu precisava ser forte a todo tempo. E com isso eu acabei sendo a controladora, a mandona, a dona da razão… A velha mandona pode até querer voltar e mandar, mas ela não me domina mais." | ★★ frase-fato, virada e escolha; madame 40+ |
+| https://youtube.com/shorts/CzkSJOeK060 | Cris Molossi (verificada, treinadora sistêmica, mentora de terapeutas) | Buscava entender o dinheiro que vai e volta. Lembrou de uma cena aos 9 anos: apontaram uma arma para o pai por causa de uma dívida. "Dinheiro pra mim significa morte… briga." O que ficou: "Viva o agora, a vida acontece no agora." | ★★ prosperidade; conclusão tirada na infância e escolha no presente; tema pesado, só com autorização |
+| https://youtube.com/shorts/nuOLM4kig5o | Denise | "Eu estava vulnerável à questão de ser boa demais para as pessoas e esquecer de mim… a prioridade é Deus, eu e depois as outras pessoas." | ★ conversa com "A boazinha" |
+| https://youtube.com/shorts/vcFy6txc3sg | aluna empresária (sem nome no vídeo) | "Eu vim buscar o porquê eu consigo fazer dinheiro e o dinheiro não fica… acessei memórias de família… entendi que eu tenho que ficar na gestão." | ★ prosperidade |
+| https://youtube.com/shorts/mWt96lWY6c0 | Regina, empresária | Desafios financeiros que "vêm da infância"; "vi muitas coisas que eu não enxergava antes". | prosperidade, apoio |
+| https://youtube.com/shorts/xp5BChLjGGU | Geisiane | Segunda vez no TDL (a primeira em nov/2023): "houve uma grande mudança para positivo… algumas coisas já não fazem muito sentido para mim." | ★ prova de que dura |
+| https://youtube.com/shorts/IdcGbTbfc0E | Eliane | Dificuldade de acreditar em si e crescer profissionalmente; "saio daqui uma melhor mãe, esposa e profissional". | apoio |
+| https://youtube.com/shorts/TVyqD_Sjp3E | Liane, de Natal | Processo de autoconhecimento, "nós somos criadores da nossa própria realidade". | apoio; evitar o trecho "criadores da realidade" |
+| https://youtube.com/shorts/Yo9fTBxqMxY | Adriana, terapeuta homeopata e epidemiologista | Desbloquear insegurança e medos para ajudar pessoas. | apoio; mostra o público profissional |
+| https://youtube.com/shorts/y_Uga_GqlTA | Bárbara | Padrões de comportamento e "até um problema de saúde… entendi por que estou lutando com esse problema há tanto tempo". | ⚠ NÃO usar: liga crença a doença |
+| https://www.youtube.com/shorts/ywZz_CPKcTQ | Gisele | Explica o TDL: boa parte de quem faz são profissionais de saúde física ou mental, ou quem desenvolve pessoas. | informação de público (base para a formação futura) |
+
+Bordão das alunas no fim dos vídeos: "Eu sou treinável."
