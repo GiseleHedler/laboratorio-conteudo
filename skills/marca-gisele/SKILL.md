@@ -33,6 +33,7 @@ Apoio:
 - Fundo claro (branco ou parede clara): texto roxo, destaque framboesa.
 - Texto sobre foto: degradê **preto** por cima, nunca roxo. Se a área do texto já for clara e limpa (parede, céu), vale a regra do fundo claro.
 - Cursiva em uma ou duas palavras por tela, para chamar atenção.
+- **Cursiva encostada no título:** a linha em cursiva fica logo abaixo do título em caixa alta, centralizada, e sobe até encostar ou passar um pouco por cima da base das letras do título (cerca de um terço da altura da cursiva). Nunca deixar espaço vazio entre as duas linhas. A cursiva é menor que o título e funciona como assinatura dele.
 - Nada de travessão nos textos.
 - Capa com letra bem grande.
 - Vídeo: @giselehedler no centro, logo abaixo da frase, em Merriweather itálico pequeno. Nunca no canto (é fácil de cortar).
