@@ -46,3 +46,22 @@ ou da página do Luciano Bruno. A conferir.
   com a forma certa do ativo. Hipótese a testar, não conclusão.
 - Cuidado ao copiar: "canetinhas criam dependência vitalícia" e "a nutrição de precisão já resolve" são alegações que a NP,
   como marca de suplemento, não pode fazer.
+
+## O ciclo de aulas do Flavio (levantado em 12/10/2026)
+Aulas e lives gratuitas que aparecem nas legendas de @flaviopassos e @purissima.saude:
+
+| data | aula | tema (dor) | como chamou no orgânico |
+|---|---|---|---|
+| 08/10/2025 | lançamento da Puríssima, transmissão online gratuita | "nutrição é melhor que injeção" | posts desde 13/09 com data e hora |
+| 14/05/2026 | aula gratuita (quinta, 20h) | vaidade e amor-próprio | reel com "Comente QUERO para receber" |
+| 14/06/2026 | live com especialista em azeite | azeite, fraude, qualidade | reel com convite |
+| 07/2026 | lista de espera do lançamento de emagrecimento | canetas emagrecedoras | 8 anúncios a partir de 02/07 |
+| 18/09/2026 | Aula Magna CALMA, gratuita | ansiedade | reel com convite |
+| 10/2026 | Aula Magna Prosperidade Nutricional | escolher melhor cada refeição | reel de 27/09 com "Comente PROSPERIDADE" + 33 anúncios desde 08/10 |
+
+Ritmo: uma aula a cada 4 a 6 semanas, cada uma em cima de uma dor diferente.
+Divulgação: (1) reels do Flavio com "Comente PALAVRA" (provável automação que manda o link no direct);
+(2) anúncios para a página de cadastro (purissima.com/prosperidade/captura-ig); (3) depois, anúncios de venda para o site.
+Volume por aula: só dá para medir a atual. Prosperidade: 33 anúncios (18 imagens, 15 vídeos), todos lançados no mesmo dia (08/10).
+A Biblioteca de Anúncios do Brasil só mostra anúncio ativo de produto, então os anúncios das aulas anteriores já sumiram.
+Para medir o ciclo inteiro é preciso puxar a página dele toda semana e guardar o histórico.
