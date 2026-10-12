@@ -160,6 +160,19 @@ Dá nome a uma mudança no comportamento de uma geração e prova com pesquisa.
   - "Eu não quero ser rica para comprar coisas. Quero ser rica para nunca mais pedir licença para gastar com a minha vida."
   - "Prosperidade não é ter. É não precisar da aprovação de ninguém para o que você escolhe."
 
+## 20. "Por que filhas de ___ ___?" (o seu carrossel com teste)
+Pergunta que junta uma origem (o tipo de família) com um comportamento de hoje que a mulher não entende em si. A capa promete explicar; o teste "marcou 3 ou mais?" no slide 2 faz ela se reconhecer e mandar para a amiga.
+- **Original seu:** "Por que filhas de pais ausentes se atraem pelos homens que vão abandoná-las?" **14,3 mil views, 88 envios, 17 seguidores novos** (19/04/2026). https://www.instagram.com/p/DXT9lE0AAHJ/
+- **Fórmula da capa:** Por que [filhas de / a menina que] [origem] [comportamento de hoje que parece contraditório]?
+- **Estrutura do carrossel:** capa, teste 1 (marcou 3+?), o que a menina concluiu, relatos reais, "hoje você é a mulher que", o ciclo, teste 2, prova, o que fazer, convite com 5524.
+- **Suas versões:**
+  - "Por que a filha que dava conta de tudo vira a mulher que não consegue pedir ajuda?"
+  - "Por que filhas de mães controladoras não conseguem descansar?"
+  - "Por que filhas de pais que brigavam por dinheiro não conseguem guardar dinheiro?"
+  - "Por que a menina que nunca podia chorar vira a mulher que explode por nada?"
+  - "Por que filhas de mães críticas não conseguem receber um elogio?"
+- **Trava:** a capa e o teste podem falar da origem, mas a virada precisa dizer que acreditar nisso hoje é escolha ("não foi escolha; continuar acreditando, é"). Nada de "isso moldou TUDO em você" ou "você não consegue".
+
 ---
 
 ## Fecho com palavra-chave (não é gancho, mas gera comentários)
