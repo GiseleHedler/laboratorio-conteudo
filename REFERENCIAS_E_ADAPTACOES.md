@@ -73,6 +73,8 @@ Os roteiros completos estão no banco de conteúdos: conteudos.html (https://cla
   - **O príncipe Harry chorou uma vez só.** Para rever.
   - **Cora Coralina publicou o primeiro livro aos 75 anos.** No molde completo, virada "tarde demais não é fato, é conclusão". Para rever (conferir fatos).
   - Estratégia: contar a história real de alguém do seu meio e convidar a pessoa para collab.
+- **Vídeo do Bruno Gouveia (luto):** abre com o fato chocante e uma pergunta ("Como alguém faz isso?"), cria uma imagem própria ("a régua que mede o luto dos outros mede comportamento, não dor"), fala direto com quem assiste ("talvez você conheça isso"), troca o sentido da culpa ("não é prova de que você sofreu menos, é prova de que você está vivo") e fecha com o livro de 2019 e a assinatura. É o mesmo tema do seu campeão de 458x.
+  - **O que a gente criou:** **A régua do luto** (sua história com seu pai, no molde Fernando, com o seu gancho "Te disseram que…"). Para gravar, com os seus dados reais.
 
 ## 9. Os seus próprios campeões
 - **"Te disseram que…"** (458x): https://www.instagram.com/p/DYkX-DmOqx9/
@@ -87,4 +89,3 @@ Os roteiros completos estão no banco de conteúdos: conteudos.html (https://cla
 ## Ainda falta você descrever
 - Ana, 6 s, "Voltar para casa por vezes é voltar para si": https://www.instagram.com/reel/DbX7mCzBfvj/
 - Ana, 21 s, "Quando não existem palavras": https://www.instagram.com/reel/DbMJmYExmcn/
-- Fernando, Bruno Gouveia (item 8): como ele mostra o caso na tela?
