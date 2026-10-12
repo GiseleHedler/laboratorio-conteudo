@@ -30,4 +30,23 @@ Export do Viral Finder recebido em 12/10/2026. Multiplicador = views ÷ mediana 
 | 11.1x | 20.664 | 65 | 2026-10-01 | https://www.instagram.com/p/Dd8pSl-PLLG | Vitamina B12: a dose depende de contexto, necessidade e individualidade. Nesse vídeo, o @luciano explica o que |
 | 10.3x | 18.555 | 47 | 2026-09-16 | https://www.instagram.com/p/DdXO-Qmph03 | ELAS ESTÃO DE VOLTA! 💚 A espera acabou: as Perfect Protein estão disponíveis no site. Para quem estava esperan |
 
-Transcrição da fala: pendente (Apify).
+## Ganchos falados (transcrição)
+| x | duração | link | primeiros 3 segundos |
+|---|---|---|---|
+| 76.8x | 164s | https://www.instagram.com/reel/DZCgapgN9KJ/ | viajou, toma própolis, ficou em casa, toma própolis, |
+| 58.9x | 102s | https://www.instagram.com/reel/DPSCJrAATT6/ | Mingau de aveia proteico, sim, mingau de aveia proteico pra você bater sua meta de proteína, mas bater com indulgência. |
+| 54.1x | 335s | https://www.instagram.com/reel/DQlspLBjmX1/ | Porque eu criei, prescrevo e uso esses dois suplementos aqui, todos os dias no meu pós-treino. |
+| 36.1x | 376s | https://www.instagram.com/reel/DRg6gw7DQm_/ | A melhor barrinha proteica que você vai comer na sua vida. |
+| 29.7x | 186s | https://www.instagram.com/reel/DRO6SPbDZIF/ | Guacamole proteica para você bater sua meta de proteínas diária. |
+| 25.3x | 209s | https://www.instagram.com/reel/DddxpWKpquY/ | 3 suplementos que podem ajudar muito quem está usando caneta emagrecedora e está perdendo cabelo, |
+| 20.4x | 70s | https://www.instagram.com/reel/DYAxnqqOuaF/ | Mousse de chocolate com 23 gramas de proteína por porção. |
+| 18.7x | 47s | https://www.instagram.com/reel/Db0jLZHpIPE/ | (sem fala) |
+| 17.3x | 79s | https://www.instagram.com/reel/DZs4hjMJ48P/ | Todo mundo é apaixonado por canjica, mas a gente sabe que às vezes ela pode ser um pouquinho pesada. |
+| 14.6x | 107s | https://www.instagram.com/reel/Dcb91J5OnsR/ | Pão sem glúten tem fama de ficar com textura de borracha ou esfarelar na mão. |
+| 13.2x | 233s | https://www.instagram.com/reel/DTXbsl0jh8Y/ | Sabe o que é isso aqui? Machá proteico. E eu vou te ensinar agora, porque isso aqui é uma delícia, refrescante para esse calorão que está fazendo. |
+| 12.9x | 82s | https://www.instagram.com/reel/Da_R8AYpVNo/ | Como bom mineiro que eu sou, não deu conta de viver sem pão de queijo. |
+| 11.3x | 86s | https://www.instagram.com/reel/DHvOaAbOhwR/ | Própolis realmente melhora a imunidade? Sim, eu vou te explicar como. |
+| 11.1x | 184s | https://www.instagram.com/reel/Dd8pSl-PLLG/ | Você provavelmente já ouviu falar de vitamina B12, mas a minha dúvida é essa. |
+| 10.3x | 108s | https://www.instagram.com/reel/DdXO-Qmph03/ | Quer uma boa notícia? Aliás, uma ótima notícia que você estava esperando. |
+
+Transcrição completa: natural-pure/transcricoes/cycles.nutrition.md

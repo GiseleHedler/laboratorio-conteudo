@@ -30,4 +30,23 @@ Export do Viral Finder recebido em 12/10/2026. Multiplicador = views ÷ mediana 
 | 1.5x | 8.556 | 11 | 2026-09-10 | https://www.instagram.com/p/DdGzANrNBse | Uma suplementação hiper completa específica para você. É qualidade de vida . É vida saudável. É ter longevidad |
 | 1.5x | 11.275 | 27 | 2026-08-03 | https://www.instagram.com/p/DblsbOIReqq | Uma das coisas mais incríveis que descobri nesses últimos tempos foi a @purissima.saude 💚🌿 amei TANTO que eu t |
 
-Transcrição da fala: pendente (Apify).
+## Ganchos falados (transcrição)
+| x | duração | link | primeiros 3 segundos |
+|---|---|---|---|
+| 24.8x | 37s | https://www.instagram.com/reel/Dd_nh2xyGY2/ | existe uma grande diferença do produto que você divulga e o produto que realmente faz parte da sua rotina. |
+| 11.4x | 250s | https://www.instagram.com/reel/Dd9966XqGA0/ | Há um ano eu fiz um compromisso público. Eu estava num palco, diante de mais de 9 mil pessoas, anunciando uma grande novidade, |
+| 7.8x | 266s | https://www.instagram.com/reel/DPtZmH6jplv/ | Seja bem-vindo à Puríssima! Oferecemos um novo modelo de suplementação, |
+| 6.2x | 329s | https://www.instagram.com/reel/DXRV5sgjjIC/ | Esse vídeo é sobre um dos suplementos mais eficazes que eu já pesquisei em mais de 20 anos de profissão. |
+| 6.2x | 323s | https://www.instagram.com/reel/DPpKkNeDvI7/ | Gravei esse vídeo para esclarecer uma dúvida recorrente que surgiu depois da minha apresentação. |
+| 5.2x | 13s | https://www.instagram.com/reel/DZu2iBVuwhU/ | (sem fala) |
+| 3.2x | 172s | https://www.instagram.com/reel/DP4f7hBDrop/ | A puríssima, como tudo que o Flávio faz, é algo que é revolucionário, |
+| 2.8x | 139s | https://www.instagram.com/reel/DPcD2wXDlNR/ | Esse é o segredo do leite materno que quase ninguém conhece. Crescer forte, saudável e feliz não é questão de sorte, |
+| 2.6x | 22s | https://www.instagram.com/reel/Dbf8MU3R6Rn/ | E aí Meninos, café tá pronto |
+| 2.2x | 11s | https://www.instagram.com/reel/DUmGyQoDqz_/ | (sem fala) |
+| 2.0x | 18s | https://www.instagram.com/reel/DcoZAdkx82B/ | (sem fala) |
+| 1.9x | 168s | https://www.instagram.com/reel/DXCRMtXDo3T/ | Transparência é o atributo natural de quem trabalha com excelência. |
+| 1.7x | 41s | https://www.instagram.com/reel/DcgiTBzxr9e/ | Someone to hold me tight |
+| 1.5x | 121s | https://www.instagram.com/reel/DdGzANrNBse/ | Bom, gente, eu estava aqui preparando os meus conteúdos, aí chegou pra mim puríssima, né? |
+| 1.5x | 61s | https://www.instagram.com/reel/DblsbOIReqq/ | Oi gente, eu estava super empolgada, esperando essa entrega chegar para mostrar para vocês, |
+
+Transcrição completa: natural-pure/transcricoes/purissima.saude.md

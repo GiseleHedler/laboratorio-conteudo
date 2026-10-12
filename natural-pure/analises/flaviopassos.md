@@ -28,4 +28,23 @@ Export do Viral Finder recebido em 12/10/2026. Multiplicador = views ÷ mediana 
 | 3.7x | 400.870 | 889 | 2025-09-24 | https://www.instagram.com/p/DO_3jybjr0H | A cada década, o diagnóstico de autismo cresce em ritmo alarmante. 🤯 O que está por trás disso? Fatores genéti |
 | 3.7x | 391.814 | 392 | 2024-02-08 | https://www.instagram.com/p/C3Ge_1SOPnC | 🚨PARTE 1 - Invista alguns minutos de sua vida para assistir. Surpreenda-se e absorva o conteúdo. Na sequência, |
 
-Transcrição da fala: pendente (Apify).
+## Ganchos falados (transcrição)
+| x | duração | link | primeiros 3 segundos |
+|---|---|---|---|
+| 13.4x | 339s | https://www.instagram.com/reel/DZACkCtOzmY/ | Se você gosta de azeite, precisa saber que ele é o segundo alimento mais falsificado do mundo. |
+| 10.5x | 212s | https://www.instagram.com/reel/DVEDkMIDv0V/ | Conheça os 5 melhores suplementos de 2026. Primeiro, urolitina. |
+| 10.4x | 313s | https://www.instagram.com/reel/DWe1YlVCh8X/ | Prenderam essa semana os donos de uma fábrica de suplementos em Minas Gerais. |
+| 9.8x | 321s | https://www.instagram.com/reel/DP_aU03jg0l/ | Se eu precisasse emagrecer, eu não começaria tentando comer menos. |
+| 9.6x | 434s | https://www.instagram.com/reel/DTREdUyjgsV/ | O que por anos chamaram de radical, ontem virou diretriz oficial do governo americano. |
+| 7.3x | 591s | https://www.instagram.com/reel/DRNgewlDoaq/ | Quando você completa 50 anos, metade das suas mitocôndrias já morreu. |
+| 6.0x | 260s | https://www.instagram.com/reel/DVPGeDRjgPw/ | E o café é saudável? A resposta curta é sim e bastante. |
+| 5.8x | 869s | https://www.instagram.com/reel/DX1V9d4uBzX/ | A menopausa é a melhor fase da sua vida, e eu posso te provar. |
+| 5.3x | 55s | https://www.instagram.com/reel/DeC28fJKjsF/ | Muita gente pedindo meu posicionamento sobre as eleições, vou trazer isso da forma mais simples possível. |
+| 4.3x | 452s | https://www.instagram.com/reel/DZTA7FKqSUE/ | A ciência testou 38 alimentos para descobrir qual mata a fome por mais tempo. |
+| 4.2x | 363s | https://www.instagram.com/reel/Db_zdqQOgeJ/ | Você provavelmente está acompanhando essa notícia de que tem muito azeite vendido como extra virgem que não é extra virgem. |
+| 3.9x | 432s | https://www.instagram.com/reel/DXIKmB7DmRB/ | A roupa que você usa para treinar pode estar intoxicando o seu corpo com químicos que o seu metabolismo nunca consegue eliminar. |
+| 3.8x | 253s | https://www.instagram.com/reel/DZKph4ruqn0/ | Existe um exercício simples que faz mais pela sua saúde em 3 minutos do que 30 minutos de caminhada. |
+| 3.7x | 289s | https://www.instagram.com/reel/DO_3jybjr0H/ | Atenção pais e mães, hoje eu quero trazer informações sobre algo muito importante, |
+| 3.7x | 900s | https://www.instagram.com/reel/C3Ge_1SOPnC/ | You'd think less than two years after the very public failure of the COVID vaccines that more people in this country would be skeptical of brand new p |
+
+Transcrição completa: natural-pure/transcricoes/flaviopassos.md

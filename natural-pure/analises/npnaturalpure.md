@@ -119,3 +119,24 @@ Só 3 anúncios ativos. Todos levam para a página do produto no site, com o bot
 
 O anúncio de ômega 3 reaproveita o gancho do reel orgânico de 09/2026 (34x). É o caminho certo: anunciar o que já provou no orgânico.
 Antes de dizer qual anúncio dá lucro, é preciso olhar o custo por compra na conta de anúncios (token da Meta vencido em 10/10/2026).
+
+## Ganchos falados do Gabriel nos collabs (transcrição)
+| x | duração | link | primeiros 3 segundos |
+|---|---|---|---|
+| 229.3x | 166s | https://www.instagram.com/reel/C6jms6JuFj5/ | provavelmente você já tem notícias do que está acontecendo aqui no nosso estado do Rio Grande do Sul, |
+| 153.4x | 145s | https://www.instagram.com/reel/DIZAjl2Rmg1/ | Ficar em jejum pela manhã é a melhor opção? |
+| 129.2x | 179s | https://www.instagram.com/reel/DIcTBIqRNEe/ | Porque ter o sono perfeito e começa usando melatonina, talvez não seja uma boa ideia. |
+| 119.8x | 87s | https://www.instagram.com/reel/C-alyLDO8Gn/ | Na última semana, a CEO da FSA, Giselle Hedler, após falência renal, precisou passar por um transplante de rim. |
+| 112.8x | 580s | https://www.instagram.com/reel/DORkAs6kaBd/ | Nesse último domingo, o dia do nutricionista foi ao ar no Fantástico, uma reportagem sobre hipervitaminose. |
+| 44.6x | 59s | https://www.instagram.com/reel/DXKhdOGkYlK/ | Tu toma melatonina via oral tentando melhorar o teu sono? |
+| 34.1x | 101s | https://www.instagram.com/reel/Dc_abh7lbaH/ | No teu ômega 3 não tem pouca dose, tem óleo demais. |
+| 21.9x | 59s | https://www.instagram.com/reel/DV_sro7kTA1/ | Eu estou perseguindo umas estratégias para aumento de sono profundo, de forma a turbinar minha saúde hormonal, hormônio do crescimento, memória, limpe |
+| 18.9x | 247s | https://www.instagram.com/reel/DX2Y3p5xFpv/ | Deixa eu descrever aqui para vocês a suplementação que eu estou fazendo, as estratégias que eu estou usando. |
+| 18.1x | 191s | https://www.instagram.com/reel/DMd3-SOPz4R/ | 5 gramas de proteína perdida por dia. Só pra você ter uma ideia, tá? Era como se o meu corpo, |
+| 17.7x | 87s | https://www.instagram.com/reel/DEVkVQ8xDOB/ | Bora lá, partir o correio. Hoje vai ter que chegar os produtos que eu estou esperando. |
+| 17.1x | 95s | https://www.instagram.com/reel/DH3z_hypTRh/ | Você sente insônia, dores musculares, cansaço, cansaço extremo, dores pelo corpo inteiro, musculares ou articulares. |
+| 14.5x | 0s | https://www.instagram.com/reel/DLN_NCSRZS1/ | (sem fala ou não transcrito) |
+| 14.1x | 0s | https://www.instagram.com/reel/C-tKk5XunDE/ | (sem fala ou não transcrito) |
+| 12.4x | 0s | https://www.instagram.com/reel/DE-1tCuxFUw/ | (sem fala ou não transcrito) |
+
+Transcrição completa: natural-pure/transcricoes/gabriel_collabs_np.md
