@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Archivo+Black&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root{
+  --roxo:#2e1a35;
+  --magenta:#b13a6a;
+  --creme:#ece4d8;
+}
+
+body{ background:#555; }
+
+.slide{
+  width:1080px;
+  height:1350px;
+  position:relative;
+  overflow:hidden;
+  font-family:'Archivo', sans-serif;
+  display:flex;
+  flex-direction:column;
+}
+
+/* === FUNDOS (alternar entre os 3) === */
+.bg-roxo{ background:var(--roxo); }
+.bg-magenta{ background:var(--magenta); }
+.bg-creme{ background:var(--creme); }
+
+/* === FUNDOS TEXTURIZADOS (dão profundidade, opcional) ===
+   Use no lugar de bg-* para um visual menos chapado. */
+.tex-grad-roxo{ background:
+  radial-gradient(circle at 75% 20%, rgba(177,58,106,0.55), transparent 55%),
+  radial-gradient(circle at 20% 85%, rgba(177,58,106,0.30), transparent 50%),
+  var(--roxo); }
+.tex-grad-magenta{ background:
+  radial-gradient(circle at 25% 15%, rgba(236,228,216,0.30), transparent 55%),
+  radial-gradient(circle at 85% 80%, rgba(46,26,53,0.45), transparent 55%),
+  var(--magenta); }
+.tex-grad-creme{ background:
+  radial-gradient(circle at 80% 25%, rgba(177,58,106,0.22), transparent 55%),
+  radial-gradient(circle at 15% 90%, rgba(46,26,53,0.12), transparent 50%),
+  var(--creme); }
+.tex-linhas-roxo{ background:
+  repeating-linear-gradient(115deg, rgba(177,58,106,0.10) 0 2px, transparent 2px 46px),
+  var(--roxo); }
+.tex-pontos-magenta{ background:
+  radial-gradient(rgba(255,255,255,0.10) 2px, transparent 2px),
+  var(--magenta); background-size:auto, 40px 40px; }
+
+/* === MARCA TOPO === */
+.marca{
+  text-align:center;
+  padding-top:60px;
+  font-weight:400;
+  font-size:30px;
+  letter-spacing:0.5px;
+}
+.marca b{ font-weight:700; }
+.marca-claro{ color:var(--creme); }
+.marca-claro b{ color:#fff; }
+.marca-escuro{ color:var(--roxo); }
+
+/* === TITULO (caixas tipo Vick) === */
+.titulo-wrap{ padding:50px 70px 0 70px; margin-top:30px; }
+.titulo{
+  font-family:'Archivo Black', sans-serif;
+  font-size:96px;
+  line-height:1.02;
+  text-transform:uppercase;
+  display:inline;
+}
+.titulo .linha{
+  display:inline;
+  padding:6px 14px;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+
+/* === COMENTARIO === */
+.comentario-wrap{ padding:0 70px; margin-top:38px; }
+.comentario{
+  display:inline;
+  font-weight:400;
+  font-size:46px;
+  line-height:1.45;
+  padding:8px 16px;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+.comentario b{ font-weight:700; }
+
+/* === CAIXAS (combinacoes texto/fundo) === */
+.cx-creme{ background:var(--creme); color:var(--roxo); }
+.cx-magenta{ background:var(--magenta); color:#fff; }
+.cx-roxo{ background:var(--roxo); color:var(--creme); }
+
+/* === DOTS PAGINACAO === */
+.dots{ position:absolute; bottom:55px; left:0; right:0; display:flex; justify-content:center; gap:14px; }
+.dot{ width:13px; height:13px; border-radius:50%; }
+.dot.on-claro{ background:var(--creme); }
+.dot.off-claro{ background:rgba(236,228,216,0.35); }
+.dot.on-escuro{ background:var(--roxo); }
+.dot.off-escuro{ background:rgba(46,26,53,0.3); }
+
+/* === CAPA === */
+.capa .titulo-wrap{ margin-top:180px; }
+.capa .titulo{ font-size:110px; }
+
+/* === NUMERO DECORATIVO === */
+.num{
+  position:absolute;
+  bottom:130px;
+  right:70px;
+  font-family:'Archivo Black', sans-serif;
+  font-size:340px;
+  line-height:0.8;
+  opacity:0.12;
+}
+.num-claro{ color:var(--creme); }
+.num-escuro{ color:var(--roxo); }
+
+/* === SLIDE COM FOTO DE FUNDO (texto por cima) === */
+.foto-fundo{ position:absolute; inset:0; }
+.foto-fundo img{ width:100%; height:100%; object-fit:cover; }
+.foto-fundo::after{ content:''; position:absolute; inset:0; background:rgba(46,26,53,0.25); }
+
+/* === SLIDE COLAGEM 2x2 === */
+.grid{ position:absolute; inset:0; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; }
+.grid div{ overflow:hidden; }
+.grid img{ width:100%; height:100%; object-fit:cover; display:block; }
+.marca-sobre{ position:absolute; top:38px; left:0; right:0; text-align:center; z-index:5;
+  font-weight:400; font-size:30px; color:#fff; text-shadow:0 1px 6px rgba(0,0,0,0.5); }
+.marca-sobre b{ font-weight:700; }
+.titulo-centro{ position:absolute; top:50%; left:50px; right:50px; transform:translateY(-50%); z-index:6; }
+
+/* === SLIDE COM FOTO-DESTAQUE (produto/objeto centralizado) === */
+.destaque{ position:absolute; bottom:0; left:50%; transform:translateX(-50%); max-height:62%; }
+.destaque img{ max-height:100%; width:auto; display:block; }
+
+.spacer{ flex:1; }
+</style>
+</head>
+<body>
+
+<!-- ===================================================================
+     COMO USAR ESTE TEMPLATE
+     Cada bloco abaixo e um TIPO de slide. Duplique o tipo que precisar,
+     troque o texto e as fotos, e ajuste a cor de fundo (bg-roxo /
+     bg-magenta / bg-creme), alternando a cada slide.
+
+     REGRA DE COR DAS CAIXAS:
+     - Fundo roxo ou magenta  -> marca-claro, dots claros, caixas cx-creme/cx-magenta
+     - Fundo creme            -> marca-escuro, dots escuros, caixas cx-roxo/cx-magenta
+     ==================================================================== -->
+
+
+<!-- TIPO A: CAPA SO TEXTO -->
+<div class="slide bg-roxo capa">
+  <div class="marca marca-claro">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div>
+  <div class="titulo-wrap">
+    <span class="titulo">
+      <span class="linha cx-creme">LINHA 1</span><br>
+      <span class="linha cx-magenta">LINHA 2</span><br>
+      <span class="linha cx-creme">LINHA 3</span>
+    </span>
+  </div>
+  <div class="dots">
+    <span class="dot on-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span>
+  </div>
+</div>
+
+
+<!-- TIPO B: CONTEUDO (titulo + comentario + numero) -->
+<div class="slide bg-magenta">
+  <div class="marca marca-claro">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div>
+  <div class="titulo-wrap">
+    <span class="titulo">
+      <span class="linha cx-creme">TITULO</span><br>
+      <span class="linha cx-creme">DO SLIDE</span>
+    </span>
+  </div>
+  <div class="comentario-wrap">
+    <span class="comentario cx-creme">Texto do comentario em um unico paragrafo, com <b>a parte importante em negrito.</b></span>
+  </div>
+  <div class="num num-claro">2</div>
+  <div class="dots">
+    <span class="dot off-claro"></span><span class="dot on-claro"></span><span class="dot off-claro"></span>
+  </div>
+</div>
+
+
+<!-- TIPO C: CONTEUDO FUNDO CREME (inverte cores) -->
+<div class="slide bg-creme">
+  <div class="marca marca-escuro">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div>
+  <div class="titulo-wrap">
+    <span class="titulo">
+      <span class="linha cx-roxo">TITULO</span><br>
+      <span class="linha cx-magenta">DESTAQUE</span>
+    </span>
+  </div>
+  <div class="comentario-wrap">
+    <span class="comentario cx-roxo">Texto do comentario, fundo creme usa <b>caixa roxa com texto creme.</b></span>
+  </div>
+  <div class="num num-escuro">3</div>
+  <div class="dots">
+    <span class="dot off-escuro"></span><span class="dot off-escuro"></span><span class="dot on-escuro"></span>
+  </div>
+</div>
+
+
+<!-- TIPO D: FOTO DE FUNDO COM TEXTO POR CIMA -->
+<div class="slide">
+  <div class="foto-fundo"><img src="FOTO_AQUI.jpeg"></div>
+  <div class="marca-sobre">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div>
+  <div class="titulo-centro">
+    <span class="titulo">
+      <span class="linha cx-magenta">TITULO SOBRE</span><br>
+      <span class="linha cx-magenta">A FOTO</span>
+    </span>
+  </div>
+  <div class="dots">
+    <span class="dot on-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span>
+  </div>
+</div>
+
+
+<!-- TIPO E: COLAGEM 2x2 (4 fotos) -->
+<div class="slide">
+  <div class="grid">
+    <div><img src="FOTO_1.jpeg"></div>
+    <div><img src="FOTO_2.jpeg"></div>
+    <div><img src="FOTO_3.jpeg"></div>
+    <div><img src="FOTO_4.jpeg"></div>
+  </div>
+  <div class="marca-sobre">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div>
+  <div class="titulo-centro">
+    <span class="titulo">
+      <span class="linha cx-magenta">TITULO NO</span><br>
+      <span class="linha cx-magenta">MEIO</span>
+    </span>
+  </div>
+  <div class="dots">
+    <span class="dot on-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span>
+  </div>
+</div>
+
+
+<!-- TIPO F: FOTO-DESTAQUE (objeto/produto centralizado embaixo) -->
+<div class="slide bg-magenta">
+  <div class="marca marca-claro">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div>
+  <div class="titulo-wrap">
+    <span class="titulo">
+      <span class="linha cx-creme">NOME DO ITEM</span>
+    </span>
+  </div>
+  <div class="comentario-wrap">
+    <span class="comentario cx-creme">Comentario curto sobre o item.</span>
+  </div>
+  <div class="destaque"><img src="FOTO_ITEM.png"></div>
+  <div class="dots">
+    <span class="dot off-claro"></span><span class="dot on-claro"></span><span class="dot off-claro"></span>
+  </div>
+</div>
+
+</body>
+</html>
