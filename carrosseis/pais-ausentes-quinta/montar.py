@@ -185,13 +185,13 @@ for yy in range(H): fade.putpixel((0,yy),255 if yy<TOPO else int(255*max(0,1-(yy
 img.paste(Image.new('RGB',(W,H),'#000'),(0,0),fade.resize((W,H)))
 img=gradiente(img,de=0.20,forca=248)
 d=ImageDraw.Draw(img)
-y=titulo_cursiva(d,760,['VOCÊ NÃO PRECISA','PROVAR'],'que merece ficar',tsz=82,csz=112)
-y+=30
-for l in ['Na Quinta da Mente eu aprofundo isso,','ao vivo e de graça. Quinta, 18:59.']:
-    d.text((W/2,y),l,font=f(REG,40),fill=BRANCO,anchor='ms'); y+=54
+y=titulo_cursiva(d,700,['VOCÊ NÃO PRECISA','PROVAR'],'que merece ficar',tsz=74,csz=100)
 y+=24
-for l in ['Comenta 5524','que eu te mando o link.']:
-    d.text((W/2,y),l,font=f(BLK,50),fill=ROSE,anchor='ms'); y+=64
+d.text((W/2,y),'Aula desta quinta, 18:59, ao vivo e de graça:',font=f(REG,34),fill=BRANCO,anchor='ms'); y+=66
+for l in ['POR QUE VOCÊ ESCOLHE','QUEM VAI EMBORA']:
+    d.text((W/2,y),l,font=f(BLK,52),fill=ROSE,anchor='ms'); y+=62
+y+=22
+d.text((W/2,y),'Comenta 5524 que eu te mando o link.',font=f(B8,40),fill=BRANCO,anchor='ms')
 d.text((W/2,H-45),'@giselehedler',font=f(ITA,24),fill='#d8d2e0',anchor='ms')
 img.save(OUT+'10.png')
 
