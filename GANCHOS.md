@@ -128,6 +128,38 @@ Pega o assunto da semana e mostra o que ele revela sobre a mulher que está assi
 - "Quer que o seu filho tenha inteligência emocional? Comece pelo prato sujo." **53x** (estudo de Harvard, molde Tay). https://www.instagram.com/p/DB8onB0MZUj
 - "Sabia que sua mente acredita e realiza tudo aquilo que você diz?" + "escreva PODER". **153x, 4.297 comentários.** https://www.instagram.com/p/DAcKS31PUup
 
+## 16. Cena de família que vira argumento (pilar CORPO)
+- **Original (Tay, o maior dela):** "E aí eu falo para ele: pai, você precisa fazer musculação. Você já tem 62 anos, a chance de você ficar bombado é zero. O que você vai fazer é garantir que aos 80 você consiga carregar os meus filhos." Legenda: "Musculação não com o objetivo de ser a mais gostosa, mas a mais velha…" **66x, 3,8 mi.** https://www.instagram.com/p/CsqmEOXAuAb
+- **Por que funciona:** troca o motivo (estética) por um motivo que dói (depender de alguém) e prova com uma cena de família.
+- **Suas versões:**
+  - "Musculação depois dos 40 não é para ficar bonita. É para ninguém precisar te levantar do sofá aos 80."
+  - "Eu falei para a minha mãe: o médico não vai te devolver a força. Só você."
+  - "Eu passei por hemodiálise. Sabe o que eu aprendi sobre o corpo? Que ele avisa muito antes de gritar."
+
+## 17. Fenômeno da geração + estudo com número
+Dá nome a uma mudança no comportamento de uma geração e prova com pesquisa.
+- **Originais (Tay):**
+  - "A gente tá vivendo um colapso bizarro e quase ninguém tá falando disso. A gente tá virando uma geração de fantasmas." **13x, 8,9 mi, 6.141 comentários.** https://www.instagram.com/p/DRXVy8qjUJE
+  - "Geração zero álcool." (45% bebem, gastam 87% menos) **10x, 4,4 mi.** https://www.instagram.com/p/DIPREctyiPD
+  - "A gente tá ficando tão burro que os filmes estão tendo que piorar de propósito." (Universidade da Califórnia, menos 65%) **3,5 mi.** https://www.instagram.com/p/DSbA3z8DYKc
+- **Suas versões (conferir os números antes de gravar):**
+  - "As mulheres depois dos 50 estão pedindo divórcio como nunca. E quase ninguém está falando do motivo."
+  - "Tem uma geração de mulheres que nunca se aposentou de cuidar: dos filhos, depois dos netos, depois dos pais."
+  - "A geração das nossas mães aguentava. A nossa está indo embora. E as duas estão cansadas."
+
+## 18. Diz a frase de golpista e desmonta (variação do cigarro)
+- **Original (Tay):** "E foi assim que eu fiquei bilionária antes dos 30, aposentei meus pais sem nunca ter pisado numa faculdade. Quando eu escuto essas coisas, eu sinto logo o cheiro de golpe." **9x, 1,9 mi.** https://www.instagram.com/p/DBR3zDNPoNC
+- **Suas versões (pilar PROSPERIDADE e MENTE):**
+  - "E foi assim que eu curei todos os meus traumas em 21 dias. Quando eu escuto isso, eu sinto o cheiro de golpe."
+  - "Basta mentalizar que o dinheiro vem. Quando eu escuto isso, eu sinto o cheiro de golpe."
+- **Ganho:** te separa do "autoconhecimento de Instagram" e reforça que você é a séria do nicho.
+
+## 19. Opinião sobre riqueza (pilar PROSPERIDADE)
+- **Original (Tay):** "Eu não tenho a menor vontade de ter um iate, um jato, mansões. As pessoas vinculam riqueza à posse. Para mim, riqueza é experiência." **9x, 1,8 mi, 2.283 comentários.** https://www.instagram.com/p/DCXb_dwvJ2y
+- **Suas versões:**
+  - "Eu não quero ser rica para comprar coisas. Quero ser rica para nunca mais pedir licença para gastar com a minha vida."
+  - "Prosperidade não é ter. É não precisar da aprovação de ninguém para o que você escolhe."
+
 ---
 
 ## Fecho com palavra-chave (não é gancho, mas gera comentários)
@@ -135,6 +167,7 @@ Pega o assunto da semana e mostra o que ele revela sobre a mulher que está assi
 - **Sua versão:** "Comenta TREINÁVEL que eu te mando a aula."
 
 ## Achados que mudam o jogo
+- **Tay preenche os seus pilares vazios:** o maior vídeo dela é sobre CORPO (musculação aos 62 para carregar os netos), e outro campeão é sobre PROSPERIDADE (riqueza é experiência). Os moldes 16 e 19 vêm daí.
 - **Carol e política:** o vídeo dela que bombou ("Não discuta com convictos", 21,5 mil comentários) toma lado. Ela fala dos "eleitores raivosos da extrema esquerda". O engajamento veio da tribo. O seu é neutro de propósito, então ninguém compartilha para "ganhar". É escolha, não erro.
 - **Ana e anúncios:** 216 dos 490 reels da Ana têm cara de anúncio (curtidas baixíssimas para as visualizações). Parte do "viral" dela é tráfego pago. Não compare o seu orgânico com os números brutos dela.
 - **Carol usa depoimento como vídeo:** os reels de alunas contando a própria virada ("41 anos procurando colo") deram de 10 a 12 vezes a média. Você tem Maria Cristina, Cris Molossi e Denise. Falta o consentimento.

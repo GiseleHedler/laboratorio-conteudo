@@ -100,3 +100,7 @@ Os roteiros completos estão no banco de conteúdos: conteudos.html (https://cla
 - **Análise completa:** analises/carol-rache.md. **Ganchos transcritos:** GANCHOS.md (moldes 1 a 6, 11 e 12).
 - **Campeões:** "Só é ofensa se eu pegar para mim" (https://www.instagram.com/p/C_tw3n5O5Yj), teoria do velcro (https://www.instagram.com/p/DDN0QnYPMIb), "O ciúme é um sintoma" (https://www.instagram.com/p/DF2pOOiuwFV), carrossel "Ele não vai mudar" (https://www.instagram.com/p/DAMfchdO--9).
 - **O que a gente criou:** teoria do ímã, "Culpa é igual boleto no nome dos outros", "Você não é cansada. Você é viciada em ser necessária", "Comenta TREINÁVEL".
+
+## 11. Tay Dantas (export do Viral Finder)
+- **Campeões:** musculação aos 62 (https://www.instagram.com/p/CsqmEOXAuAb), geração de fantasmas (https://www.instagram.com/p/DRXVy8qjUJE), bilionária antes dos 30 (https://www.instagram.com/p/DBR3zDNPoNC), riqueza é experiência (https://www.instagram.com/p/DCXb_dwvJ2y).
+- **O que a gente criou:** moldes 16 a 19 em GANCHOS.md ("Musculação depois dos 40 não é para ficar bonita", "Curei meus traumas em 21 dias… cheiro de golpe", "Quero ser rica para nunca mais pedir licença").
