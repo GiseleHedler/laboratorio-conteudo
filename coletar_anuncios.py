@@ -12,6 +12,7 @@ ou APIFY_TOKEN no .env no computador.
 Salva em dados/anuncios_<slug>.json
 Rodar:  python3 coletar_anuncios.py "Ana Lisboa" [limite]
         python3 coletar_anuncios.py pagina:387087041810736 [limite]   (todos os anúncios da página, ativos e antigos)
+        python3 coletar_anuncios.py "ryzesuperfoods.com" 30 US        (terceiro argumento: país, padrão BR)
 """
 import os
 import sys
@@ -39,11 +40,12 @@ def chamar(metodo, caminho, corpo=None):
 def main():
     nome = sys.argv[1]
     limite = int(sys.argv[2]) if len(sys.argv) > 2 else 150
+    pais = sys.argv[3].upper() if len(sys.argv) > 3 else "BR"
     if nome.startswith("pagina:"):
-        params = {"active_status": "all", "ad_type": "all", "country": "BR",
+        params = {"active_status": "all", "ad_type": "all", "country": pais,
                   "view_all_page_id": nome.split(":", 1)[1], "search_type": "page", "media_type": "all"}
     else:
-        params = {"active_status": "active", "ad_type": "all", "country": "BR",
+        params = {"active_status": "active", "ad_type": "all", "country": pais,
                   "q": nome, "search_type": "keyword_unordered", "media_type": "all"}
     busca = "https://www.facebook.com/ads/library/?" + urllib.parse.urlencode(params)
     entrada = {"urls": [{"url": busca}], "count": limite, "scrapeAdDetails": False}
@@ -53,7 +55,7 @@ def main():
         time.sleep(10)
         run = chamar("GET", "/actor-runs/" + run["id"])["data"]
     itens = chamar("GET", "/datasets/%s/items?clean=true&format=json" % run["defaultDatasetId"])
-    slug = nome.lower().replace(" ", "_").replace(":", "_")
+    slug = ("" if pais == "BR" else pais.lower() + "_") + nome.lower().replace(" ", "_").replace(":", "_")
     os.makedirs("dados", exist_ok=True)
     with open("dados/anuncios_%s.json" % slug, "w", encoding="utf-8") as f:
         json.dump(itens, f, ensure_ascii=False, indent=1)
