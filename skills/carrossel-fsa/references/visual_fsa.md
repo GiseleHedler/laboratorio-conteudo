@@ -11,7 +11,7 @@ Inspirado no formato editorial de caixas de texto sólidas sobre fundo de cor ou
 | Rosa FSA      | #C73E5C  | Fundo alternado; cor do "A" no logo              |
 | Rosa destaque | #DC447C  | Detalhe e destaque (palavra, sublinhado, selo)   |
 | Vinho fundo   | #14020D  | Fundo mais escuro, alternativa ao roxo           |
-| Creme         | #ece4d8  | Fundo claro herdado do template antigo. NÃO está na paleta oficial: confirmar com a Gisele antes de usar |
+| Creme         | #ece4d8  | Fundo claro. Mantido pela Gisele (12/10/2026)  |
 
 No código do template, a variável --magenta guarda o Rosa FSA (o nome ficou por compatibilidade).
 

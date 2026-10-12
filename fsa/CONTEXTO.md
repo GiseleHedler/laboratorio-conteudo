@@ -36,7 +36,7 @@ Frases que prometem resultado de carreira ou de saúde e não podem ir para o co
 ## Identidade visual (paleta oficial, 12/10/2026; arquivos em fsa/marca/)
 - Roxo FSA #2B0739 · Rosa FSA #C73E5C · Rosa destaque #DC447C · Vinho fundo #14020D.
 - Logo: fsa/marca/logo-fsa.jpg ("FS" roxo, "A" rosa, fundo branco). Falta versão PNG transparente ou negativa.
-- Creme #ece4d8 era do template antigo e não está na paleta oficial: confirmar se fica.
+- Creme #ece4d8: fica (decisão da Gisele, 12/10/2026), como o fundo claro da marca.
 - Fonte: pendente. Template usa Archivo Black e Archivo.
 - A skill carrossel-fsa (cópia em skills/carrossel-fsa) já usa as cores novas.
 
