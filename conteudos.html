@@ -1,0 +1,393 @@
+<title>Banco de Conteúdos Gisele</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Satisfy&display=swap">
+<style>
+/* Layout: uma coluna de leitura; resumo da semana no topo; cada conteúdo é um cartão com estado, roteiro e legenda; no fim, bancos de ganchos e links pendentes */
+:root{
+  --bg:#eae8ec; --surface:#f6f4f7; --fg:#241751; --muted:#5a4f74; --line:#d6d0de;
+  --accent:#b53b70; --soft:#efe1ea; --ok:#2f6b4f; --warn:#9a5a12; --todo:#623079;
+  --display:"Merriweather", Georgia, "Times New Roman", serif;
+  --script:"Satisfy", "Brush Script MT", cursive;
+  --body:"Merriweather", Georgia, serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#241751; --surface:#2e2063; --fg:#eae8ec; --muted:#c3bad6; --line:#43357c;
+  --accent:#e29f8e; --soft:#3a2a6e; --ok:#8fd1ae; --warn:#f0bf7a; --todo:#d3a8ea; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#241751; --surface:#2e2063; --fg:#eae8ec; --muted:#c3bad6; --line:#43357c;
+  --accent:#e29f8e; --soft:#3a2a6e; --ok:#8fd1ae; --warn:#f0bf7a; --todo:#d3a8ea; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15.5px;line-height:1.65;margin:0}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:28px 72px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h1{font-size:clamp(1.9rem,6vw,2.6rem);font-weight:900;line-height:1.15}
+h1 .cur{font-family:var(--script);font-weight:400;color:var(--accent);font-size:1.35em}
+h2{font-size:1.45rem;font-weight:900;margin-bottom:12px}
+h3{font-size:1.15rem;font-weight:700;line-height:1.35}
+.lead{color:var(--muted);margin:10px 0 0;max-width:62ch}
+.eyebrow{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent)}
+section{margin-top:44px}
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:8px;overflow-x:auto;padding-block:10px;margin-top:24px;border-bottom:1px solid var(--line)}
+nav.toc a{flex:0 0 auto;text-decoration:none;color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:.82rem}
+nav.toc a:hover,nav.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.central{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.central .big{font-size:1.2rem;font-weight:900;line-height:1.4;margin:0 0 8px}
+.central ol{margin:8px 0 0;padding-left:1.2em}
+.tablewrap{overflow-x:auto;margin-top:6px}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cards{display:flex;flex-direction:column;gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px 8px;scroll-margin-top:64px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px}
+.chip{font-family:system-ui,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1px solid currentColor}
+.s-pronto{color:var(--ok)} .s-gravar{color:var(--todo)} .s-rever{color:var(--warn)} .s-ideia{color:var(--muted)}
+.tag{font-family:system-ui,sans-serif;font-size:.72rem;color:var(--muted)}
+.hook{font-weight:900;font-size:1.08rem;margin:4px 0 2px}
+.meta{color:var(--muted);font-size:.88rem;margin:4px 0 8px}
+details{border-top:1px solid var(--line);padding-block:9px}
+summary{cursor:pointer;font-weight:700;font-size:.92rem;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent)}
+details[open] summary::after{content:"–"}
+summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.txt{white-space:pre-line;margin:10px 0 4px}
+ol.lines{margin:10px 0 4px;padding-left:1.6em}
+ol.lines li{margin-bottom:3px}
+.note{background:var(--soft);border-radius:8px;padding:8px 12px;font-size:.87rem;margin:8px 0}
+.copy{font-family:system-ui,sans-serif;font-size:.78rem;border:1px solid var(--line);background:transparent;color:var(--fg);border-radius:6px;padding:3px 10px;cursor:pointer;margin:2px 0 6px}
+.copy:hover,.copy:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+ul.plain{margin:8px 0 0;padding-left:1.1em}
+ul.plain li{margin-bottom:6px}
+a{color:var(--accent)}
+.links li{word-break:break-word}
+footer{margin-top:48px;color:var(--muted);font-size:.82rem}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Gisele Hedler · tudo num lugar só</div>
+  <h1>Banco de conteúdos da <span class="cur">madame</span></h1>
+  <p class="lead">Todos os conteúdos que criamos, com roteiro completo, legenda e o estado de cada um. Os links de reels que faltam você descrever estão no fim.</p>
+</header>
+
+<nav class="toc" aria-label="Seções">
+  <a href="#central">Ideia central</a><a href="#semana">Semana 1</a><a href="#prontos">Prontos</a><a href="#gravar">Para gravar</a><a href="#rever">Para rever</a><a href="#ideias">Ideias</a><a href="#ganchos">Ganchos</a><a href="#links">Links pendentes</a>
+</nav>
+
+<section id="central">
+  <h2>Ideia central</h2>
+  <div class="central">
+    <p class="big">A madame não está à mercê: nem do passado, nem das emoções, nem dos outros.</p>
+    <p style="margin:0">Filtro antes de postar:</p>
+    <ol>
+      <li>Diz algo que os perfis de psicologia não dizem?</li>
+      <li>Tira a pessoa do "estou à mercê"?</li>
+      <li>Devolve uma escolha para hoje?</li>
+    </ol>
+    <p class="meta" style="margin-top:10px">Molde da Tay e referências de fora valem sempre, desde que a virada final seja um dos contrapontos (estão no MARCA.md e na skill marca-gisele).</p>
+  </div>
+</section>
+
+<section id="semana">
+  <h2>Semana 1</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Dia</th><th>Conteúdo</th><th>Estado</th></tr></thead>
+    <tbody>
+      <tr><td>Seg 12</td><td>Planta: a madame aprendeu que podia replantar</td><td>Pronto</td></tr>
+      <tr><td>Ter 13</td><td>Política: ninguém na sua família está brigando por política</td><td>Pronto</td></tr>
+      <tr><td>Qua 14</td><td>Comigo vai ser igual</td><td>Gravar</td></tr>
+      <tr><td>Qui 15</td><td>Live: Herança não é sentença</td><td>Ao vivo</td></tr>
+      <tr><td>Sex 16</td><td>Hoje eu vou descansar (portas)</td><td>Gravar</td></tr>
+      <tr><td>Sáb 17</td><td>Recorte da live</td><td>Depois da live</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="prontos">
+  <h2>Prontos</h2>
+  <div class="cards">
+
+  <article class="card" id="planta">
+    <div class="top"><span class="chip s-pronto">Pronto</span><span class="tag">Vídeo de IA · compartilhar · Dia das Crianças</span></div>
+    <h3>A planta</h3>
+    <p class="meta">Avó, mãe e madame passam uma planta seca; a madame replanta e entrega florida para a menina. 15 s, versões roxo e rose gold em videos/.</p>
+    <details open><summary>Frases na tela</summary>
+      <div class="txt">Início: Por gerações, a gente entregou o que recebeu.
+Final: Até que um dia, a madame aprendeu que podia replantar.</div>
+    </details>
+    <details><summary>Legenda</summary>
+      <div class="txt" id="leg-planta">Feliz Dia das Crianças, madame. Inclusive para a menina que você foi.
+
+Ela recebeu o que a família tinha para dar: algumas flores, algumas folhas secas e muitas frases que nem eram dela.
+
+Nenhuma menina escolhe o que recebe. Mas a mulher que você é hoje escolhe o que cuida, o que replanta e o que entrega para a próxima criança que vier.
+
+A raiz continua sendo da sua família. A terra, agora, é escolha sua. 🌸
+
+Manda para uma mulher que está replantando a própria história.</div>
+      <button class="copy" data-copy="leg-planta" type="button">Copiar legenda</button>
+    </details>
+  </article>
+
+  <article class="card" id="politica">
+    <div class="top"><span class="chip s-pronto">Pronto</span><span class="tag">Você falando · pijama · editado v2</span></div>
+    <h3>Ninguém na sua família está brigando por política</h3>
+    <p class="meta">Sem pausas e sem repetições. Gancho na tela nos 5 primeiros segundos. Arquivo: videos/politica-familia-v2.mp4.</p>
+    <details><summary>Texto completo</summary>
+      <div class="txt">Ninguém na sua família está brigando por política.
+
+Olha quem mais grita no grupo da família. Quase sempre é quem passou a vida sem ser ouvido naquela mesa. O irmão que nunca foi o preferido. A tia que engoliu tudo calada. O pai que nunca soube pedir desculpa.
+
+Durante anos não teve espaço para falar do que doía. Aí aparece um candidato e, de repente, existe um assunto em que dá para ter razão, dá para levantar a voz, dá para ganhar.
+
+A gente acha que está defendendo o país. Mas está defendendo um lugar na família que nunca teve.
+
+E sabe quem conhece isso melhor do que ninguém? Os políticos. Dos dois lados. Gente com raiva compartilha mais, briga mais e vota com mais certeza. A gente acha que está pensando sozinha. Mas está seguindo um roteiro que outra pessoa escreveu.
+
+Por isso ninguém muda de voto depois de uma discussão em família. A discussão nunca foi sobre voto.
+
+Eu não estou dizendo para não falar de política. Fala. Só entende que, quando a conversa esquenta demais, quase sempre tem uma história antiga embaixo, e alguém lá fora ganhando com ela.
+
+E a madame que enxerga isso para de brigar com o candidato do irmão e começa a olhar para o irmão.
+
+Nenhum candidato vai estar no seu almoço de domingo. A sua família vai.</div>
+    </details>
+    <details><summary>Legenda</summary>
+      <div class="txt" id="leg-politica">A briga nunca foi sobre voto.
+
+Na sua família, quem parou de falar com quem por causa de política?</div>
+      <button class="copy" data-copy="leg-politica" type="button">Copiar legenda</button>
+    </details>
+  </article>
+  </div>
+</section>
+
+<section id="gravar">
+  <h2>Para gravar</h2>
+  <div class="cards">
+
+  <article class="card" id="descanso">
+    <div class="top"><span class="chip s-gravar">Gravar</span><span class="tag">Portas · pensamento em círculo · sexta</span></div>
+    <h3>Hoje eu vou descansar</h3>
+    <p class="meta">Contrapontos: você não precisa merecer; emoção não é fato; as duas culpas. Cada frase numa porta ou cômodo; a última é você sentando no sofá.</p>
+    <details open><summary>Roteiro</summary>
+      <ol class="lines">
+        <li>Hoje eu vou descansar.</li>
+        <li>Mas a casa tá uma bagunça. Descanso depois.</li>
+        <li>Não. Eu mereço. Trabalhei a semana inteira.</li>
+        <li>Peraí. "Mereço"? Então descanso é prêmio? Se eu não tivesse trabalhado, não podia?</li>
+        <li>Tá, pode. Mas eu tô sentindo culpa. E se eu sinto culpa, é porque tô fazendo coisa errada.</li>
+        <li>Ou não. Sentir culpa não prova nada. É só um sentimento.</li>
+        <li>Então vamos ver. Eu machuquei alguém deitando no sofá?</li>
+        <li>Não. Ninguém sangrou porque a louça ficou na pia.</li>
+        <li>Então essa culpa não está me avisando de dano nenhum. Está me lembrando de uma regra.</li>
+        <li>"Mulher que senta é preguiçosa." Quem disse isso? Não lembro. Mas eu repito todo domingo.</li>
+        <li>Ok. Culpa que avisa de dano real, eu escuto. Culpa de regra herdada, eu agradeço e devolvo.</li>
+        <li>(senta no sofá) Pronto.</li>
+      </ol>
+      <p class="txt"><b>Fecho, olhando para a câmera:</b> 44 anos vivendo, estudando, aprendendo. E ninguém me ensinou a sentar no sofá sem pedir desculpa.</p>
+    </details>
+    <details><summary>Legenda</summary>
+      <div class="txt" id="leg-descanso">Essa culpa está te avisando de um dano, ou de uma regra que nem era sua?</div>
+      <button class="copy" data-copy="leg-descanso" type="button">Copiar legenda</button>
+    </details>
+  </article>
+
+  <article class="card" id="comigo">
+    <div class="top"><span class="chip s-gravar">Gravar</span><span class="tag">Monólogo · sua história · quarta</span></div>
+    <h3>Comigo vai ser igual</h3>
+    <p class="hook">Eu herdei muita coisa da minha família sem nunca ter assinado nada.</p>
+    <details><summary>Roteiro</summary>
+      <div class="txt">(pausa) Algumas eu guardo com orgulho. Outras eu levei anos para perceber que carregava.
+
+É como herdar a casa da família. Os móveis vêm junto. O lugar de cada coisa vem junto. Até o jeito de fechar a porta. E a gente mora ali por anos achando que aquela decoração é a gente.
+
+Comigo veio uma frase: comigo vai ser igual. Ela veio junto com a doença do meu pai, e eu morei anos dentro dela.
+
+Soberania, para mim, é andar por essa casa com calma e escolher. Isso fica. Isso eu agradeço e tiro da sala.
+
+Herdar a casa não te obriga a manter a decoração.</div>
+      <p class="note">Regra de saúde: a doença é fato; a frase é a conclusão. Nunca dizer que a frase causou ou curou nada.</p>
+    </details>
+    <details><summary>Legenda</summary>
+      <div class="txt" id="leg-comigo">Herdar a casa não te obriga a manter a decoração.
+O que você herdou e ainda não escolheu se fica?
+Comenta HERANÇA que eu te mando a aula completa sobre isso.</div>
+      <button class="copy" data-copy="leg-comigo" type="button">Copiar legenda</button>
+    </details>
+  </article>
+
+  <article class="card" id="live">
+    <div class="top"><span class="chip s-gravar">Ao vivo</span><span class="tag">Quinta da Mente · 18:59</span></div>
+    <h3>Herança não é sentença: a frase da sua família que você ainda repete</h3>
+    <details><summary>Roteiro da live (cerca de 50 min)</summary>
+      <div class="txt"><b>Stories de manhã:</b> Hoje, 18:59, ao vivo e aberto. Depois, a gravação fica só na Integra.
+
+<b>0 a 5 min:</b> "Escreve aqui no chat uma frase da sua família que hoje sai da sua boca." Ler algumas em voz alta.
+
+<b>5 a 20 min:</b> fato e conclusão. O fato: a mãe fazia assim. A conclusão: "então eu sou assim". A gente herda a conclusão, não o fato.
+
+<b>20 a 30 min:</b> a frase não está escondida no passado. Você repete ela hoje. Não precisa achar a origem para parar de repetir. Sua história com "comigo vai ser igual".
+
+<b>30 a 40 min:</b> exercício: escrever a frase e responder "isso é fato ou conclusão de alguém?" e "se fosse minha, eu escolheria?".
+
+<b>40 a 50 min:</b> convite: "Isso foi a primeira aula sobre herança. As outras 7 estão na Integra, R$ 39 por mês. Comenta HERANÇA no meu último post que eu te mando."
+
+<b>Durante:</b> anotar o minuto da frase mais forte para o recorte de sábado.</div>
+    </details>
+  </article>
+
+  <article class="card" id="agua">
+    <div class="top"><span class="chip s-gravar">Gravar</span><span class="tag">Feito por você · custo zero</span></div>
+    <h3>A água, refeita</h3>
+    <p class="meta">O seu vídeo da água suja passando de copo em copo rendeu 1,9x. Refazer com uma frase fixa em Merriweather, tons terrosos, mãos de gerações diferentes se possível, fecho "manda para a sua filha".</p>
+  </article>
+
+  <article class="card" id="boazinha">
+    <div class="top"><span class="chip s-gravar">Gravar</span><span class="tag">Portas · contraponto 4</span></div>
+    <h3>A boazinha</h3>
+    <details><summary>Roteiro</summary>
+      <ol class="lines">
+        <li>Eu sou uma pessoa calma.</li>
+        <li>Tá, eu engoli aquilo da reunião. Mas foi para não criar clima.</li>
+        <li>E o do almoço de domingo também. Família é assim.</li>
+        <li>E o do meu marido. Não vale a pena brigar por pouco.</li>
+        <li>Aí eu explodi com a moça do caixa por causa de uma sacola.</li>
+        <li>Viu? Eu tenho um problema de raiva.</li>
+        <li>Peraí. Eu não tenho raiva demais. Eu tenho raiva guardada demais.</li>
+        <li>A raiva que eu engoli não sumiu. Ela só esperou um lugar seguro para sair.</li>
+        <li>(porta da rua, luz) A mulher boazinha não é calma. É represada.</li>
+      </ol>
+      <p class="txt"><b>Fecho:</b> E a represa sempre estoura em quem não tem nada a ver com a história.</p>
+    </details>
+  </article>
+
+  <article class="card" id="causa">
+    <div class="top"><span class="chip s-gravar">Gravar depois</span><span class="tag">Portas · contraponto 1 · semana 2 ou 3</span></div>
+    <h3>Procurando a causa</h3>
+    <details><summary>Roteiro</summary>
+      <ol class="lines">
+        <li>Eu sou assim por causa da minha mãe.</li>
+        <li>Não. Minha mãe era assim por causa da mãe dela.</li>
+        <li>Então eu preciso achar o trauma.</li>
+        <li>Achei. Sete anos, aquele dia na escola.</li>
+        <li>Mas por que aquele dia me marcou e o da minha irmã não?</li>
+        <li>Então tem um trauma antes do trauma.</li>
+        <li>Mais uma volta na infância. Mais uma gaveta aberta.</li>
+        <li>Anos procurando, e eu continuo dizendo a mesma frase sobre mim.</li>
+        <li>Peraí. Essa frase não está lá atrás. Eu digo ela hoje. Toda manhã.</li>
+        <li>Então quem escolhe de qual lembrança eu me lembro… sou eu. Agora.</li>
+        <li>(porta da rua, luz) Talvez eu não precise achar de onde veio. Só parar de repetir.</li>
+      </ol>
+      <p class="txt"><b>Fecho:</b> A gente passa anos cavando o passado procurando a chave. E a porta abre pelo lado de hoje.</p>
+      <p class="note">Cuidado para não soar contra a terapia. Resposta pronta: "Não é sobre parar a terapia. É sobre onde está a chave."</p>
+    </details>
+  </article>
+  </div>
+</section>
+
+<section id="rever">
+  <h2>Para rever</h2>
+  <div class="cards">
+  <article class="card" id="bowen">
+    <div class="top"><span class="chip s-rever">Rever</span><span class="tag">Molde da Tay · contrassenso + teoria</span></div>
+    <h3>Quem mais briga com a mãe é quem mais vira ela</h3>
+    <details><summary>Roteiro</summary>
+      <div class="txt"><b>Gancho:</b> Quem mais briga com a mãe é quem mais vira ela. E tem um excelente motivo para isso.
+
+<b>Teoria:</b> Murray Bowen, psiquiatra que estudou famílias por décadas, chamou isso de corte emocional. Quando a gente se afasta brigando, o padrão não fica para trás. Ele vai junto para o casamento, para os filhos, para o trabalho.
+
+<b>Exemplos:</b> a filha que jurou nunca ser controladora e hoje controla os filhos pelo medo. A que saiu de casa cedo para fugir dos gritos e hoje some quando o marido levanta a voz.
+
+<b>Virada (a sua):</b> distância não é liberdade, e briga também não. A madame não está à mercê da mãe nem quando foge dela. Ficar perto sem virar, discordar sem romper: isso é escolha, e acontece hoje.</div>
+      <p class="note">O molde fica. O cuidado é a virada final ser sua, e não a conclusão da psicologia.</p>
+    </details>
+  </article>
+
+  <article class="card" id="harry">
+    <div class="top"><span class="chip s-rever">Rever</span><span class="tag">Caso real · molde Fernando · tela verde</span></div>
+    <h3>O príncipe Harry chorou uma vez só</h3>
+    <details><summary>Roteiro</summary>
+      <div class="txt"><b>Gancho:</b> Depois que a mãe morreu, o príncipe Harry chorou uma vez só. Ele tinha 12 anos. (foto dos meninos atrás do caixão, 1997)
+
+No livro O Que Sobra, de 2023, ele conta isso: uma vez só, no enterro. Depois, nunca mais, por anos. (capa do livro)
+
+Em 2021, numa série com a Oprah, ele disse que ia quebrar o ciclo de dor com os filhos dele. (frase dele na tela)
+
+Um menino que herdou palácio, título e dinheiro. E o que mais pesava era uma regra que ninguém falou em voz alta: aqui a gente não chora.
+
+<b>Virada (a sua):</b> a regra não estava escondida. Estava na frente de todo mundo. E ninguém precisou desenterrar nada para parar de repetir: bastou ele escolher o que entregar para os filhos.</div>
+      <p class="note">Mostrar imagens, nunca o áudio da entrevista. Conferir as duas frases antes de gravar.</p>
+    </details>
+  </article>
+  </div>
+</section>
+
+<section id="ideias">
+  <h2>Ideias</h2>
+  <div class="cards">
+  <article class="card">
+    <div class="top"><span class="chip s-ideia">Ideia</span><span class="tag">Vídeo de IA ou feito por você</span></div>
+    <h3>O novelo</h3>
+    <p class="meta">Um novelo embolado passa da avó para a mãe e para a filha. A filha desembaraça com paciência e tricota um sapatinho para a menina. Tela: "Ninguém te entregou o fio desembaraçado. Mas você pode entregar."</p>
+  </article>
+  <article class="card">
+    <div class="top"><span class="chip s-ideia">Ideia</span><span class="tag">Semana da culpa</span></div>
+    <h3>O avental, corrigido</h3>
+    <p class="meta">Avó e mãe servem a mesa de pé. A filha serve também, e no fim põe um prato para si e senta junto. Tela: "Ela continuou servindo. Só que agora tem um prato para ela também."</p>
+  </article>
+  </div>
+</section>
+
+<section id="ganchos">
+  <h2>Ganchos</h2>
+  <div class="central">
+    <p style="margin:0 0 6px"><b>"Te disseram que…"</b> (seu molde de 458x)</p>
+    <ul class="plain">
+      <li>Te disseram que filha boa é a que não dá trabalho.</li>
+      <li>Te disseram que mãe de verdade não descansa.</li>
+      <li>Te disseram que roupa suja se lava em casa.</li>
+      <li>Te disseram que dinheiro na mão de mulher some.</li>
+      <li>Te disseram que depois dos 50 a mulher tem que sossegar.</li>
+      <li>Te disseram que família é assim mesmo.</li>
+    </ul>
+    <p style="margin:14px 0 6px"><b>Curtos no estilo da Ana</b> (legenda com pergunta para a madame)</p>
+    <ul class="plain">
+      <li>O que você ainda carrega só porque era da sua mãe, madame?</li>
+      <li>Você pode amar a sua mãe e não concordar com a vida dela.</li>
+      <li>Quanto da sua vida você ainda vive do jeito que te ensinaram, madame?</li>
+    </ul>
+  </div>
+</section>
+
+<section id="links">
+  <h2>Links pendentes</h2>
+  <p class="lead" style="margin-top:0">Me descreve ou manda print destes, como você fez com o da pedra. Comece pelos marcados com ★.</p>
+  <ol class="lines links">
+    <li>Ana · pedra passando de geração em geração · <b>feito</b></li>
+    <li>★ Ana · 10 s · 12,8x · "Antes de aprender a duvidar de si…" · <a href="https://www.instagram.com/reel/DdGntyWxWcV/">instagram.com/reel/DdGntyWxWcV</a></li>
+    <li>Ana · 6 s · 7,0x · "Voltar para casa por vezes é voltar para si" · <a href="https://www.instagram.com/reel/DbX7mCzBfvj/">instagram.com/reel/DbX7mCzBfvj</a></li>
+    <li>Ana · 21 s · 8,6x · "Quando não existem palavras" · <a href="https://www.instagram.com/reel/DbMJmYExmcn/">instagram.com/reel/DbMJmYExmcn</a></li>
+    <li>★ Ana · 109x · 5,9 mi · "Para quem você ainda sente que precisa provar que é uma boa pessoa?" · <a href="https://www.instagram.com/reel/DcHXDonR8Jl/">instagram.com/reel/DcHXDonR8Jl</a></li>
+    <li>Ana · 75x · 3,7 mi · "Quanto de você ficou para trás…, senhora?" · <a href="https://www.instagram.com/reel/DeFcUkWthSA/">instagram.com/reel/DeFcUkWthSA</a></li>
+    <li>★ Fernando · 145x · "Na casa nova, em 2024, o pai de @theodoro…" · <a href="https://www.instagram.com/p/DeJ1_APjuZS/">instagram.com/p/DeJ1_APjuZS</a></li>
+    <li>Fernando · 103x · "Em 2019, Bruno Gouveia publicou a autobiografia…" · <a href="https://www.instagram.com/p/DeNmTb3iYOj/">instagram.com/p/DeNmTb3iYOj</a></li>
+  </ol>
+  <p class="meta">Referência das portas (já analisada): <a href="https://www.instagram.com/reel/Dd7OVcuR6NQ/">instagram.com/reel/Dd7OVcuR6NQ</a></p>
+</section>
+
+<footer>Atualizado em 12/10/2026. Cópia no projeto: laboratorio-conteudo/conteudos.html.</footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.dataset.copy); var t=el.innerText;
+    var done=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar legenda'},1500)};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selecionado, copie';};
+    try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
+  });
+});
+</script>
