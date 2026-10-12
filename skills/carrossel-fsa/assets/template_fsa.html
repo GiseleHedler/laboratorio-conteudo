@@ -8,8 +8,10 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 
 :root{
-  --roxo:#2e1a35;
-  --magenta:#b13a6a;
+  --roxo:#2B0739;
+  --vinho:#14020D;
+  --destaque:#DC447C;
+  --magenta:#C73E5C;
   --creme:#ece4d8;
 }
 
@@ -33,19 +35,19 @@ body{ background:#555; }
 /* === FUNDOS TEXTURIZADOS (dão profundidade, opcional) ===
    Use no lugar de bg-* para um visual menos chapado. */
 .tex-grad-roxo{ background:
-  radial-gradient(circle at 75% 20%, rgba(177,58,106,0.55), transparent 55%),
-  radial-gradient(circle at 20% 85%, rgba(177,58,106,0.30), transparent 50%),
+  radial-gradient(circle at 75% 20%, rgba(199,62,92,0.55), transparent 55%),
+  radial-gradient(circle at 20% 85%, rgba(199,62,92,0.30), transparent 50%),
   var(--roxo); }
 .tex-grad-magenta{ background:
   radial-gradient(circle at 25% 15%, rgba(236,228,216,0.30), transparent 55%),
-  radial-gradient(circle at 85% 80%, rgba(46,26,53,0.45), transparent 55%),
+  radial-gradient(circle at 85% 80%, rgba(43,7,57,0.45), transparent 55%),
   var(--magenta); }
 .tex-grad-creme{ background:
-  radial-gradient(circle at 80% 25%, rgba(177,58,106,0.22), transparent 55%),
-  radial-gradient(circle at 15% 90%, rgba(46,26,53,0.12), transparent 50%),
+  radial-gradient(circle at 80% 25%, rgba(199,62,92,0.22), transparent 55%),
+  radial-gradient(circle at 15% 90%, rgba(43,7,57,0.12), transparent 50%),
   var(--creme); }
 .tex-linhas-roxo{ background:
-  repeating-linear-gradient(115deg, rgba(177,58,106,0.10) 0 2px, transparent 2px 46px),
+  repeating-linear-gradient(115deg, rgba(199,62,92,0.10) 0 2px, transparent 2px 46px),
   var(--roxo); }
 .tex-pontos-magenta{ background:
   radial-gradient(rgba(255,255,255,0.10) 2px, transparent 2px),
@@ -104,7 +106,7 @@ body{ background:#555; }
 .dot.on-claro{ background:var(--creme); }
 .dot.off-claro{ background:rgba(236,228,216,0.35); }
 .dot.on-escuro{ background:var(--roxo); }
-.dot.off-escuro{ background:rgba(46,26,53,0.3); }
+.dot.off-escuro{ background:rgba(43,7,57,0.3); }
 
 /* === CAPA === */
 .capa .titulo-wrap{ margin-top:180px; }
@@ -126,7 +128,7 @@ body{ background:#555; }
 /* === SLIDE COM FOTO DE FUNDO (texto por cima) === */
 .foto-fundo{ position:absolute; inset:0; }
 .foto-fundo img{ width:100%; height:100%; object-fit:cover; }
-.foto-fundo::after{ content:''; position:absolute; inset:0; background:rgba(46,26,53,0.25); }
+.foto-fundo::after{ content:''; position:absolute; inset:0; background:rgba(43,7,57,0.25); }
 
 /* === SLIDE COLAGEM 2x2 === */
 .grid{ position:absolute; inset:0; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; }

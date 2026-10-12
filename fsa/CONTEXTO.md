@@ -33,8 +33,12 @@ Frases que prometem resultado de carreira ou de saúde e não podem ir para o co
 "atenda com segurança casos hormonais em até 3 meses", "transforme anos de tentativa e erro em meses de progresso real",
 "torne-se referência", "nutrientes na prevenção e tratamento" (curso COVID-19).
 
-## Identidade visual (skill carrossel-fsa)
-- Cores: roxo #2e1a35, magenta #b13a6a, creme #ece4d8. Fonte: pendente (template usa Archivo).
+## Identidade visual (paleta oficial, 12/10/2026; arquivos em fsa/marca/)
+- Roxo FSA #2B0739 · Rosa FSA #C73E5C · Rosa destaque #DC447C · Vinho fundo #14020D.
+- Logo: fsa/marca/logo-fsa.jpg ("FS" roxo, "A" rosa, fundo branco). Falta versão PNG transparente ou negativa.
+- Creme #ece4d8 era do template antigo e não está na paleta oficial: confirmar se fica.
+- Fonte: pendente. Template usa Archivo Black e Archivo.
+- A skill carrossel-fsa (cópia em skills/carrossel-fsa) já usa as cores novas.
 
 ## Perguntas em aberto
 1. Oferta da Black Friday: o que entra, preços, até quando.
