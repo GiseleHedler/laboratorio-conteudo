@@ -58,9 +58,21 @@ Os roteiros completos estão no banco de conteúdos: conteudos.html (https://cla
 - **O que a gente criou:** **Quem mais briga com a mãe é quem mais vira ela** (Bowen e o corte emocional, com a virada sua: "a madame não está à mercê da mãe nem quando foge dela"). Para rever.
 
 ## 8. Fernando Segredo: casos reais
-- **Conteúdos originais:** https://www.instagram.com/p/DeJ1_APjuZS/ (145x, o pai de @theodoro) e https://www.instagram.com/p/DeNmTb3iYOj/ (103x, Bruno Gouveia)
-- **O que é:** caso de pessoa conhecida, com ano e nome, e um detalhe pequeno de uma história grande.
-- **O que a gente criou:** **O príncipe Harry chorou uma vez só** (tela verde com imagens, sem o áudio das entrevistas; virada: a regra não estava escondida e ele escolheu o que entregar aos filhos). Para rever.
+- **Conteúdos originais:** https://www.instagram.com/p/DeJ1_APjuZS/ (145x, Felipe Teodoro e a piscina) e https://www.instagram.com/p/DeNmTb3iYOj/ (103x, Bruno Gouveia)
+- **Atenção:** o do Felipe teve collab com o próprio Felipe, que tem milhões de seguidores. Parte do alcance vem daí.
+- **Estrutura do vídeo do Felipe (molde Fernando):**
+  1. Gancho falado = a lição em forma de contrassenso ("Quem mais te ama dentro de casa não quer o seu dinheiro, quer estar ao seu lado.")
+  2. Origem em uma frase (Campo Grande, varejo, pandemia, milhões de seguidores).
+  3. A conquista com ano (a casa, em 2024) e o que ela significou para os pais.
+  4. A tensão (o filho pode dar conforto; o pai quer continuar trabalhando).
+  5. O detalhe pequeno (o pai pede para limpar a piscina) e a releitura ("ele só queria estar presente").
+  6. A virada para quem assiste: "E é aqui que essa história fica maior."
+  7. A pergunta trocada: "Talvez a pergunta não seja X. Talvez seja Y."
+  8. Fecho com símbolo (a casa e a piscina) e assinatura ("Eu sou Fernando Segredo… compartilha com eles… vida com mais consciência").
+- **O que a gente criou:**
+  - **O príncipe Harry chorou uma vez só.** Para rever.
+  - **Cora Coralina publicou o primeiro livro aos 75 anos.** No molde completo, virada "tarde demais não é fato, é conclusão". Para rever (conferir fatos).
+  - Estratégia: contar a história real de alguém do seu meio e convidar a pessoa para collab.
 
 ## 9. Os seus próprios campeões
 - **"Te disseram que…"** (458x): https://www.instagram.com/p/DYkX-DmOqx9/
@@ -75,4 +87,4 @@ Os roteiros completos estão no banco de conteúdos: conteudos.html (https://cla
 ## Ainda falta você descrever
 - Ana, 6 s, "Voltar para casa por vezes é voltar para si": https://www.instagram.com/reel/DbX7mCzBfvj/
 - Ana, 21 s, "Quando não existem palavras": https://www.instagram.com/reel/DbMJmYExmcn/
-- Fernando, os dois do item 8 (como ele mostra o caso: imagens reais, tela verde ou só fala?)
+- Fernando, Bruno Gouveia (item 8): como ele mostra o caso na tela?
