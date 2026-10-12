@@ -28,6 +28,12 @@ Os roteiros completos estão no banco de conteúdos: conteudos.html (https://cla
 - **O que é:** áudio narrado (provavelmente áudio em alta, não necessariamente a voz dela) sobre cenas aleatórias. "No fim das contas, ter paz é deixar as pessoas acharem o que elas quiserem…" Legenda: "Para quem você ainda sente que precisa provar que é uma boa pessoa?" 109x, 5,9 mi (provável anúncio).
 - **O que a gente criou:** **O meu valor nunca esteve em votação** (sua voz sobre cenas do seu dia). Legenda: "Quem você ainda deixa votar no seu valor, madame?" Para gravar.
 
+## 3b. Ana Lisboa: carta "Espero que você…"
+- **Conteúdo original:** https://www.instagram.com/reel/DeFcUkWthSA/
+- **O que é:** voz narrando uma lista de desejos, todos começando com "Espero que você…", 61 s, 75x, 3,7 mi. Fecha com "Eu quero ver quem você vai se tornar." Legenda: "Quanto de você ficou para trás enquanto tentava dar conta de tudo, senhora?"
+- **Cuidado:** o texto é autoajuda genérica (curar feridas, "o que é seu por destino já está a caminho"). Copiamos o ritmo, não o conteúdo.
+- **O que a gente criou:** **Espero que você (manifesto da madame):** a mesma repetição, cada desejo é um contraponto seu. Para gravar; bom para fixar no perfil.
+
 ## 4. Ana Lisboa: "Eu tô em obra"
 - **Conteúdo original:** https://www.instagram.com/reel/DdzjV01xgRE/
 - **O que é:** monólogo dela, primeira pessoa, uma metáfora só (a reforma por dentro). 23x, 1,4 mi.
@@ -69,5 +75,4 @@ Os roteiros completos estão no banco de conteúdos: conteudos.html (https://cla
 ## Ainda falta você descrever
 - Ana, 6 s, "Voltar para casa por vezes é voltar para si": https://www.instagram.com/reel/DbX7mCzBfvj/
 - Ana, 21 s, "Quando não existem palavras": https://www.instagram.com/reel/DbMJmYExmcn/
-- Ana, 75x, "Quanto de você ficou para trás…, senhora?": https://www.instagram.com/reel/DeFcUkWthSA/
 - Fernando, os dois do item 8 (como ele mostra o caso: imagens reais, tela verde ou só fala?)
