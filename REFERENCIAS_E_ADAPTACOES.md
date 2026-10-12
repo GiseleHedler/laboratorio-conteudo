@@ -55,7 +55,11 @@ Os roteiros completos estão no banco de conteúdos: conteudos.html (https://cla
 ## 7. Tay Dantas: o cigarro (contrassenso + teoria)
 - **Conteúdo original:** https://www.instagram.com/reel/DeNWYBkR5Wy/
 - **O que é:** "Me desculpem os conservadores, mas fumar é muito sexy." Depois: "tem um excelente motivo", teoria com nome (pêndulo social de Schlesinger), exemplos, o que diz sobre nós.
-- **O que a gente criou:** **Quem mais briga com a mãe é quem mais vira ela** (Bowen e o corte emocional, com a virada sua: "a madame não está à mercê da mãe nem quando foge dela"). Para rever.
+- **Outros da Tay no mesmo molde:** "Nós somos a geração mais fraca que já pisou na Terra" (https://www.instagram.com/reel/DeKwK7ExcFi/) e "A gente tá ficando tão burro que os filmes estão tendo que piorar" (https://www.instagram.com/reel/DSbA3z8DYKc/). Estrutura: frase absurda, "e tem um excelente motivo", teoria ou estudo com nome e número, exemplos do mundo, virada para quem assiste.
+- **O que a gente criou:**
+  - **Quem mais briga com a mãe é quem mais vira ela** (Bowen e o corte emocional; virada: "a madame não está à mercê da mãe nem quando foge dela"). Para rever.
+  - **"Eu me amo" no espelho pode te deixar pior** (estudo de Joanne Wood, 2009; virada: olhar primeiro a frase que você já repete). Para rever.
+  - **Tentar ficar calma é o jeito mais rápido de explodir** (urso branco de Daniel Wegner, 1987; virada: a madame não precisa ser calma, precisa ser inteira). Para rever.
 
 ## 8. Fernando Segredo: casos reais
 - **Conteúdos originais:** https://www.instagram.com/p/DeJ1_APjuZS/ (145x, Felipe Teodoro e a piscina) e https://www.instagram.com/p/DeNmTb3iYOj/ (103x, Bruno Gouveia)
