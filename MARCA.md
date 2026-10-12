@@ -55,6 +55,20 @@ Não é "crie sua realidade" e não é psicologia de trauma. A diferença está 
 
 Fora: corpo e doença como causa, escolha de doença ou morte, catástrofes, Cristo, mundos paralelos, "você cria tudo".
 
+### O passado (como falar)
+Não é "não olhe para o passado". É: **olhar, sim; morar lá, não.**
+- Só se está à mercê do passado quando se acredita estar.
+- As crenças de hoje escolhem as lembranças que você vê (ímã).
+- Procurar no passado só o que deu errado é ler um livro de história só com os fracassos: reforça a limitação.
+- Use o mesmo passado como fonte: procure também as vezes em que deu certo.
+- A origem da frase pode ser dos outros; manter a frase é escolha sua, hoje. "Agora você é adulta, não mais uma criança a ser intimidada."
+- Reestruturar, não negar o que aprendeu.
+
+### Bordões da Gisele
+- "Eu sou treinável." (prontidão para aprender; as alunas do TDL repetem no fim dos depoimentos)
+- "Faço o que tem que ser feito."
+- "Tenho capacidade extraordinária para lidar com qualquer coisa."
+
 ### Filtro antes de postar
 1. Diz algo que os perfis de psicologia não dizem?
 2. Tira a pessoa do "estou à mercê" (do passado, da emoção, do outro)?
