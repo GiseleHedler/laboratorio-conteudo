@@ -1,5 +1,7 @@
 # Life Option: leitura técnica do site (14/10/2026)
 
+Marca de terceiros. Um amigo da Gisele pediu a opinião dela; não é marca do grupo.
+
 Fonte: lifeoption.com.br, lido pelo Apify (página inicial e 23 páginas de produto). Dados brutos em dados/site_lifeoption.json e dados/lifeoption_produtos.json.
 Limite: as páginas trazem os ingredientes, mas a tabela com as doses (mg por cápsula) não veio no texto. Sem dose não dá para julgar eficácia; dá para julgar forma, desenho de fórmula e promessa.
 
@@ -44,9 +46,3 @@ Limite: as páginas trazem os ingredientes, mas a tabela com as doses (mg por c�
 ## Nível e estilo
 - **Faixa:** intermediária popular. Mais séria que as marcas de academia e marketplace (fórmulas com bisglicinato, MEG-3, clean label), abaixo das premium (Essential, Puravida, NP) em dose e desenho.
 - **Estilo:** varejo de resposta direta. Nome de produto que diz o resultado, compra por objetivo, garantia de 60 dias, Pix, frete por quantidade, 10x, gomas infantis. É o jeito de vender de Ocean Drop, Lauton e Nutrify, com preço um pouco abaixo. ⚠ comparação feita pelo estilo e pela faixa de preço, não por análise dos rótulos dessas marcas.
-- **Em relação à NP:** a NP é a marca de dose e forma do ativo para quem prescreve; a Life Option é a de entrada, para quem compra por objetivo.
-
-## Pontos de atenção entre as duas marcas
-- As duas falam em "dose certa". Se o mesmo rosto vender as duas, a mensagem se mistura.
-- Produtos sobrepostos: magnésio multiforma, NAC, própolis verde, cúrcuma, ômega 3, Q10, creatina. É preciso deixar claro quem é entrada e quem é premium, para uma não canibalizar a outra.
-- A Life Option tem garantia de 60 dias; a NP não mostra garantia no site.
