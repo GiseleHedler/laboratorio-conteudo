@@ -6,10 +6,15 @@ Objetivo: 3 opções de vídeo no molde 21 (fala curta de uma famosa ou históri
 1. Notícias e entretenimento (busca na web): Gshow, Quem, Terra, UOL Splash, Metrópoles, Folha, Estadão, CNN Brasil, g1. Procurar falas de famosas e famosos em entrevistas, podcasts e programas de TV.
 2. Cortes de podcast e TV que viralizaram no Instagram e no YouTube: entrevistas, programas de auditório, podcasts de conversa.
 3. Google Trends Brasil: o que as pessoas estão buscando na semana.
-4. Instagram (Apify, até US$ 0,50 por semana): perfis da lista abaixo, posts dos últimos 7 dias ordenados por visualização, e transcrição do trecho escolhido para ter a frase exata.
+4. Instagram (Apify, até US$ 0,50 por semana, opcional): quando uma fala aparecer nos portais, buscar o vídeo original ou o corte mais visto e transcrever o trecho para ter a frase exata.
 
-## Perfis para acompanhar no Instagram (a Gisele completa)
-- (adicionar aqui os @ de famosas, podcasts e páginas de cortes que ela gosta)
+## Busca genérica (a Gisele não acompanha famosas nem podcasts)
+O radar descobre sozinho, sem lista fixa de perfis. Buscas sugeridas, sempre com "esta semana" ou a data:
+- "famosa desabafa casamento", "atriz fala sobre separação", "fala sobre a mãe entrevista", "chorou ao falar do pai"
+- "aos 50 anos recomeçou", "aos 60 anos se formou", "história emocionante recomeço"
+- "podcast entrevista viralizou", "fala viraliza nas redes", "polêmica declaração"
+- Google Trends Brasil: assuntos em alta de entretenimento
+Preferir pessoas que a madame 40+ conhece (atrizes, apresentadoras, cantoras, ex-BBBs, jogadores famosos) e histórias de gente comum que viralizaram.
 
 ## Temas que servem (pela pesquisa das seguidoras)
 Casamento e separação, mãe e filha, pai ausente, cansaço e dar conta de tudo, dinheiro e cobrar o que vale, envelhecer e depois dos 50, recomeço, perdão, luto, fé, inveja e comparação, corpo e saúde.
