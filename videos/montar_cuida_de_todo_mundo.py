@@ -120,13 +120,16 @@ open(B+'/leg.ass','w',encoding='utf-8').write(ass)
 # composição final: cupcake sobre "a dela, ela mesma comprou o bolo", tela do grupo sobre a mensagem
 c0=mapt(2.70); c1=c0+2.6
 g0=mapt(21.20); g1=mapt(26.55)
+p0=mapt(12.95); p1=mapt(18.25)
 fc=(f"[1:v]trim=0:3.9,setpts=PTS-STARTPTS+{c0}/TB,scale={W}:{H},fps=30[cup];"
     f"[0:v][cup]overlay=enable='between(t,{c0},{c1})':eof_action=pass[v1];"
     f"[2:v]format=rgba,fade=t=in:st={g0}:d=0.25:alpha=1[ch];"
-    f"[v1][ch]overlay=enable='between(t,{g0},{g1})'[v2];"
+    f"[v1][ch]overlay=enable='between(t,{g0},{g1})'[v1b];"
+    f"[3:v]trim=0:{p1-p0+0.05},setpts=PTS-STARTPTS+{p0}/TB[pan];"
+    f"[v1b][pan]overlay=enable='between(t,{p0},{p1})':eof_action=pass[v2];"
     f"[v2]ass={B}/leg.ass:fontsdir={F}[v]")
-run(['ffmpeg','-loglevel','error','-y','-i',B+'/corte.mp4','-i',CUP,'-loop','1','-t',str(TOT),'-i',B+'/chat.png',
+run(['ffmpeg','-loglevel','error','-y','-i',B+'/corte.mp4','-i',CUP,'-loop','1','-t',str(TOT),'-i',B+'/chat.png','-i',B+'/panela.mp4',
      '-filter_complex',fc,'-map','[v]','-map','0:a','-af','loudnorm=I=-14:TP=-1.5:LRA=11',
      '-c:v','libx264','-preset','medium','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',
-     R+'/reel-cuida-de-todo-mundo-v1.mp4'])
+     R+'/reel-cuida-de-todo-mundo-v2.mp4'])
 print('total',round(TOT,2),'cup',round(c0,2),'chat',round(g0,2),round(g1,2),'cta',round(CTA,2))
