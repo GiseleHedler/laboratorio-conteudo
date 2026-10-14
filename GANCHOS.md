@@ -173,6 +173,14 @@ Pergunta que junta uma origem (o tipo de família) com um comportamento de hoje 
   - "Por que filhas de mães críticas não conseguem receber um elogio?"
 - **Trava:** a capa e o teste podem falar da origem, mas a virada precisa dizer que acreditar nisso hoje é escolha ("não foi escolha; continuar acreditando, é"). Nada de "isso moldou TUDO em você" ou "você não consegue".
 
+## 21. Começa com a fala de uma famosa, continua com a sua história (o seu melhor do mês)
+Os primeiros segundos são um trecho curto de alguém conhecido e polêmico dizendo uma frase forte. Depois você entra e continua o assunto com a sua história ou a sua lente, sem atacar a pessoa.
+- **Original seu:** Luana Piovani: "Acredita em casamento? Tá maluca! Tenho pânico dessa palavra… se eu vejo uma noiva na rua, eu falo: não casa!". Você continua: "Depois que me separei, ouvi muito conselho…" **15.840 views, 501 curtidas, 65 comentários** (08/10/2026). https://www.instagram.com/p/DeOwCCvNmns/
+- **Outro seu no mesmo molde:** "Tu viu o que aconteceu entre a Luana Piovani e a Virginia?" (9,8x). https://www.instagram.com/p/DXt_4SeAJbV
+- **Por que funciona:** a famosa amada e odiada para o dedo de quem rola a tela (as duas torcidas param); você não toma partido contra ela, então ninguém sai brigando; a sua história dá a virada.
+- **Regras:** trecho curto (3 a 8 segundos), dar o crédito na legenda, não distorcer o que a pessoa disse, não atacar. Vale também história bonita de outra pessoa, não só polêmica.
+- **Fórmula:** [frase forte da famosa] → "Eu entendo de onde vem isso. Eu também…" → a sua história → a regra que você enxerga → a escolha de hoje.
+
 ---
 
 ## Travas da casa (da skill ganchos-gisele, valem para todos os moldes)
