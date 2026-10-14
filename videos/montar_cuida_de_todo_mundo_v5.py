@@ -67,7 +67,7 @@ open(V+'/leg.ass','w',encoding='utf-8').write(ass)
 
 
 E=S+'/reel/env'
-BR=[('yoga.mov',6.0,0.30,2.20,0.5),('postit.mov',1.0,4.10,7.45,0.5),('presentes.mov',7.0,7.45,9.20,0.40),
+BR=[('yoga.mov',6.0,43.84,46.42,0.5),('postit.mov',1.0,4.10,7.45,0.5),('presentes.mov',7.0,7.45,9.20,0.40),
     ('chao.mov',3.8,20.05,22.40,0.47),('armadura.mp4',2.0,23.10,25.10,0.40),('toalha.mp4',1.0,28.50,33.25,0.50),
     ('copo.mov',2.5,33.40,36.30,0.5)]
 for i,(f,ss,a,b,cx) in enumerate(BR):
@@ -98,5 +98,5 @@ run(['ffmpeg','-loglevel','error','-y','-i',SRC,'-i',CUP,'-loop','1','-t',str(TO
      '-i',B+'/panela.mp4','-loop','1','-t',str(TOT),'-i',V+'/degrade.png','-i',V+'/audio_final.wav',*sum([['-i',E+f'/br{i}.mp4'] for i in range(len(BR))],[]),
      '-filter_complex',fc,'-map','[v]','-map','5:a','-t',str(TOT),
      '-c:v','libx264','-preset','medium','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',
-     V+'/reel-cuida-de-todo-mundo-v5.mp4'])
+     V+'/reel-cuida-de-todo-mundo-v6.mp4'])
 print('ok')
