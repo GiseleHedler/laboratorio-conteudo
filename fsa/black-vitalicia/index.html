@@ -264,6 +264,10 @@ tr.total td{font-weight:700;color:var(--creme)}
 .dep{margin:0;background:var(--bg2);border:1px solid var(--linha);border-top:3px solid var(--destaque);padding:26px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;min-width:0}
 .dep blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:23px;line-height:1.3;color:var(--creme)}
 .dep figcaption{font-weight:700}
+.dep-video{padding:0 0 22px;gap:14px}
+.dep-video video{width:100%;aspect-ratio:3/2;display:block;background:#000;object-fit:cover}
+.dep-video blockquote{font-size:19px;padding:0 22px}
+.dep-video figcaption{padding:0 22px}
 .dep figcaption span{display:block;font-weight:400;font-size:13px;color:var(--suave)}
 /* plataforma */
 .plat-grid{display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center;margin-top:32px}
@@ -402,8 +406,9 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <div class="eyebrow">Quem já estudou</div>
   <h2>O que muda <span class="ital">no consultório</span></h2>
   <div class="deps">
+    <figure class="dep dep-video"><video controls playsinline preload="none" poster="dep-daniela.jpg" src="dep-daniela.mp4" aria-label="Depoimento em vídeo de Daniela Nadruz, médica gastroenterologista"></video><blockquote>“O paciente tem essa expectativa que o médico oriente sobre dieta, sono e estilo de vida. Mas a gente não aprende isso na nossa formação.”</blockquote><figcaption>Daniela Nadruz<span>Médica gastroenterologista, aluna FSA</span></figcaption></figure>
     <figure class="dep"><blockquote>“Hoje avalio o paciente por completo, não fico mais de mãos atadas. Essa mudança eu tive.”</blockquote><figcaption>Ana Paula Tonissi<span>Nutricionista, aluna FSA</span></figcaption></figure>
-    <figure class="dep"><blockquote>“Saí da graduação me sentindo segura para começar a trabalhar no dia seguinte.”</blockquote><figcaption>Ariane Cardoso<span>Nutricionista, aluna FSA</span></figcaption></figure>
+    
     <figure class="dep"><blockquote>“É totalmente diferente do que eu aprendi anteriormente.”</blockquote><figcaption>Amanda Turazzi<span>Nutricionista, aluna FSA</span></figcaption></figure>
   </div>
 </div></section>
@@ -557,13 +562,13 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
     <div>
       <h3>Gisele Hedler</h3>
       <span class="cargo">Cofundadora e CEO da FSA</span>
-      <p>Fundou a FSA ao lado do Gabriel e está à frente da empresa desde o primeiro dia. É ela quem assina embaixo do compromisso do acesso vitalício.</p>
+      <p>Está à frente da FSA desde o primeiro dia. É ela quem assina embaixo do compromisso do acesso vitalício.</p>
     </div>
   </div>
   <div class="numero numero-fsa"><b>40 mil+</b><span>alunos já estudaram na FSA</span></div>
   <h3 class="equipe-tit">E uma equipe pedagógica de doutoras e pesquisadores</h3>
   <div class="profs">
-      <div class="prof"><img src="prof-fernanda.jpg" width="240" height="240" alt="Fernanda Colossi de Paris" loading="lazy"><div><h4>Fernanda Colossi de Paris</h4><span>Professora</span><p>Doutora em Ciências da Saúde pela PUCRS, com pesquisa em obesidade e síndrome metabólica. Mais de 20 anos de experiência clínica e acadêmica.</p></div></div>
+      <div class="prof"><img src="prof-fernanda.jpg" width="240" height="240" alt="Fernanda Colossi de Paris" loading="lazy"><div><h4>Fernanda Colossi de Paris</h4><span>Professora e coordenadora pedagógica</span><p>Doutora em Ciências da Saúde pela PUCRS, com pesquisa em obesidade e síndrome metabólica. Mais de 20 anos de experiência clínica e acadêmica.</p></div></div>
       <div class="prof"><img src="prof-emiliana.jpg" width="240" height="240" alt="Emiliana Barbosa Marques" loading="lazy"><div><h4>Emiliana Barbosa Marques</h4><span>Professora</span><p>Doutora em Ciências Biomédicas pela UFF, com pós-doutorado em programação metabólica e doenças cardiometabólicas.</p></div></div>
       <div class="prof"><img src="prof-liliane.jpg" width="240" height="240" alt="Liliane Alves dos Santos Wanderley" loading="lazy"><div><h4>Liliane Alves dos Santos Wanderley</h4><span>Professora</span><p>Doutora em Engenharia de Alimentos pela URI e mestre em Microbiologia pela UFRGS. Graduada em Nutrição.</p></div></div>
       <div class="prof"><img src="prof-vinicius.jpg" width="240" height="240" alt="Vinicius Leal" loading="lazy"><div><h4>Vinicius Leal</h4><span>Pesquisador e tutor</span><p>Nutricionista pela UnB, com pós-graduação em Fitoterapia Funcional. Especialista em Nutrição Funcional e Exames Laboratoriais.</p></div></div>

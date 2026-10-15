@@ -72,3 +72,8 @@ Soma: pelo menos 251h → página usa "mais de 250 h de aula".
 Gisele Hedler: cofundadora e CEO, publicitária (não divulgar formação sem ela pedir), fundou a FSA com o Gabriel; a decisão do vitalício foi dela, mas a página NÃO diz isso (ela pediu): ela "assina embaixo do compromisso".
 
 - 15/10: na página da Black, Gabriel = "Cofundador e professor da FSA" (sem "coordenador pedagógico", a pedido da Gisele). Gisele: NÃO mostrar credenciais (ela normalmente não apresenta; publicitária e psicanalista). Na prática, a coordenadora pedagógica é a Fernanda Colossi; Gabriel não deve aparecer como coordenador. "40 mil+ alunos" fica como número da FSA, abaixo dos dois fundadores.
+
+## Depoimentos em vídeo recebidos (15/10)
+- Daniela Nadruz, médica gastroenterologista (Drive 1JRkE-...): USADO na página, só o trecho 0:00 a 0:46 + frase final ("privilégio... embasamento"). NÃO usar o caso do paciente com gordura no fígado/fibrose (resultado de tratamento).
+- Lysiane, nutricionista (Drive 1XKJHOG...): NÃO usar. Diz "a nutrição funcional salvou a vida daquele homem", "eu salvo pessoas", caso de paralisia/morfina e "não tenho mais horário na agenda" (promessa de resultado clínico e de carreira; risco CFN/CRN).
+- Ariane removida da página.
