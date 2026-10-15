@@ -131,16 +131,30 @@ section{padding-block:80px}
 .pacote .btn{justify-content:center;margin-top:10px}
 .letrinha{font-size:13px;color:var(--suave);margin:0}
 
-/* detalhes */
-.detalhe{border-top:1px solid var(--linha);padding-block:40px;display:grid;grid-template-columns:4fr 6fr;gap:40px}
-.detalhe:first-of-type{border-top:0}
-.detalhe > *{min-width:0}
-.detalhe h3{font-family:var(--display);font-size:36px;font-weight:600;margin:0;line-height:1.05}
-.detalhe h3 small{display:block;font-family:var(--body);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--destaque);margin-top:8px}
-.detalhe p{margin:12px 0}
-.detalhe dl{margin:0;display:flex;flex-direction:column;gap:12px}
-.detalhe dt{font-weight:700}
-.detalhe dd{margin:0;color:var(--suave)}
+/* por dentro: formações */
+.grupo{margin-top:48px}
+.grupo-topo{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 24px;border-bottom:1px solid var(--linha);padding-bottom:14px}
+.grupo-topo h3{font-family:var(--display);font-size:34px;font-weight:600;margin:0;line-height:1}
+.grupo-topo h3 small{font-family:var(--body);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--destaque);margin-left:10px;vertical-align:middle}
+.grupo-topo p{margin:0;color:var(--suave);font-size:15px;flex:1 1 320px}
+.cursos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
+.curso{background:var(--bg2);border:1px solid var(--linha);padding:22px 20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.curso svg{width:46px;height:46px;color:var(--destaque);flex:none}
+.curso h4{font-family:var(--display);font-size:22px;line-height:1.1;margin:0;font-weight:600;color:var(--creme)}
+.curso p{margin:0;font-size:15px;line-height:1.5;color:var(--suave)}
+.olimpo-bar{margin-top:48px;border:2px solid var(--destaque);padding:24px 28px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;justify-content:space-between}
+.olimpo-bar h3{font-family:var(--display);font-size:34px;font-weight:600;margin:0;line-height:1}
+.olimpo-bar p{margin:4px 0 0;color:var(--suave)}
+/* para quem */
+.quem-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+.quem-col{border:1px solid var(--linha);padding:28px 26px;min-width:0}
+.quem-col.sim{background:var(--bg2)}
+.quem-col h3{font-family:var(--display);font-size:28px;font-weight:600;margin:0 0 14px}
+.quem-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.quem-col li{padding-left:30px;position:relative}
+.quem-col li::before{position:absolute;left:0;top:0;font-weight:700;color:var(--destaque)}
+.sim li::before{content:"✓"}
+.nao li::before{content:"✕";color:var(--suave)}
 .tbl{overflow-x:auto;margin-top:18px}
 table{border-collapse:collapse;width:100%;font-size:15px;min-width:420px}
 th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--linha)}
@@ -161,7 +175,8 @@ footer{border-top:1px solid var(--linha);padding-block:28px;font-size:13px;color
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 
 @media (max-width:900px){
-  .hero .wrap,.manifesto .grid,.detalhe{grid-template-columns:1fr;gap:32px}
+  .hero .wrap,.manifesto .grid,.quem-grid{grid-template-columns:1fr;gap:20px}
+  .cursos{grid-template-columns:1fr 1fr}
   .pacotes,.historia .wrap{grid-template-columns:1fr}
   .pacote.top3{order:-1}
 }
@@ -173,6 +188,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
   .selo i{font-size:13px;padding:1px 8px}
   .selo span{font-size:8px}
   section{padding-block:56px}
+  .cursos{grid-template-columns:1fr}
+  .curso{flex-direction:row;flex-wrap:wrap;align-items:center}
+  .curso h4{flex:1 1 0}
+  .curso p{flex-basis:100%}
 }
 </style>
 </head>
@@ -240,7 +259,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
   <h2>Estude no seu ritmo. <span class="ital">Para sempre.</span></h2>
   <p>Hoje, cada formação tem acesso de 1 ou 2 anos. Nesta Black, o acesso é vitalício: você assiste entre um atendimento e outro e volta a cada aula sempre que um caso pedir.</p>
   <p>Depois desta Black, as formações voltam ao acesso com prazo.</p>
-  <span class="regra">Acesso vitalício enquanto a FSA mantiver o curso no ar.</span>
+  <span class="regra"><b>Vitalício quer dizer:</b> enquanto existir a plataforma de cursos da FSA, as suas formações estarão lá para você.</span>
 </div></section>
 
 <section class="sec" id="pacotes"><div class="wrap">
@@ -308,44 +327,60 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
       <p class="letrinha">Sai R$ 1.947 mais barato do que comprar os pacotes Hipócrates e Galeno separados nesta Black.</p>
     </article>
   </div>
-  <p class="letrinha" style="margin-top:18px">Todas as formações são 100% gravadas. Acesso vitalício enquanto a FSA mantiver o curso no ar.</p>
+  <p class="letrinha" style="margin-top:18px">Todas as formações são 100% gravadas. Vitalício: enquanto existir a plataforma de cursos da FSA, o seu acesso continua.</p>
 </div></section>
 
 <section class="sec"><div class="wrap">
   <div class="eyebrow">O que tem em cada pacote</div>
-  <h2>Por dentro dos pacotes</h2>
+  <h2>Por dentro das <span class="ital">8 formações</span></h2>
 
-  <div class="detalhe">
-    <h3>Hipócrates<small>Pacote Nutrição Funcional</small></h3>
-    <div>
-      <p><b>Para quem é:</b> para quem quer dominar a abordagem sistêmica da Nutrição Funcional e conduzir com segurança a suplementação.</p>
-      <dl>
-        <dt>Nutrição Funcional 3.0</dt><dd>A abordagem sistêmica, com a Matriz e a Pirâmide das Prioridades, aplicada a tireoide, síndrome metabólica, saúde da mulher, saúde intestinal e mais.</dd>
-        <dt>Suplementação Individualizada</dt><dd>Prescrever com segurança, eficácia e personalização, nutriente por nutriente.</dd>
-        <dt>Jejum: Ferramenta para a Saúde</dt><dd>O jejum como estratégia, com análise crítica das evidências.</dd>
-        <dt>Hemograma: O Ponto Cego</dt><dd>Enxergar no hemograma muito além da anemia.</dd>
-      </dl>
+  <div class="grupo">
+    <div class="grupo-topo"><h3>Hipócrates<small>Nutrição Funcional</small></h3><p>Para quem quer dominar a abordagem sistêmica da Nutrição Funcional e conduzir com segurança a suplementação.</p></div>
+    <div class="cursos">
+      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6 42 40H6Z"/><path d="M14.5 24h19M10.3 32h27.4"/></svg><h4>Nutrição Funcional 3.0</h4><p>A abordagem sistêmica, com a Matriz e a Pirâmide das Prioridades, aplicada a tireoide, síndrome metabólica, saúde da mulher, saúde intestinal e mais.</p></div>
+      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="17" width="32" height="14" rx="7" transform="rotate(-35 24 24)"/><path d="m20.5 18.8 7 10"/></svg><h4>Suplementação Individualizada</h4><p>Prescrever com segurança, eficácia e personalização, nutriente por nutriente.</p></div>
+      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="26" r="15"/><path d="M24 18v8l5 4M20 6h8M24 6v5"/></svg><h4>Jejum: Ferramenta para a Saúde</h4><p>O jejum como estratégia, com análise crítica das evidências.</p></div>
+      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6c7 9 12 15.5 12 22a12 12 0 0 1-24 0c0-6.5 5-13 12-22Z"/><path d="M18 30a6 6 0 0 0 6 6"/></svg><h4>Hemograma: O Ponto Cego</h4><p>Enxergar no hemograma muito além da anemia.</p></div>
     </div>
   </div>
 
-  <div class="detalhe">
-    <h3>Galeno<small>Pacote Saúde Avançada</small></h3>
-    <div>
-      <p><b>Para quem é:</b> para quem atende saúde da mulher e do homem, hormônios, fertilidade e gestação, e quer interpretar exames além da referência.</p>
-      <dl>
-        <dt>Exames Laboratoriais 2.0</dt><dd>Interpretar exames além dos valores de referência e transformar o dado em decisão clínica.</dd>
-        <dt>Saúde Hormonal</dt><dd>Avaliar e conduzir disfunções hormonais com segurança, mesmo com exames dentro da referência.</dd>
-        <dt>Fertilidade e Gestação</dt><dd>Avaliar, priorizar e ajustar a conduta da pré-concepção ao pós-parto.</dd>
-        <dt>Certificação Base em Nutrição Funcional e Alergias Alimentares</dt><dd>Os fundamentos da Nutrição Funcional e as alergias alimentares não mediadas por IgE.</dd>
-      </dl>
+  <div class="grupo">
+    <div class="grupo-topo"><h3>Galeno<small>Saúde Avançada</small></h3><p>Para quem atende saúde da mulher e do homem, hormônios, fertilidade e gestação, e quer interpretar exames além da referência.</p></div>
+    <div class="cursos">
+      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6h12M20 6v28a4 4 0 0 0 8 0V6"/><path d="M20 22h8"/><path d="M34 14h6M34 22h6M34 30h6"/></svg><h4>Exames Laboratoriais 2.0</h4><p>Interpretar exames além dos valores de referência e transformar o dado em decisão clínica.</p></div>
+      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m24 8 13 7.5v15L24 38l-13-7.5v-15Z"/><circle cx="24" cy="23" r="5"/></svg><h4>Saúde Hormonal</h4><p>Avaliar e conduzir disfunções hormonais com segurança, mesmo com exames dentro da referência.</p></div>
+      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="24" cy="26" rx="12" ry="15"/><circle cx="24" cy="26" r="4"/><path d="M24 11V6"/></svg><h4>Fertilidade e Gestação</h4><p>Avaliar, priorizar e ajustar a conduta da pré-concepção ao pós-parto.</p></div>
+      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 38C10 20 20 10 38 10c0 18-10 28-28 28Z"/><path d="M10 38 28 20"/></svg><h4>Nutrição Funcional e Alergias Alimentares</h4><p>Certificação base: os fundamentos da Nutrição Funcional e as alergias alimentares não mediadas por IgE.</p></div>
     </div>
   </div>
 
-  <div class="detalhe">
-    <h3>Olimpo<small>Pacote Completo</small></h3>
-    <div>
-      <p><b>Para quem é:</b> para quem quer o raciocínio clínico funcional inteiro, da avaliação à conduta.</p>
-      <p><b>O que tem:</b> as oito formações dos pacotes Hipócrates e Galeno.</p>
+  <div class="olimpo-bar">
+    <div><h3>Olimpo</h3><p>As 8 formações acima, do Hipócrates e do Galeno, num pacote só. Para quem quer o raciocínio clínico funcional inteiro, da avaliação à conduta.</p></div>
+    <a class="btn" href="#pacotes">Ver o Olimpo</a>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="eyebrow">Antes de decidir</div>
+  <h2>Para quem é. <span class="ital">E para quem não é.</span></h2>
+  <div class="quem-grid">
+    <div class="quem-col sim">
+      <h3>É para você se</h3>
+      <ul>
+        <li>Você é nutricionista ou profissional da saúde graduado e quer decidir a conduta pelo raciocínio, não pelo protocolo pronto.</li>
+        <li>Você é estudante de nutrição e quer chegar à clínica já pensando de forma sistêmica.</li>
+        <li>Você já perdeu o acesso a um curso antes de terminar e não quer passar por isso de novo.</li>
+        <li>Você quer voltar à aula quando o caso difícil chegar, daqui a um mês ou daqui a cinco anos.</li>
+      </ul>
+    </div>
+    <div class="quem-col nao">
+      <h3>Não é para você se</h3>
+      <ul>
+        <li>Você procura um protocolo para copiar e aplicar igual em todo paciente.</li>
+        <li>Você quer aula ao vivo. Aqui, todas as formações são gravadas.</li>
+        <li>Você não é da área da saúde. As formações são para profissionais e estudantes.</li>
+        <li>Você espera promessa de faturamento ou de carreira. Aqui tem formação, não promessa. E cada profissional aplica o conteúdo dentro do que o seu conselho permite.</li>
+      </ul>
     </div>
   </div>
 </div></section>
@@ -353,8 +388,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 <section class="sec faq"><div class="wrap">
   <div class="eyebrow">Perguntas</div>
   <h2>Antes de escolher</h2>
-  <details><summary>O que quer dizer acesso vitalício?</summary><p>Você tem acesso às formações do seu pacote enquanto a FSA mantiver o curso no ar, sem prazo de renovação.</p></details>
+  <details><summary>O que quer dizer acesso vitalício?</summary><p>Quer dizer que o seu acesso não tem data para acabar e não precisa ser renovado. Enquanto existir a plataforma de cursos da FSA, as formações do seu pacote ficam disponíveis para você assistir quantas vezes quiser.</p></details>
   <details><summary>As aulas são ao vivo?</summary><p>Não. Todas as formações são 100% gravadas. Você assiste no ritmo da sua agenda e volta a cada aula sempre que precisar.</p></details>
+  <details><summary>Depois da Black, ainda vai ter acesso vitalício?</summary><p>Não. Depois desta Black, as formações voltam ao acesso com prazo de 1 ou 2 anos.</p></details>
+  <details><summary>E se eu me arrepender?</summary><p>Você tem 7 dias a partir da compra para pedir o reembolso, como garante o Código de Defesa do Consumidor.</p></details>
   <details><summary>Para quem são as formações?</summary><p>Para profissionais da saúde graduados e estudantes de nutrição que querem aplicar a abordagem funcional na prática clínica.</p></details>
 </div></section>
 
@@ -366,7 +403,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 
 <footer><div class="wrap">
   <span><img src="logo-fsa-escuro.png" width="480" height="256" alt="FSA">Faculdade de Saúde Avançada® · saudeavancada.com.br</span>
-  <span>Acesso vitalício enquanto a FSA mantiver o curso no ar.</span>
+  <span>Acesso vitalício: enquanto existir a plataforma de cursos da FSA.</span>
 </div></footer>
 
 <script>
@@ -382,5 +419,6 @@ function tick(){
 }
 tick(); setInterval(tick, 1000);
 </script>
+
 </body>
 </html>
