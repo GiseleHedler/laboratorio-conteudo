@@ -48,3 +48,10 @@ Frases que prometem resultado de carreira ou de saúde e não podem ir para o co
 ## Ordem de trabalho
 1. Contexto (este arquivo). 2. Análise dos dois perfis. 3. Concorrentes. 4. Anúncios.
 5. GANCHOS.md. 6. REFERENCIAS_E_ADAPTACOES.md. 7. Semana 1. 8. Pauta quente.
+
+## Marca e termos próprios (15/10/2026)
+- **SerHumanologista®** é marca registrada da FSA. Plural usado no site: "SeresHumanologistas". Usar com ® na primeira menção de cada peça.
+- Bordão da Black Vitalícia 2026: "O fim da Narrativa Cega (tratar o exame e não o paciente). O começo de uma geração de SeresHumanologistas: profissionais que enxergam o ser humano inteiro."
+- Gabriel de Carvalho: cofundador, coordenador pedagógico e professor da FSA; responsável técnico pela Natural Pure.
+- Equipe pedagógica atual (out/2026): Fernanda Colossi de Paris (professora), Emiliana Barbosa Marques, Liliane Alves dos Santos Wanderley, Vinicius Leal. Raquel Schwanke saiu da FSA, mas tem aulas gravadas na Suplementação.
+- Garantia padrão das formações: 15 dias incondicional. Contato: WhatsApp (51) 98983-1882, secretaria@saudeavancada.com.br.
