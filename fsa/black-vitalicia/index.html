@@ -7,7 +7,7 @@
 <meta name="description" content="Black Friday Vitalícia FSA: pela primeira vez, as formações da Faculdade de Saúde Avançada com acesso vitalício. Três pacotes, só nesta Black.">
 <meta property="og:title" content="Black Friday Vitalícia FSA">
 <meta property="og:description" content="Pela primeira vez, as formações da FSA com acesso vitalício.">
-<meta property="og:image" content="cena.jpg">
+<meta property="og:image" content="https://black-fsa.pages.dev/cena.jpg">
 <link rel="icon" href="logo-fsa-escuro.png">
 <title>Black Vitalícia FSA</title>
 
@@ -140,6 +140,14 @@ section{padding-block:80px}
 .preco .nao{font-size:15px}
 .pacote .btn{justify-content:center;margin-top:10px}
 .letrinha{font-size:13px;color:var(--suave);margin:0}
+.hero-preco{margin:14px 0 20px;font-size:17px;color:var(--creme)}
+.hero-preco .nw{white-space:nowrap}
+.hero-preco b{font-family:var(--display);font-size:26px;font-weight:600;color:#fff}
+.hist-nota{grid-column:1 / -1;margin:8px 0 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:18px;color:var(--creme)}
+.hist-nota b{color:var(--destaque)}
+.aluno-aviso{margin:22px auto 0;max-width:640px;text-align:center;font-size:15px;color:var(--creme);border:1px dashed var(--linha);padding:12px 16px}
+.aluno-aviso b{color:var(--destaque)}
+.resumo-mob{display:none;margin:0;color:var(--texto);font-size:15px}
 .soma{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
 .soma img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--destaque)}
 .soma b{font-family:var(--display);font-size:26px;color:var(--destaque);line-height:1}
@@ -218,7 +226,7 @@ tr.total td{font-weight:700;color:var(--creme)}
 .credenciais li{padding-left:22px;position:relative}
 .credenciais li::before{content:"";position:absolute;left:0;top:.65em;width:10px;height:2px;background:var(--rosa)}
 .numero{margin-top:26px;display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--linha);padding-top:20px}
-.numero b{font-family:var(--display);font-size:48px;font-weight:600;color:var(--destaque);line-height:1}
+.numero b{white-space:nowrap;font-family:var(--display);font-size:48px;font-weight:600;color:var(--destaque);line-height:1}
 .numero span{color:var(--suave)}
 .equipe-tit{font-family:var(--display);font-size:28px;font-weight:600;margin:56px 0 20px}
 .profs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -289,7 +297,8 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
 @media (max-width:640px){
   .balao{display:none}
   .dialogo{display:flex}
-  .selo{width:104px;height:104px;right:-6px;bottom:-26px}
+  .selo{width:96px;height:96px;right:-6px;bottom:auto;top:-30px}
+  .hero .figure{margin-top:26px}
   .selo b{font-size:26px}
   .selo i{font-size:13px;padding:1px 8px}
   .selo span{font-size:8px}
@@ -299,11 +308,14 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   .fixo{transition:opacity .2s,transform .2s}
   .fixo.oculto{opacity:0;transform:translateY(20px);pointer-events:none}
   .curso{flex:0 0 72%}
+  .top3 ul,.top3 .sub{display:none}
+  .resumo-mob{display:block}
   .leque img{width:64px;height:64px;margin-left:-30px}
 }
 </style>
 </head>
 <body>
+
 <div class="top"><div class="wrap">
   <span class="dot" aria-hidden="true"></span>
   <span>Black Friday Vitalícia FSA</span>
@@ -314,11 +326,12 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
 <header class="hero"><div class="wrap">
   <div>
     <div class="marca"><img src="logo-fsa-escuro.png" width="480" height="256" alt="FSA"><span class="eyebrow">Faculdade de<br>Saúde Avançada®</span></div>
-    <h1><span class="l1">O fim da</span><span class="l2">Narrativa Cega.</span><span class="l3">O começo de uma geração de <em>SeresHumanologistas®</em>.</span></h1>
+    <h1><span class="l1">O fim da</span><span class="l2">Narrativa Cega.</span></h1>
+    <p class="sub">Chega de olhar só o número do laudo e o protocolo pronto. Nesta Black, as 8 formações da FSA ficam com você:</p>
     <div class="vital-tag"><b>Acesso vitalício</b><span>Pela primeira vez nas formações da FSA</span></div>
-    <p class="sub">8 formações 100% gravadas. Três pacotes, só nesta Black.</p>
+    <p class="hero-preco">A partir de <b>12x de R$ 579,40</b> <span class="nw">ou R$ 5.947 à vista</span></p>
     <a class="btn" href="#pacotes">Ver os pacotes <span aria-hidden="true">→</span></a>
-    <div class="meta">8 formações · 100% gravadas · para profissionais da saúde</div>
+    <div class="meta">8 formações · 3 pacotes · 100% gravadas</div>
   </div>
   <div class="figure">
     <div class="cena">
@@ -344,11 +357,11 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <div>
     <div class="eyebrow">O que termina aqui</div>
     <h2>A Narrativa Cega tem nome. E tem sintomas.</h2>
-    <p>A Narrativa Cega ensinou uma geração inteira de profissionais a confiar cegamente na referência laboratorial, no protocolo pronto e na tentativa e erro. Você reconhece quando ela aparece no consultório:</p>
+    <p>A Narrativa Cega é olhar só o número do laudo, só o protocolo pronto, e ir na tentativa e erro. Você reconhece quando ela aparece no consultório:</p>
   </div>
   <div>
     <ul class="sintomas">
-      <li>O T3 e o T4 "normais", e o paciente segue sintomático.</li>
+      <li>Exames dentro da referência, e o paciente ainda com queixas que ninguém explicou.</li>
       <li>O ferro que você suplementa por meses, ajusta a dose, troca a forma, e não sobe.</li>
       <li>O protocolo que funciona numa paciente e não funciona na outra.</li>
       <li>Onze queixas, uma lista de suplementos e nenhuma ordem para começar.</li>
@@ -361,14 +374,18 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <div class="marco"><img class="medalha" src="marco-hipocrates.jpg" width="320" height="320" alt="Busto de mármore de Hipócrates" loading="lazy"><span class="ano">2.400</span><h3>anos atrás</h3><p>Hipócrates já olhava o paciente inteiro: o que comia, como vivia, onde morava.</p></div>
   <div class="marco"><img class="medalha" src="marco-gabriel.jpg" width="320" height="320" alt="Gabriel de Carvalho" loading="lazy"><span class="ano">27</span><h3>anos atrás, em Porto Alegre</h3><p>Gabriel de Carvalho começa a ensinar Nutrição Funcional no Brasil. A ciência de hoje a serviço dessa mesma pergunta.</p></div>
   <div class="marco"><span class="medalha ouro" aria-hidden="true"><b>Black</b><i>Vitalícia</i></span><span class="ano">2026</span><h3>hoje</h3><p>Pela primeira vez, e por um tempo muito curto, as formações da FSA com acesso vitalício. Uma Black que nem o Hipócrates viu.</p></div>
+  <p class="hist-nota"><b>Hoje, cada formação tem acesso de 1 ou 2 anos.</b> Nesta Black, o acesso é vitalício. Depois dela, as formações voltam ao acesso com prazo.</p>
 </div></section>
 
-<section class="vital"><div class="wrap">
-  <div class="eyebrow">A oportunidade</div>
-  <h2>Estude no seu ritmo. <span class="ital">Para sempre.</span></h2>
-  <p>Hoje, cada formação tem acesso de 1 ou 2 anos. Nesta Black, o acesso é vitalício: você assiste entre um atendimento e outro e volta a cada aula sempre que um caso pedir.</p>
-  <p>Depois desta Black, as formações voltam ao acesso com prazo.</p>
-  <span class="regra"><b>Vitalício quer dizer:</b> enquanto existir a plataforma de cursos da FSA, as suas formações estarão lá para você.</span>
+
+<section class="sec depoimentos"><div class="wrap">
+  <div class="eyebrow">Quem já estudou</div>
+  <h2>O que muda <span class="ital">no consultório</span></h2>
+  <div class="deps">
+    <figure class="dep"><blockquote>“Hoje avalio o paciente por completo, não fico mais de mãos atadas. Essa mudança eu tive.”</blockquote><figcaption>Ana Paula Tonissi<span>Nutricionista, aluna FSA</span></figcaption></figure>
+    <figure class="dep"><blockquote>“Saí da graduação me sentindo segura para começar a trabalhar no dia seguinte.”</blockquote><figcaption>Ariane Cardoso<span>Nutricionista, aluna FSA</span></figcaption></figure>
+    <figure class="dep"><blockquote>“É totalmente diferente do que eu aprendi anteriormente.”</blockquote><figcaption>Amanda Turazzi<span>Nutricionista, aluna FSA</span></figcaption></figure>
+  </div>
 </div></section>
 
 <section class="sec" id="pacotes"><div class="wrap">
@@ -393,7 +410,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       <div class="preco">
         <span class="de">De <s>R$ 9.488</s> por</span>
         <span class="por">R$ 5.947</span>
-        <span class="parc">ou 12x de R$ 579,40 no cartão</span>
+        <span class="parc">à vista, ou 12x de R$ 579,40 no cartão (com juros)</span>
       </div>
       <a class="btn" href="#" data-checkout="hipocrates">Quero o Hipócrates</a>
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
@@ -401,21 +418,21 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
 
     <article class="pacote">
       <img class="capa" src="pacote-galeno.jpg" width="1024" height="688" alt="Busto de mármore de Galeno">
-      <div class="linha">Saúde Avançada</div>
+      <div class="linha">Exames, Hormônios e Fertilidade</div>
       <div class="nome">Galeno</div>
-      <p class="mote">Exames, hormônios e fertilidade além da referência.</p>
+      <p class="mote">O raciocínio clínico além da referência.</p>
       <ul>
         <li><span>Formação em Exames Laboratoriais 2.0</span><s>R$ 3.497</s></li>
         <li><span>Formação em Saúde Hormonal</span><s>R$ 3.497</s></li>
         <li><span>Fertilidade e Gestação</span><s>R$ 1.997</s></li>
-        <li><span>Certificação Base em Nutrição Funcional e Alergias Alimentares</span><s>R$ 697</s></li>
+        <li><span>Certificação em Nutrição Funcional e Alergias Alimentares</span><s>R$ 697</s></li>
       </ul>
-      <p class="ideal"><b>Ideal se</b> você já tem base e atende exames, hormônios, fertilidade e gestação.</p>
+      <p class="ideal"><b>Ideal se</b> você atende exames, hormônios, fertilidade e gestação e quer integrar o laudo ao paciente inteiro.</p>
       <div class="mini-capas" aria-hidden="true"><img src="capa-exames.jpg" alt="" loading="lazy"><img src="capa-hormonal.jpg" alt="" loading="lazy"><img src="capa-fertilidade.jpg" alt="" loading="lazy"><img src="capa-alergias.jpg" alt="" loading="lazy"></div>
       <div class="preco">
         <span class="de">De <s>R$ 9.688</s> por</span>
         <span class="por">R$ 5.947</span>
-        <span class="parc">ou 12x de R$ 579,40 no cartão</span>
+        <span class="parc">à vista, ou 12x de R$ 579,40 no cartão (com juros)</span>
       </div>
       <a class="btn" href="#" data-checkout="galeno">Quero o Galeno</a>
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
@@ -430,6 +447,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       </div>
       <div class="nome">Olimpo</div>
       <p class="mote">Não quer escolher entre os dois? Leve os dois.</p>
+      <p class="resumo-mob">As 8 formações do Hipócrates e do Galeno. A lista completa está logo abaixo, em “Por dentro das 8 formações”.</p>
       <div class="sub">Tudo do Hipócrates</div>
       <ul>
         <li><span>Formação em Nutrição Funcional 3.0</span><s>R$ 3.497</s></li>
@@ -442,7 +460,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
         <li><span>Formação em Exames Laboratoriais 2.0</span><s>R$ 3.497</s></li>
         <li><span>Formação em Saúde Hormonal</span><s>R$ 3.497</s></li>
         <li><span>Fertilidade e Gestação</span><s>R$ 1.997</s></li>
-        <li><span>Certificação Base em Nutrição Funcional e Alergias Alimentares</span><s>R$ 697</s></li>
+        <li><span>Certificação em Nutrição Funcional e Alergias Alimentares</span><s>R$ 697</s></li>
       </ul>
       <div class="bonus">
         <img src="capa-gripes.jpg" width="480" height="480" alt="Capa do curso Gripes e Resfriados" loading="lazy">
@@ -452,14 +470,14 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
         <span class="de">Valor original das 8 formações: <s>R$ 19.176</s></span>
         <span class="de">Hipócrates + Galeno nesta Black: <s>R$ 11.894</s></span>
         <span class="por">R$ 9.947</span>
-        <span class="parc">ou 12x de R$ 969,11 no cartão</span>
+        <span class="parc">à vista, ou 12x de R$ 969,11 no cartão (com juros)</span>
         <span class="eco">R$ 1.947 a menos do que levar os dois pacotes separados</span>
       </div>
       <a class="btn" href="#" data-checkout="olimpo">Quero os dois: Olimpo</a>
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
     </article>
   </div>
-  <p class="letrinha" style="margin-top:18px">Todas as formações são 100% gravadas. Vitalício: enquanto existir a plataforma de cursos da FSA, o seu acesso continua.</p>
+  <p class="aluno-aviso"><b>Já é aluno da FSA?</b> Você tem preço especial nesta Black. Ao escolher o pacote, informe o seu CPF e o preço de aluno aparece na hora.</p>
 </div></section>
 
 <section class="sec"><div class="wrap">
@@ -470,25 +488,25 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
     <div class="grupo-topo"><h3>Hipócrates<small>Nutrição Funcional</small></h3><p>Para quem quer dominar a abordagem sistêmica da Nutrição Funcional e conduzir com segurança a suplementação.</p></div>
     <div class="cursos">
       <div class="curso"><img class="capa-curso" src="capa-nf30.jpg" width="480" height="480" alt="Capa da formação Nutrição Funcional 3.0" loading="lazy"><div class="curso-txt"><h4>Nutrição Funcional 3.0</h4><p>A abordagem sistêmica, com a Matriz e a Pirâmide das Prioridades, aplicada a tireoide, síndrome metabólica, saúde da mulher, saúde intestinal e mais.</p></div></div>
-      <div class="curso"><img class="capa-curso" src="capa-suplementacao.jpg" width="480" height="480" alt="Capa da formação Suplementação Individualizada" loading="lazy"><div class="curso-txt"><h4>Suplementação Individualizada</h4><p>Prescrever com segurança, eficácia e personalização, nutriente por nutriente.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-suplementacao.jpg" width="480" height="480" alt="Capa da formação Suplementação Individualizada" loading="lazy"><div class="curso-txt"><h4>Suplementação Individualizada</h4><p>Critérios para indicar a suplementação com segurança e individualização, nutriente por nutriente.</p></div></div>
       <div class="curso"><img class="capa-curso" src="capa-jejum.jpg" width="480" height="480" alt="Capa da formação Jejum: Ferramenta para a Saúde" loading="lazy"><div class="curso-txt"><h4>Jejum: Ferramenta para a Saúde</h4><p>O jejum como estratégia, com análise crítica das evidências.</p></div></div>
       <div class="curso"><img class="capa-curso" src="capa-hemograma.jpg" width="480" height="480" alt="Capa da formação Hemograma: O Ponto Cego" loading="lazy"><div class="curso-txt"><h4>Hemograma: O Ponto Cego</h4><p>Enxergar no hemograma muito além da anemia.</p></div></div>
     </div>
   </div>
 
   <div class="grupo">
-    <div class="grupo-topo"><h3>Galeno<small>Saúde Avançada</small></h3><p>Para quem atende saúde da mulher e do homem, hormônios, fertilidade e gestação, e quer interpretar exames além da referência.</p></div>
+    <div class="grupo-topo"><h3>Galeno<small>Exames, Hormônios e Fertilidade</small></h3><p>Para quem atende saúde da mulher e do homem, hormônios, fertilidade e gestação, e quer interpretar os exames junto com o quadro clínico.</p></div>
     <div class="cursos">
-      <div class="curso"><img class="capa-curso" src="capa-exames.jpg" width="480" height="480" alt="Capa da formação Exames Laboratoriais 2.0" loading="lazy"><div class="curso-txt"><h4>Exames Laboratoriais 2.0</h4><p>Interpretar exames além dos valores de referência e transformar o dado em decisão clínica.</p></div></div>
-      <div class="curso"><img class="capa-curso" src="capa-hormonal.jpg" width="480" height="480" alt="Capa da formação Saúde Hormonal" loading="lazy"><div class="curso-txt"><h4>Saúde Hormonal</h4><p>Avaliar e conduzir disfunções hormonais com segurança, mesmo com exames dentro da referência.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-exames.jpg" width="480" height="480" alt="Capa da formação Exames Laboratoriais 2.0" loading="lazy"><div class="curso-txt"><h4>Exames Laboratoriais 2.0</h4><p>Ler os exames laboratoriais junto com a história e os sintomas, e transformar o dado em raciocínio clínico.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-hormonal.jpg" width="480" height="480" alt="Capa da formação Saúde Hormonal" loading="lazy"><div class="curso-txt"><h4>Saúde Hormonal</h4><p>O olhar funcional sobre a saúde hormonal da mulher e do homem, integrando exames, sintomas e estilo de vida.</p></div></div>
       <div class="curso"><img class="capa-curso" src="capa-fertilidade.jpg" width="480" height="480" alt="Capa da formação Fertilidade e Gestação" loading="lazy"><div class="curso-txt"><h4>Fertilidade e Gestação</h4><p>Avaliar, priorizar e ajustar a conduta da pré-concepção ao pós-parto.</p></div></div>
-      <div class="curso"><img class="capa-curso" src="capa-alergias.jpg" width="480" height="480" alt="Capa da formação Nutrição Funcional e Alergias Alimentares" loading="lazy"><div class="curso-txt"><h4>Nutrição Funcional e Alergias Alimentares</h4><p>Certificação base: os fundamentos da Nutrição Funcional e as alergias alimentares não mediadas por IgE.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-alergias.jpg" width="480" height="480" alt="Capa da formação Nutrição Funcional e Alergias Alimentares" loading="lazy"><div class="curso-txt"><h4>Nutrição Funcional e Alergias Alimentares</h4><p>Certificação completa e avançada: a Nutrição Funcional aplicada às alergias alimentares não mediadas por IgE.</p></div></div>
     </div>
   </div>
 
   <div class="olimpo-bar">
     <div class="leque" aria-hidden="true"><img src="capa-nf30.jpg" alt="" style="--r:-14deg;--y:10px" loading="lazy"><img src="capa-suplementacao.jpg" alt="" style="--r:-10deg;--y:5px" loading="lazy"><img src="capa-jejum.jpg" alt="" style="--r:-6deg;--y:2px" loading="lazy"><img src="capa-hemograma.jpg" alt="" style="--r:-2deg;--y:0px" loading="lazy"><img src="capa-exames.jpg" alt="" style="--r:2deg;--y:0px" loading="lazy"><img src="capa-hormonal.jpg" alt="" style="--r:6deg;--y:2px" loading="lazy"><img src="capa-fertilidade.jpg" alt="" style="--r:10deg;--y:5px" loading="lazy"><img src="capa-alergias.jpg" alt="" style="--r:14deg;--y:10px" loading="lazy"><img class="leque-bonus" src="capa-gripes.jpg" alt="" style="--r:18deg;--y:16px" loading="lazy"></div>
-    <div><h3>Olimpo = Hipócrates + Galeno + bônus</h3><p>Os dois pacotes juntos: as 8 formações acima, sem precisar escolher. E só no Olimpo, de bônus, o <b>Curso Gripes e Resfriados</b>, com estratégias nutricionais para gripes e resfriados: fatores de risco, nutrientes que apoiam a imunidade e a conduta na recuperação. Para quem quer o raciocínio clínico funcional inteiro, da avaliação à conduta. <b>Sai a menos de R$ 1.250 por formação.</b></p></div>
+    <div><h3>Olimpo = Hipócrates + Galeno + bônus</h3><p>Os dois pacotes juntos: as 8 formações acima, sem precisar escolher. E só no Olimpo, de bônus, o <b>Curso Gripes e Resfriados</b>, com o papel da nutrição na prevenção e na recuperação de gripes e resfriados. Para quem quer o raciocínio clínico funcional inteiro, da avaliação à conduta. <b>Sai a menos de R$ 1.250 por formação.</b></p></div>
     <a class="btn" href="#pacotes">Ver o Olimpo</a>
   </div>
 </div></section>
@@ -503,13 +521,12 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       <span class="cargo">Cofundador, coordenador pedagógico e professor da FSA</span>
       <p>Nutricionista e farmacêutico bioquímico. Introduziu a Nutrição Funcional no Brasil em 1999 e atende em clínica desde 1998.</p>
       <ul class="credenciais">
-        <li>Responsável técnico pela Natural Pure</li>
         <li>Primeiro profissional da América Latina certificado pelo The Institute for Functional Medicine (EUA)</li>
         <li>Fundador do IBNF, Instituto Brasileiro de Nutrição Funcional</li>
         <li>Pós-graduado em Nutrição Clínica Funcional</li>
         <li>Palestrante nacional e internacional, referência no ensino da suplementação</li>
       </ul>
-      <div class="numero"><b>40 mil+</b><span>SeresHumanologistas® formados pela FSA</span></div>
+      <div class="numero"><b>40 mil+</b><span>alunos já estudaram na FSA</span></div>
     </div>
   </div>
   <h3 class="equipe-tit">E uma equipe pedagógica de doutoras e pesquisadores</h3>
@@ -530,18 +547,9 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
     <figure class="m-turma"><img src="foto-turma.jpg" width="1200" height="800" alt="Turma de alunos reunida em um encontro presencial da FSA" loading="lazy"></figure>
     <figure class="m-equipe"><img src="foto-equipe.jpg" width="1000" height="750" alt="Gabriel de Carvalho com a equipe da FSA" loading="lazy"></figure>
   </div>
-  <p class="letrinha" style="margin-top:14px">Fotos de encontros e eventos presenciais da FSA. As formações desta Black são 100% online e gravadas.</p>
+  <p class="letrinha" style="margin-top:14px">Fotos de encontros e eventos presenciais da FSA. As formações desta Black são online.</p>
 </div></section>
 
-<section class="sec depoimentos"><div class="wrap">
-  <div class="eyebrow">Quem já estudou</div>
-  <h2>O que muda <span class="ital">no consultório</span></h2>
-  <div class="deps">
-    <figure class="dep"><blockquote>“Hoje avalio o paciente por completo, não fico mais de mãos atadas. Essa mudança eu tive.”</blockquote><figcaption>Ana Paula Tonissi<span>Nutricionista, aluna FSA</span></figcaption></figure>
-    <figure class="dep"><blockquote>“Saí da graduação me sentindo segura para começar a trabalhar no dia seguinte.”</blockquote><figcaption>Ariane Cardoso<span>Nutricionista, aluna FSA</span></figcaption></figure>
-    <figure class="dep"><blockquote>“É totalmente diferente do que eu aprendi anteriormente.”</blockquote><figcaption>Amanda Turazzi<span>Nutricionista, aluna FSA</span></figcaption></figure>
-  </div>
-</div></section>
 
 <section class="sec plataforma"><div class="wrap">
   <div class="eyebrow">Como é por dentro</div>
@@ -589,6 +597,8 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <details><summary>As aulas são ao vivo?</summary><p>Não. Todas as formações são 100% gravadas. Você assiste no ritmo da sua agenda e volta a cada aula sempre que precisar.</p></details>
   <details><summary>Depois da Black, ainda vai ter acesso vitalício?</summary><p>Não. Depois desta Black, as formações voltam ao acesso com prazo de 1 ou 2 anos.</p></details>
   <details><summary>E se eu me arrepender?</summary><p>Você tem 15 dias de garantia incondicional. Assista às aulas com calma e, se concluir que não é para você, devolvemos 100% do valor. Sem burocracia.</p></details>
+  <details><summary>Já sou aluno da FSA. Tenho condição especial?</summary><p>Sim. Quem já é aluno tem preço especial nesta Black. Ao escolher o pacote, você informa o seu CPF e, se for aluno, o preço especial aparece na hora.</p></details>
+  <details><summary>As formações são pós-graduação?</summary><p>Não. São cursos de extensão, com certificado de conclusão emitido pela Faculdade de Saúde Avançada®.</p></details>
   <details><summary>Tem certificado?</summary><p>Sim. Ao concluir cada formação, você recebe o certificado de conclusão emitido pela Faculdade de Saúde Avançada®.</p></details>
   <details><summary>E se eu tiver dúvida nas aulas?</summary><p>Você tira as dúvidas sobre o conteúdo pela própria plataforma, com a equipe pedagógica da FSA.</p></details>
   <details><summary>Para quem são as formações?</summary><p>Para profissionais da saúde graduados e estudantes de nutrição que querem aplicar a abordagem funcional na prática clínica.</p></details>

@@ -55,3 +55,11 @@ Frases que prometem resultado de carreira ou de saúde e não podem ir para o co
 - Gabriel de Carvalho: cofundador, coordenador pedagógico e professor da FSA; responsável técnico pela Natural Pure.
 - Equipe pedagógica atual (out/2026): Fernanda Colossi de Paris (professora), Emiliana Barbosa Marques, Liliane Alves dos Santos Wanderley, Vinicius Leal. Raquel Schwanke saiu da FSA, mas tem aulas gravadas na Suplementação.
 - Garantia padrão das formações: 15 dias incondicional. Contato: WhatsApp (51) 98983-1882, secretaria@saudeavancada.com.br.
+
+## Black Vitalícia: decisões de 15/10/2026
+- Bloco A da revisão aplicado na página (headline traduzida, preço no topo em parcela com à vista visível, sintomas sem T3/T4, depoimentos antes dos pacotes, Natural Pure removido, "40 mil+ alunos").
+- As formações são cursos de extensão. Nenhuma é pós.
+- Alunos têm preço especial: o checkout pede CPF e mostra o preço de aluno. Sem números na página.
+- A certificação de alergias não é "base": nome usado é "Certificação em Nutrição Funcional e Alergias Alimentares" (conferir com o nome no checkout).
+- Médicos também são público: não usar "dentro da atuação do nutricionista".
+- TESTE A/B (para depois): versão A = "O fim da Narrativa Cega" + subtítulo atual. Versão B = "Black Friday Vitalícia FSA / Sua prática clínica mais assertiva, seu trabalho mais valorizado, você mais relevante. Para sempre." (suavizar "trabalho mais valorizado", que soa promessa de carreira). Testar só a headline, medir clique para o checkout, precisa pixel/GA.
