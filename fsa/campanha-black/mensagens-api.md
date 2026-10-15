@@ -14,12 +14,30 @@ E nessa noite ele revela uma Black Friday diferente de tudo o que a FSA já fez.
 Quem está na lista fica sabendo primeiro:
 👉 https://fsa.link/black-27anos
 
-### 17/10 · Pergunta (sem link, para gerar resposta)
+### 17/10 · Pergunta
+INSTRUÇÃO PARA A EQUIPE DA API (escolher UMA opção antes de 17/10):
+Opção 1, resposta no WhatsApp (preferida, se a ferramenta permitir):
+1. Criar uma automação: quem responder a esta mensagem recebe a etiqueta "pergunta-live".
+2. Resposta automática imediata: "Recebemos a sua pergunta! O Gabriel vai escolher algumas para responder ao vivo. Te vejo dia 19/10, às 20h27."
+3. Até 19/10 às 12h, exportar as conversas com a etiqueta "pergunta-live" para uma planilha e mandar para a Gisele e o Gabriel.
+Se a ferramenta não tiver etiqueta + resposta automática + exportação, NÃO usar a opção 1 (a pessoa responderia e ficaria sem retorno).
+Opção 2, formulário: criar um Google Forms com uma pergunta ("Qual a sua pergunta para o Gabriel?") e usar a versão da mensagem com link.
+
+Versão da opção 1 (sem link):
 *Se você pudesse perguntar uma coisa ao Gabriel, o que seria?*
 
 Responda aqui mesmo. Na festa de 27 anos, dia 19/10 às 20h27, ele vai responder algumas perguntas ao vivo.
 
 Pode ser aquele caso que não sai da sua cabeça. Aquele exame que não fecha. Aquela dúvida que nenhum curso respondeu.
+
+Versão da opção 2 (com formulário):
+*Se você pudesse perguntar uma coisa ao Gabriel, o que seria?*
+
+Na festa de 27 anos, dia 19/10 às 20h27, ele vai responder algumas perguntas ao vivo.
+
+Pode ser aquele caso que não sai da sua cabeça. Aquele exame que não fecha. Aquela dúvida que nenhum curso respondeu.
+
+👉 Mande a sua pergunta aqui: [LINK DO FORMULÁRIO]
 
 ### 18/10 · Expectativa
 *Amanhã, às 20h27, a FSA abre uma Black que nunca existiu.*
@@ -32,6 +50,8 @@ Se você está de olho na sua próxima formação, não decida nada antes de ama
 👉 https://fsa.link/black-27anos
 
 ### 19/10 · Manhã
+INSTRUÇÃO PARA A EQUIPE: só usar "Responda SIM" se houver automação que envie o link da live a quem responder SIM às 20h27. Sem isso, trocar a última frase por: "Salve o horário: hoje, 20h27."
+
 *Posso confirmar sua presença hoje às 20h27?*
 
 Hoje o Gabriel celebra 27 anos ensinando Nutrição Funcional no Brasil e abre, ao vivo, a Black Friday mais diferente da história da FSA.
