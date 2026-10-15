@@ -16,7 +16,7 @@
 <style>
 /* Layout: página editorial escura (vinho FSA), hero com a cena e balões, faixa corrida, manifesto, pacotes em 3 colunas, detalhes, perguntas. Tema único escuro por escolha. */
 :root{
-  --bg:#14020D; --bg2:#1d0616; --roxo:#2B0739; --creme:#ece4d8; --texto:#f1e9ec; --suave:#bfa9b4;
+  --bg:#14020D; --bg2:#1d0616; --roxo:#2B0739; --creme:#ece4d8; --texto:#f1e9ec; --suave:#d2c1ca;
   --rosa:#C73E5C; --destaque:#DC447C; --linha:#3a1630;
   --display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
   --body:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
@@ -133,13 +133,13 @@ section{padding-block:80px}
 .pacote ul li s{color:var(--suave);white-space:nowrap;font-variant-numeric:tabular-nums;text-decoration-color:var(--rosa);font-size:14px}
 .pacote ul li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:2px;background:var(--rosa)}
 .preco{margin-top:auto;border-top:1px solid var(--linha);padding-top:16px;display:flex;flex-direction:column;gap:4px}
-.preco .de{font-size:14px;color:var(--suave)}
+.preco .de{font-size:15px;color:var(--suave)}
 .preco .de s{text-decoration-color:var(--rosa)}
 .preco .por{font-family:var(--display);font-size:42px;font-weight:600;line-height:1;color:var(--texto);font-variant-numeric:tabular-nums}
 .preco .quem{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--suave)}
 .preco .nao{font-size:15px}
 .pacote .btn{justify-content:center;margin-top:10px}
-.letrinha{font-size:13px;color:var(--suave);margin:0}
+.letrinha{font-size:15px;color:var(--suave);margin:0}
 .hero-preco{margin:16px 0 22px;display:flex;flex-direction:column;gap:2px}
 .hp-12{font-family:var(--display);font-size:22px;color:var(--creme);font-weight:600}
 .hp-12 b{display:block;font-size:34px;line-height:1.1;color:#fff;font-weight:600}
@@ -209,9 +209,9 @@ tr.total td{font-weight:700;color:var(--creme)}
 
 
 /* parcelamento e garantia */
-.preco .parc{font-size:13px;color:var(--suave)}
+.preco .parc{font-size:15px;color:var(--suave)}
 .preco .por small{font-size:22px;color:var(--creme)}
-.seguro{margin:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;font-size:13px;color:var(--suave)}
+.seguro{margin:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;font-size:14px;color:var(--suave)}
 .seguro span::before{content:"✓ ";color:var(--destaque);font-weight:700}
 .seguro a{color:var(--suave);text-underline-offset:3px}
 .seguro a:hover,.seguro a:focus-visible{color:var(--creme)}
@@ -268,7 +268,7 @@ tr.total td{font-weight:700;color:var(--creme)}
 .dep-video video{width:100%;aspect-ratio:16/9;display:block;background:#000;object-fit:cover}
 .dep-video blockquote{font-size:19px;padding:0 22px}
 .dep-video figcaption{padding:0 22px}
-.dep figcaption span{display:block;font-weight:400;font-size:13px;color:var(--suave)}
+.dep figcaption span{display:block;font-weight:400;font-size:14px;color:var(--suave)}
 /* plataforma */
 .plat-grid{display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center;margin-top:32px}
 .plat-grid > *{min-width:0}
@@ -436,7 +436,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       <div class="preco">
         <span class="de">De <s>R$ 9.488</s></span>
         <span class="por"><small>12x</small> R$ 579,40</span>
-        <span class="parc">ou R$ 5.947 à vista</span>
+        <span class="parc">ou R$ 5.947 à vista, com desconto</span>
       </div>
       <a class="btn" href="#" data-checkout="hipocrates">Quero o Hipócrates</a>
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
@@ -458,7 +458,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       <div class="preco">
         <span class="de">De <s>R$ 9.688</s></span>
         <span class="por"><small>12x</small> R$ 579,40</span>
-        <span class="parc">ou R$ 5.947 à vista</span>
+        <span class="parc">ou R$ 5.947 à vista, com desconto</span>
       </div>
       <a class="btn" href="#" data-checkout="galeno">Quero o Galeno</a>
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
@@ -496,7 +496,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
         <span class="de">Valor original das 8 formações: <s>R$ 19.176</s></span>
         <span class="de">Hipócrates + Galeno nesta Black: <s>R$ 11.894</s></span>
         <span class="por"><small>12x</small> R$ 969,11</span>
-        <span class="parc">ou R$ 9.947 à vista</span>
+        <span class="parc">ou R$ 9.947 à vista, com desconto</span>
         <span class="eco">R$ 1.947 a menos do que levar os dois pacotes separados</span>
       </div>
       <a class="btn" href="#" data-checkout="olimpo">Quero os dois: Olimpo</a>
@@ -536,7 +536,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
 
   <div class="olimpo-bar">
     <div class="leque" aria-hidden="true"><img src="capa-nf30.jpg" alt="" style="--r:-14deg;--y:10px" loading="lazy"><img src="capa-suplementacao.jpg" alt="" style="--r:-10deg;--y:5px" loading="lazy"><img src="capa-jejum.jpg" alt="" style="--r:-6deg;--y:2px" loading="lazy"><img src="capa-hemograma.jpg" alt="" style="--r:-2deg;--y:0px" loading="lazy"><img src="capa-exames.jpg" alt="" style="--r:2deg;--y:0px" loading="lazy"><img src="capa-hormonal.jpg" alt="" style="--r:6deg;--y:2px" loading="lazy"><img src="capa-fertilidade.jpg" alt="" style="--r:10deg;--y:5px" loading="lazy"><img src="capa-alergias.jpg" alt="" style="--r:14deg;--y:10px" loading="lazy"><img class="leque-bonus" src="capa-gripes.jpg" alt="" style="--r:18deg;--y:16px" loading="lazy"></div>
-    <div><h3>Olimpo = Hipócrates + Galeno + bônus</h3><p>Os dois pacotes juntos: as 8 formações acima, com mais de 250 horas de aula, sem precisar escolher. E só no Olimpo, de bônus, o <b>Curso Gripes e Resfriados</b>, com o papel da nutrição na prevenção e na recuperação de gripes e resfriados. Para quem quer o raciocínio clínico funcional inteiro, da avaliação à conduta. <b>Sai a menos de R$ 1.250 por formação.</b></p></div>
+    <div><h3>Olimpo = Hipócrates + Galeno + bônus</h3><p>Os dois pacotes juntos: as 8 formações acima, com mais de 250 horas de aula, sem precisar escolher. E só no Olimpo, de bônus, o <b>Curso Gripes e Resfriados</b>, com o papel da nutrição na prevenção e na recuperação de gripes e resfriados. Para quem quer o raciocínio clínico funcional inteiro, da avaliação à conduta. <b>À vista, sai a menos de R$ 1.250 por formação.</b></p></div>
     <a class="btn" href="#pacotes">Ver o Olimpo</a>
   </div>
 </div></section>
@@ -614,6 +614,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
         <li>Você é estudante de nutrição e quer chegar à clínica já pensando de forma sistêmica.</li>
         <li>Você já perdeu o acesso a um curso antes de terminar e não quer passar por isso de novo.</li>
         <li>Você quer voltar à aula quando o caso difícil chegar, daqui a um mês ou daqui a cinco anos.</li>
+        <li>Você não tem tempo de fazer tudo em 1 ou 2 anos e quer estudar no seu ritmo, sem prazo.</li>
       </ul>
     </div>
     <div class="quem-col nao">
@@ -634,6 +635,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <details><summary>O que quer dizer acesso vitalício?</summary><p>Quer dizer que o seu acesso não tem data para acabar e não precisa ser renovado. Enquanto existir a plataforma de cursos da FSA, as formações do seu pacote ficam disponíveis para você assistir quantas vezes quiser.</p></details>
   <details><summary>As aulas são ao vivo?</summary><p>Não. Todas as formações são 100% gravadas. Você assiste no ritmo da sua agenda e volta a cada aula sempre que precisar.</p></details>
   <details><summary>Depois da Black, ainda vai ter acesso vitalício?</summary><p>Não. Depois desta Black, as formações voltam ao acesso com prazo de 1 ou 2 anos.</p></details>
+  <details><summary>Posso parcelar?</summary><p>Sim, em até 12x no cartão: 12x de R$ 579,40 no Hipócrates ou no Galeno e 12x de R$ 969,11 no Olimpo. E à vista você tem desconto: R$ 5.947 no Hipócrates ou no Galeno e R$ 9.947 no Olimpo.</p></details>
   <details><summary>E se eu me arrepender?</summary><p>Você tem 15 dias de garantia incondicional. Assista às aulas com calma e, se concluir que não é para você, devolvemos 100% do valor. Sem burocracia.</p></details>
   <details><summary>As formações são pós-graduação?</summary><p>Não. São cursos de extensão, com certificado de conclusão emitido pela Faculdade de Saúde Avançada®.</p></details>
   <details><summary>Tem certificado?</summary><p>Sim. Ao concluir cada formação, você recebe o certificado de conclusão emitido pela Faculdade de Saúde Avançada®.</p></details>

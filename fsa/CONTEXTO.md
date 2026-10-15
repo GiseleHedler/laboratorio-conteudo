@@ -77,3 +77,8 @@ Gisele Hedler: cofundadora e CEO, publicitária (não divulgar formação sem el
 - Daniela Nadruz, médica gastroenterologista (Drive 1JRkE-...): USADO na página, só o trecho 0:00 a 0:46 + frase final ("privilégio... embasamento"). NÃO usar o caso do paciente com gordura no fígado/fibrose (resultado de tratamento).
 - Lysiane, nutricionista (Drive 1XKJHOG...): Gisele decidiu (15/10) usar o vídeo INTEIRO só na página, ciente do risco; NUNCA em criativos/anúncios. Na página, a frase escrita é só a parte segura. Conteúdo de risco: Diz "a nutrição funcional salvou a vida daquele homem", "eu salvo pessoas", caso de paralisia/morfina e "não tenho mais horário na agenda" (promessa de resultado clínico e de carreira; risco CFN/CRN).
 - Ariane removida da página.
+
+## Pesquisa Black Friday 27 anos (planilha 1fJ19IdSo..., 808 respostas válidas, lida em 15/10)
+91% mulheres · 75% com 39+ anos · 81% conhecem a FSA há mais de 1 ano · 65% NÃO são alunos · 78% profissionais de saúde (~35 médicos) · interesse: NF 34%, Exames 24%, Hormonal 22%, Suplementação 13%, Fertilidade 3% · canal: Instagram 58%, e-mail 16% · renda: 43% até R$3.000 · barreiras: conhecimento 20%, insegurança 10%, tempo 8%, dinheiro 5%.
+Decisão: não fazer pesquisa nova; perguntas para a live via caixinha nos stories.
+Regra de preço da FSA: não dizer "com juros"; dizer "à vista com desconto".
