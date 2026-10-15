@@ -213,6 +213,12 @@ tr.total td{font-weight:700;color:var(--creme)}
 .m-plateia{grid-column:2;grid-row:1 / span 2}
 .m-turma{grid-column:3;grid-row:1}
 .m-equipe{grid-column:3;grid-row:2}
+/* depoimentos */
+.deps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.dep{margin:0;background:var(--bg2);border:1px solid var(--linha);border-top:3px solid var(--destaque);padding:26px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;min-width:0}
+.dep blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:23px;line-height:1.3;color:var(--creme)}
+.dep figcaption{font-weight:700}
+.dep figcaption span{display:block;font-weight:400;font-size:13px;color:var(--suave)}
 /* plataforma */
 .plat-grid{display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center;margin-top:32px}
 .plat-grid > *{min-width:0}
@@ -241,6 +247,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
 
 @media (max-width:900px){
   .gabriel,.plat-grid{grid-template-columns:1fr;gap:28px}
+  .deps{grid-template-columns:1fr}
   .mosaico{grid-template-columns:1fr 1fr;grid-template-rows:220px 180px 180px}
   .m-aula{grid-column:1 / span 2;grid-row:1}
   .m-plateia{grid-column:1;grid-row:2 / span 2}
@@ -490,6 +497,16 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
     <figure class="m-equipe"><img src="foto-equipe.jpg" width="1000" height="750" alt="Gabriel de Carvalho com a equipe da FSA" loading="lazy"></figure>
   </div>
   <p class="letrinha" style="margin-top:14px">Fotos de encontros e eventos presenciais da FSA. As formações desta Black são 100% online e gravadas.</p>
+</div></section>
+
+<section class="sec depoimentos"><div class="wrap">
+  <div class="eyebrow">Quem já estudou</div>
+  <h2>O que muda <span class="ital">no consultório</span></h2>
+  <div class="deps">
+    <figure class="dep"><blockquote>“Hoje avalio o paciente por completo, não fico mais de mãos atadas. Essa mudança eu tive.”</blockquote><figcaption>Ana Paula Tonissi<span>Nutricionista, aluna FSA</span></figcaption></figure>
+    <figure class="dep"><blockquote>“Saí da graduação me sentindo segura para começar a trabalhar no dia seguinte.”</blockquote><figcaption>Ariane Cardoso<span>Nutricionista, aluna FSA</span></figcaption></figure>
+    <figure class="dep"><blockquote>“É totalmente diferente do que eu aprendi anteriormente.”</blockquote><figcaption>Amanda Turazzi<span>Nutricionista, aluna FSA</span></figcaption></figure>
+  </div>
 </div></section>
 
 <section class="sec plataforma"><div class="wrap">
