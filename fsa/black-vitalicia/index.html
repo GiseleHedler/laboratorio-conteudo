@@ -176,7 +176,11 @@ tr.total td{font-weight:700;color:var(--creme)}
 .fim{text-align:center;padding-block:96px;background:radial-gradient(ellipse at center,rgba(199,62,92,.18),transparent 65%)}
 .fim h2{font-family:var(--display);font-weight:500;font-size:clamp(40px,6vw,76px);line-height:1;margin:0 0 18px}
 footer{border-top:1px solid var(--linha);padding-block:28px;font-size:13px;color:var(--suave)}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:flex-start}
+footer .legal{display:flex;flex-direction:column;gap:6px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--suave);text-underline-offset:3px}
+footer a:hover,footer a:focus-visible{color:var(--creme)}
 
 @media (max-width:900px){
   .hero .wrap,.manifesto .grid,.quem-grid{grid-template-columns:1fr;gap:20px}
@@ -406,8 +410,18 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 </div></section>
 
 <footer><div class="wrap">
-  <span><img src="logo-fsa-escuro.png" width="480" height="256" alt="FSA">Faculdade de Saúde Avançada® · saudeavancada.com.br</span>
-  <span>Acesso vitalício: enquanto existir a plataforma de cursos da FSA.</span>
+  <div class="legal">
+    <span><img src="logo-fsa-escuro.png" width="480" height="256" alt="FSA">Faculdade de Saúde Avançada®</span>
+    <span>CNPJ 32.820.232/0001-82 · Porto Alegre, RS</span>
+    <span>© 2026 Faculdade de Saúde Avançada. Todos os direitos reservados.</span>
+  </div>
+  <div class="legal">
+    <nav aria-label="Links legais">
+      <a href="https://lp.saudeavancada.com.br/termosdeuso" target="_blank" rel="noopener">Termos de uso e Política de Privacidade</a>
+      <a href="https://saudeavancada.com.br/" target="_blank" rel="noopener">saudeavancada.com.br</a>
+    </nav>
+    <span>Acesso vitalício: enquanto existir a plataforma de cursos da FSA.</span>
+  </div>
 </div></footer>
 
 <script>
