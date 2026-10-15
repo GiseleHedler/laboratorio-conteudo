@@ -151,11 +151,18 @@ section{padding-block:80px}
 .grupo-topo h3{font-family:var(--display);font-size:34px;font-weight:600;margin:0;line-height:1}
 .grupo-topo h3 small{font-family:var(--body);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--destaque);margin-left:10px;vertical-align:middle}
 .grupo-topo p{margin:0;color:var(--suave);font-size:15px;flex:1 1 320px}
+.arraste{display:none;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--suave);margin-top:10px}
 .cursos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
-.curso{background:var(--bg2);border:1px solid var(--linha);padding:22px 20px;display:flex;flex-direction:column;gap:10px;min-width:0}
-.curso svg{width:46px;height:46px;color:var(--destaque);flex:none}
-.curso h4{font-family:var(--display);font-size:22px;line-height:1.1;margin:0;font-weight:600;color:var(--creme)}
-.curso p{margin:0;font-size:15px;line-height:1.5;color:var(--suave)}
+.curso{background:var(--bg2);border:1px solid var(--linha);display:flex;flex-direction:column;min-width:0;overflow:hidden;transition:transform .25s,border-color .25s}
+.curso:hover{transform:translateY(-4px) scale(1.02);border-color:var(--destaque)}
+.capa-curso{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.curso-txt{padding:16px 16px 20px;display:flex;flex-direction:column;gap:8px}
+.curso h4{font-family:var(--display);font-size:21px;line-height:1.1;margin:0;font-weight:600;color:var(--creme)}
+.curso p{margin:0;font-size:14px;line-height:1.5;color:var(--suave)}
+.leque{display:flex;justify-content:center;align-items:flex-end;padding:10px 0 4px;min-width:0}
+.leque img{width:110px;height:110px;object-fit:cover;border:2px solid var(--bg);box-shadow:0 6px 16px rgba(0,0,0,.55);margin-left:-38px;border-radius:4px;transform:rotate(var(--r)) translateY(var(--y));transition:transform .25s}
+.leque img:first-child{margin-left:0}
+.olimpo-bar:hover .leque img{transform:rotate(calc(var(--r) * 1.5)) translateY(calc(var(--y) - 4px))}
 .olimpo-bar{margin-top:48px;border:2px solid var(--destaque);padding:24px 28px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;justify-content:space-between}
 .olimpo-bar h3{font-family:var(--display);font-size:34px;font-weight:600;margin:0;line-height:1}
 .olimpo-bar p{margin:4px 0 0;color:var(--suave)}
@@ -258,7 +265,9 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   .m-equipe{grid-column:2;grid-row:3}
   .gabriel-foto{max-width:300px}
   .hero .wrap,.manifesto .grid,.quem-grid{grid-template-columns:1fr;gap:20px}
-  .cursos{grid-template-columns:1fr 1fr}
+  .cursos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;gap:12px;margin-inline:-16px;padding:0 16px 10px;scrollbar-width:none}
+  .cursos::-webkit-scrollbar{display:none}
+  .curso{flex:0 0 62%;scroll-snap-align:start}
   .pacotes,.historia .wrap{grid-template-columns:1fr}
 }
 @media (max-width:640px){
@@ -273,10 +282,8 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   footer{padding-bottom:96px}
   .fixo{transition:opacity .2s,transform .2s}
   .fixo.oculto{opacity:0;transform:translateY(20px);pointer-events:none}
-  .cursos{grid-template-columns:1fr}
-  .curso{flex-direction:row;flex-wrap:wrap;align-items:center}
-  .curso h4{flex:1 1 0}
-  .curso p{flex-basis:100%}
+  .curso{flex:0 0 72%}
+  .leque img{width:64px;height:64px;margin-left:-30px}
 }
 </style>
 </head>
@@ -439,24 +446,25 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <div class="grupo">
     <div class="grupo-topo"><h3>Hipócrates<small>Nutrição Funcional</small></h3><p>Para quem quer dominar a abordagem sistêmica da Nutrição Funcional e conduzir com segurança a suplementação.</p></div>
     <div class="cursos">
-      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6 42 40H6Z"/><path d="M14.5 24h19M10.3 32h27.4"/></svg><h4>Nutrição Funcional 3.0</h4><p>A abordagem sistêmica, com a Matriz e a Pirâmide das Prioridades, aplicada a tireoide, síndrome metabólica, saúde da mulher, saúde intestinal e mais.</p></div>
-      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="17" width="32" height="14" rx="7" transform="rotate(-35 24 24)"/><path d="m20.5 18.8 7 10"/></svg><h4>Suplementação Individualizada</h4><p>Prescrever com segurança, eficácia e personalização, nutriente por nutriente.</p></div>
-      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="26" r="15"/><path d="M24 18v8l5 4M20 6h8M24 6v5"/></svg><h4>Jejum: Ferramenta para a Saúde</h4><p>O jejum como estratégia, com análise crítica das evidências.</p></div>
-      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6c7 9 12 15.5 12 22a12 12 0 0 1-24 0c0-6.5 5-13 12-22Z"/><path d="M18 30a6 6 0 0 0 6 6"/></svg><h4>Hemograma: O Ponto Cego</h4><p>Enxergar no hemograma muito além da anemia.</p></div>
+      <div class="curso"><img class="capa-curso" src="capa-nf30.jpg" width="480" height="480" alt="Capa da formação Nutrição Funcional 3.0" loading="lazy"><div class="curso-txt"><h4>Nutrição Funcional 3.0</h4><p>A abordagem sistêmica, com a Matriz e a Pirâmide das Prioridades, aplicada a tireoide, síndrome metabólica, saúde da mulher, saúde intestinal e mais.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-suplementacao.jpg" width="480" height="480" alt="Capa da formação Suplementação Individualizada" loading="lazy"><div class="curso-txt"><h4>Suplementação Individualizada</h4><p>Prescrever com segurança, eficácia e personalização, nutriente por nutriente.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-jejum.jpg" width="480" height="480" alt="Capa da formação Jejum: Ferramenta para a Saúde" loading="lazy"><div class="curso-txt"><h4>Jejum: Ferramenta para a Saúde</h4><p>O jejum como estratégia, com análise crítica das evidências.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-hemograma.jpg" width="480" height="480" alt="Capa da formação Hemograma: O Ponto Cego" loading="lazy"><div class="curso-txt"><h4>Hemograma: O Ponto Cego</h4><p>Enxergar no hemograma muito além da anemia.</p></div></div>
     </div>
   </div>
 
   <div class="grupo">
     <div class="grupo-topo"><h3>Galeno<small>Saúde Avançada</small></h3><p>Para quem atende saúde da mulher e do homem, hormônios, fertilidade e gestação, e quer interpretar exames além da referência.</p></div>
     <div class="cursos">
-      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6h12M20 6v28a4 4 0 0 0 8 0V6"/><path d="M20 22h8"/><path d="M34 14h6M34 22h6M34 30h6"/></svg><h4>Exames Laboratoriais 2.0</h4><p>Interpretar exames além dos valores de referência e transformar o dado em decisão clínica.</p></div>
-      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m24 8 13 7.5v15L24 38l-13-7.5v-15Z"/><circle cx="24" cy="23" r="5"/></svg><h4>Saúde Hormonal</h4><p>Avaliar e conduzir disfunções hormonais com segurança, mesmo com exames dentro da referência.</p></div>
-      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="24" cy="26" rx="12" ry="15"/><circle cx="24" cy="26" r="4"/><path d="M24 11V6"/></svg><h4>Fertilidade e Gestação</h4><p>Avaliar, priorizar e ajustar a conduta da pré-concepção ao pós-parto.</p></div>
-      <div class="curso"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 38C10 20 20 10 38 10c0 18-10 28-28 28Z"/><path d="M10 38 28 20"/></svg><h4>Nutrição Funcional e Alergias Alimentares</h4><p>Certificação base: os fundamentos da Nutrição Funcional e as alergias alimentares não mediadas por IgE.</p></div>
+      <div class="curso"><img class="capa-curso" src="capa-exames.jpg" width="480" height="480" alt="Capa da formação Exames Laboratoriais 2.0" loading="lazy"><div class="curso-txt"><h4>Exames Laboratoriais 2.0</h4><p>Interpretar exames além dos valores de referência e transformar o dado em decisão clínica.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-hormonal.jpg" width="480" height="480" alt="Capa da formação Saúde Hormonal" loading="lazy"><div class="curso-txt"><h4>Saúde Hormonal</h4><p>Avaliar e conduzir disfunções hormonais com segurança, mesmo com exames dentro da referência.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-fertilidade.jpg" width="480" height="480" alt="Capa da formação Fertilidade e Gestação" loading="lazy"><div class="curso-txt"><h4>Fertilidade e Gestação</h4><p>Avaliar, priorizar e ajustar a conduta da pré-concepção ao pós-parto.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-alergias.jpg" width="480" height="480" alt="Capa da formação Nutrição Funcional e Alergias Alimentares" loading="lazy"><div class="curso-txt"><h4>Nutrição Funcional e Alergias Alimentares</h4><p>Certificação base: os fundamentos da Nutrição Funcional e as alergias alimentares não mediadas por IgE.</p></div></div>
     </div>
   </div>
 
   <div class="olimpo-bar">
+    <div class="leque" aria-hidden="true"><img src="capa-nf30.jpg" alt="" style="--r:-14deg;--y:10px" loading="lazy"><img src="capa-suplementacao.jpg" alt="" style="--r:-10deg;--y:5px" loading="lazy"><img src="capa-jejum.jpg" alt="" style="--r:-6deg;--y:2px" loading="lazy"><img src="capa-hemograma.jpg" alt="" style="--r:-2deg;--y:0px" loading="lazy"><img src="capa-exames.jpg" alt="" style="--r:2deg;--y:0px" loading="lazy"><img src="capa-hormonal.jpg" alt="" style="--r:6deg;--y:2px" loading="lazy"><img src="capa-fertilidade.jpg" alt="" style="--r:10deg;--y:5px" loading="lazy"><img src="capa-alergias.jpg" alt="" style="--r:14deg;--y:10px" loading="lazy"></div>
     <div><h3>Olimpo = Hipócrates + Galeno</h3><p>Os dois pacotes juntos: as 8 formações acima, sem precisar escolher. Para quem quer o raciocínio clínico funcional inteiro, da avaliação à conduta. <b>Sai a menos de R$ 1.250 por formação.</b></p></div>
     <a class="btn" href="#pacotes">Ver o Olimpo</a>
   </div>
