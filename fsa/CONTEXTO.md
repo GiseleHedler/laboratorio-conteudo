@@ -75,5 +75,5 @@ Gisele Hedler: cofundadora e CEO, publicitária (não divulgar formação sem el
 
 ## Depoimentos em vídeo recebidos (15/10)
 - Daniela Nadruz, médica gastroenterologista (Drive 1JRkE-...): USADO na página, só o trecho 0:00 a 0:46 + frase final ("privilégio... embasamento"). NÃO usar o caso do paciente com gordura no fígado/fibrose (resultado de tratamento).
-- Lysiane, nutricionista (Drive 1XKJHOG...): NÃO usar. Diz "a nutrição funcional salvou a vida daquele homem", "eu salvo pessoas", caso de paralisia/morfina e "não tenho mais horário na agenda" (promessa de resultado clínico e de carreira; risco CFN/CRN).
+- Lysiane, nutricionista (Drive 1XKJHOG...): Gisele decidiu (15/10) usar o vídeo INTEIRO só na página, ciente do risco; NUNCA em criativos/anúncios. Na página, a frase escrita é só a parte segura. Conteúdo de risco: Diz "a nutrição funcional salvou a vida daquele homem", "eu salvo pessoas", caso de paralisia/morfina e "não tenho mais horário na agenda" (promessa de resultado clínico e de carreira; risco CFN/CRN).
 - Ariane removida da página.
