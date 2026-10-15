@@ -53,7 +53,7 @@ Título: **19 aulas. Temas avançados. Um raciocínio só.**
 **Estresse, energia e sistema imune**
 - Síndrome do Esgotamento Profissional (Burnout)
 - Nutrição, estresse e sistema imunológico
-- Nutrição Funcional e Covid-19 (partes 1 e 2)
+- Nutrição Funcional em gripes e resfriados (partes 1 e 2)
 
 **Intestino e reações alimentares**
 - Saúde intestinal: endotoxemia e aspectos avançados
@@ -163,6 +163,6 @@ Botão: QUERO A FORMAÇÃO AVANÇADA
 
 ## Notas para a FSA (não publicar)
 1. Pendente: valor da parcela, prazo de acesso, credenciais do Gabriel confirmadas.
-2. Aulas sensíveis para anúncio: "câncer", "Covid-19", "peptídeos" e "melasma". Na página, como tema de aula, estão ok. Em anúncio pago, evitar como chamada principal (a Meta restringe saúde e o conselho pode ler como promessa).
+2. Aulas sensíveis para anúncio: "câncer", "peptídeos" e "melasma". Não usar a palavra "Covid" em nenhuma peça. Na página, como tema de aula, estão ok. Em anúncio pago, evitar como chamada principal (a Meta restringe saúde e o conselho pode ler como promessa).
 3. A página não promete resultado clínico nem de carreira. Manter assim.
 4. A formação existe desde 2021 e estava fora de venda. Durante a Black, ela volta primeiro dentro do Olimpo. Esta página separada deve manter o preço de R$ 1.988, que é o valor informado na página da Black.
