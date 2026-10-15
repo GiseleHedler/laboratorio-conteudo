@@ -93,3 +93,4 @@ Olimpo = NF 3.0, Suplementação, Jejum, Exames 2.0, Saúde Hormonal, Fertilidad
 Âncora do Olimpo: R$ 17.982 (6 formações à venda hoje); a Avançada NÃO entra na conta porque não está à venda. Desconto máximo: 44,7% → topo diz "até 44% menos".
 Horas do Olimpo sem repetição: 234 + 72 = 306h → "mais de 300 h".
 - 15/10 (decisão da Gisele): a Avançada ENTRA na conta com o valor de lançamento R$ 1.988 (página diz "valor de lançamento" e "inédita"). Valor das 7 formações: R$ 19.970. Desconto máx. 50,2% → topo: "Para sempre, pagando até 50% menos do que o valor das formações compradas separadas." Não lançar a página separada da Avançada antes do fim da Black.
+- CORREÇÃO 15/10: a Formação Avançada NÃO é inédita. Existe desde 2021, era vendida por R$ 1.988 e parou de ser vendida; agora é reativada. Na página: selo "De volta", "Estava fora de venda e volta agora, primeiro no Olimpo. Valor de venda: R$ 1.988."

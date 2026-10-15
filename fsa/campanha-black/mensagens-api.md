@@ -96,7 +96,7 @@ São mais de 300 horas de aula para enxergar o ser humano inteiro. Com acesso vi
 
 *Hipócrates:* Nutrição Funcional 3.0, Suplementação Individualizada, Jejum e Hemograma.
 *Galeno:* Exames Laboratoriais 2.0, Saúde Hormonal, Fertilidade e Gestação e Alergias Alimentares.
-*Olimpo:* os dois juntos, sem repetir aula, mais a Formação Avançada em Nutrição Funcional, inédita, e o curso Gripes e Resfriados de bônus.
+*Olimpo:* os dois juntos, sem repetir aula, mais a Formação Avançada em Nutrição Funcional, que volta agora, e o curso Gripes e Resfriados de bônus.
 
 Todos com acesso vitalício. Só até [DATA DE FIM].
 👉 [LINK DA PÁGINA]

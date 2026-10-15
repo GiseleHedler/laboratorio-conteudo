@@ -5,7 +5,7 @@ Copy para o webdesigner. Sem travessão. Itens entre [colchetes] precisam ser pr
 
 ## 1. TOPO (primeira dobra)
 
-Selo: NOVA FORMAÇÃO · FSA
+Selo: DE VOLTA · FSA
 
 Título:
 **O próximo nível da Nutrição Funcional.**
@@ -165,4 +165,4 @@ Botão: QUERO A FORMAÇÃO AVANÇADA
 1. Pendente: valor da parcela, prazo de acesso, credenciais do Gabriel confirmadas.
 2. Aulas sensíveis para anúncio: "câncer", "Covid-19", "peptídeos" e "melasma". Na página, como tema de aula, estão ok. Em anúncio pago, evitar como chamada principal (a Meta restringe saúde e o conselho pode ler como promessa).
 3. A página não promete resultado clínico nem de carreira. Manter assim.
-4. Durante a Black, esta formação entra no Olimpo como inédita. Não lançar esta página antes do fim da Black, para não criar dúvida sobre preço.
+4. A formação existe desde 2021 e estava fora de venda. Durante a Black, ela volta primeiro dentro do Olimpo. Esta página separada deve manter o preço de R$ 1.988, que é o valor informado na página da Black.
