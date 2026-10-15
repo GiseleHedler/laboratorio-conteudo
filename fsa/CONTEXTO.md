@@ -71,4 +71,4 @@ NF 3.0 80h (pág. antiga dizia 72h) · Suplementação 45h (págs. antigas 50h e
 Soma: pelo menos 251h → página usa "mais de 250 h de aula".
 Gisele Hedler: cofundadora e CEO, publicitária (não divulgar formação sem ela pedir), fundou a FSA com o Gabriel; a decisão do vitalício foi dela, mas a página NÃO diz isso (ela pediu): ela "assina embaixo do compromisso".
 
-- 15/10: na página da Black, Gabriel = "Cofundador e professor da FSA" (sem "coordenador pedagógico", a pedido da Gisele). Gisele = "Publicitária e psicanalista" (ela autorizou divulgar). "40 mil+ alunos" fica como número da FSA, abaixo dos dois fundadores.
+- 15/10: na página da Black, Gabriel = "Cofundador e professor da FSA" (sem "coordenador pedagógico", a pedido da Gisele). Gisele: NÃO mostrar credenciais (ela normalmente não apresenta; publicitária e psicanalista). Na prática, a coordenadora pedagógica é a Fernanda Colossi; Gabriel não deve aparecer como coordenador. "40 mil+ alunos" fica como número da FSA, abaixo dos dois fundadores.
