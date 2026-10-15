@@ -245,6 +245,18 @@ tr.total td{font-weight:700;color:var(--creme)}
 .numero-fsa{justify-content:center;margin-top:32px}
 .inedita{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#3a2504;background:#E0B64F;padding:2px 7px;align-self:center}
 .sem-repetir{margin:4px 0 0;font-size:14px;line-height:1.45;color:var(--suave);border-left:2px solid var(--destaque);padding-left:10px}
+.avancada{margin-top:48px;display:grid;grid-template-columns:300px 1fr;gap:36px;align-items:center;background:linear-gradient(120deg,rgba(120,40,200,.22),rgba(199,62,92,.10));border:1px solid rgba(224,182,79,.55);padding:28px}
+.av-capa{width:100%;height:auto;display:block;box-shadow:0 12px 30px rgba(0,0,0,.45)}
+.av-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.av-tag{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--destaque);color:#fff;padding:3px 9px}
+.av-tag.claro{background:#E0B64F;color:#3a2504}
+.avancada .horas{margin:0;padding:3px 9px}
+.avancada h3{font-family:var(--display);font-size:clamp(28px,3vw,38px);font-weight:600;margin:0 0 10px;line-height:1.1}
+.avancada p{margin:0 0 14px;color:var(--texto)}
+.av-temas{list-style:none;margin:0 0 16px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+.av-temas li{padding-left:20px;position:relative;font-size:15px}
+.av-temas li::before{content:"✦";position:absolute;left:0;color:#E0B64F;font-size:12px;top:3px}
+.av-valor{font-size:15px;color:var(--suave)}
 .equipe-tit{font-family:var(--display);font-size:28px;font-weight:600;margin:56px 0 20px}
 .profs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 @media (max-width:700px){.profs{grid-template-columns:1fr}}
@@ -329,6 +341,9 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   .fixo{transition:opacity .2s,transform .2s}
   .fixo.oculto{opacity:0;transform:translateY(20px);pointer-events:none}
   .curso{flex:0 0 72%}
+  .avancada{grid-template-columns:1fr;padding:20px;gap:20px}
+  .av-capa{max-width:260px;margin-inline:auto}
+  .av-temas{grid-template-columns:1fr}
   .fundadora{grid-template-columns:110px 1fr;gap:18px}
   .compromisso{grid-template-columns:56px 1fr;padding:16px}
   .compromisso img{width:56px;height:56px;grid-row:2;grid-column:1}
@@ -549,10 +564,23 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
     </div>
   </div>
 
-  <div class="grupo">
-    <div class="grupo-topo"><h3>Só no Olimpo<small>Avançada</small></h3><p>Estava fora de venda e volta agora, primeiro no Olimpo. Valor de venda: R$ 1.988. São 19 aulas com temas avançados de Nutrição Funcional, para quem já tem a base e quer ir além.</p></div>
-    <div class="cursos">
-      <div class="curso"><img class="capa-curso" src="capa-nfa.jpg" width="480" height="480" alt="Capa da Formação Avançada em Nutrição Funcional" loading="lazy"><div class="curso-txt"><span class="horas">72 h de aula</span><h4>Formação Avançada em Nutrição Funcional</h4><p>Burnout, intolerância à histamina, sarcopenia, doenças autoimunes, saúde intestinal, alergias alimentares, estética de dentro para fora, mindful eating e mais.</p></div></div>
+  <div class="avancada">
+    <img class="av-capa" src="capa-nfa.jpg" width="480" height="480" alt="Capa da Formação Avançada em Nutrição Funcional" loading="lazy">
+    <div class="av-txt">
+      <div class="av-tags"><span class="av-tag">Só no Olimpo</span><span class="av-tag claro">De volta</span><span class="horas">72 h de aula</span></div>
+      <h3>Formação Avançada em Nutrição Funcional</h3>
+      <p>Estava fora de venda e volta agora, primeiro no Olimpo. São 19 aulas com o Gabriel de Carvalho, para quem já tem a base e quer ir além.</p>
+      <ul class="av-temas">
+        <li>Burnout e estresse</li>
+        <li>Intolerância à histamina</li>
+        <li>Saúde intestinal avançada</li>
+        <li>Doenças autoimunes</li>
+        <li>Sarcopenia e aminoácidos</li>
+        <li>Alergias e dessensibilização</li>
+        <li>Estética de dentro para fora</li>
+        <li>Mindful eating</li>
+      </ul>
+      <p class="av-valor">Valor de venda: <s>R$ 1.988</s> · incluída no Olimpo</p>
     </div>
   </div>
 
