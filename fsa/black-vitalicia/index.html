@@ -199,7 +199,8 @@ tr.total td{font-weight:700;color:var(--creme)}
 .numero b{font-family:var(--display);font-size:48px;font-weight:600;color:var(--destaque);line-height:1}
 .numero span{color:var(--suave)}
 .equipe-tit{font-family:var(--display);font-size:28px;font-weight:600;margin:56px 0 20px}
-.profs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.profs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:700px){.profs{grid-template-columns:1fr}}
 .prof{display:flex;gap:16px;background:var(--bg2);border:1px solid var(--linha);padding:18px;min-width:0}
 .prof img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--destaque)}
 .prof h4{font-family:var(--display);font-size:20px;font-weight:600;margin:0;line-height:1.15;color:var(--creme)}
