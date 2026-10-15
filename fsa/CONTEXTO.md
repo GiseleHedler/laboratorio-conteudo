@@ -63,3 +63,5 @@ Frases que prometem resultado de carreira ou de saúde e não podem ir para o co
 - A certificação de alergias não é "base": nome usado é "Certificação em Nutrição Funcional e Alergias Alimentares" (conferir com o nome no checkout).
 - Médicos também são público: não usar "dentro da atuação do nutricionista".
 - TESTE A/B (para depois): versão A = "O fim da Narrativa Cega" + subtítulo atual. Versão B = "Black Friday Vitalícia FSA / Sua prática clínica mais assertiva, seu trabalho mais valorizado, você mais relevante. Para sempre." (suavizar "trabalho mais valorizado", que soa promessa de carreira). Testar só a headline, medir clique para o checkout, precisa pixel/GA.
+
+- Posicionamento (15/10): o vitalício é o herói, o desconto é prova. Topo: "Para sempre, pagando até 48% menos do que custa hoje o acesso de 1 ou 2 anos." A escassez a comunicar é "o vitalício fecha dia X", não "o desconto acaba".
