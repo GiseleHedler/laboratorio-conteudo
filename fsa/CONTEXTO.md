@@ -84,3 +84,4 @@ Decisão: não fazer pesquisa nova; perguntas para a live via caixinha nos stori
 Regra de preço da FSA: não dizer "com juros"; dizer "à vista com desconto".
 
 - HORAS OFICIAIS (confirmadas pela Gisele 15/10, valem acima do site): Suplementação 45h · Exames 2.0 50h · NF 3.0 80h · Fertilidade e Gestação 20h · Certificação Alergias 10h · Hemograma 7h · Jejum 6h · Covid, gripes e resfriados 8h · Saúde Hormonal 33h. Total das 8 formações: 251h; com o bônus: 259h.
+- Pix entra como à vista (com desconto).
