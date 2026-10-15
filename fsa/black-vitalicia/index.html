@@ -230,6 +230,17 @@ tr.total td{font-weight:700;color:var(--creme)}
 .numero{margin-top:26px;display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--linha);padding-top:20px}
 .numero b{white-space:nowrap;font-family:var(--display);font-size:48px;font-weight:600;color:var(--destaque);line-height:1}
 .numero span{color:var(--suave)}
+.fundadora{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;margin-top:40px;padding-top:32px;border-top:1px solid var(--linha)}
+.fundadora img{width:100%;height:auto;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent);mask-image:linear-gradient(to bottom,#000 80%,transparent)}
+.fundadora h3{font-family:var(--display);font-size:clamp(28px,3vw,36px);font-weight:600;margin:0;line-height:1}
+.fundadora .cargo{display:block;margin-top:8px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--destaque);font-weight:700}
+.fundadora p{margin:12px 0 0;color:var(--texto);max-width:52ch}
+.compromisso{margin:32px auto 0;max-width:760px;display:grid;grid-template-columns:72px 1fr;gap:6px 18px;align-items:center;border:1px solid #E0B64F;background:linear-gradient(90deg,rgba(224,182,79,.10),rgba(224,182,79,.02));padding:20px 22px}
+.compromisso img{grid-row:1 / span 2;width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid #E0B64F}
+.compromisso blockquote{margin:0;font-family:var(--display);font-size:clamp(18px,2vw,22px);line-height:1.35;color:var(--creme)}
+.compromisso figcaption{font-weight:700;font-size:14px;color:#F1D27F}
+.compromisso figcaption span{display:block;font-weight:400;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--suave)}
+.horas{display:inline-block;font-size:12px;letter-spacing:.04em;font-weight:700;color:#3a2504;background:#E0B64F;padding:2px 7px;margin-bottom:6px}
 .equipe-tit{font-family:var(--display);font-size:28px;font-weight:600;margin:56px 0 20px}
 .profs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 @media (max-width:700px){.profs{grid-template-columns:1fr}}
@@ -310,6 +321,11 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   .fixo{transition:opacity .2s,transform .2s}
   .fixo.oculto{opacity:0;transform:translateY(20px);pointer-events:none}
   .curso{flex:0 0 72%}
+  .fundadora{grid-template-columns:110px 1fr;gap:18px}
+  .compromisso{grid-template-columns:56px 1fr;padding:16px}
+  .compromisso img{width:56px;height:56px;grid-row:2;grid-column:1}
+  .compromisso blockquote{grid-column:1 / -1;grid-row:1;margin-bottom:8px}
+  .compromisso figcaption{grid-row:2;grid-column:2}
   .top3 ul,.top3 .sub{display:none}
   .resumo-mob{display:block}
   .leque img{width:64px;height:64px;margin-left:-30px}
@@ -333,7 +349,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
     <div class="vital-tag"><b>Acesso vitalício</b><span>Pela primeira vez nas formações da FSA</span></div>
     <p class="hero-preco"><span class="hp-12"><b>Para sempre,</b> pagando até 48% menos</span><span class="hp-av">do que custa hoje o acesso de 1 ou 2 anos.</span></p>
     <a class="btn" href="#pacotes">Ver os pacotes <span aria-hidden="true">→</span></a>
-    <div class="meta">8 formações · 3 pacotes · 100% gravadas</div>
+    <div class="meta">8 formações · mais de 250 h de aula · 100% gravadas</div>
   </div>
   <div class="figure">
     <div class="cena">
@@ -479,6 +495,11 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
     </article>
   </div>
+  <figure class="compromisso">
+    <img src="gisele-rosto.jpg" width="240" height="240" alt="Gisele Hedler">
+    <blockquote>“Vitalício é um compromisso da FSA: enquanto existir a nossa plataforma de cursos, as suas formações estão lá. E se não for para você, você tem 15 dias de garantia.”</blockquote>
+    <figcaption>Gisele Hedler<span>Cofundadora e CEO da FSA</span></figcaption>
+  </figure>
 </div></section>
 
 <section class="sec"><div class="wrap">
@@ -488,26 +509,26 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <div class="grupo">
     <div class="grupo-topo"><h3>Hipócrates<small>Nutrição Funcional</small></h3><p>Para quem quer dominar a abordagem sistêmica da Nutrição Funcional e conduzir com segurança a suplementação.</p></div>
     <div class="cursos">
-      <div class="curso"><img class="capa-curso" src="capa-nf30.jpg" width="480" height="480" alt="Capa da formação Nutrição Funcional 3.0" loading="lazy"><div class="curso-txt"><h4>Nutrição Funcional 3.0</h4><p>A abordagem sistêmica, com a Matriz e a Pirâmide das Prioridades, aplicada a tireoide, síndrome metabólica, saúde da mulher, saúde intestinal e mais.</p></div></div>
-      <div class="curso"><img class="capa-curso" src="capa-suplementacao.jpg" width="480" height="480" alt="Capa da formação Suplementação Individualizada" loading="lazy"><div class="curso-txt"><h4>Suplementação Individualizada</h4><p>Critérios para indicar a suplementação com segurança e individualização, nutriente por nutriente.</p></div></div>
-      <div class="curso"><img class="capa-curso" src="capa-jejum.jpg" width="480" height="480" alt="Capa da formação Jejum: Ferramenta para a Saúde" loading="lazy"><div class="curso-txt"><h4>Jejum: Ferramenta para a Saúde</h4><p>O jejum como estratégia, com análise crítica das evidências.</p></div></div>
-      <div class="curso"><img class="capa-curso" src="capa-hemograma.jpg" width="480" height="480" alt="Capa da formação Hemograma: O Ponto Cego" loading="lazy"><div class="curso-txt"><h4>Hemograma: O Ponto Cego</h4><p>Enxergar no hemograma muito além da anemia.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-nf30.jpg" width="480" height="480" alt="Capa da formação Nutrição Funcional 3.0" loading="lazy"><div class="curso-txt"><span class="horas">80 h de aula</span><h4>Nutrição Funcional 3.0</h4><p>A abordagem sistêmica, com a Matriz e a Pirâmide das Prioridades, aplicada a tireoide, síndrome metabólica, saúde da mulher, saúde intestinal e mais.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-suplementacao.jpg" width="480" height="480" alt="Capa da formação Suplementação Individualizada" loading="lazy"><div class="curso-txt"><span class="horas">45 h de aula</span><h4>Suplementação Individualizada</h4><p>Critérios para indicar a suplementação com segurança e individualização, nutriente por nutriente.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-jejum.jpg" width="480" height="480" alt="Capa da formação Jejum: Ferramenta para a Saúde" loading="lazy"><div class="curso-txt"><span class="horas">6 h de aula</span><h4>Jejum: Ferramenta para a Saúde</h4><p>O jejum como estratégia, com análise crítica das evidências.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-hemograma.jpg" width="480" height="480" alt="Capa da formação Hemograma: O Ponto Cego" loading="lazy"><div class="curso-txt"><span class="horas">7 h de aula</span><h4>Hemograma: O Ponto Cego</h4><p>Enxergar no hemograma muito além da anemia.</p></div></div>
     </div>
   </div>
 
   <div class="grupo">
     <div class="grupo-topo"><h3>Galeno<small>Exames, Hormônios e Fertilidade</small></h3><p>Para quem atende saúde da mulher e do homem, hormônios, fertilidade e gestação, e quer interpretar os exames junto com o quadro clínico.</p></div>
     <div class="cursos">
-      <div class="curso"><img class="capa-curso" src="capa-exames.jpg" width="480" height="480" alt="Capa da formação Exames Laboratoriais 2.0" loading="lazy"><div class="curso-txt"><h4>Exames Laboratoriais 2.0</h4><p>Ler os exames laboratoriais junto com a história e os sintomas, e transformar o dado em raciocínio clínico.</p></div></div>
-      <div class="curso"><img class="capa-curso" src="capa-hormonal.jpg" width="480" height="480" alt="Capa da formação Saúde Hormonal" loading="lazy"><div class="curso-txt"><h4>Saúde Hormonal</h4><p>O olhar funcional sobre a saúde hormonal da mulher e do homem, integrando exames, sintomas e estilo de vida.</p></div></div>
-      <div class="curso"><img class="capa-curso" src="capa-fertilidade.jpg" width="480" height="480" alt="Capa da formação Fertilidade e Gestação" loading="lazy"><div class="curso-txt"><h4>Fertilidade e Gestação</h4><p>Avaliar, priorizar e ajustar a conduta da pré-concepção ao pós-parto.</p></div></div>
-      <div class="curso"><img class="capa-curso" src="capa-alergias.jpg" width="480" height="480" alt="Capa da formação Nutrição Funcional e Alergias Alimentares" loading="lazy"><div class="curso-txt"><h4>Nutrição Funcional e Alergias Alimentares</h4><p>Certificação completa e avançada: a Nutrição Funcional aplicada às alergias alimentares não mediadas por IgE.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-exames.jpg" width="480" height="480" alt="Capa da formação Exames Laboratoriais 2.0" loading="lazy"><div class="curso-txt"><span class="horas">mais de 50 h de aula</span><h4>Exames Laboratoriais 2.0</h4><p>Ler os exames laboratoriais junto com a história e os sintomas, e transformar o dado em raciocínio clínico.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-hormonal.jpg" width="480" height="480" alt="Capa da formação Saúde Hormonal" loading="lazy"><div class="curso-txt"><span class="horas">33 h de aula</span><h4>Saúde Hormonal</h4><p>O olhar funcional sobre a saúde hormonal da mulher e do homem, integrando exames, sintomas e estilo de vida.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-fertilidade.jpg" width="480" height="480" alt="Capa da formação Fertilidade e Gestação" loading="lazy"><div class="curso-txt"><span class="horas">20 h de aula</span><h4>Fertilidade e Gestação</h4><p>Avaliar, priorizar e ajustar a conduta da pré-concepção ao pós-parto.</p></div></div>
+      <div class="curso"><img class="capa-curso" src="capa-alergias.jpg" width="480" height="480" alt="Capa da formação Nutrição Funcional e Alergias Alimentares" loading="lazy"><div class="curso-txt"><span class="horas">10 h de aula</span><h4>Nutrição Funcional e Alergias Alimentares</h4><p>Certificação completa e avançada: a Nutrição Funcional aplicada às alergias alimentares não mediadas por IgE.</p></div></div>
     </div>
   </div>
 
   <div class="olimpo-bar">
     <div class="leque" aria-hidden="true"><img src="capa-nf30.jpg" alt="" style="--r:-14deg;--y:10px" loading="lazy"><img src="capa-suplementacao.jpg" alt="" style="--r:-10deg;--y:5px" loading="lazy"><img src="capa-jejum.jpg" alt="" style="--r:-6deg;--y:2px" loading="lazy"><img src="capa-hemograma.jpg" alt="" style="--r:-2deg;--y:0px" loading="lazy"><img src="capa-exames.jpg" alt="" style="--r:2deg;--y:0px" loading="lazy"><img src="capa-hormonal.jpg" alt="" style="--r:6deg;--y:2px" loading="lazy"><img src="capa-fertilidade.jpg" alt="" style="--r:10deg;--y:5px" loading="lazy"><img src="capa-alergias.jpg" alt="" style="--r:14deg;--y:10px" loading="lazy"><img class="leque-bonus" src="capa-gripes.jpg" alt="" style="--r:18deg;--y:16px" loading="lazy"></div>
-    <div><h3>Olimpo = Hipócrates + Galeno + bônus</h3><p>Os dois pacotes juntos: as 8 formações acima, sem precisar escolher. E só no Olimpo, de bônus, o <b>Curso Gripes e Resfriados</b>, com o papel da nutrição na prevenção e na recuperação de gripes e resfriados. Para quem quer o raciocínio clínico funcional inteiro, da avaliação à conduta. <b>Sai a menos de R$ 1.250 por formação.</b></p></div>
+    <div><h3>Olimpo = Hipócrates + Galeno + bônus</h3><p>Os dois pacotes juntos: as 8 formações acima, com mais de 250 horas de aula, sem precisar escolher. E só no Olimpo, de bônus, o <b>Curso Gripes e Resfriados</b>, com o papel da nutrição na prevenção e na recuperação de gripes e resfriados. Para quem quer o raciocínio clínico funcional inteiro, da avaliação à conduta. <b>Sai a menos de R$ 1.250 por formação.</b></p></div>
     <a class="btn" href="#pacotes">Ver o Olimpo</a>
   </div>
 </div></section>
@@ -528,6 +549,14 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
         <li>Palestrante nacional e internacional, referência no ensino da suplementação</li>
       </ul>
       <div class="numero"><b>40 mil+</b><span>alunos já estudaram na FSA</span></div>
+    </div>
+  </div>
+  <div class="fundadora">
+    <img src="gisele-fsa.jpg" width="480" height="756" alt="Gisele Hedler" loading="lazy">
+    <div>
+      <h3>Gisele Hedler</h3>
+      <span class="cargo">Cofundadora e CEO da FSA</span>
+      <p>Fundou a FSA ao lado do Gabriel e está à frente da empresa desde o primeiro dia. Foi dela a decisão de abrir, pela primeira vez, o acesso vitalício às formações.</p>
     </div>
   </div>
   <h3 class="equipe-tit">E uma equipe pedagógica de doutoras e pesquisadores</h3>

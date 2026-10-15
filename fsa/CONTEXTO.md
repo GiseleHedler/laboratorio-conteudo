@@ -65,3 +65,8 @@ Frases que prometem resultado de carreira ou de saúde e não podem ir para o co
 - TESTE A/B (para depois): versão A = "O fim da Narrativa Cega" + subtítulo atual. Versão B = "Black Friday Vitalícia FSA / Sua prática clínica mais assertiva, seu trabalho mais valorizado, você mais relevante. Para sempre." (suavizar "trabalho mais valorizado", que soa promessa de carreira). Testar só a headline, medir clique para o checkout, precisa pixel/GA.
 
 - Posicionamento (15/10): o vitalício é o herói, o desconto é prova. Topo: "Para sempre, pagando até 48% menos do que custa hoje o acesso de 1 ou 2 anos." A escassez a comunicar é "o vitalício fecha dia X", não "o desconto acaba".
+
+## Carga horária (site lp.saudeavancada.com.br, levantada em 15/10/2026)
+NF 3.0 80h (pág. antiga dizia 72h) · Suplementação 45h (págs. antigas 50h e 20h) · Jejum 6h · Hemograma 7h (1 ano de acesso) · Exames 2.0 "mais de 50h" (módulos novos em gravação) · Saúde Hormonal 33h · Fertilidade e Gestação 20h · Certificação Alergias 10h no certificado / 11h no FAQ da própria página (1 ano de acesso; página ainda chama de "Base") · Gripes e Resfriados: sem página, carga não encontrada.
+Soma: pelo menos 251h → página usa "mais de 250 h de aula".
+Gisele Hedler: cofundadora e CEO, publicitária (não divulgar formação sem ela pedir), fundou a FSA com o Gabriel; a decisão do vitalício foi dela.
