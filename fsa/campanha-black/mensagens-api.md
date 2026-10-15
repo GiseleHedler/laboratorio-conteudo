@@ -78,7 +78,7 @@ Foi isso que o Gabriel revelou hoje na festa de 27 anos: acesso vitalício.
 
 Hoje, cada formação tem 1 ou 2 anos de acesso. Nesta Black, não tem prazo. Você volta à aula quando o caso pedir, daqui a um mês ou daqui a cinco anos.
 
-E pagando até 48% menos do que custa hoje o acesso de 1 ou 2 anos.
+E pagando até 44% menos do que custa hoje o acesso de 1 ou 2 anos.
 
 O vitalício fecha dia [DATA DE FIM].
 👉 [LINK DA PÁGINA]
@@ -88,7 +88,7 @@ O vitalício fecha dia [DATA DE FIM].
 
 Exames dentro da referência, e o paciente ainda com queixas que ninguém explicou. Você conhece essa cena.
 
-São 8 formações e mais de 250 horas de aula para enxergar o ser humano inteiro. Com acesso vitalício, só nesta Black.
+São mais de 300 horas de aula para enxergar o ser humano inteiro. Com acesso vitalício, só nesta Black.
 👉 [LINK DA PÁGINA]
 
 ### 21/10 · Os três pacotes
@@ -96,7 +96,7 @@ São 8 formações e mais de 250 horas de aula para enxergar o ser humano inteir
 
 *Hipócrates:* Nutrição Funcional 3.0, Suplementação Individualizada, Jejum e Hemograma.
 *Galeno:* Exames Laboratoriais 2.0, Saúde Hormonal, Fertilidade e Gestação e Alergias Alimentares.
-*Olimpo:* os dois juntos, com o curso Gripes e Resfriados de bônus. À vista, sai a menos de R$ 1.250 por formação.
+*Olimpo:* os dois juntos, sem repetir aula, mais a Formação Avançada em Nutrição Funcional, inédita, e o curso Gripes e Resfriados de bônus.
 
 Todos com acesso vitalício. Só até [DATA DE FIM].
 👉 [LINK DA PÁGINA]

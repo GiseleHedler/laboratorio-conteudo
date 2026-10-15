@@ -86,3 +86,9 @@ Regra de preço da FSA: não dizer "com juros"; dizer "à vista com desconto".
 - HORAS OFICIAIS (confirmadas pela Gisele 15/10, valem acima do site): Suplementação 45h · Exames 2.0 50h · NF 3.0 80h · Fertilidade e Gestação 20h · Certificação Alergias 10h · Hemograma 7h · Jejum 6h · Covid, gripes e resfriados 8h · Saúde Hormonal 33h. Total das 8 formações: 251h; com o bônus: 259h.
 - Pix entra como à vista (com desconto).
 - Nome correto do curso: "Alergias Alimentares" (NÃO "Certificação", nem "Certificação Base"). Capa editada sem a palavra.
+
+## Olimpo reformulado (15/10)
+Hemograma = parte de Exames; Alergias = começo da NF 3.0. No Olimpo não entram (seria aula repetida).
+Olimpo = NF 3.0, Suplementação, Jejum, Exames 2.0, Saúde Hormonal, Fertilidade e Gestação + Formação Avançada em Nutrição Funcional (72h, 19 aulas, Gabriel; INÉDITA, ainda não está à venda; preço futuro R$ 1.988) + bônus Gripes e Resfriados.
+Âncora do Olimpo: R$ 17.982 (6 formações à venda hoje); a Avançada NÃO entra na conta porque não está à venda. Desconto máximo: 44,7% → topo diz "até 44% menos".
+Horas do Olimpo sem repetição: 234 + 72 = 306h → "mais de 300 h".
