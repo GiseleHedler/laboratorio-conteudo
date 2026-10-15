@@ -92,3 +92,4 @@ Hemograma = parte de Exames; Alergias = começo da NF 3.0. No Olimpo não entram
 Olimpo = NF 3.0, Suplementação, Jejum, Exames 2.0, Saúde Hormonal, Fertilidade e Gestação + Formação Avançada em Nutrição Funcional (72h, 19 aulas, Gabriel; INÉDITA, ainda não está à venda; preço futuro R$ 1.988) + bônus Gripes e Resfriados.
 Âncora do Olimpo: R$ 17.982 (6 formações à venda hoje); a Avançada NÃO entra na conta porque não está à venda. Desconto máximo: 44,7% → topo diz "até 44% menos".
 Horas do Olimpo sem repetição: 234 + 72 = 306h → "mais de 300 h".
+- 15/10 (decisão da Gisele): a Avançada ENTRA na conta com o valor de lançamento R$ 1.988 (página diz "valor de lançamento" e "inédita"). Valor das 7 formações: R$ 19.970. Desconto máx. 50,2% → topo: "Para sempre, pagando até 50% menos do que o valor das formações compradas separadas." Não lançar a página separada da Avançada antes do fim da Black.

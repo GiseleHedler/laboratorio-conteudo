@@ -78,7 +78,7 @@ Foi isso que o Gabriel revelou hoje na festa de 27 anos: acesso vitalício.
 
 Hoje, cada formação tem 1 ou 2 anos de acesso. Nesta Black, não tem prazo. Você volta à aula quando o caso pedir, daqui a um mês ou daqui a cinco anos.
 
-E pagando até 44% menos do que custa hoje o acesso de 1 ou 2 anos.
+E pagando até 50% menos do que o valor das formações compradas separadas.
 
 O vitalício fecha dia [DATA DE FIM].
 👉 [LINK DA PÁGINA]
