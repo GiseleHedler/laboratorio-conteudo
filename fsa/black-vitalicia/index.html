@@ -140,9 +140,10 @@ section{padding-block:80px}
 .preco .nao{font-size:15px}
 .pacote .btn{justify-content:center;margin-top:10px}
 .letrinha{font-size:13px;color:var(--suave);margin:0}
-.hero-preco{margin:14px 0 20px;font-size:17px;color:var(--creme)}
-.hero-preco .nw{white-space:nowrap}
-.hero-preco b{font-family:var(--display);font-size:26px;font-weight:600;color:#fff}
+.hero-preco{margin:16px 0 22px;display:flex;flex-direction:column;gap:2px}
+.hp-12{font-family:var(--display);font-size:22px;color:var(--creme);font-weight:600}
+.hp-12 b{font-size:40px;color:#fff;font-weight:600}
+.hp-av{font-size:14px;color:var(--suave)}
 .hist-nota{grid-column:1 / -1;margin:8px 0 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:18px;color:var(--creme)}
 .hist-nota b{color:var(--destaque)}
 .aluno-aviso{margin:22px auto 0;max-width:640px;text-align:center;font-size:15px;color:var(--creme);border:1px dashed var(--linha);padding:12px 16px}
@@ -208,7 +209,8 @@ tr.total td{font-weight:700;color:var(--creme)}
 
 
 /* parcelamento e garantia */
-.preco .parc{font-size:15px;color:var(--texto)}
+.preco .parc{font-size:13px;color:var(--suave)}
+.preco .por small{font-size:22px;color:var(--creme)}
 .seguro{margin:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;font-size:13px;color:var(--suave)}
 .seguro span::before{content:"✓ ";color:var(--destaque);font-weight:700}
 .seguro a{color:var(--suave);text-underline-offset:3px}
@@ -329,7 +331,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
     <h1><span class="l1">O fim da</span><span class="l2">Narrativa Cega.</span></h1>
     <p class="sub">Chega de olhar só o número do laudo e o protocolo pronto. Nesta Black, as 8 formações da FSA ficam com você:</p>
     <div class="vital-tag"><b>Acesso vitalício</b><span>Pela primeira vez nas formações da FSA</span></div>
-    <p class="hero-preco">A partir de <b>12x de R$ 579,40</b> <span class="nw">ou R$ 5.947 à vista</span></p>
+    <p class="hero-preco"><span class="hp-12">12x <b>R$ 579,40</b></span><span class="hp-av">ou R$ 5.947 à vista</span></p>
     <a class="btn" href="#pacotes">Ver os pacotes <span aria-hidden="true">→</span></a>
     <div class="meta">8 formações · 3 pacotes · 100% gravadas</div>
   </div>
@@ -408,9 +410,9 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       <p class="ideal"><b>Ideal se</b> você quer construir a base da Nutrição Funcional e conduzir a suplementação com segurança.</p>
       <div class="mini-capas" aria-hidden="true"><img src="capa-nf30.jpg" alt="" loading="lazy"><img src="capa-suplementacao.jpg" alt="" loading="lazy"><img src="capa-jejum.jpg" alt="" loading="lazy"><img src="capa-hemograma.jpg" alt="" loading="lazy"></div>
       <div class="preco">
-        <span class="de">De <s>R$ 9.488</s> por</span>
-        <span class="por">R$ 5.947</span>
-        <span class="parc">à vista, ou 12x de R$ 579,40 no cartão (com juros)</span>
+        <span class="de">De <s>R$ 9.488</s></span>
+        <span class="por"><small>12x</small> R$ 579,40</span>
+        <span class="parc">ou R$ 5.947 à vista</span>
       </div>
       <a class="btn" href="#" data-checkout="hipocrates">Quero o Hipócrates</a>
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
@@ -430,9 +432,9 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       <p class="ideal"><b>Ideal se</b> você atende exames, hormônios, fertilidade e gestação e quer integrar o laudo ao paciente inteiro.</p>
       <div class="mini-capas" aria-hidden="true"><img src="capa-exames.jpg" alt="" loading="lazy"><img src="capa-hormonal.jpg" alt="" loading="lazy"><img src="capa-fertilidade.jpg" alt="" loading="lazy"><img src="capa-alergias.jpg" alt="" loading="lazy"></div>
       <div class="preco">
-        <span class="de">De <s>R$ 9.688</s> por</span>
-        <span class="por">R$ 5.947</span>
-        <span class="parc">à vista, ou 12x de R$ 579,40 no cartão (com juros)</span>
+        <span class="de">De <s>R$ 9.688</s></span>
+        <span class="por"><small>12x</small> R$ 579,40</span>
+        <span class="parc">ou R$ 5.947 à vista</span>
       </div>
       <a class="btn" href="#" data-checkout="galeno">Quero o Galeno</a>
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
@@ -469,8 +471,8 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       <div class="preco">
         <span class="de">Valor original das 8 formações: <s>R$ 19.176</s></span>
         <span class="de">Hipócrates + Galeno nesta Black: <s>R$ 11.894</s></span>
-        <span class="por">R$ 9.947</span>
-        <span class="parc">à vista, ou 12x de R$ 969,11 no cartão (com juros)</span>
+        <span class="por"><small>12x</small> R$ 969,11</span>
+        <span class="parc">ou R$ 9.947 à vista</span>
         <span class="eco">R$ 1.947 a menos do que levar os dois pacotes separados</span>
       </div>
       <a class="btn" href="#" data-checkout="olimpo">Quero os dois: Olimpo</a>
