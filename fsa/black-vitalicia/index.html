@@ -176,6 +176,53 @@ th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--suav
 td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 tr.total td{font-weight:700;color:var(--creme)}
 
+
+/* parcelamento e garantia */
+.preco .parc{font-size:15px;color:var(--texto)}
+.seguro{margin:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;font-size:13px;color:var(--suave)}
+.seguro span::before{content:"✓ ";color:var(--destaque);font-weight:700}
+.seguro a{color:var(--suave);text-underline-offset:3px}
+.seguro a:hover,.seguro a:focus-visible{color:var(--creme)}
+.faq-contato{margin:28px 0 0;color:var(--suave)}
+.faq-contato a{color:var(--creme)}
+/* quem ensina */
+.gabriel{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:center;margin-top:32px}
+.gabriel > *{min-width:0}
+.gabriel-foto{width:100%;height:auto;display:block;max-width:440px;margin-inline:auto;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent);mask-image:linear-gradient(to bottom,#000 78%,transparent)}
+.gabriel h3{font-family:var(--display);font-size:clamp(34px,4vw,48px);font-weight:600;margin:0;line-height:1}
+.gabriel .cargo{display:block;margin-top:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--destaque);font-weight:700}
+.gabriel p{margin:18px 0}
+.credenciais{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.credenciais li{padding-left:22px;position:relative}
+.credenciais li::before{content:"";position:absolute;left:0;top:.65em;width:10px;height:2px;background:var(--rosa)}
+.numero{margin-top:26px;display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--linha);padding-top:20px}
+.numero b{font-family:var(--display);font-size:48px;font-weight:600;color:var(--destaque);line-height:1}
+.numero span{color:var(--suave)}
+.equipe-tit{font-family:var(--display);font-size:28px;font-weight:600;margin:56px 0 20px}
+.profs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.prof{display:flex;gap:16px;background:var(--bg2);border:1px solid var(--linha);padding:18px;min-width:0}
+.prof img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--destaque)}
+.prof h4{font-family:var(--display);font-size:20px;font-weight:600;margin:0;line-height:1.15;color:var(--creme)}
+.prof span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--destaque);font-weight:700}
+.prof p{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--suave)}
+/* galeria */
+.mosaico{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:12px;margin-top:32px}
+.mosaico figure{margin:0;overflow:hidden;min-width:0;border:1px solid var(--linha)}
+.mosaico img{width:100%;height:100%;object-fit:cover;display:block}
+.m-aula{grid-column:1;grid-row:1 / span 2}
+.m-plateia{grid-column:2;grid-row:1 / span 2}
+.m-turma{grid-column:3;grid-row:1}
+.m-equipe{grid-column:3;grid-row:2}
+/* plataforma */
+.plat-grid{display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center;margin-top:32px}
+.plat-grid > *{min-width:0}
+.print{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+.pendente{border:2px dashed var(--destaque);color:var(--destaque);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px;background:rgba(220,68,124,.06)}
+.plat-lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+.plat-lista li{border-left:2px solid var(--destaque);padding-left:16px}
+.plat-lista b{color:var(--creme)}
+/* barra fixa no celular */
+.fixo{display:none}
 /* faq */
 .faq details{border-top:1px solid var(--linha);padding-block:18px}
 .faq summary{cursor:pointer;font-family:var(--display);font-size:24px;font-weight:600;list-style:none}
@@ -193,6 +240,13 @@ footer a{color:var(--suave);text-underline-offset:3px}
 footer a:hover,footer a:focus-visible{color:var(--creme)}
 
 @media (max-width:900px){
+  .gabriel,.plat-grid{grid-template-columns:1fr;gap:28px}
+  .mosaico{grid-template-columns:1fr 1fr;grid-template-rows:220px 180px 180px}
+  .m-aula{grid-column:1 / span 2;grid-row:1}
+  .m-plateia{grid-column:1;grid-row:2 / span 2}
+  .m-turma{grid-column:2;grid-row:2}
+  .m-equipe{grid-column:2;grid-row:3}
+  .gabriel-foto{max-width:300px}
   .hero .wrap,.manifesto .grid,.quem-grid{grid-template-columns:1fr;gap:20px}
   .cursos{grid-template-columns:1fr 1fr}
   .pacotes,.historia .wrap{grid-template-columns:1fr}
@@ -205,6 +259,10 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   .selo i{font-size:13px;padding:1px 8px}
   .selo span{font-size:8px}
   section{padding-block:56px}
+  .fixo{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;justify-content:center;align-items:center;gap:10px;background:var(--rosa);color:#fff;text-decoration:none;font-family:var(--display);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:15px;padding:16px;border-radius:2px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+  footer{padding-bottom:96px}
+  .fixo{transition:opacity .2s,transform .2s}
+  .fixo.oculto{opacity:0;transform:translateY(20px);pointer-events:none}
   .cursos{grid-template-columns:1fr}
   .curso{flex-direction:row;flex-wrap:wrap;align-items:center}
   .curso h4{flex:1 1 0}
@@ -224,7 +282,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <div>
     <div class="marca"><img src="logo-fsa-escuro.png" width="480" height="256" alt="FSA"><span class="eyebrow">Faculdade de<br>Saúde Avançada®</span></div>
     <h1><span class="l1">O fim da</span><span class="l2">Narrativa Cega.</span></h1>
-    <p class="sub">Pela primeira vez, as formações da FSA com <u>acesso vitalício</u>. Três pacotes, só nesta Black.</p>
+    <p class="sub">8 formações da FSA, 100% gravadas, com <u>acesso vitalício</u> pela primeira vez. Três pacotes, só nesta Black.</p>
     <a class="btn" href="#pacotes">Ver os pacotes <span aria-hidden="true">→</span></a>
     <div class="meta">8 formações · 100% gravadas · para profissionais da saúde</div>
   </div>
@@ -300,8 +358,10 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       <div class="preco">
         <span class="de">De <s>R$ 9.488</s> por</span>
         <span class="por">R$ 5.947</span>
+        <span class="parc">ou 12x de R$ 579,40 no cartão</span>
       </div>
       <a class="btn" href="#" data-checkout="hipocrates">Quero o Hipócrates</a>
+      <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
     </article>
 
     <article class="pacote">
@@ -319,8 +379,10 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       <div class="preco">
         <span class="de">De <s>R$ 9.688</s> por</span>
         <span class="por">R$ 5.947</span>
+        <span class="parc">ou 12x de R$ 579,40 no cartão</span>
       </div>
       <a class="btn" href="#" data-checkout="galeno">Quero o Galeno</a>
+      <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
     </article>
 
     <article class="pacote top3">
@@ -350,9 +412,11 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
         <span class="de">Hipócrates + Galeno separados: <s>R$ 11.894</s></span>
         <span class="de">Valor original das 8 formações: <s>R$ 19.176</s></span>
         <span class="por">R$ 9.947</span>
+        <span class="parc">ou 12x de R$ 969,11 no cartão</span>
         <span class="eco">R$ 1.947 a menos do que levar os dois pacotes separados</span>
       </div>
       <a class="btn" href="#" data-checkout="olimpo">Quero os dois: Olimpo</a>
+      <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
     </article>
   </div>
   <p class="letrinha" style="margin-top:18px">Todas as formações são 100% gravadas. Vitalício: enquanto existir a plataforma de cursos da FSA, o seu acesso continua.</p>
@@ -383,8 +447,62 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   </div>
 
   <div class="olimpo-bar">
-    <div><h3>Olimpo = Hipócrates + Galeno</h3><p>Os dois pacotes juntos: as 8 formações acima, sem precisar escolher. Para quem quer o raciocínio clínico funcional inteiro, da avaliação à conduta.</p></div>
+    <div><h3>Olimpo = Hipócrates + Galeno</h3><p>Os dois pacotes juntos: as 8 formações acima, sem precisar escolher. Para quem quer o raciocínio clínico funcional inteiro, da avaliação à conduta. <b>Sai a menos de R$ 1.250 por formação.</b></p></div>
     <a class="btn" href="#pacotes">Ver o Olimpo</a>
+  </div>
+</div></section>
+
+<section class="sec quem-ensina"><div class="wrap">
+  <div class="eyebrow">Quem ensina</div>
+  <h2>Quem está do outro lado <span class="ital">da aula</span></h2>
+  <div class="gabriel">
+    <img class="gabriel-foto" src="gabriel-fsa.jpg" width="560" height="883" alt="Gabriel de Carvalho" loading="lazy">
+    <div>
+      <h3>Gabriel de Carvalho</h3>
+      <span class="cargo">Cofundador e professor da FSA</span>
+      <p>Nutricionista e farmacêutico bioquímico. Introduziu a Nutrição Funcional no Brasil em 1999 e atende em clínica desde 1998.</p>
+      <ul class="credenciais">
+        <li>Primeiro profissional da América Latina certificado pelo The Institute for Functional Medicine (EUA)</li>
+        <li>Fundador do IBNF, Instituto Brasileiro de Nutrição Funcional</li>
+        <li>Pós-graduado em Nutrição Clínica Funcional</li>
+        <li>Palestrante nacional e internacional, referência no ensino da suplementação</li>
+      </ul>
+      <div class="numero"><b>40 mil+</b><span>profissionais já formados pela FSA</span></div>
+    </div>
+  </div>
+  <h3 class="equipe-tit">E uma equipe pedagógica de doutoras e pesquisadores</h3>
+  <div class="profs">
+      <div class="prof"><img src="prof-fernanda.jpg" width="240" height="240" alt="Fernanda Colossi de Paris" loading="lazy"><div><h4>Fernanda Colossi de Paris</h4><span>Coordenadora pedagógica</span><p>Doutora em Ciências da Saúde pela PUCRS, com pesquisa em obesidade e síndrome metabólica. Mais de 20 anos de experiência clínica e acadêmica.</p></div></div>
+      <div class="prof"><img src="prof-raquel.jpg" width="240" height="240" alt="Raquel Cristina Schwanke" loading="lazy"><div><h4>Raquel Cristina Schwanke</h4><span>Professora</span><p>Doutora em Farmacologia pela UFSC, com pós-doutorado em Farmacologia e Farmacocinética na GlaxoSmithKline (Reino Unido). Graduada em Nutrição e Farmácia.</p></div></div>
+      <div class="prof"><img src="prof-emiliana.jpg" width="240" height="240" alt="Emiliana Barbosa Marques" loading="lazy"><div><h4>Emiliana Barbosa Marques</h4><span>Professora</span><p>Doutora em Ciências Biomédicas pela UFF, com pós-doutorado em programação metabólica e doenças cardiometabólicas.</p></div></div>
+      <div class="prof"><img src="prof-liliane.jpg" width="240" height="240" alt="Liliane Alves dos Santos Wanderley" loading="lazy"><div><h4>Liliane Alves dos Santos Wanderley</h4><span>Professora</span><p>Doutora em Engenharia de Alimentos pela URI e mestre em Microbiologia pela UFRGS. Graduada em Nutrição.</p></div></div>
+      <div class="prof"><img src="prof-vinicius.jpg" width="240" height="240" alt="Vinicius Leal" loading="lazy"><div><h4>Vinicius Leal</h4><span>Pesquisador e tutor</span><p>Nutricionista pela UnB, com pós-graduação em Fitoterapia Funcional. Especialista em Nutrição Funcional e Exames Laboratoriais.</p></div></div>
+  </div>
+</div></section>
+
+<section class="sec galeria"><div class="wrap">
+  <div class="eyebrow">A comunidade FSA</div>
+  <h2>Gente que estuda <span class="ital">o paciente inteiro</span></h2>
+  <div class="mosaico">
+    <figure class="m-aula"><img src="foto-aula.jpg" width="1400" height="933" alt="Profissionais da saúde em sala de aula da FSA, com o slide da Faculdade de Saúde Avançada ao fundo" loading="lazy"></figure>
+    <figure class="m-plateia"><img src="foto-plateia.jpg" width="900" height="1200" alt="Plateia de profissionais da saúde fazendo anotações durante um evento da FSA" loading="lazy"></figure>
+    <figure class="m-turma"><img src="foto-turma.jpg" width="1200" height="800" alt="Turma de alunos reunida em um encontro presencial da FSA" loading="lazy"></figure>
+    <figure class="m-equipe"><img src="foto-equipe.jpg" width="1000" height="750" alt="Gabriel de Carvalho com a equipe da FSA" loading="lazy"></figure>
+  </div>
+  <p class="letrinha" style="margin-top:14px">Fotos de encontros e eventos presenciais da FSA. As formações desta Black são 100% online e gravadas.</p>
+</div></section>
+
+<section class="sec plataforma"><div class="wrap">
+  <div class="eyebrow">Como é por dentro</div>
+  <h2>Do seu celular, <span class="ital">no seu ritmo</span></h2>
+  <div class="plat-grid">
+    <div class="print pendente" role="img" aria-label="Espaço para o print da plataforma">PENDENTE: print da plataforma de cursos</div>
+    <ul class="plat-lista">
+      <li><b>Aulas 100% gravadas.</b> Assista no computador ou no celular, entre um atendimento e outro.</li>
+      <li><b>Dúvidas pela plataforma.</b> A equipe pedagógica responde às suas perguntas sobre o conteúdo.</li>
+      <li><b>Certificado de conclusão</b> emitido pela FSA ao final de cada formação.</li>
+      <li><b>Acesso vitalício.</b> Volte à aula quando o caso pedir, daqui a um mês ou daqui a cinco anos.</li>
+    </ul>
   </div>
 </div></section>
 
@@ -419,8 +537,11 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <details><summary>O que quer dizer acesso vitalício?</summary><p>Quer dizer que o seu acesso não tem data para acabar e não precisa ser renovado. Enquanto existir a plataforma de cursos da FSA, as formações do seu pacote ficam disponíveis para você assistir quantas vezes quiser.</p></details>
   <details><summary>As aulas são ao vivo?</summary><p>Não. Todas as formações são 100% gravadas. Você assiste no ritmo da sua agenda e volta a cada aula sempre que precisar.</p></details>
   <details><summary>Depois da Black, ainda vai ter acesso vitalício?</summary><p>Não. Depois desta Black, as formações voltam ao acesso com prazo de 1 ou 2 anos.</p></details>
-  <details><summary>E se eu me arrepender?</summary><p>Você tem 7 dias a partir da compra para pedir o reembolso, como garante o Código de Defesa do Consumidor.</p></details>
+  <details><summary>E se eu me arrepender?</summary><p>Você tem 15 dias de garantia incondicional. Assista às aulas com calma e, se concluir que não é para você, devolvemos 100% do valor. Sem burocracia.</p></details>
+  <details><summary>Tem certificado?</summary><p>Sim. Ao concluir cada formação, você recebe o certificado de conclusão emitido pela Faculdade de Saúde Avançada®.</p></details>
+  <details><summary>E se eu tiver dúvida nas aulas?</summary><p>Você tira as dúvidas sobre o conteúdo pela própria plataforma, com a equipe pedagógica da FSA.</p></details>
   <details><summary>Para quem são as formações?</summary><p>Para profissionais da saúde graduados e estudantes de nutrição que querem aplicar a abordagem funcional na prática clínica.</p></details>
+  <p class="faq-contato">Ficou alguma dúvida? <a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Fale com a nossa equipe no WhatsApp</a> ou escreva para <a href="mailto:secretaria@saudeavancada.com.br">secretaria@saudeavancada.com.br</a>.</p>
 </div></section>
 
 <section class="fim"><div class="wrap">
@@ -428,6 +549,8 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <h2>O fim da <span class="ital">Narrativa Cega</span> começa aqui.</h2>
   <a class="btn" href="#pacotes">Escolher meu pacote <span aria-hidden="true">→</span></a>
 </div></section>
+
+<a class="fixo" href="#pacotes">Escolher meu pacote <span aria-hidden="true">→</span></a>
 
 <footer><div class="wrap">
   <div class="legal">
@@ -439,6 +562,8 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
     <nav aria-label="Links legais">
       <a href="https://lp.saudeavancada.com.br/termosdeuso" target="_blank" rel="noopener">Termos de uso e Política de Privacidade</a>
       <a href="https://saudeavancada.com.br/" target="_blank" rel="noopener">saudeavancada.com.br</a>
+      <a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">WhatsApp (51) 98983-1882</a>
+      <a href="mailto:secretaria@saudeavancada.com.br">secretaria@saudeavancada.com.br</a>
     </nav>
     <span>Acesso vitalício: enquanto existir a plataforma de cursos da FSA.</span>
   </div>
@@ -456,6 +581,15 @@ function tick(){
   el.textContent = "Termina em " + d + "d " + String(h).padStart(2,"0") + "h " + String(m).padStart(2,"0") + "m " + String(s).padStart(2,"0") + "s";
 }
 tick(); setInterval(tick, 1000);
+
+// barra fixa do celular: some quando o hero, os pacotes ou o fim estão na tela
+(function(){
+  var bar=document.querySelector('.fixo'); if(!bar||!('IntersectionObserver' in window)) return;
+  var alvos=[document.querySelector('.hero'),document.getElementById('pacotes'),document.querySelector('.fim')].filter(Boolean);
+  var vis=new Set();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?vis.add(e.target):vis.delete(e.target)});bar.classList.toggle('oculto',vis.size>0)},{threshold:0.05});
+  alvos.forEach(function(a){io.observe(a)});
+})();
 </script>
 
 </body>
