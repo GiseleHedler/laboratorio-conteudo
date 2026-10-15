@@ -141,6 +141,9 @@ section{padding-block:80px}
 .soma span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--destaque);font-weight:700;margin-left:6px}
 .soma span i{font-style:normal;color:var(--creme)}
 .pacote .sub{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--creme);font-weight:700;margin-bottom:-4px}
+.mini-capas{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+.mini-capas img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border:1px solid var(--linha);transition:transform .25s}
+.pacote:hover .mini-capas img{transform:scale(1.02)}
 .ideal{margin:6px 0 0;padding:14px 16px;border-left:2px solid var(--destaque);background:rgba(220,68,124,.07);font-size:15px}
 .ideal b{color:var(--creme)}
 .preco .eco{font-size:14px;color:var(--creme);font-weight:600}
@@ -276,6 +279,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   .cursos::-webkit-scrollbar{display:none}
   .curso{flex:0 0 62%;scroll-snap-align:start}
   .pacotes,.historia .wrap{grid-template-columns:1fr}
+  .mini-capas{grid-template-columns:repeat(4,1fr);gap:6px}
 }
 @media (max-width:640px){
   .balao{display:none}
@@ -379,6 +383,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
         <li><span>Hemograma: O Ponto Cego</span><s>R$ 497</s></li>
       </ul>
       <p class="ideal"><b>Ideal se</b> você quer construir a base da Nutrição Funcional e conduzir a suplementação com segurança.</p>
+      <div class="mini-capas" aria-hidden="true"><img src="capa-nf30.jpg" alt="" loading="lazy"><img src="capa-suplementacao.jpg" alt="" loading="lazy"><img src="capa-jejum.jpg" alt="" loading="lazy"><img src="capa-hemograma.jpg" alt="" loading="lazy"></div>
       <div class="preco">
         <span class="de">De <s>R$ 9.488</s> por</span>
         <span class="por">R$ 5.947</span>
@@ -400,6 +405,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
         <li><span>Certificação Base em Nutrição Funcional e Alergias Alimentares</span><s>R$ 697</s></li>
       </ul>
       <p class="ideal"><b>Ideal se</b> você já tem base e atende exames, hormônios, fertilidade e gestação.</p>
+      <div class="mini-capas" aria-hidden="true"><img src="capa-exames.jpg" alt="" loading="lazy"><img src="capa-hormonal.jpg" alt="" loading="lazy"><img src="capa-fertilidade.jpg" alt="" loading="lazy"><img src="capa-alergias.jpg" alt="" loading="lazy"></div>
       <div class="preco">
         <span class="de">De <s>R$ 9.688</s> por</span>
         <span class="por">R$ 5.947</span>
