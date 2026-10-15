@@ -82,3 +82,5 @@ Gisele Hedler: cofundadora e CEO, publicitária (não divulgar formação sem el
 91% mulheres · 75% com 39+ anos · 81% conhecem a FSA há mais de 1 ano · 65% NÃO são alunos · 78% profissionais de saúde (~35 médicos) · interesse: NF 34%, Exames 24%, Hormonal 22%, Suplementação 13%, Fertilidade 3% · canal: Instagram 58%, e-mail 16% · renda: 43% até R$3.000 · barreiras: conhecimento 20%, insegurança 10%, tempo 8%, dinheiro 5%.
 Decisão: não fazer pesquisa nova; perguntas para a live via caixinha nos stories.
 Regra de preço da FSA: não dizer "com juros"; dizer "à vista com desconto".
+
+- HORAS OFICIAIS (confirmadas pela Gisele 15/10, valem acima do site): Suplementação 45h · Exames 2.0 50h · NF 3.0 80h · Fertilidade e Gestação 20h · Certificação Alergias 10h · Hemograma 7h · Jejum 6h · Covid, gripes e resfriados 8h · Saúde Hormonal 33h. Total das 8 formações: 251h; com o bônus: 259h.
