@@ -59,7 +59,7 @@ Frases que prometem resultado de carreira ou de saúde e não podem ir para o co
 ## Black Vitalícia: decisões de 15/10/2026
 - Bloco A da revisão aplicado na página (headline traduzida, preço no topo em parcela com à vista visível, sintomas sem T3/T4, depoimentos antes dos pacotes, Natural Pure removido, "40 mil+ alunos").
 - As formações são cursos de extensão. Nenhuma é pós.
-- Alunos têm preço especial: o checkout pede CPF e mostra o preço de aluno. Sem números na página.
+- Alunos têm preço especial: o checkout pede CPF e mostra o preço de aluno. NÃO mencionar na página (quem é novo se sente pagando mais). Comunicar só para a base, por e-mail/WhatsApp.
 - A certificação de alergias não é "base": nome usado é "Certificação em Nutrição Funcional e Alergias Alimentares" (conferir com o nome no checkout).
 - Médicos também são público: não usar "dentro da atuação do nutricionista".
 - TESTE A/B (para depois): versão A = "O fim da Narrativa Cega" + subtítulo atual. Versão B = "Black Friday Vitalícia FSA / Sua prática clínica mais assertiva, seu trabalho mais valorizado, você mais relevante. Para sempre." (suavizar "trabalho mais valorizado", que soa promessa de carreira). Testar só a headline, medir clique para o checkout, precisa pixel/GA.
