@@ -70,3 +70,5 @@ Frases que prometem resultado de carreira ou de saúde e não podem ir para o co
 NF 3.0 80h (pág. antiga dizia 72h) · Suplementação 45h (págs. antigas 50h e 20h) · Jejum 6h · Hemograma 7h (1 ano de acesso) · Exames 2.0 "mais de 50h" (módulos novos em gravação) · Saúde Hormonal 33h · Fertilidade e Gestação 20h · Certificação Alergias 10h no certificado / 11h no FAQ da própria página (1 ano de acesso; página ainda chama de "Base") · Gripes e Resfriados: sem página, carga não encontrada.
 Soma: pelo menos 251h → página usa "mais de 250 h de aula".
 Gisele Hedler: cofundadora e CEO, publicitária (não divulgar formação sem ela pedir), fundou a FSA com o Gabriel; a decisão do vitalício foi dela, mas a página NÃO diz isso (ela pediu): ela "assina embaixo do compromisso".
+
+- 15/10: na página da Black, Gabriel = "Cofundador e professor da FSA" (sem "coordenador pedagógico", a pedido da Gisele). Gisele = "Publicitária e psicanalista" (ela autorizou divulgar). "40 mil+ alunos" fica como número da FSA, abaixo dos dois fundadores.
