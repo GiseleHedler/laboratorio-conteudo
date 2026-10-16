@@ -28,7 +28,7 @@ COMO GRAVAR
 - Olhando para a lente, de perto, no consultório ou na mesa de atendimento.
 - Pode gravar em blocos, um por vez. Se travar, repete a frase inteira; não ler.
 - A primeira frase devagar e firme. É ela que segura a pessoa.
-- Gravar na vertical (celular em pé) e, se der, também na horizontal para a página.
+- Gravar na vertical (celular em pé). Serve para a página, anúncios, Reels, Stories e WhatsApp.
 
 ANTES DE GRAVAR
 - Confirmar a data de fim para entrar no lugar de [DATA]. Se ainda não tiver, gravar "fecha no fim da Black" e a edição ajusta.
