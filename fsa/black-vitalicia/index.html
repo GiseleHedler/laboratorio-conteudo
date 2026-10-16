@@ -292,6 +292,22 @@ tr.total td{font-weight:700;color:var(--creme)}
 .resumo-preco .parc{font-size:15px;color:var(--suave)}
 .resumo-preco .eco{color:#F1D27F;font-weight:700;margin-bottom:8px}
 .resumo-preco .seguro{justify-content:center;margin-top:6px}
+.video-gabriel{padding-block:64px;background:var(--bg)}
+.video-gabriel .wrap{display:grid;grid-template-columns:320px 1fr;gap:48px;align-items:center}
+.vg-frame video,.vg-pendente{width:100%;aspect-ratio:9/16;display:block;background:#000;border:1px solid rgba(224,182,79,.55);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.vg-pendente{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#F1D27F;font-size:44px;background:linear-gradient(160deg,#2B0739,#14020D)}
+.vg-pendente span{font-family:var(--display);font-size:24px;color:var(--creme)}
+.vg-pendente small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--suave)}
+.vg-txt h2{font-family:var(--display);font-weight:500;font-size:clamp(32px,4vw,52px);line-height:1.05;margin:8px 0 16px}
+.vg-txt p{max-width:46ch;margin:0 0 22px}
+.saida{position:fixed;inset:0;z-index:100;background:rgba(10,0,8,.78);display:flex;align-items:center;justify-content:center;padding:16px}
+.saida[hidden]{display:none}
+.saida-box{position:relative;max-width:460px;width:100%;background:var(--bg2);border:1px solid #E0B64F;padding:32px 28px 24px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.saida-box h3{font-family:var(--display);font-size:34px;font-weight:600;margin:8px 0 12px}
+.saida-box p{margin:0 0 20px;color:var(--texto)}
+.saida-box .btn{display:block;width:100%;box-sizing:border-box}
+.saida-x{position:absolute;top:8px;right:12px;background:none;border:0;color:var(--suave);font-size:28px;cursor:pointer;line-height:1}
+.saida-fica{margin-top:12px;background:none;border:0;color:var(--suave);text-decoration:underline;cursor:pointer;font-size:14px}
 .equipe-tit{font-family:var(--display);font-size:28px;font-weight:600;margin:56px 0 20px}
 .profs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 @media (max-width:700px){.profs{grid-template-columns:1fr}}
@@ -376,6 +392,11 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   .fixo{transition:opacity .2s,transform .2s}
   .fixo.oculto{opacity:0;transform:translateY(20px);pointer-events:none}
   .curso{flex:0 0 72%}
+  .video-gabriel{padding-block:40px}
+  .video-gabriel .wrap{grid-template-columns:1fr;gap:24px}
+  .vg-frame{max-width:260px;margin-inline:auto;width:100%}
+  .vg-txt{text-align:center}
+  .vg-txt p{margin-inline:auto}
   .top-btn{display:none}
   .numeros .wrap{grid-template-columns:1fr 1fr;gap:18px 0;padding-block:20px}
   .numeros div:nth-child(3){border-left:0}
@@ -460,6 +481,20 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <div><b>300 h+</b><span>de aula no Olimpo</span></div>
   <div><b>100%</b><span>online e gravado</span></div>
 </div></div>
+
+<section class="video-gabriel"><div class="wrap">
+  <div class="vg-frame">
+    <!-- VÍDEO DO GABRIEL: trocar o bloco .vg-pendente por
+         <video controls playsinline preload="none" poster="video-gabriel.jpg" src="video-gabriel.mp4"></video> -->
+    <div class="vg-pendente" role="img" aria-label="Espaço para o vídeo do Gabriel">▶<span>Vídeo do Gabriel</span><small>em breve</small></div>
+  </div>
+  <div class="vg-txt">
+    <div class="eyebrow">Em 1 minuto</div>
+    <h2>Por que, pela primeira vez, <span class="ital">vitalício</span></h2>
+    <p>O Gabriel conta o que muda quando a aula fica com você para sempre, e o que tem em cada pacote.</p>
+    <a class="btn" href="#pacotes">Ver os pacotes <span aria-hidden="true">→</span></a>
+  </div>
+</div></section>
 
 <div class="faixa" aria-hidden="true"><div class="trilho">
   <span>Black Friday Vitalícia</span><span>✦</span><span>Acesso para sempre</span><span>✦</span><span>Mais de 300 horas de aula</span><span>✦</span><span>3 pacotes</span><span>✦</span><span>Pela primeira vez</span><span>✦</span>
@@ -809,6 +844,18 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <a class="btn" href="#pacotes">Escolher meu pacote <span aria-hidden="true">→</span></a>
 </div></section>
 
+
+<div class="saida" id="saida" role="dialog" aria-modal="true" aria-labelledby="saida-tit" hidden>
+  <div class="saida-box">
+    <button class="saida-x" type="button" aria-label="Fechar">×</button>
+    <div class="eyebrow">Black Vitalícia FSA</div>
+    <h3 id="saida-tit">Espera, não vai ainda.</h3>
+    <p>Ficou com alguma dúvida, ou precisa de uma condição diferente para entrar agora? Fale com a nossa equipe. A gente te ajuda a encontrar o melhor caminho.</p>
+    <a class="btn" href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Estava%20na%20p%C3%A1gina%20da%20Black%20Vital%C3%ADcia%20e%20queria%20falar%20sobre%20uma%20condi%C3%A7%C3%A3o%20para%20entrar." target="_blank" rel="noopener">Falar com a equipe no WhatsApp</a>
+    <button class="saida-fica" type="button">Quero continuar vendo a página</button>
+  </div>
+</div>
+
 <a class="fixo" href="#pacotes">Escolher meu pacote <span aria-hidden="true">→</span></a>
 
 <footer><div class="wrap">
@@ -850,6 +897,24 @@ tick(); setInterval(tick, 1000);
   var vis=new Set();
   var io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?vis.add(e.target):vis.delete(e.target)});bar.classList.toggle('oculto',vis.size>0)},{threshold:0.05});
   alvos.forEach(function(a){io.observe(a)});
+})();
+
+// pop-up de saída: no computador, quando o mouse sai pelo topo; no celular, quando a pessoa sobe a página rápido depois de ver os pacotes. Uma vez por visita.
+(function(){
+  var m=document.getElementById('saida'); if(!m) return;
+  var visto=false, viuPacotes=false;
+  try{ visto=sessionStorage.getItem('saidaVista')==='1'; }catch(e){}
+  function abrir(){ if(visto) return; visto=true; try{sessionStorage.setItem('saidaVista','1');}catch(e){} m.hidden=false; m.querySelector('.btn').focus(); }
+  function fechar(){ m.hidden=true; }
+  m.addEventListener('click',function(e){ if(e.target===m) fechar(); });
+  m.querySelector('.saida-x').addEventListener('click',fechar);
+  m.querySelector('.saida-fica').addEventListener('click',fechar);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') fechar(); });
+  document.addEventListener('mouseout',function(e){ if(!e.relatedTarget && e.clientY<=0) abrir(); });
+  var pac=document.getElementById('pacotes');
+  if(pac && 'IntersectionObserver' in window){ new IntersectionObserver(function(es){ es.forEach(function(x){ if(x.isIntersecting) viuPacotes=true; }); }).observe(pac); }
+  var ultY=scrollY, ultT=Date.now();
+  addEventListener('scroll',function(){ var y=scrollY,t=Date.now(); if(viuPacotes && innerWidth<=640 && ultY-y>600 && t-ultT<400) abrir(); if(t-ultT>=400||y>ultY){ ultY=y; ultT=t; } },{passive:true});
 })();
 </script>
 
