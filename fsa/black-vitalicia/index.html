@@ -499,6 +499,28 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
 .faixa-ouro{background:#E0B64F;border-color:#c99c35}
 .faixa-ouro .trilho{color:#3a2504;font-weight:600}
 .faixa-ouro .trilho span:nth-child(even){color:#7a1d3e}
+
+/* checkout: aluno por e-mail */
+.ck .saida-box{padding:40px 34px 28px}
+.ck h3{font-family:var(--display);font-weight:500;line-height:1.1;margin:12px 0 10px;font-size:clamp(28px,4.4vw,38px);color:#fff}
+.ck h3 em{font-style:italic;color:#E9C56A}
+.ck .ck-pac{font-family:var(--display);font-style:italic;color:#E9C56A;font-size:20px;margin:0 0 18px}
+.ck-passo[hidden]{display:none}
+.ck-op{display:grid;gap:12px}
+.ck-alt{display:flex;align-items:center;justify-content:center;width:100%;box-sizing:border-box;padding:16px 20px;border-radius:999px;background:transparent;color:var(--creme);border:1px solid rgba(224,182,79,.55);font-family:var(--body);font-weight:600;font-size:16px;cursor:pointer;text-decoration:none}
+.ck-alt:hover{border-color:#E0B64F;color:#fff}
+.ck .saida-btn{border:0;cursor:pointer;font-family:var(--body)}
+.ck label{display:block;text-align:left;font-size:14px;color:var(--suave);margin:0 0 6px}
+.ck input[type=email]{width:100%;box-sizing:border-box;padding:15px 18px;border-radius:14px;border:1px solid rgba(224,182,79,.55);background:#0d0109;color:#fff;font-size:17px;font-family:var(--body);margin-bottom:14px}
+.ck input[type=email]:focus{outline:2px solid #E0B64F;outline-offset:2px}
+.ck-msg{min-height:1.4em;font-size:14px;color:#f3a3b8;margin:-4px 0 12px;text-align:left}
+.ck-preco{border:1px solid rgba(224,182,79,.4);border-radius:18px;padding:18px 16px;margin:0 0 20px;background:rgba(224,182,79,.06)}
+.ck-preco .de{color:var(--suave);font-size:14px}
+.ck-preco .de s{color:var(--suave)}
+.ck-preco .parc{display:block;font-family:var(--display);font-weight:600;font-size:clamp(34px,6vw,44px);color:#fff;line-height:1.1;margin-top:6px}
+.ck-preco .vista{display:block;font-size:15px;color:var(--creme);margin-top:4px}
+.ck-nota{font-size:13px;color:var(--suave);margin:14px 0 0}
+.ck .saida-box p{margin-bottom:20px}
 </style>
 </head>
 <body>
@@ -967,7 +989,7 @@ tick(); setInterval(tick, 1000);
   var m=document.getElementById('saida'); if(!m) return;
   var visto=false, viuPacotes=false;
   try{ visto=sessionStorage.getItem('saidaVista')==='1'; }catch(e){}
-  function abrir(){ if(visto) return; visto=true; try{sessionStorage.setItem('saidaVista','1');}catch(e){} m.hidden=false; m.querySelector('.saida-btn').focus(); }
+  function abrir(){ var ck=document.getElementById('ck'); if(visto || (ck && !ck.hidden)) return; visto=true; try{sessionStorage.setItem('saidaVista','1');}catch(e){} m.hidden=false; m.querySelector('.saida-btn').focus(); }
   function fechar(){ m.hidden=true; }
   m.addEventListener('click',function(e){ if(e.target===m) fechar(); });
   m.querySelector('.saida-x').addEventListener('click',fechar);
@@ -978,6 +1000,112 @@ tick(); setInterval(tick, 1000);
   if(pac && 'IntersectionObserver' in window){ new IntersectionObserver(function(es){ es.forEach(function(x){ if(x.isIntersecting) viuPacotes=true; }); }).observe(pac); }
   var ultY=scrollY, ultT=Date.now();
   addEventListener('scroll',function(){ var y=scrollY,t=Date.now(); if(viuPacotes && innerWidth<=640 && ultY-y>600 && t-ultT<400) abrir(); if(t-ultT>=400||y>ultY){ ultY=y; ultT=t; } },{passive:true});
+})();
+</script>
+
+<div class="saida ck" id="ck" role="dialog" aria-modal="true" aria-labelledby="ck-tit" hidden>
+  <div class="saida-box">
+    <button class="saida-x" type="button" aria-label="Fechar">×</button>
+    <div class="saida-tag"><span class="pt"></span>Black Vitalícia FSA</div>
+    <div class="ck-passo" data-passo="pergunta">
+      <h3 id="ck-tit">Você já estudou <em>na FSA?</em></h3>
+      <p class="ck-pac" data-nome></p>
+      <div class="ck-op">
+        <button class="saida-btn" type="button" data-acao="sou">Sim, já fiz um curso da FSA</button>
+        <button class="ck-alt" type="button" data-acao="seguir">Não, quero seguir para o pagamento</button>
+      </div>
+    </div>
+    <div class="ck-passo" data-passo="email" hidden>
+      <h3>Qual é o seu <em>e-mail de acesso?</em></h3>
+      <p>Use o mesmo e-mail com que você entra na plataforma de cursos da FSA.</p>
+      <form novalidate>
+        <label for="ck-email">E-mail de acesso</label>
+        <input id="ck-email" type="email" autocomplete="email" inputmode="email" placeholder="voce@email.com" required>
+        <div class="ck-msg" role="alert"></div>
+        <button class="saida-btn" type="submit">Ver o meu valor</button>
+      </form>
+    </div>
+    <div class="ck-passo" data-passo="achou" hidden>
+      <h3>Encontramos <em>seu cadastro.</em></h3>
+      <p class="ck-pac" data-nome></p>
+      <div class="ck-preco">
+        <span class="de">Valor das formações compradas separadas: <s data-de></s></span>
+        <span class="parc" data-parc></span>
+        <span class="vista" data-vista></span>
+      </div>
+      <a class="saida-btn" href="#" data-ir="aluno">Garantir com o meu valor</a>
+      <p class="ck-nota">Acesso vitalício. 15 dias de garantia incondicional.</p>
+    </div>
+    <div class="ck-passo" data-passo="naoachou" hidden>
+      <h3>Não encontramos <em>esse e-mail.</em></h3>
+      <p>Confira se é o mesmo e-mail com que você entra na plataforma. Se tiver dúvida, nossa equipe confere para você.</p>
+      <div class="ck-op">
+        <button class="ck-alt" type="button" data-acao="outro">Tentar outro e-mail</button>
+        <a class="ck-alt" href="#" data-zap target="_blank" rel="noopener">Falar com o suporte no WhatsApp</a>
+        <a class="saida-btn" href="#" data-ir="geral">Seguir com o valor da página</a>
+      </div>
+    </div>
+    <div class="ck-passo" data-passo="erro" hidden>
+      <h3>Não conseguimos <em>conferir agora.</em></h3>
+      <p>Fale com a nossa equipe que ela confere o seu cadastro na hora, ou siga com o valor da página.</p>
+      <div class="ck-op">
+        <a class="saida-btn" href="#" data-zap target="_blank" rel="noopener">Falar com o suporte no WhatsApp</a>
+        <a class="ck-alt" href="#" data-ir="geral">Seguir com o valor da página</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+// checkout: pergunta se já estudou na FSA; se sim, confere o e-mail na base de alunos (Supabase) e leva ao checkout de aluno.
+(function(){
+  var PAC={
+    hipocrates:{nome:'Pacote Hipócrates',de:'R$ 9.488',parc:'12x de R$ 516,08',vista:'ou R$ 5.297 à vista, com desconto',
+      aluno:'https://pay.hotmart.com/F108056177M?off=g79fruer&checkoutMode=10',geral:'https://pay.hotmart.com/F108056177M?off=rpg9gyuf&checkoutMode=10',valor:5297},
+    galeno:{nome:'Pacote Galeno',de:'R$ 9.688',parc:'12x de R$ 516,08',vista:'ou R$ 5.297 à vista, com desconto',
+      aluno:'https://pay.hotmart.com/O108057608J?off=74ban1lc&checkoutMode=10',geral:'https://pay.hotmart.com/O108057608J?off=ua1x0dvm&checkoutMode=10',valor:5297},
+    olimpo:{nome:'Pacote Olimpo',de:'R$ 19.970',parc:'12x de R$ 871,69',vista:'ou R$ 8.947 à vista, com desconto',
+      aluno:'https://pay.hotmart.com/Q108057881S?off=8chqcjwl&checkoutMode=10',geral:'https://pay.hotmart.com/Q108057881S?off=0ebdbcf4&checkoutMode=10',valor:8947}
+  };
+  var API='https://hgbqcecpcykmvvnmfecd.supabase.co/rest/v1/rpc/verificar_aluno';
+  var KEY='sb_publishable_oeCidmJTfyQbd1uv7KT8MQ_dCjDJf8Z';
+  var ZAP='https://wa.me/5551989831882?text=';
+  var m=document.getElementById('ck'); if(!m) return;
+  var atual=null, email='', origem=null;
+  function passo(n){ m.querySelectorAll('.ck-passo').forEach(function(p){ p.hidden=p.getAttribute('data-passo')!==n; }); var f=m.querySelector('.ck-passo[data-passo="'+n+'"] input, .ck-passo[data-passo="'+n+'"] .saida-btn'); if(f) f.focus(); }
+  function link(tipo){ var u=PAC[atual][tipo]; return email? u+'&email='+encodeURIComponent(email) : u; }
+  function zap(){ return ZAP+encodeURIComponent('Olá! Estou na página da Black Vitalícia, já estudei na FSA e não encontrei meu cadastro'+(email?' com o e-mail '+email:'')+'. Quero o '+PAC[atual].nome+'.'); }
+  function preencher(){ var d=PAC[atual];
+    m.querySelectorAll('[data-nome]').forEach(function(e){ e.textContent=d.nome; });
+    m.querySelector('[data-de]').textContent=d.de; m.querySelector('[data-parc]').textContent=d.parc; m.querySelector('[data-vista]').textContent=d.vista;
+    m.querySelectorAll('[data-ir]').forEach(function(a){ a.href=link(a.getAttribute('data-ir')); });
+    m.querySelectorAll('[data-zap]').forEach(function(a){ a.href=zap(); }); }
+  function abrir(p,el){ atual=p; origem=el; email=''; m.querySelector('#ck-email').value=''; m.querySelector('.ck-msg').textContent=''; preencher(); m.hidden=false; passo('pergunta'); }
+  function fechar(){ m.hidden=true; if(origem) origem.focus(); }
+  function rastrear(tipo){ var d=PAC[atual];
+    try{ if(window.fbq) fbq('track','InitiateCheckout',{content_name:d.nome,value:tipo==='aluno'?d.valor:null,currency:'BRL'}); }catch(e){}
+    try{ if(window.gtag) gtag('event','begin_checkout',{item_name:d.nome,aluno:tipo==='aluno'}); }catch(e){} }
+  document.querySelectorAll('[data-checkout]').forEach(function(a){ a.addEventListener('click',function(e){ var p=a.getAttribute('data-checkout'); if(!PAC[p]) return; e.preventDefault(); abrir(p,a); }); });
+  m.addEventListener('click',function(e){
+    if(e.target===m) return fechar();
+    var b=e.target.closest('[data-acao]'); if(b){ var ac=b.getAttribute('data-acao');
+      if(ac==='sou'||ac==='outro'){ passo('email'); }
+      if(ac==='seguir'){ rastrear('geral'); location.href=link('geral'); } return; }
+    var ir=e.target.closest('[data-ir]'); if(ir){ rastrear(ir.getAttribute('data-ir')); }
+  });
+  m.querySelector('.saida-x').addEventListener('click',fechar);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !m.hidden) fechar(); });
+  m.querySelector('form').addEventListener('submit',function(e){
+    e.preventDefault(); var inp=m.querySelector('#ck-email'), msg=m.querySelector('.ck-msg'), bt=this.querySelector('button');
+    var v=inp.value.trim().toLowerCase();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){ msg.textContent='Confira o e-mail digitado.'; inp.focus(); return; }
+    msg.textContent=''; email=v; bt.disabled=true; bt.textContent='Conferindo...';
+    var ctl=('AbortController' in window)? new AbortController():null; var t=setTimeout(function(){ if(ctl) ctl.abort(); },8000);
+    fetch(API,{method:'POST',headers:{'apikey':KEY,'Content-Type':'application/json'},body:JSON.stringify({email:v}),signal:ctl?ctl.signal:undefined})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(ok){ preencher(); passo(ok===true?'achou':(ok===false?'naoachou':'erro')); })
+      .catch(function(){ preencher(); passo('erro'); })
+      .then(function(){ clearTimeout(t); bt.disabled=false; bt.textContent='Ver o meu valor'; });
+  });
 })();
 </script>
 
