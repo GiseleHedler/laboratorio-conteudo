@@ -99,3 +99,13 @@ Horas do Olimpo sem repetição: 234 + 72 = 306h → "mais de 300 h".
 - FIM DA BLACK: 31/10/2026 (corrigido; antes foi dito 30/11) (Gisele, 16/10). Página usa 23h59 de Brasília (confirmar horário). Abertura: 19/10 às 20h27 na live.
 - "A conta do vitalício" (16/10): simulação de 6 anos comprando de novo a cada 2 anos, preços de hoje à vista. Hipócrates 28.464 · Galeno 29.064 · Olimpo 59.910 (Black: 5.947 / 5.947 / 9.947). Olimpo = um sexto. Não usar como preço riscado "de/por"; é simulação rotulada. A copy da consultora tinha preços errados (feita por IA), descartada.
 - Nomenclatura (16/10): Olimpo = 5 formações (NF 3.0, Suplementação, Exames 2.0, Saúde Hormonal, Avançada) + 2 cursos (Jejum, Fertilidade e Gestação). Nunca dizer "7 formações" nem "R$ X por formação" (média enganosa).
+
+## Decisões de 16/10 (Gisele)
+- Acesso atual: TODAS as formações e cursos têm 2 anos de acesso. Nunca escrever "1 ou 2 anos". (Atenção: páginas antigas de Hemograma e Alergias ainda dizem 1 ano; a VSL do Gabriel fala "um ou dois anos" no áudio.)
+- Vitalício = acesso para sempre ao que comprou + todas as atualizações da mesma formação. Versão nova com outro nome (ex.: 4.0) é produto à parte. Sem prometer condição especial para a 4.0.
+- Preços individuais são reais e praticados no site. O ® de SeresHumanologistas e Faculdade de Saúde Avançada é registro concedido.
+- Tabela de 6 anos fica (ancoragem). Página B (teste A/B) só depois da A pronta: muda a primeira dobra ("Pela primeira vez, acesso vitalício" em destaque) e pode testar sem a tabela.
+- Novembro: não haverá oferta nova; no máximo reabertura da mesma promo. Por isso NÃO usar "não volta" nem "nunca mais". Usar só "o vitalício fecha dia 31/10" (verdade na data).
+- Validação de aluno: só por e-mail. Base no Supabase (projeto fsa-black-alunos, função verificar_aluno, hashes sha256 truncados com prefixo "fsa-black:"). Suporte: WhatsApp (51) 98983-1882.
+- Checkouts Hotmart: Hipócrates F108056177M (não aluno off=rpg9gyuf, aluno off=g79fruer); Galeno O108057608J (ua1x0dvm / 74ban1lc); Olimpo Q108057881S (0ebdbcf4 / 8chqcjwl), todos com checkoutMode=10.
+- Tags na página: Meta Pixel 455815738170857, GA4 G-20YMZPGYCZ, Hotmart launcher, Lead Tracker lt25616.
