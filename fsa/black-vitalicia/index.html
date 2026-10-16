@@ -268,6 +268,30 @@ tr.total td{font-weight:700;color:var(--creme)}
 .conta .destaque-linha td{background:rgba(220,68,124,.10);font-weight:700}
 .conta .sm{display:none}
 .conta-fim{margin:16px 0 8px!important;font-size:18px}
+.top{position:sticky;top:0;z-index:60}
+.top-btn{margin-left:8px;background:var(--rosa);color:#fff;text-decoration:none;font-family:var(--body);font-weight:700;letter-spacing:.06em;font-size:12px;padding:7px 14px;border-radius:2px}
+.cd-linha{margin:12px 0 0;font-size:14px;color:var(--suave)}
+.cd-linha b{color:#F1D27F;font-variant-numeric:tabular-nums}
+.numeros{background:#0d0109;border-bottom:1px solid var(--linha)}
+.numeros .wrap{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;padding-block:26px}
+.numeros div{padding:0 10px;border-left:1px solid var(--linha)}
+.numeros div:first-child{border-left:0}
+.numeros b{display:block;font-family:var(--display);font-size:clamp(30px,3.4vw,44px);font-weight:600;color:#F1D27F;line-height:1.05}
+.numeros span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--suave)}
+.preco .eco{color:#F1D27F}
+.preco .eco-2{color:var(--creme);font-weight:400;font-size:13px}
+.resumo-box{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;border:1px solid rgba(224,182,79,.55);padding:28px;background:linear-gradient(140deg,rgba(224,182,79,.07),rgba(199,62,92,.06))}
+.resumo-lista{list-style:none;margin:0;padding:0}
+.resumo-lista li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--linha)}
+.resumo-lista s{color:var(--suave);white-space:nowrap}
+.resumo-lista .r-vital{color:#F1D27F;font-weight:700;border-bottom:0}
+.resumo-preco{display:flex;flex-direction:column;justify-content:center;gap:6px;text-align:center}
+.resumo-preco .de{font-size:15px;color:var(--suave)}
+.resumo-preco .por{font-family:var(--display);font-size:56px;font-weight:600;line-height:1}
+.resumo-preco .por small{font-size:24px;color:var(--creme)}
+.resumo-preco .parc{font-size:15px;color:var(--suave)}
+.resumo-preco .eco{color:#F1D27F;font-weight:700;margin-bottom:8px}
+.resumo-preco .seguro{justify-content:center;margin-top:6px}
 .equipe-tit{font-family:var(--display);font-size:28px;font-weight:600;margin:56px 0 20px}
 .profs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 @media (max-width:700px){.profs{grid-template-columns:1fr}}
@@ -352,6 +376,13 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   .fixo{transition:opacity .2s,transform .2s}
   .fixo.oculto{opacity:0;transform:translateY(20px);pointer-events:none}
   .curso{flex:0 0 72%}
+  .top-btn{display:none}
+  .numeros .wrap{grid-template-columns:1fr 1fr;gap:18px 0;padding-block:20px}
+  .numeros div:nth-child(3){border-left:0}
+  .numeros span{font-size:10px}
+  .resumo-box{grid-template-columns:1fr;padding:20px}
+  .resumo-lista li{font-size:15px}
+  .resumo-preco .por{font-size:46px}
   .conta{padding:20px 14px}
   .conta .c-hoje{display:none}
   .conta .lg{display:none}
@@ -394,6 +425,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <span>Black Friday Vitalícia FSA</span>
   <span aria-hidden="true">·</span>
   <b id="contagem">Acesso vitalício só nesta Black</b>
+  <a class="top-btn" href="#pacotes">Garantir meu pacote</a>
 </div></div>
 
 <header class="hero"><div class="wrap">
@@ -404,6 +436,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
     <div class="vital-tag"><b>Acesso vitalício</b><span>Pela primeira vez nas formações da FSA</span></div>
     <p class="hero-preco"><span class="hp-12"><b>Para sempre,</b> pagando até 50% menos</span><span class="hp-av">do que o valor das formações compradas separadas.</span></p>
     <a class="btn" href="#pacotes">Ver os pacotes <span aria-hidden="true">→</span></a>
+    <p class="cd-linha">O vitalício fecha em <b class="cd">31 de outubro</b></p>
     <div class="meta">3 pacotes · mais de 300 h de aula · 100% gravadas</div>
   </div>
   <div class="figure">
@@ -420,6 +453,13 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
     </ul>
   </div>
 </div></header>
+
+<div class="numeros"><div class="wrap">
+  <div><b>40 mil+</b><span>alunos já estudaram na FSA</span></div>
+  <div><b>27 anos</b><span>ensinando Nutrição Funcional</span></div>
+  <div><b>300 h+</b><span>de aula no Olimpo</span></div>
+  <div><b>100%</b><span>online e gravado</span></div>
+</div></div>
 
 <div class="faixa" aria-hidden="true"><div class="trilho">
   <span>Black Friday Vitalícia</span><span>✦</span><span>Acesso para sempre</span><span>✦</span><span>Mais de 300 horas de aula</span><span>✦</span><span>3 pacotes</span><span>✦</span><span>Pela primeira vez</span><span>✦</span>
@@ -491,6 +531,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
         <span class="de">De <s>R$ 9.488</s></span>
         <span class="por"><small>12x</small> R$ 579,40</span>
         <span class="parc">ou R$ 5.947 à vista, com desconto</span>
+        <span class="eco">Você economiza R$ 3.541</span>
       </div>
       <a class="btn" href="#" data-checkout="hipocrates">Quero o Hipócrates</a>
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
@@ -513,6 +554,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
         <span class="de">De <s>R$ 9.688</s></span>
         <span class="por"><small>12x</small> R$ 579,40</span>
         <span class="parc">ou R$ 5.947 à vista, com desconto</span>
+        <span class="eco">Você economiza R$ 3.741</span>
       </div>
       <a class="btn" href="#" data-checkout="galeno">Quero o Galeno</a>
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
@@ -550,7 +592,8 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
         <span class="de">Hipócrates + Galeno nesta Black: <s>R$ 11.894</s></span>
         <span class="por"><small>12x</small> R$ 969,11</span>
         <span class="parc">ou R$ 9.947 à vista, com desconto</span>
-        <span class="eco">R$ 1.947 a menos do que levar os dois pacotes separados</span>
+        <span class="eco">Você economiza R$ 10.023</span>
+        <span class="eco eco-2">E paga R$ 1.947 a menos do que levando os dois pacotes separados</span>
       </div>
       <a class="btn" href="#" data-checkout="olimpo">Quero os dois: Olimpo</a>
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
@@ -717,6 +760,32 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   </div>
 </div></section>
 
+<section class="sec resumo"><div class="wrap">
+  <div class="eyebrow">O que você leva no Olimpo</div>
+  <h2>Tudo o que está <span class="ital">incluso</span></h2>
+  <div class="resumo-box">
+    <ul class="resumo-lista">
+      <li><span>Formação em Nutrição Funcional 3.0</span><s>R$ 3.497</s></li>
+      <li><span>Formação em Suplementação Individualizada</span><s>R$ 4.497</s></li>
+      <li><span>Jejum: Ferramenta para a Saúde</span><s>R$ 997</s></li>
+      <li><span>Formação em Exames Laboratoriais 2.0</span><s>R$ 3.497</s></li>
+      <li><span>Formação em Saúde Hormonal</span><s>R$ 3.497</s></li>
+      <li><span>Fertilidade e Gestação</span><s>R$ 1.997</s></li>
+      <li><span>Formação Avançada em Nutrição Funcional</span><s>R$ 1.988</s></li>
+      <li class="r-vital"><span>Acesso vitalício a todas</span><b>Só nesta Black</b></li>
+    </ul>
+    <div class="resumo-preco">
+      <span class="de">Valor das 7 formações: <s>R$ 19.970</s></span>
+      <span class="por"><small>12x</small> R$ 969,11</span>
+      <span class="parc">ou R$ 9.947 à vista, com desconto</span>
+      <span class="eco">Você economiza R$ 10.023</span>
+      <a class="btn" href="#" data-checkout="olimpo">Quero o Olimpo</a>
+      <p class="cd-linha">O vitalício fecha em <b class="cd">31 de outubro</b></p>
+      <p class="seguro"><span>15 dias de garantia incondicional</span><a href="#pacotes">Prefere só um? Ver Hipócrates e Galeno</a></p>
+    </div>
+  </div>
+</div></section>
+
 <section class="sec faq tom-vinho"><div class="wrap">
   <div class="eyebrow">Perguntas</div>
   <h2>Antes de escolher</h2>
@@ -768,7 +837,9 @@ function tick(){
   const ms = new Date(FIM) - new Date();
   if(ms <= 0){ el.textContent = "Encerrada"; return; }
   const d = Math.floor(ms/864e5), h = Math.floor(ms/36e5)%24, m = Math.floor(ms/6e4)%60, s = Math.floor(ms/1e3)%60;
-  el.textContent = "Termina em " + d + "d " + String(h).padStart(2,"0") + "h " + String(m).padStart(2,"0") + "m " + String(s).padStart(2,"0") + "s";
+  const t = d + "d " + String(h).padStart(2,"0") + "h " + String(m).padStart(2,"0") + "m " + String(s).padStart(2,"0") + "s";
+  el.textContent = "Termina em " + t;
+  document.querySelectorAll(".cd").forEach(function(c){ c.textContent = t; });
 }
 tick(); setInterval(tick, 1000);
 
