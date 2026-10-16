@@ -101,7 +101,7 @@ Horas do Olimpo sem repetição: 234 + 72 = 306h → "mais de 300 h".
 - Nomenclatura (16/10): Olimpo = 5 formações (NF 3.0, Suplementação, Exames 2.0, Saúde Hormonal, Avançada) + 2 cursos (Jejum, Fertilidade e Gestação). Nunca dizer "7 formações" nem "R$ X por formação" (média enganosa).
 
 ## Decisões de 16/10 (Gisele)
-- Acesso atual: TODAS as formações e cursos têm 2 anos de acesso. Nunca escrever "1 ou 2 anos". (Atenção: páginas antigas de Hemograma e Alergias ainda dizem 1 ano; a VSL do Gabriel fala "um ou dois anos" no áudio.)
+- Acesso atual: as formações (as grandes) têm 2 anos. Só os cursos menores Hemograma e Alergias Alimentares têm 1 ano. "1 ou 2 anos" é correto quando fala de todos; "2 anos" quando fala só das formações.
 - Vitalício = acesso para sempre ao que comprou + todas as atualizações da mesma formação. Versão nova com outro nome (ex.: 4.0) é produto à parte. Sem prometer condição especial para a 4.0.
 - Preços individuais são reais e praticados no site. O ® de SeresHumanologistas e Faculdade de Saúde Avançada é registro concedido.
 - Tabela de 6 anos fica (ancoragem). Página B (teste A/B) só depois da A pronta: muda a primeira dobra ("Pela primeira vez, acesso vitalício" em destaque) e pode testar sem a tabela.
