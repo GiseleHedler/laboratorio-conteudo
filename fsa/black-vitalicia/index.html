@@ -516,9 +516,13 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
 .ck-msg{min-height:1.4em;font-size:14px;color:#f3a3b8;margin:-4px 0 12px;text-align:left}
 .ck-preco{border:1px solid rgba(224,182,79,.4);border-radius:18px;padding:18px 16px;margin:0 0 20px;background:rgba(224,182,79,.06)}
 .ck-preco .de{color:var(--suave);font-size:14px}
-.ck-preco .de s{color:var(--suave)}
+.ck-preco .de s{color:var(--suave);white-space:nowrap}
 .ck-preco .parc{display:block;font-family:var(--display);font-weight:600;font-size:clamp(34px,6vw,44px);color:#fff;line-height:1.1;margin-top:6px}
 .ck-preco .vista{display:block;font-size:15px;color:var(--creme);margin-top:4px}
+.ck-selo{display:inline-block;margin:14px 0 2px;background:var(--destaque);color:#fff;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border-radius:999px;box-shadow:0 0 22px rgba(220,68,124,.45)}
+.ck-preco{border-color:rgba(220,68,124,.6);background:rgba(220,68,124,.08)}
+.ck-preco .seu{display:block;margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#f3a3c0}
+.ck-preco .eco{display:inline-block;margin-top:12px;background:rgba(220,68,124,.18);border:1px solid rgba(220,68,124,.6);color:#fff;font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px}
 .ck-nota{font-size:13px;color:var(--suave);margin:14px 0 0}
 .ck .saida-box p{margin-bottom:20px}
 </style>
@@ -1026,12 +1030,15 @@ tick(); setInterval(tick, 1000);
       </form>
     </div>
     <div class="ck-passo" data-passo="achou" hidden>
-      <h3>Encontramos <em>seu cadastro.</em></h3>
+      <div class="ck-selo">Exclusivo para quem já é FSA</div>
+      <h3>Por você já ser da FSA, <em>seu valor é ainda mais especial.</em></h3>
       <p class="ck-pac" data-nome></p>
       <div class="ck-preco">
-        <span class="de">Valor das formações compradas separadas: <s data-de></s></span>
+        <span class="de">Valor da Black na página: <s data-de></s></span>
+        <span class="seu">Seu valor</span>
         <span class="parc" data-parc></span>
         <span class="vista" data-vista></span>
+        <span class="eco" data-eco></span>
       </div>
       <a class="saida-btn" href="#" data-ir="aluno">Garantir com o meu valor</a>
       <p class="ck-nota">Acesso vitalício. 15 dias de garantia incondicional.</p>
@@ -1059,11 +1066,11 @@ tick(); setInterval(tick, 1000);
 // checkout: pergunta se já estudou na FSA; se sim, confere o e-mail na base de alunos (Supabase) e leva ao checkout de aluno.
 (function(){
   var PAC={
-    hipocrates:{nome:'Pacote Hipócrates',de:'R$ 9.488',parc:'12x de R$ 516,08',vista:'ou R$ 5.297 à vista, com desconto',
+    hipocrates:{nome:'Pacote Hipócrates',de:'12x de R$ 579,40',eco:'Você paga R$ 650 a menos',parc:'12x de R$ 516,08',vista:'ou R$ 5.297 à vista, com desconto',
       aluno:'https://pay.hotmart.com/F108056177M?off=g79fruer&checkoutMode=10',geral:'https://pay.hotmart.com/F108056177M?off=rpg9gyuf&checkoutMode=10',valor:5297},
-    galeno:{nome:'Pacote Galeno',de:'R$ 9.688',parc:'12x de R$ 516,08',vista:'ou R$ 5.297 à vista, com desconto',
+    galeno:{nome:'Pacote Galeno',de:'12x de R$ 579,40',eco:'Você paga R$ 650 a menos',parc:'12x de R$ 516,08',vista:'ou R$ 5.297 à vista, com desconto',
       aluno:'https://pay.hotmart.com/O108057608J?off=74ban1lc&checkoutMode=10',geral:'https://pay.hotmart.com/O108057608J?off=ua1x0dvm&checkoutMode=10',valor:5297},
-    olimpo:{nome:'Pacote Olimpo',de:'R$ 19.970',parc:'12x de R$ 871,69',vista:'ou R$ 8.947 à vista, com desconto',
+    olimpo:{nome:'Pacote Olimpo',de:'12x de R$ 969,11',eco:'Você paga R$ 1.000 a menos',parc:'12x de R$ 871,69',vista:'ou R$ 8.947 à vista, com desconto',
       aluno:'https://pay.hotmart.com/Q108057881S?off=8chqcjwl&checkoutMode=10',geral:'https://pay.hotmart.com/Q108057881S?off=0ebdbcf4&checkoutMode=10',valor:8947}
   };
   var API='https://hgbqcecpcykmvvnmfecd.supabase.co/rest/v1/rpc/verificar_aluno';
@@ -1076,7 +1083,7 @@ tick(); setInterval(tick, 1000);
   function zap(){ return ZAP+encodeURIComponent('Olá! Estou na página da Black Vitalícia, já estudei na FSA e não encontrei meu cadastro'+(email?' com o e-mail '+email:'')+'. Quero o '+PAC[atual].nome+'.'); }
   function preencher(){ var d=PAC[atual];
     m.querySelectorAll('[data-nome]').forEach(function(e){ e.textContent=d.nome; });
-    m.querySelector('[data-de]').textContent=d.de; m.querySelector('[data-parc]').textContent=d.parc; m.querySelector('[data-vista]').textContent=d.vista;
+    m.querySelector('[data-de]').textContent=d.de; m.querySelector('[data-parc]').textContent=d.parc; m.querySelector('[data-vista]').textContent=d.vista; m.querySelector('[data-eco]').textContent=d.eco;
     m.querySelectorAll('[data-ir]').forEach(function(a){ a.href=link(a.getAttribute('data-ir')); });
     m.querySelectorAll('[data-zap]').forEach(function(a){ a.href=zap(); }); }
   function abrir(p,el){ atual=p; origem=el; email=''; m.querySelector('#ck-email').value=''; m.querySelector('.ck-msg').textContent=''; preencher(); m.hidden=false; passo('pergunta'); }
