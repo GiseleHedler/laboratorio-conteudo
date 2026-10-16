@@ -96,4 +96,4 @@ Horas do Olimpo sem repetição: 234 + 72 = 306h → "mais de 300 h".
 - CORREÇÃO 15/10: a Formação Avançada NÃO é inédita. Existe desde 2021, era vendida por R$ 1.988 e parou de ser vendida; agora é reativada. Na página: selo "De volta", "Estava fora de venda e volta agora, primeiro no Olimpo. Valor de venda: R$ 1.988."
 - As 2 aulas "Nutrição Funcional e Covid-19" da Avançada são o mesmo conteúdo do curso Gripes e Resfriados. Não usar a palavra "Covid" em nenhuma peça; chamar de "gripes e resfriados".
 - 15/10: bônus Gripes e Resfriados REMOVIDO do Olimpo (repetia as aulas da Avançada). Olimpo = 6 formações + Avançada, sem bônus.
-- FIM DA BLACK: 30/11/2026 (Gisele, 16/10). Página usa 23h59 de Brasília (confirmar horário). Abertura: 19/10 às 20h27 na live.
+- FIM DA BLACK: 31/10/2026 (corrigido; antes foi dito 30/11) (Gisele, 16/10). Página usa 23h59 de Brasília (confirmar horário). Abertura: 19/10 às 20h27 na live.

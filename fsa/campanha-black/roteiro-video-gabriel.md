@@ -18,11 +18,11 @@ VERSÃO PRINCIPAL (cerca de 1 minuto)
 "Até cinquenta por cento menos do que as formações compradas separadas. E isso comparando com um ou dois anos de acesso. Com o vitalício, você nunca mais precisa renovar."
 
 [52 a 60 s] FECHAMENTO
-"É o fim da Narrativa Cega. E o começo de uma geração de SeresHumanologistas. O vitalício fecha dia trinta de novembro. Depois disso, volta o prazo. O link está aqui."
+"É o fim da Narrativa Cega. E o começo de uma geração de SeresHumanologistas. O vitalício fecha dia trinta e um de outubro. Depois disso, volta o prazo. O link está aqui."
 
 VERSÃO CURTA PARA ANÚNCIO (cerca de 15 segundos)
 
-"Em vinte e sete anos ensinando Nutrição Funcional, eu nunca fiz isso. Nesta Black, pela primeira vez, as formações da FSA têm acesso vitalício. Para sempre, pagando até cinquenta por cento menos. O vitalício fecha dia trinta de novembro."
+"Em vinte e sete anos ensinando Nutrição Funcional, eu nunca fiz isso. Nesta Black, pela primeira vez, as formações da FSA têm acesso vitalício. Para sempre, pagando até cinquenta por cento menos. O vitalício fecha dia trinta e um de outubro."
 
 COMO GRAVAR
 - Olhando para a lente, de perto, no consultório ou na mesa de atendimento.

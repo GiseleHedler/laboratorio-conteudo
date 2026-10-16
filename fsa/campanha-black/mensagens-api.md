@@ -1,6 +1,6 @@
 # Black Vitalícia · Mensagens de WhatsApp (API)
 Regra: a primeira linha (em negrito) decide se a pessoa abre. Até ~60 caracteres. Sem travessão.
-Pendências: 30/11, [LINK DA LIVE], [LINK DA PÁGINA], autorização de uso do depoimento da Daniela.
+Pendências: 31/10, [LINK DA LIVE], [LINK DA PÁGINA], autorização de uso do depoimento da Daniela.
 
 ## PRÉ-LIVE (não revelar o vitalício)
 
@@ -80,7 +80,7 @@ Hoje, cada formação tem 1 ou 2 anos de acesso. Nesta Black, não tem prazo. Vo
 
 E pagando até 50% menos do que o valor das formações compradas separadas.
 
-O vitalício fecha dia 30/11.
+O vitalício fecha dia 31/10.
 👉 [LINK DA PÁGINA]
 
 ### 20/10 · Narrativa Cega
@@ -98,7 +98,7 @@ São mais de 300 horas de aula para enxergar o ser humano inteiro. Com acesso vi
 *Galeno:* Exames Laboratoriais 2.0, Saúde Hormonal, Fertilidade e Gestação e Alergias Alimentares.
 *Olimpo:* os dois juntos, sem repetir aula, mais a Formação Avançada em Nutrição Funcional, que volta agora.
 
-Todos com acesso vitalício. Só até 30/11.
+Todos com acesso vitalício. Só até 31/10.
 👉 [LINK DA PÁGINA]
 
 ### 22/10 · Objeção do tempo
