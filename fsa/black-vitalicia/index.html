@@ -257,6 +257,17 @@ tr.total td{font-weight:700;color:var(--creme)}
 .av-temas li{padding-left:20px;position:relative;font-size:15px}
 .av-temas li::before{content:"✦";position:absolute;left:0;color:#E0B64F;font-size:12px;top:3px}
 .av-valor{font-size:15px;color:var(--suave)}
+.conta{margin:40px auto 0;max-width:860px;border:1px solid rgba(224,182,79,.55);background:rgba(224,182,79,.05);padding:28px 30px}
+.conta h3{font-family:var(--display);font-size:clamp(26px,3vw,34px);font-weight:600;margin:6px 0 10px;line-height:1.15}
+.conta>p{margin:0 0 16px}
+.conta table{width:100%;min-width:0;border-collapse:collapse;font-size:16px}
+.conta th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--suave);font-weight:700;text-align:left;padding:8px 10px;border-bottom:1px solid var(--linha)}
+.conta td{padding:12px 10px;border-bottom:1px solid var(--linha);font-variant-numeric:tabular-nums}
+.conta td s{color:var(--suave);text-decoration-color:var(--rosa)}
+.conta td b{color:#F1D27F;font-size:18px}
+.conta .destaque-linha td{background:rgba(220,68,124,.10);font-weight:700}
+.conta .sm{display:none}
+.conta-fim{margin:16px 0 8px!important;font-size:18px}
 .equipe-tit{font-family:var(--display);font-size:28px;font-weight:600;margin:56px 0 20px}
 .profs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 @media (max-width:700px){.profs{grid-template-columns:1fr}}
@@ -341,6 +352,18 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   .fixo{transition:opacity .2s,transform .2s}
   .fixo.oculto{opacity:0;transform:translateY(20px);pointer-events:none}
   .curso{flex:0 0 72%}
+  .conta{padding:20px 14px}
+  .conta .c-hoje{display:none}
+  .conta .lg{display:none}
+  .conta .sm{display:inline}
+  .conta td:first-child{padding-left:0}
+  .conta table{table-layout:auto;width:100%!important;max-width:100%}
+  .conta th:nth-child(1),.conta td:nth-child(1){width:34%}
+  .conta th,.conta td{white-space:normal;word-break:break-word}
+  .conta table{font-size:14px}
+  .conta th{font-size:10px;padding:6px}
+  .conta td{padding:10px 6px}
+  .conta td b{font-size:15px}
   .avancada{grid-template-columns:1fr;padding:20px;gap:20px}
   .av-capa{max-width:260px;margin-inline:auto}
   .av-temas{grid-template-columns:1fr}
@@ -532,6 +555,21 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
       <a class="btn" href="#" data-checkout="olimpo">Quero os dois: Olimpo</a>
       <p class="seguro"><span>15 dias de garantia incondicional</span><a href="https://wa.me/5551989831882?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Black%20Vital%C3%ADcia%20da%20FSA." target="_blank" rel="noopener">Dúvidas? Fale no WhatsApp</a></p>
     </article>
+  </div>
+  <div class="conta">
+    <div class="eyebrow">A conta do vitalício</div>
+    <h3>Quanto custaria estudar por 6 anos sem o vitalício?</h3>
+    <p>Hoje o acesso é de 2 anos. Para continuar voltando às aulas por 6 anos, você teria que comprar a mesma formação 3 vezes.</p>
+    <table>
+      <thead><tr><th>Pacote</th><th class="c-hoje">Hoje, 2 anos</th><th><span class="lg">Em 6 anos, comprando de novo</span><span class="sm">Em 6 anos</span></th><th><span class="lg">Na Black, para sempre</span><span class="sm">Na Black</span></th></tr></thead>
+      <tbody>
+        <tr><td>Hipócrates</td><td class="c-hoje">R$ 9.488</td><td><s>R$ 28.464</s></td><td><b>R$ 5.947</b></td></tr>
+        <tr><td>Galeno</td><td class="c-hoje">R$ 9.688</td><td><s>R$ 29.064</s></td><td><b>R$ 5.947</b></td></tr>
+        <tr class="destaque-linha"><td>Olimpo</td><td class="c-hoje">R$ 19.970</td><td><s>R$ 59.910</s></td><td><b>R$ 9.947</b></td></tr>
+      </tbody>
+    </table>
+    <p class="conta-fim">No Olimpo, o vitalício custa <b>um sexto</b> do que você pagaria em 6 anos. E depois do sexto ano, continua seu.</p>
+    <p class="letrinha">Simulação comprando de novo a cada 2 anos, pelos preços de hoje à vista. Valores da Black à vista; também em até 12x no cartão.</p>
   </div>
   <figure class="compromisso">
     <img src="gisele-rosto.jpg" width="240" height="240" alt="Gisele Hedler">

@@ -97,3 +97,4 @@ Horas do Olimpo sem repetição: 234 + 72 = 306h → "mais de 300 h".
 - As 2 aulas "Nutrição Funcional e Covid-19" da Avançada são o mesmo conteúdo do curso Gripes e Resfriados. Não usar a palavra "Covid" em nenhuma peça; chamar de "gripes e resfriados".
 - 15/10: bônus Gripes e Resfriados REMOVIDO do Olimpo (repetia as aulas da Avançada). Olimpo = 6 formações + Avançada, sem bônus.
 - FIM DA BLACK: 31/10/2026 (corrigido; antes foi dito 30/11) (Gisele, 16/10). Página usa 23h59 de Brasília (confirmar horário). Abertura: 19/10 às 20h27 na live.
+- "A conta do vitalício" (16/10): simulação de 6 anos comprando de novo a cada 2 anos, preços de hoje à vista. Hipócrates 28.464 · Galeno 29.064 · Olimpo 59.910 (Black: 5.947 / 5.947 / 9.947). Olimpo = um sexto. Não usar como preço riscado "de/por"; é simulação rotulada. A copy da consultora tinha preços errados (feita por IA), descartada.
