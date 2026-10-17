@@ -437,9 +437,11 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   .mini-capas{grid-template-columns:repeat(4,1fr);gap:6px}
 }
 @media (max-width:640px){
-  .balao{display:none}
-  .dialogo{display:flex}
-  .selo{width:96px;height:96px;right:-6px;bottom:auto;top:-30px}
+  .balao{font-size:11px;padding:.55em .7em;border-radius:12px;line-height:1.15}
+  .b-hip{left:3%;top:2%;width:44%}
+  .b-gal{left:50%;top:2%;width:30%}
+  .balao::after{border-width:7px}
+  .selo{width:86px;height:86px;right:-6px;bottom:auto;top:calc((100vw - 32px) * .558 - 34px)}
   .hero .figure{margin-top:26px}
   .selo b{font-size:26px}
   .selo i{font-size:13px;padding:1px 8px}
