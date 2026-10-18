@@ -1,5 +1,5 @@
 # Live 19/10 · 20h27 · Festa dos 27 anos da Nutrição Funcional
-Roteiro falado do Gabriel (versão 1, 18/10)
+Roteiro falado do Gabriel (versão 2, 18/10: ridicularização do preço no bloco 11 e "pela primeira vez" no lugar de "só nesta Black")
 
 Como ler:
 - Fala do Gabriel entre aspas. Não é para decorar: é para ler antes e falar do jeito dele.
