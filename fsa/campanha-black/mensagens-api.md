@@ -5,7 +5,7 @@ Pendências: 31/10, [LINK DA LIVE], [LINK DA PÁGINA], autorização de uso do d
 ## PRÉ-LIVE (não revelar o vitalício)
 
 ### 16/10 · Convite
-*Em 27 anos, a FSA nunca fez o que vai fazer dia 19/10.*
+*Em 27 anos ensinando Nutrição Funcional, o Gabriel nunca fez o que vai fazer dia 19/10.*
 
 No dia 19/10, às 20h27, Gabriel de Carvalho abre ao vivo a Festa dos 27 anos da Nutrição Funcional.
 
@@ -42,7 +42,7 @@ Pode ser aquele caso que não sai da sua cabeça. Aquele exame que não fecha. A
 ### 18/10 · Expectativa
 *Amanhã, às 20h27, a FSA abre uma Black que nunca existiu.*
 
-Não é só desconto. É algo que, em 27 anos, nenhum aluno da FSA teve.
+Não é só desconto. É algo que nenhum aluno da FSA teve até hoje.
 
 O Gabriel revela ao vivo, na festa dos 27 anos da Nutrição Funcional.
 
