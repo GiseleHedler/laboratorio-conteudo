@@ -164,6 +164,10 @@ NÃO falar o preço da Black aqui.
 ## Bloco 11 · O preço (último slide, fica na tela até o fim)
 [SLIDE] "Para sempre, pagando até 50% menos do que as formações compradas separadas."
 "Hipócrates e Galeno: 12x de R$ 579,40, ou R$ 5.947 à vista. O Olimpo: 12x de R$ 969,11, ou R$ 9.947 à vista. No Olimpo, é um sexto do que custariam 6 anos, e R$ 1.947 a menos do que levar os dois separados, com a Avançada."
+Ridicularizar o preço (logo depois de falar os valores, devagar):
+"Agora olha o que isso quer dizer. R$ 579 por mês dá menos de R$ 20 por dia. Doze meses. E a 13ª parcela? Não existe. Em um ano tu terminou de pagar, e as formações são tuas pelo resto da tua vida profissional. Sem renovar, sem pagar de novo daqui a dois anos."
+"No Olimpo, uns R$ 32 por dia. Comprando e renovando em 6 anos, seriam R$ 59.910. Aqui são 12 parcelas, e depois é teu."
+NÃO dizer "nunca mais vai acontecer" nem "não volta". NÃO comparar com consulta ou faturamento (promessa de renda, conselho). Pode dizer: "Pela primeira vez, nesta Black."
 "O vitalício fecha dia 31/10, às 23h59. O link está aqui embaixo e na bio: black.saudeavancada.com. Dúvida de pagamento ou de qual pacote? Tem o WhatsApp da equipe na página."
 Prova social, durante este bloco e as perguntas: a Franciele passa ao Gabriel só o primeiro nome de quem escreveu no chat que entrou ("A Ana acabou de entrar no Olimpo!"). Nada de sobrenome ou cidade (LGPD).
 

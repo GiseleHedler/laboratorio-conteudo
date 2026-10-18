@@ -88,7 +88,7 @@ O vitalício fecha dia 31/10.
 
 Exames dentro da referência, e o paciente ainda com queixas que ninguém explicou. Você conhece essa cena.
 
-São mais de 300 horas de aula para enxergar o ser humano inteiro. Com acesso vitalício, só nesta Black.
+São mais de 300 horas de aula para enxergar o ser humano inteiro. Com acesso vitalício, pela primeira vez, nesta Black.
 👉 [LINK DA PÁGINA]
 
 ### 21/10 · Os três pacotes
