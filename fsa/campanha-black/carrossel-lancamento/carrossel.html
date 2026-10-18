@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><style>
+@font-face{font-family:Corm;src:url(fonts/corm-normal-600.woff2) format('woff2');font-weight:300 700;font-style:normal}
+@font-face{font-family:Corm;src:url(fonts/corm-italic-600.woff2) format('woff2');font-weight:300 700;font-style:italic}
+@font-face{font-family:Archivo;src:url(fonts/archivo.woff2) format('woff2');font-weight:100 900}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#333}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:Archivo,sans-serif;color:#f1e9ec;padding:0 80px;
+ background:radial-gradient(90% 55% at 80% 0%,rgba(199,62,92,.28),transparent 60%),radial-gradient(70% 50% at 0% 100%,rgba(224,182,79,.10),transparent 60%),linear-gradient(180deg,#1d0616,#0f0109)}
+.slide::before{content:'';position:absolute;inset:26px;border:1px solid rgba(224,182,79,.22);border-radius:6px;pointer-events:none}
+.top{display:flex;justify-content:space-between;align-items:center;padding-top:62px;position:relative;z-index:3}
+.brand{display:flex;align-items:center;gap:18px}
+.brand img{height:34px}
+.brand span{font-family:Corm;font-weight:600;letter-spacing:.32em;font-size:26px;color:#ece4d8}
+.pg{font-weight:700;letter-spacing:.18em;font-size:24px;color:#E0B64F}
+.foot{position:absolute;left:80px;right:80px;bottom:66px;display:flex;align-items:center;gap:30px;z-index:3}
+.bar{flex:1;height:3px;background:rgba(236,228,216,.18);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#b8862e,#F1D27F)}
+.arr{font-weight:700;letter-spacing:.24em;font-size:22px;color:#cbb8c2}
+.arr b{color:#E0B64F;margin-left:6px}
+.big{font-family:Corm;font-weight:600;font-size:116px;line-height:.98;letter-spacing:.01em;color:#fbf6ef;position:relative;z-index:2}
+.big em{font-style:italic;color:#E9C56A;text-transform:none;font-weight:600}
+.ital{font-family:Corm;font-style:italic;font-weight:600;font-size:84px;line-height:1;color:#E9C56A;margin-top:6px;position:relative;z-index:2}
+.ital.sm{font-size:50px;margin-top:4px}
+.kick{margin-top:230px;font-weight:700;letter-spacing:.3em;font-size:22px;color:#E0B64F;margin-bottom:22px}
+.rule{width:110px;height:2px;background:#E0B64F;margin:44px 0 36px}
+.rule.c{margin-left:auto;margin-right:auto}
+.lead{font-size:42px;line-height:1.45;color:#ece4d8;max-width:860px;position:relative;z-index:2}
+.lead b{color:#fff}
+.c{text-align:center;margin-left:auto;margin-right:auto}
+/* capa */
+.capa .cena{position:absolute;left:0;right:0;top:0;height:780px}
+.capa .cena img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:saturate(.95)}
+.capa .cena::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,1,9,.85) 0%,rgba(15,1,9,0) 30%,rgba(15,1,9,.2) 60%,#170412 100%)}
+.capa .big{margin-top:560px;font-size:112px;white-space:nowrap}
+.capa .lead{font-size:38px}
+.capa .ital{font-size:86px}
+.capa .rule{margin:34px 0 28px}
+/* 2 */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:60px 0 50px}
+.vs>div{border-radius:22px;padding:30px 32px;border:1px solid rgba(236,228,216,.18);background:rgba(255,255,255,.03)}
+.vs small{display:block;font-weight:700;letter-spacing:.24em;font-size:20px;color:#cbb8c2;margin-bottom:12px}
+.vs b{font-family:Corm;font-size:54px;font-weight:600;line-height:1.05}
+.vs-a b s{text-decoration-color:#DC447C;text-decoration-thickness:4px;color:#a8939f}
+.vs-b{border-color:rgba(224,182,79,.7)!important;background:linear-gradient(160deg,rgba(224,182,79,.16),rgba(224,182,79,.03))!important;box-shadow:0 0 50px rgba(224,182,79,.15)}
+.vs-b b{color:#F1D27F}
+/* claro */
+.claro{background:radial-gradient(80% 50% at 85% 5%,rgba(199,62,92,.14),transparent 60%),#f4ede3;color:#2a0f1f}
+.claro::before{border-color:rgba(43,7,57,.18)}
+.claro .brand span{color:#2B0739}.claro .brand img{mix-blend-mode:multiply}
+.claro .big{color:#1d0616}.claro .big em{color:#b8325f}
+.claro .lead{color:#3c1b2e}.claro .kick{color:#b8325f}.claro .rule{background:#b8325f}
+.claro .bar{background:rgba(43,7,57,.15)}.claro .arr{color:#6e5563}
+.frase{margin-top:70px;border-left:4px solid #b8325f;padding:10px 0 10px 34px;font-family:Corm;font-style:italic;font-size:56px;line-height:1.15;color:#2B0739}
+.frase span{display:block;font-family:Archivo;font-style:normal;font-size:24px;letter-spacing:.06em;color:#6e5563;margin-top:16px}
+/* pacotes */
+.pac .pimg{position:absolute;left:0;right:0;top:0;height:520px}
+.pac .pimg img{width:100%;height:100%;object-fit:cover}
+.pac .pimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,1,9,.85) 0%,rgba(15,1,9,0) 28%,rgba(23,4,18,.35) 62%,#1a0514 100%)}
+.pac .kick{margin-top:330px}
+.pac .big{font-size:120px}
+.lst{list-style:none;margin-top:36px;border:1px solid rgba(224,182,79,.28);border-radius:24px;padding:10px 34px;background:rgba(10,0,6,.45)}
+.lst li{display:flex;align-items:center;gap:22px;padding:19px 0;border-bottom:1px solid rgba(236,228,216,.1);font-size:33px}
+.lst li:last-child{border-bottom:0}
+.ck{flex:0 0 46px;height:46px;border:1.5px solid #E0B64F;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ck svg{width:26px;height:26px}
+.lst .t{flex:1;line-height:1.2}
+.lst .h{font-weight:700;color:#E0B64F;font-size:28px;letter-spacing:.04em}
+.pill{display:inline-block;margin-top:30px;border:1.5px solid #E0B64F;border-radius:999px;padding:16px 30px;font-weight:700;letter-spacing:.16em;font-size:22px;color:#E0B64F}
+.pill b{color:#fff;letter-spacing:.04em;font-size:26px;margin-left:8px}
+.nfa{display:flex;gap:26px;align-items:center;margin-top:22px;border:1.5px solid rgba(224,182,79,.75);border-radius:24px;padding:20px;background:linear-gradient(160deg,rgba(224,182,79,.16),rgba(224,182,79,.03));box-shadow:0 0 50px rgba(224,182,79,.15)}
+.nfa img{width:150px;height:150px;border-radius:14px;object-fit:cover}
+.nfa .tag{display:inline-block;background:#DC447C;color:#fff;font-weight:700;letter-spacing:.2em;font-size:18px;padding:6px 14px;border-radius:999px;margin-bottom:10px}
+.nfa b{display:block;font-family:Corm;font-size:46px;line-height:1.05;font-weight:600;color:#fbf6ef}
+.nfa small{display:block;font-size:24px;color:#E0B64F;margin-top:8px;font-weight:600}
+/* oferta */
+.oferta .kick{margin-top:200px}
+.oferta .lead{margin-top:50px}
+.preco{margin-top:70px;border:1.5px solid rgba(224,182,79,.75);border-radius:28px;padding:44px 50px;background:linear-gradient(160deg,rgba(224,182,79,.16),rgba(224,182,79,.03));box-shadow:0 0 60px rgba(224,182,79,.18)}
+.preco small{display:block;font-weight:700;letter-spacing:.26em;font-size:22px;color:#E0B64F}
+.preco b{display:block;font-family:Corm;font-weight:600;font-size:118px;line-height:1.05;color:#fff;margin-top:10px}
+.preco span{display:block;font-size:32px;color:#ece4d8}
+/* fim */
+.fim .logo-g{display:block;height:120px;margin:170px auto 60px}
+.fim .lead{margin-top:46px}
+.assin{text-align:center;font-family:Corm;font-style:italic;font-weight:600;font-size:50px;line-height:1.2;color:#E9C56A}
+</style></head><body><section class="slide capa"><div class="top"><div class="brand"><img src="logo-fsa-escuro.png" alt=""><span>BLACK VITALÍCIA</span></div><div class="pg">01 / 08</div></div><div class="cena"><img src="cena.jpg" alt=""></div>
+<h1 class="big">REVELAMOS<br>A BLACK DA FSA</h1><div class="ital">pela primeira vez, vitalícia.</div><div class="rule"></div>
+<p class="lead">As formações da Faculdade de Saúde Avançada® ficam com você para sempre.</p><div class="foot"><div class="bar"><i style="width:12%"></i></div><span class="arr">ARRASTE <b>→</b></span></div></section>
+<section class="slide "><div class="top"><div class="brand"><img src="logo-fsa-escuro.png" alt=""><span>BLACK VITALÍCIA</span></div><div class="pg">02 / 08</div></div><div class="kick">27 ANOS DE FSA</div><h2 class="big">EM 27 ANOS,<br><em>nunca fizemos isso.</em></h2>
+<div class="vs"><div class="vs-a"><small>HOJE</small><b><s>2 anos de acesso</s></b></div><div class="vs-b"><small>NESTA BLACK</small><b>Acesso vitalício</b></div></div>
+<p class="lead">As formações ficam com você para sempre, com todas as atualizações de cada uma. É a primeira vez que a FSA faz isso.</p><div class="foot"><div class="bar"><i style="width:25%"></i></div><span class="arr">ARRASTE <b>→</b></span></div></section>
+<section class="slide claro"><div class="top"><div class="brand"><img src="logo-fsa.jpg" alt=""><span>BLACK VITALÍCIA</span></div><div class="pg">03 / 08</div></div><div class="kick">POR QUE VITALÍCIO</div><h2 class="big">O CASO DIFÍCIL<br><em>não avisa quando chega.</em></h2>
+<div class="rule"></div><p class="lead">Pode ser no mês que vem, pode ser daqui a cinco anos. Quando ele chegar, a aula vai estar lá, e você volta a ela quantas vezes precisar.</p>
+<div class="frase">“E quando ele chegar, a aula vai tá lá.”<span>Gabriel de Carvalho, cofundador e professor da FSA</span></div><div class="foot"><div class="bar"><i style="width:37%"></i></div><span class="arr">ARRASTE <b>→</b></span></div></section>
+<section class="slide pac"><div class="top"><div class="brand"><img src="logo-fsa-escuro.png" alt=""><span>BLACK VITALÍCIA</span></div><div class="pg">04 / 08</div></div><div class="pimg"><img src="pacote-hipocrates.jpg" alt=""></div><div class="kick">PACOTE</div><h2 class="big">HIPÓCRATES</h2><div class="ital sm">a base do raciocínio funcional</div><ul class="lst"><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="#E0B64F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Formação em Nutrição Funcional 3.0</span><span class="h">80 h</span></li><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="#E0B64F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Formação em Suplementação Individualizada</span><span class="h">45 h</span></li><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="#E0B64F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Jejum: ferramenta para a saúde</span><span class="h">6 h</span></li><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="#E0B64F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Hemograma: o ponto cego</span><span class="h">7 h</span></li></ul><div class="pill">VALOR DAS FORMAÇÕES SEPARADAS: <b>R$ 9.488</b></div><div class="foot"><div class="bar"><i style="width:50%"></i></div><span class="arr">ARRASTE <b>→</b></span></div></section>
+<section class="slide pac"><div class="top"><div class="brand"><img src="logo-fsa-escuro.png" alt=""><span>BLACK VITALÍCIA</span></div><div class="pg">05 / 08</div></div><div class="pimg"><img src="pacote-galeno.jpg" alt=""></div><div class="kick">PACOTE</div><h2 class="big">GALENO</h2><div class="ital sm">exames e saúde hormonal</div><ul class="lst"><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="#E0B64F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Formação em Exames Laboratoriais 2.0</span><span class="h">50 h</span></li><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="#E0B64F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Formação em Saúde Hormonal</span><span class="h">33 h</span></li><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="#E0B64F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Fertilidade e Gestação</span><span class="h">20 h</span></li><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="#E0B64F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Alergias Alimentares</span><span class="h">10 h</span></li></ul><div class="pill">VALOR DAS FORMAÇÕES SEPARADAS: <b>R$ 9.688</b></div><div class="foot"><div class="bar"><i style="width:62%"></i></div><span class="arr">ARRASTE <b>→</b></span></div></section>
+<section class="slide pac"><div class="top"><div class="brand"><img src="logo-fsa-escuro.png" alt=""><span>BLACK VITALÍCIA</span></div><div class="pg">06 / 08</div></div><div class="pimg"><img src="pacote-olimpo.jpg" alt=""></div><div class="kick">PACOTE</div><h2 class="big">OLIMPO</h2><div class="ital sm">os dois, sem repetir nenhuma aula</div><ul class="lst"><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="#E0B64F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Tudo do Hipócrates</span><span class="h">✓</span></li><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" fill="none" stroke="#E0B64F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Tudo do Galeno</span><span class="h">✓</span></li></ul><div class="nfa"><img src="capa-nfa.jpg" alt=""><div><span class="tag">DE VOLTA</span><b>Formação Avançada em Nutrição Funcional</b><small>72 h · só no Olimpo nesta Black</small></div></div><div class="pill">VALOR DAS FORMAÇÕES SEPARADAS: <b>R$ 19.970</b></div><div class="foot"><div class="bar"><i style="width:75%"></i></div><span class="arr">ARRASTE <b>→</b></span></div></section>
+<section class="slide oferta"><div class="top"><div class="brand"><img src="logo-fsa-escuro.png" alt=""><span>BLACK VITALÍCIA</span></div><div class="pg">07 / 08</div></div><div class="kick">A CONDIÇÃO</div><h2 class="big">PARA SEMPRE,<br><em>até 50% menos.</em></h2>
+<p class="lead">Pagando até 50% menos do que o valor das formações compradas separadas. O vitalício é o que muda a sua prática. O desconto é a prova de que esta Black é diferente.</p>
+<div class="preco"><small>PACOTES A PARTIR DE</small><b>12x R$ 579,40</b><span>ou R$ 5.947 à vista, com desconto</span></div><div class="foot"><div class="bar"><i style="width:87%"></i></div><span class="arr">ARRASTE <b>→</b></span></div></section>
+<section class="slide fim"><div class="top"><div class="brand"><img src="logo-fsa-escuro.png" alt=""><span>BLACK VITALÍCIA</span></div><div class="pg">08 / 08</div></div><img class="logo-g" src="logo-fsa-escuro.png" alt=""><h2 class="big c">QUAL PACOTE<br><em>é o seu?</em></h2>
+<p class="lead c">Todos os detalhes em <b>black.saudeavancada.com</b>. Me conta aqui embaixo qual faz mais sentido para o seu consultório hoje.</p>
+<div class="rule c"></div><div class="assin">O fim da Narrativa Cega.<br>O começo de uma geração de SeresHumanologistas®.</div><div class="foot"><div class="bar"><i style="width:100%"></i></div><span class="arr">LINK NA BIO</span></div></section></body></html>
