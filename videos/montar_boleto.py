@@ -9,7 +9,8 @@ LAT_OFF=86.48   # v2 começa no segundo 86.48 da principal (sincronizado pelo á
 def run(c): subprocess.run(c,check=True)
 
 # blocos da principal (tempo de origem); some a tentativa interrompida ("essa sim, essa... peraí")
-BLOCOS=[(1.70,5.50),(7.95,57.60),(62.20,73.40),(86.65,99.95),(104.35,111.00)]
+# ordem nova: o exercício ("de quem é esse boleto?") vem antes, e o vídeo fecha em "culpa verdadeira não cobra juros"
+BLOCOS=[(1.70,5.50),(7.95,57.60),(62.20,73.40),(104.35,111.00),(86.65,99.95)]
 # corta todas as pausas: silêncio > 0,25 s sai, fica só um respiro curto antes e depois da fala
 PRE,POS=0.10,0.12
 r=subprocess.run(['ffmpeg','-i',P,'-af','silencedetect=n=-40dB:d=0.25','-f','null','-'],capture_output=True,text=True).stderr
@@ -28,7 +29,8 @@ for a,b in BLOCOS:
 FALAS=[tuple(sum(int(x)*k for x,k in zip(re.split('[:,]',t.strip()),(3600,60,1,0.001))) for t in l.split('-->'))
        for l in open(V+'/principal.srt',encoding='utf-8') if '-->' in l]
 SEG=[(a,b) for a,b in SEG if b-a>0.12 and (b-a>=0.45 or any(f0<b and f1>a for f0,f1 in FALAS))]
-SEG[-1]=(SEG[-1][0],SEG[-1][1]+0.45)   # respiro no fim, para o final não cortar seco
+FIM_FALA=SEG[-1][1]
+SEG[-1]=(SEG[-1][0],SEG[-1][1]+2.3)   # ela em silêncio no fim, por baixo do "Leia a legenda"
 OUT=[]; o=0.0
 for a,b in SEG: OUT.append((a,b,o)); o+=b-a
 TOT=round(o,2)
@@ -46,7 +48,7 @@ LAT=[(93.95,95.65),(104.35,106.05)]   # takes curtos
 
 # zoom (tempo de origem): aproximação lenta, afastamento rápido, recomeço em cada bloco
 KS=[(1.70,1.0),(5.50,1.12),(7.95,1.0),(19.86,1.15),(20.40,1.0),(34.40,1.18),(35.00,1.02),(55.0,1.20),(57.60,1.28),
-    (62.20,1.0),(73.40,1.15),(86.65,1.05),(99.95,1.22),(104.35,1.12),(111.00,1.30)]
+    (62.20,1.0),(73.40,1.15),(104.35,1.05),(111.00,1.18),(86.65,1.10),(99.80,1.28),(102.10,1.31)]
 K=[]
 for t,z in KS:
     ot=m(t)
@@ -96,6 +98,8 @@ Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour,
 Style: Leg,Merriweather Black,78,&H00ECE8EA,&H00ECE8EA,&H00000000,&H8C000000,0,0,0,0,100,100,1,0,1,0,3,2,80,80,520,1
 Style: Topo,Merriweather Black,84,&H00ECE8EA,&H00ECE8EA,&H00000000,&H8C000000,0,0,0,0,100,100,1,0,1,0,3,8,70,70,200,1
 Style: Cursiva,Satisfy,140,&H008E9FE2,&H008E9FE2,&H00000000,&H8C000000,0,0,0,0,100,100,0,0,1,0,3,8,70,70,318,1
+Style: Fim,Merriweather Black,92,&H00ECE8EA,&H00ECE8EA,&H00000000,&H8C000000,0,0,0,0,100,100,1,0,1,0,3,8,70,70,260,1
+Style: FimCur,Satisfy,150,&H008E9FE2,&H008E9FE2,&H00000000,&H8C000000,0,0,0,0,100,100,0,0,1,0,3,8,70,70,350,1
 Style: Arroba,Merriweather,40,&H30ECE8EA,&H30ECE8EA,&H00000000,&H8C000000,0,1,0,0,100,100,1,0,1,0,2,2,70,70,440,1
 
 [Events]
@@ -103,6 +107,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 1,{fmt(0)},{fmt(HOOK_FIM)},Topo,,0,0,0,,{{\\fad(150,200)}}A mulher que paga tudo em dia é a mais endividada da família.
 Dialogue: 1,{fmt(m(8.40))},{fmt(HOOK_FIM)},Cursiva,,0,0,0,,{{\\fad(120,200)}}em culpa.
 Dialogue: 1,{fmt(HOOK_FIM)},{fmt(TOT)},Arroba,,0,0,0,,@giselehedler
+Dialogue: 2,{fmt(m(FIM_FALA)+0.1)},{fmt(TOT)},Fim,,0,0,0,,{{\\fad(250,0)}}Leia a legenda,
+Dialogue: 2,{fmt(m(FIM_FALA)+0.4)},{fmt(TOT)},FimCur,,0,0,0,,{{\\fad(250,0)}}madame.
 """+'\n'.join(lin)+'\n'
 open(V+'/leg.ass','w',encoding='utf-8').write(ass)
 
@@ -129,7 +135,7 @@ run(['ffmpeg','-loglevel','error','-y','-i',P,'-filter_complex',fc,'-map','[v]',
 # áudio: voz normalizada + trilha baixa que abaixa quando ela fala
 run(['ffmpeg','-loglevel','error','-y','-i',V+'/base.mov','-map','0:a','-af','aresample=48000,loudnorm=I=-14:TP=-1.5:LRA=11','-c:a','pcm_s16le',V+'/ln.wav'])
 run(['ffmpeg','-loglevel','error','-y','-i',V+'/ln.wav','-i',V+'/musica.wav','-filter_complex',
-     f"[0:a]asplit=2[voz][sc];[1:a]aresample=48000,atrim=0:{TOT},volume=0.20,afade=t=out:st={TOT-2.5}:d=2.5[mus];"
+     f"[0:a]asplit=2[voz][sc];[1:a]aresample=48000,atrim=0:{TOT},volume=0.20,afade=t=out:st={TOT-1.5}:d=1.5[mus];"
      f"[mus][sc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=400[musd];"
      f"[voz][musd]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.89",'-c:a','pcm_s16le',V+'/audio_final.wav'])
 
