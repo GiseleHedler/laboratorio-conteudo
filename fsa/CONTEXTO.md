@@ -109,3 +109,4 @@ Horas do Olimpo sem repetição: 234 + 72 = 306h → "mais de 300 h".
 - Validação de aluno: só por e-mail. Base no Supabase (projeto fsa-black-alunos, função verificar_aluno, hashes sha256 truncados com prefixo "fsa-black:"). Suporte: WhatsApp (51) 98983-1882.
 - Checkouts Hotmart: Hipócrates F108056177M (não aluno off=rpg9gyuf, aluno off=g79fruer); Galeno O108057608J (ua1x0dvm / 74ban1lc); Olimpo Q108057881S (0ebdbcf4 / 8chqcjwl), todos com checkoutMode=10.
 - Tags na página: Meta Pixel 455815738170857, GA4 G-20YMZPGYCZ, Hotmart launcher, Lead Tracker lt25616.
+- 18/10: endereço oficial da página é https://black.saudeavancada.com (todas as peças e anúncios usam esse). black-fsa.pages.dev só para teste. Página liberada para o Google (sem noindex). Frase "Introduziu a Nutrição Funcional no Brasil em 1999": Gisele confirmou que tem prova.
