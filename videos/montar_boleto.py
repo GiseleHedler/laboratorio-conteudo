@@ -161,7 +161,7 @@ def camada(txt,tam,topo_cabeca):
     f=ImageFont.truetype(F+'/Satisfy-400-normal.ttf',tam)
     lay=Image.new('RGBA',(W,H),(0,0,0,0)); d=ImageDraw.Draw(lay)
     bb=d.textbbox((0,0),txt,font=f); tw,th=bb[2]-bb[0],bb[3]-bb[1]
-    cy=max(topo_cabeca-0.22*th,th/2+40)
+    cy=max(topo_cabeca+0.16*th,th/2+40)   # letras pegando o topo da cabeça
     pos=((W-tw)/2-bb[0],cy-th/2-bb[1])
     sh=Image.new('RGBA',(W,H),(0,0,0,0)); ImageDraw.Draw(sh).text((pos[0]+4,pos[1]+6),txt,font=f,fill=(0,0,0,150))
     lay=Image.alpha_composite(sh.filter(ImageFilter.GaussianBlur(8)),lay)
