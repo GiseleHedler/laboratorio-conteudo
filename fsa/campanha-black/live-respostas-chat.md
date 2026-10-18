@@ -81,7 +81,7 @@ Não prometer. Responder: "A formação te dá o raciocínio clínico para olhar
 **Isso cura X? Serve para tratar Y?**
 Não responder sobre caso clínico no chat. "Esse tipo de dúvida clínica a gente não responde por aqui, mas a formação aborda o raciocínio para casos assim."
 
-## Preço de aluno (decisão da Gisele em 18/10: não falar na live)
+## Preço de aluno (atualizado 18/10: a live fala de forma sutil, slide "Já estudou na FSA?")
 
 **Sou aluno, tenho preço especial?**
-Não confirmar no chat aberto. Responder: "Te chamo no privado" ou "Fala com a equipe no WhatsApp que a gente te orienta." O preço de aluno é comunicado só nos canais de aluno (e-mail, grupos, WhatsApp).
+"Coloca na página o e-mail que tu usa na plataforma. Dependendo das formações que tu já tem, aparece o teu valor." Não citar valores de aluno no chat aberto.
