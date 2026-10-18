@@ -1,11 +1,11 @@
 # Live 19/10 · 20h27 · Festa dos 27 anos da Nutrição Funcional
-Roteiro falado do Gabriel (versão 2, 18/10: ridicularização do preço no bloco 11 e "pela primeira vez" no lugar de "só nesta Black")
+Roteiro falado do Gabriel (versão 3, 18/10: aula e história de 1999 escritas por inteiro, a partir dos posts do próprio Gabriel; ridicularização do preço no bloco 11)
 
 Como ler:
 - Fala do Gabriel entre aspas. Não é para decorar: é para ler antes e falar do jeito dele.
 - [CHAT] = momento de pedir resposta no chat. Esperar, ler 3 ou 4 respostas em voz alta pelo nome.
 - [SLIDE] = o que aparece na tela.
-- [GABRIEL PREENCHE] = só ele sabe. Não inventar.
+- [FONTE] = de onde veio o fato. Tudo que é dado técnico tem fonte; tudo que é história vem dos posts do próprio Gabriel. Se ele quiser trocar, troca, mas sem inventar número.
 - Bordão da noite: "Normal para quem?". Frase de fechamento: "Eu não trato exame. Eu trato gente."
 - Regras: sem promessa de resultado clínico ou de renda; sem "não volta mais"; o vitalício só aparece no bloco 6.
 
@@ -51,11 +51,25 @@ Normal para quem?"
 "Isso tem nome. A gente chama de Narrativa Cega."
 
 ## Bloco 4 · A aula: a Narrativa Cega (35 a 40 min)
-Estrutura em 3 partes. O conteúdo técnico é do Gabriel. Abaixo, só as falas de ponte e as interações.
+Estrutura em 3 partes. Tudo escrito para ser falado. Ele pode ler e falar do jeito dele.
 
 ### 4.1 De onde vem
-"Primeiro: ninguém nasce com a Narrativa Cega. Ela foi ensinada. Pelo sistema."
-[GABRIEL PREENCHE] Como a faixa de referência é construída e por que "normal" não quer dizer "saudável". Os fatos e números precisam ser os dele, com fonte.
+"Primeiro, o nome. Narrativa Cega é quando a gente conta a história do paciente a partir do laudo, e não a partir da pessoa. É tratar o exame, e não o paciente.
+
+E ninguém nasce com a Narrativa Cega. Ela foi ensinada. Pelo sistema.
+
+Deixa eu te mostrar de onde vem o 'normal' do laudo. Lá no canto do exame tem uma coluna escrita 'valores de referência'. Alguém já parou para pensar de onde sai esse número?"
+[SLIDE] DE ONDE VEM O "NORMAL" DO LAUDO
+
+"A faixa de referência é estatística. O laboratório pega um grupo de pessoas, a população de referência, mede todo mundo e corta as pontas. Fica com os 95% do meio. Isso é a norma internacional, a CLSI EP28.
+
+Então presta atenção: 'normal', no laudo, quer dizer comum. Não quer dizer saudável.
+
+E tem um detalhe que quase ninguém conta. Na minha visão, as faixas tradicionais são construídas a partir de populações que já incluem pessoas doentes. Por isso são tão amplas. Se a população de onde saiu a faixa já tem muita gente inflamada, com resistência à insulina, sem dormir, a faixa fica larga o bastante para caber todo mundo. Inclusive a tua paciente que não está bem."
+[FONTE] CLSI EP28-A3c (2010): intervalo de referência = intervalo central de 95% de uma população de referência. A frase sobre populações que incluem doentes é opinião do Gabriel (post do congresso em Barranquilla): falar como "na minha visão".
+
+"Um exemplo que todo mundo aqui já viu: a ferritina. A ferritina sobe quando tem inflamação. Ela é uma proteína de fase aguda. Então uma paciente inflamada pode chegar com a ferritina 'normal' e estar sem estoque de ferro. Tanto que a própria Organização Mundial da Saúde, na diretriz de 2020, usa um corte diferente quando tem infecção ou inflamação. O número sozinho não te conta a história. A pessoa conta."
+[FONTE] WHO guideline on use of ferritin concentrations to assess iron status in individuals and populations (OMS, 2020): em adultos, ferritina abaixo de 15 µg/L indica deficiência; com infecção ou inflamação, o corte é abaixo de 70 µg/L. Se alguém perguntar o número no chat, a Franciele responde com esses valores.
 
 [CHAT] "Qual foi a frase que tu mais ouviu na faculdade sobre exame?" (esperar: "está dentro da referência")
 
@@ -69,7 +83,20 @@ Bateu? Me conta no chat."
 [SLIDE] A NARRATIVA É CEGA. TU NÃO É.
 
 [SLIDE] O iceberg: em cima, o laudo. Embaixo: sono, intestino, alimentação, estresse, história, como vive, onde mora.
-[GABRIEL PREENCHE] Um caso clínico real explicado pelo iceberg (sem identificar o paciente).
+"O laudo é a ponta do iceberg. Em cima da linha da água, o que o exame mostra. Embaixo, o que o paciente é: como dorme, como está o intestino, o que come, o estresse, a história, como vive, onde mora, o que sente. E a Narrativa Cega te ensinou a olhar só a ponta."
+
+[SLIDE] UM CASO REAL
+"Vou te contar um caso que eu apresentei no congresso em Barranquilla, na Colômbia. Uma paciente que eu comecei a estudar há uns 20 anos. Paciente com obesidade.
+
+Olha os exames dela: TSH, hemoglobina, ácido úrico, gama GT, perfil lipídico, glicose, insulina, HOMA-IR. Tudo dentro da referência. Tudo. Se tu olhar só a coluna da direita do laudo, essa paciente está ótima. Vai para casa com 'teus exames estão normais'.
+
+Agora olha os mesmos números nas faixas funcionais. Aparecem sinais precoces de resistência à insulina. Sobrecarga do fígado. Inflamação de baixo grau. Os mesmos exames. Os mesmos números. Outra leitura.
+
+Não mudou o exame. Mudou quem estava olhando.
+
+Me conta no chat: tu já teve uma paciente assim? Exame todo normal e tu sentia que tinha alguma coisa ali?"
+[CHAT] Ler 2 ou 3 respostas.
+[FONTE] Caso do próprio Gabriel, do post sobre o congresso em Barranquilla (Instagram). Não mostrar nada que identifique a paciente.
 
 "Repete comigo, em voz alta, aí na tua casa: ninguém nasce com a Narrativa Cega. O sistema ensinou."
 
@@ -112,7 +139,16 @@ Ou tu já sabe isso, ou tu ainda não sabe nada."
 ## Bloco 5 · A ponte: 1999 (3 min)
 [SLIDE] Foto do Gabriel em 1999.
 "Esse aqui sou eu. 1999."
-[GABRIEL PREENCHE] A história verdadeira de quando ele trouxe a Nutrição Funcional para o Brasil: o que ele viu, o que ele arriscou, por que decidiu. 1 a 2 minutos. Só fatos reais.
+"Em 1997, recém-formado, eu comecei a trabalhar na clínica do meu pai. E eu estava inseguro. Eu olhava para o paciente e pensava: o que eu posso fazer de diferente?
+
+Foi essa pergunta que me levou, naquele mesmo ano, a uma palestra do Jeffrey Bland, em São Paulo. No final, eu criei coragem, fui falar com ele, e recebi um convite para estudar nos Estados Unidos.
+
+Eu fui com medo. Sem dominar o inglês.
+
+E no dia 23 de outubro de 1999, em Porto Alegre, eu dei a primeira aula de Nutrição Funcional do Brasil. A sala tinha 110 lugares. Apareceram 120 pessoas. Tinha gente em pé.
+
+Sabe aquele profissional inseguro, que olhava para o paciente e não sabia o que fazer de diferente? Era eu. Eu sei exatamente o que tu sente quando o exame vem normal e a paciente não melhora. Eu senti isso."
+[FONTE] Post do Gabriel no Instagram (1/10/2026): 1997, clínica do pai, palestra do Jeffrey Bland em São Paulo, convite para estudar nos EUA, sem dominar o inglês. Post da FSA: 23/10/1999, sala de 110 lugares, 120 pessoas. "Tinha gente em pé" é dedução de 120 pessoas em 110 lugares: se ele não lembrar assim, corta.
 
 "De lá para cá, são 27 anos ensinando Nutrição Funcional. Mais de 40 mil alunos na FSA.
 
@@ -182,7 +218,8 @@ Não responder caso clínico individual no chat.
 ---
 
 ## Pendências
-- [GABRIEL] História real de 1999 e a foto.
-- [GABRIEL] Fatos e fontes sobre a faixa de referência (bloco 4.1) e o caso clínico do iceberg.
+- [GABRIEL] Ler o roteiro inteiro antes. Tudo foi escrito a partir dos posts dele e de fontes; ele só corta ou ajusta o que não soar como ele.
+- [EQUIPE] Foto do Gabriel em 1999 (slide "historia").
+- [GABRIEL] Conferir dois detalhes: o post diz "1997, clínica do meu pai" e a página diz "atende em clínica desde 1998". Se ele falar 1997 ao vivo, a página deveria dizer 1997.
 - [EQUIPE] Stories da tarde: "traz papel e caneta para a live".
 - Sem sorteio (decisão da Gisele, 18/10).
