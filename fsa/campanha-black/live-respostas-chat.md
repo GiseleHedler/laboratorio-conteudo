@@ -81,9 +81,7 @@ Não prometer. Responder: "A formação te dá o raciocínio clínico para olhar
 **Isso cura X? Serve para tratar Y?**
 Não responder sobre caso clínico no chat. "Esse tipo de dúvida clínica a gente não responde por aqui, mas a formação aborda o raciocínio para casos assim."
 
-## Pendente de decisão da Gisele
+## Preço de aluno (decisão da Gisele em 18/10: não falar na live)
 
 **Sou aluno, tenho preço especial?**
-Aguardando: caminho A (falar abertamente na live) ou B (só nos canais de aluno).
-- Se A: "Tem sim. Coloca o e-mail do teu cadastro na página, na hora de escolher o pacote, que o sistema confere."
-- Se B: responder em privado ou chamar no WhatsApp, sem confirmar no chat aberto.
+Não confirmar no chat aberto. Responder: "Te chamo no privado" ou "Fala com a equipe no WhatsApp que a gente te orienta." O preço de aluno é comunicado só nos canais de aluno (e-mail, grupos, WhatsApp).
