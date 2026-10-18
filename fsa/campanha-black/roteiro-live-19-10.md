@@ -132,52 +132,40 @@ Nesta Black, pela primeira vez, o acesso é VITALÍCIO."
 Resposta à objeção "vitalício é aula velha":
 "E vitalício aqui não é depósito de aula velha. É a formação inteira, a mesma que a gente vende hoje. E as atualizações dela entram no teu acesso, sem custo. Se um dia a FSA lançar uma formação nova, com outro nome, aí é outro produto. Eu prefiro te dizer isso agora, olhando no teu olho."
 
-## Bloco 7 · Os pacotes (7 min)
-[SLIDE] Os 3 pacotes lado a lado.
-"São três pacotes. E eu dei nome de quem olhou o paciente inteiro antes de todo mundo.
+## Bloco 7 · Os pacotes (8 min)
+[SLIDE] Os 3 pacotes. Depois um slide por pacote, com a capa de cada formação, as horas e o valor dela vendida separada.
+"São três pacotes. E eu dei nome de quem olhou o paciente inteiro antes de todo mundo."
+Hipócrates (a base): NF 3.0, Suplementação Individualizada, Jejum e Hemograma. Comprando separado: R$ 9.488.
+Galeno (além da referência): Exames 2.0, Saúde Hormonal, Fertilidade e Gestação, Alergias. Comprando separado: R$ 9.688.
+Olimpo: tudo isso, sem repetir aula, mais a Formação Avançada, que estava fora de venda e volta primeiro aqui (19 aulas, 72 h). Comprando separado: R$ 19.970.
 
-O Hipócrates. A base. Formação em Nutrição Funcional 3.0, Formação em Suplementação Individualizada, o curso de Jejum e o Hemograma: o Ponto Cego.
-
-O Galeno. O raciocínio clínico além da referência. Formação em Exames Laboratoriais 2.0, Formação em Saúde Hormonal, Fertilidade e Gestação e Alergias Alimentares.
-
-E o Olimpo. Os dois juntos, sem repetir aula. E ainda traz de volta a minha Formação Avançada em Nutrição Funcional, que estava fora de venda. 19 aulas, 72 horas. Ela volta primeiro no Olimpo.
-
-No Olimpo tu não paga duas vezes a mesma aula: o Hemograma já está dentro de Exames e Alergias já está dentro da Nutrição Funcional 3.0. São mais de 300 horas de aula."
+[SLIDE] "Qual é o teu?" com o critério de cada um.
+"Hipócrates, se tu quer a base e suplementar com segurança. Galeno, se tu atende exames, hormônios, fertilidade. Olimpo, se não quer escolher. Escreve no chat qual é o teu." Dar tempo.
 
 ## Bloco 8 · A conta (3 min)
-[SLIDE] A tabela "A conta do vitalício".
-"Faz a conta comigo. Hoje o acesso é de 2 anos. Para continuar voltando às aulas por 6 anos, tu teria que comprar a mesma formação 3 vezes.
+[SLIDE] A conta do vitalício (6 anos).
+"Para estudar 6 anos sem o vitalício, tu compraria a mesma formação 3 vezes. O Olimpo, em 6 anos: R$ 59.910. Guarda esse número. Daqui a pouco eu te mostro quanto custa ter isso para sempre."
+NÃO falar o preço da Black aqui.
 
-O Olimpo, em 6 anos comprando de novo: R$ 59.910. Na Black, para sempre: R$ 9.947. Um sexto. E depois do sexto ano, continua teu.
+## Bloco 9 · As dúvidas (8 min), uma por slide, antes do preço
+1. "Gabriel, será que eu tenho base para isso?" Se tu está começando, começa pelo Hipócrates: é a base. E as dúvidas de conteúdo tu tira na plataforma, com a equipe pedagógica.
+2. "Gabriel, eu não sei se vou dar conta do conteúdo." É gravado. Tu assiste no teu ritmo e volta quantas vezes precisar.
+3. "Gabriel, eu não tenho tempo agora." É vitalício. Não tem relógio correndo.
+4. "Eu já tenho uma das formações." No pacote novo, ela vem vitalícia. E no Olimpo tu leva tudo o que ainda não tem, sem repetir aula.
+5. "Depois eu estudo." Pode estudar depois: é vitalício. O que não fica para depois é o vitalício. Ele fecha dia 31/10, às 23h59.
+6. "E se eu me arrepender?" 15 dias de garantia incondicional.
+"Faz por ti. Por ti, que já viu a paciente voltar vezes demais."
 
-O Hipócrates e o Galeno: R$ 5.947 cada, à vista, ou 12x de R$ 579,40. O Olimpo: R$ 9.947 à vista, ou 12x de R$ 969,11.
+## Bloco 10 · Fechamento antes do preço (3 min)
+[SLIDE] "O fim da Narrativa Cega. O começo de uma geração de SeresHumanologistas®."
+[SLIDE] Recapitulando: vitalício, atualizações sem custo, mais de 300 h no Olimpo, dúvidas com a equipe pedagógica, certificado, 15 dias de garantia.
+[SLIDE] "Já estudou na FSA? Coloca na página o e-mail da plataforma: por tu já ser FSA, aparece o teu valor, ainda mais especial. Ainda não estudou com a gente? O preço da Black vem agora." Não citar valores de aluno.
 
-Até 50% menos do que as formações compradas separadas. E isso comparando com dois anos de acesso."
-
-## Bloco 9 · As dúvidas (7 min)
-"Eu sei o que está passando na tua cabeça agora. Porque a Narrativa Cega também fala dentro da gente."
-
-"'Gabriel, eu não sei se vou dar conta do conteúdo.' É gravado. Tu assiste no teu ritmo e volta quantas vezes precisar. Para sempre.
-
-'Gabriel, eu não tenho tempo agora.' É vitalício. Não tem relógio correndo. Tu começa quando puder.
-
-'Gabriel, depois eu estudo.' Depois é o que a Narrativa Cega mais gosta de ouvir.
-
-'E se eu me arrepender?' Tu tem 15 dias de garantia. Assiste com calma. Se não for para ti, a gente devolve tudo."
-
-"E faz por ti. Não pelo paciente, não pelo currículo. Por ti, que está cansado de ver a paciente voltar."
-
-## Bloco 10 · Prova social ao vivo (durante os blocos 7 a 11)
-A Franciele passa os nomes de quem comprou (só primeiro nome e cidade) para o Gabriel, num papel ou num tablet.
-"A Ana, de Curitiba, acabou de entrar no Olimpo. Seja bem-vinda, Ana!"
-
-## Bloco 11 · Fechamento (3 min)
-[SLIDE] O fim da Narrativa Cega. O começo de uma geração de SeresHumanologistas®.
-"É o fim da Narrativa Cega. E o começo de uma geração de SeresHumanologistas.
-
-O vitalício fecha dia 31 de outubro, às 23h59. Depois disso, as formações voltam a ser vendidas com prazo.
-
-O link está aqui embaixo e na bio. black.saudeavancada.com"
+## Bloco 11 · O preço (último slide, fica na tela até o fim)
+[SLIDE] "Para sempre, pagando até 50% menos do que as formações compradas separadas."
+"Hipócrates e Galeno: 12x de R$ 579,40, ou R$ 5.947 à vista. O Olimpo: 12x de R$ 969,11, ou R$ 9.947 à vista. No Olimpo, é um sexto do que custariam 6 anos, e R$ 1.947 a menos do que levar os dois separados, com a Avançada."
+"O vitalício fecha dia 31/10, às 23h59. O link está aqui embaixo e na bio: black.saudeavancada.com. Dúvida de pagamento ou de qual pacote? Tem o WhatsApp da equipe na página."
+Prova social, durante este bloco e as perguntas: a Franciele passa ao Gabriel só o primeiro nome de quem escreveu no chat que entrou ("A Ana acabou de entrar no Olimpo!"). Nada de sobrenome ou cidade (LGPD).
 
 ## Bloco 12 · Perguntas (15 a 20 min)
 O Gabriel responde ao vivo. A Franciele responde no chat com a colinha (live-respostas-chat.md).
