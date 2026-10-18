@@ -8,22 +8,51 @@ W,H=1080,1920
 LAT_OFF=86.48   # v2 começa no segundo 86.48 da principal (sincronizado pelo áudio)
 def run(c): subprocess.run(c,check=True)
 
-# trechos da principal (tempo de origem); some só a tentativa interrompida ("essa sim, essa... peraí")
-SEG=[(1.70,5.50),(7.95,57.60),(62.20,73.40),(86.65,99.95),(104.35,111.00)]
+# blocos da principal (tempo de origem); some a tentativa interrompida ("essa sim, essa... peraí")
+BLOCOS=[(1.70,5.50),(7.95,57.60),(62.20,73.40),(86.65,99.95),(104.35,111.00)]
+# corta todas as pausas: silêncio > 0,25 s sai, fica só um respiro curto antes e depois da fala
+PRE,POS=0.10,0.12
+r=subprocess.run(['ffmpeg','-i',P,'-af','silencedetect=n=-40dB:d=0.25','-f','null','-'],capture_output=True,text=True).stderr
+import re
+sil=list(zip([float(x) for x in re.findall(r'silence_start: ([0-9.]+)',r)],[float(x) for x in re.findall(r'silence_end: ([0-9.]+)',r)]))
+SEG=[]
+for a,b in BLOCOS:
+    cur=a
+    for s0,s1 in sil:
+        c0,c1=s0+POS,s1-PRE
+        if c1-c0<0.05 or c1<=cur or c0>=b: continue
+        if c0>cur: SEG.append((round(cur,3),round(c0,3)))
+        cur=max(cur,c1)
+    if b>cur: SEG.append((round(cur,3),round(b,3)))
+# fora pedacinhos sem fala (respiração, barulho): curtos e fora de qualquer frase da transcrição
+FALAS=[tuple(sum(int(x)*k for x,k in zip(re.split('[:,]',t.strip()),(3600,60,1,0.001))) for t in l.split('-->'))
+       for l in open(V+'/principal.srt',encoding='utf-8') if '-->' in l]
+SEG=[(a,b) for a,b in SEG if b-a>0.12 and (b-a>=0.45 or any(f0<b and f1>a for f0,f1 in FALAS))]
+SEG[-1]=(SEG[-1][0],SEG[-1][1]+0.45)   # respiro no fim, para o final não cortar seco
 OUT=[]; o=0.0
 for a,b in SEG: OUT.append((a,b,o)); o+=b-a
 TOT=round(o,2)
 def m(t):
+    """tempo de origem -> tempo no vídeo final (o mais próximo, se cair num corte)"""
+    best=None
     for a,b,o0 in OUT:
-        if a-0.05<=t<=b+0.05: return o0+min(max(t,a),b)-a
-    return None
+        if a<=t<=b: return o0+t-a
+        x,y=(o0,a) if t<a else (o0+b-a,b)
+        if best is None or abs(t-y)<best[0]: best=(abs(t-y),x)
+    return best[1]
 
 # lateral por cima da principal (tempo de origem)
 LAT=[(93.95,95.65),(104.35,106.05)]   # takes curtos
 
-# zoom (tempo de saída): aproximação lenta, afastamento rápido, recomeço em cada corte
-K=[(0,1.0),(3.8,1.12),(3.81,1.0),(15.5,1.15),(15.9,1.0),(30.0,1.18),(30.4,1.02),(50.8,1.20),(53.44,1.28),
-   (53.45,1.0),(64.64,1.15),(64.65,1.05),(77.94,1.22),(77.95,1.12),(TOT,1.30)]
+# zoom (tempo de origem): aproximação lenta, afastamento rápido, recomeço em cada bloco
+KS=[(1.70,1.0),(5.50,1.12),(7.95,1.0),(19.86,1.15),(20.40,1.0),(34.40,1.18),(35.00,1.02),(55.0,1.20),(57.60,1.28),
+    (62.20,1.0),(73.40,1.15),(86.65,1.05),(99.95,1.22),(104.35,1.12),(111.00,1.30)]
+K=[]
+for t,z in KS:
+    ot=m(t)
+    if K and ot<=K[-1][0]+0.005: ot=K[-1][0]+0.01
+    K.append((round(ot,3),z))
+K[0]=(0,K[0][1])
 expr=str(K[-1][1])
 for (t0,z0),(t1,z1) in reversed(list(zip(K,K[1:]))):
     u=f"((it-{t0})/({t1}-{t0}))"
@@ -41,12 +70,12 @@ g.save(V+'/degrade.png')
 def ts(s):
     h,mi,r=s.split(':'); sec,ms=r.split(','); return int(h)*3600+int(mi)*60+int(sec)+int(ms)/1000
 def fmt(t): return f'{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}'
-HOOK_FIM=5.6
+HOOK_FIM=round(m(9.10)+0.4,2)
 ev=[]
 for blk in open(V+'/principal.srt',encoding='utf-8').read().strip().split('\n\n'):
     l=blk.split('\n'); a,b=[ts(x.strip()) for x in l[1].split('-->')]; txt=' '.join(l[2:])
     a,b=m(a),m(b)
-    if a is None or b<=HOOK_FIM: continue   # o gancho já está escrito no topo
+    if b<=HOOK_FIM: continue   # o gancho já está escrito no topo
     pal=txt.split(); n=len(pal); ch=[]; i=0
     while i<n:
         k=min(4,n-i)
@@ -83,6 +112,12 @@ for i,(a,b) in enumerate(LAT):
     vf=(f"crop=iw:'iw*16/9':0:'(ih-iw*16/9)/2',scale={2*W}:{2*H}:flags=lanczos,"
         f"zoompan=z='1.50+0.06*on/({dd}*30)':x='iw*0.64-iw/zoom/2':y='ih*0.49-ih/zoom/2':d=1:s={W}x{H}:fps=30,setsar=1")
     run(['ffmpeg','-loglevel','error','-y','-ss',f'{a-LAT_OFF:.3f}','-t',f'{dd:.3f}','-i',L,'-an','-vf',vf,
+         '-c:v','libx264','-preset','veryfast','-crf','18',V+f'/latraw{i}.mp4'])
+    # mesmos cortes de pausa da principal, para a boca bater
+    pd=[(max(s0,a)-a,min(s1,b)-a) for s0,s1 in SEG if s1>a and s0<b]
+    fc=''.join(f"[0:v]trim={x:.3f}:{y:.3f},setpts=PTS-STARTPTS[p{j}];" for j,(x,y) in enumerate(pd))
+    fc+=''.join(f"[p{j}]" for j in range(len(pd)))+f"concat=n={len(pd)}:v=1:a=0[v]"
+    run(['ffmpeg','-loglevel','error','-y','-i',V+f'/latraw{i}.mp4','-filter_complex',fc,'-map','[v]',
          '-c:v','libx264','-preset','veryfast','-crf','18',V+f'/lat{i}.mp4'])
 
 # base: junta os trechos da principal (vídeo + áudio)
