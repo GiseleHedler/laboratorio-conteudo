@@ -220,6 +220,6 @@ Não responder caso clínico individual no chat.
 ## Pendências
 - [GABRIEL] Ler o roteiro inteiro antes. Tudo foi escrito a partir dos posts dele e de fontes; ele só corta ou ajusta o que não soar como ele.
 - [EQUIPE] Foto do Gabriel em 1999 (slide "historia").
-- [GABRIEL] Conferir dois detalhes: o post diz "1997, clínica do meu pai" e a página diz "atende em clínica desde 1998". Se ele falar 1997 ao vivo, a página deveria dizer 1997.
+- [GABRIEL] Conferir um detalhe: o post diz "1997, clínica do meu pai" e a página diz "atende em clínica desde 1998". Se ele falar 1997 ao vivo, a página deveria dizer 1997.
 - [EQUIPE] Stories da tarde: "traz papel e caneta para a live".
 - Sem sorteio (decisão da Gisele, 18/10).
