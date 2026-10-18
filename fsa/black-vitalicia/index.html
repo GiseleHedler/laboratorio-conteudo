@@ -1090,22 +1090,22 @@ tick(); setInterval(tick, 1000);
     olimpo:{nome:'Pacote Olimpo',de:'12x de R$ 969,11',eco:'Você paga R$ 1.000 a menos',parc:'12x de R$ 871,69',vista:'ou R$ 8.947 à vista, com desconto',
       aluno:'https://pay.hotmart.com/Q108057881S?off=8chqcjwl&checkoutMode=10',geral:'https://pay.hotmart.com/Q108057881S?off=0ebdbcf4&checkoutMode=10',valor:8947}
   };
-  var API='https://hgbqcecpcykmvvnmfecd.supabase.co/rest/v1/rpc/verificar_aluno';
+  var API='https://hgbqcecpcykmvvnmfecd.supabase.co/rest/v1/rpc/faixa_aluno';
   var KEY='sb_publishable_oeCidmJTfyQbd1uv7KT8MQ_dCjDJf8Z';
   var ZAP='https://wa.me/5551989831882?text=';
   var m=document.getElementById('ck'); if(!m) return;
-  var atual=null, email='', origem=null;
+  var atual=null, email='', origem=null, faixa={};
   function passo(n){ m.querySelectorAll('.ck-passo').forEach(function(p){ p.hidden=p.getAttribute('data-passo')!==n; }); var f=m.querySelector('.ck-passo[data-passo="'+n+'"] input, .ck-passo[data-passo="'+n+'"] .saida-btn'); if(f) f.focus(); }
-  function link(tipo){ var u=PAC[atual][tipo]; return email? u+'&email='+encodeURIComponent(email) : u; }
+  function link(tipo){ var f=faixa[atual]; var u=(tipo==='aluno'&&f&&f.url)?f.url:PAC[atual][tipo]; return email? u+'&email='+encodeURIComponent(email) : u; }
   function zap(){ return ZAP+encodeURIComponent('Olá! Estou na página da Black Vitalícia, já estudei na FSA e não encontrei meu cadastro'+(email?' com o e-mail '+email:'')+'. Quero o '+PAC[atual].nome+'.'); }
-  function preencher(){ var d=PAC[atual];
+  function preencher(){ var d=PAC[atual], f=faixa[atual]; if(f) d={nome:d.nome,de:d.de,parc:f.parc,vista:f.vista,eco:f.eco};
     m.querySelectorAll('[data-nome]').forEach(function(e){ e.textContent=d.nome; });
     m.querySelector('[data-de]').textContent=d.de; m.querySelector('[data-parc]').textContent=d.parc; m.querySelector('[data-vista]').textContent=d.vista; m.querySelector('[data-eco]').textContent=d.eco;
     m.querySelectorAll('[data-ir]').forEach(function(a){ a.href=link(a.getAttribute('data-ir')); });
     m.querySelectorAll('[data-zap]').forEach(function(a){ a.href=zap(); }); }
-  function abrir(p,el){ atual=p; origem=el; email=''; m.querySelector('#ck-email').value=''; m.querySelector('.ck-msg').textContent=''; preencher(); m.hidden=false; passo('pergunta'); }
+  function abrir(p,el){ atual=p; origem=el; email=''; faixa={}; m.querySelector('#ck-email').value=''; m.querySelector('.ck-msg').textContent=''; preencher(); m.hidden=false; passo('pergunta'); }
   function fechar(){ m.hidden=true; if(origem) origem.focus(); }
-  function rastrear(tipo){ var d=PAC[atual];
+  function rastrear(tipo){ var d=PAC[atual], f=faixa[atual]; if(f&&tipo==='aluno') d={nome:d.nome,valor:f.valor};
     try{ if(window.fbq) fbq('track','InitiateCheckout',{content_name:d.nome,value:tipo==='aluno'?d.valor:null,currency:'BRL'}); }catch(e){}
     try{ if(window.gtag) gtag('event','begin_checkout',{item_name:d.nome,aluno:tipo==='aluno'}); }catch(e){} }
   document.querySelectorAll('[data-checkout]').forEach(function(a){ a.addEventListener('click',function(e){ var p=a.getAttribute('data-checkout'); if(!PAC[p]) return; e.preventDefault(); abrir(p,a); }); });
@@ -1126,7 +1126,7 @@ tick(); setInterval(tick, 1000);
     var ctl=('AbortController' in window)? new AbortController():null; var t=setTimeout(function(){ if(ctl) ctl.abort(); },8000);
     fetch(API,{method:'POST',headers:{'apikey':KEY,'Content-Type':'application/json'},body:JSON.stringify({email:v}),signal:ctl?ctl.signal:undefined})
       .then(function(r){ if(!r.ok) throw 0; return r.json(); })
-      .then(function(ok){ preencher(); passo(ok===true?'achou':(ok===false?'naoachou':'erro')); })
+      .then(function(r){ var ok=r&&typeof r==='object'?r.aluno:null; faixa=(ok&&r.o)?r.o:{}; preencher(); passo(ok===true?'achou':(ok===false?'naoachou':'erro')); })
       .catch(function(){ preencher(); passo('erro'); })
       .then(function(){ clearTimeout(t); bt.disabled=false; bt.textContent='Ver o meu valor'; });
   });

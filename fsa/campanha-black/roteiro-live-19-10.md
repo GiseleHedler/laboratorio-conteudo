@@ -184,7 +184,7 @@ O Gabriel responde ao vivo. A Franciele responde no chat com a colinha (live-res
 Não responder caso clínico individual no chat.
 
 ## Bloco 13 · Encerramento
-Palavra-código para quem ficou até o fim: "Normal para quem?" vira a senha. Quem escrever NORMALPARAQUEM no WhatsApp da FSA recebe a gravação da aula e o modelo da "folha da paciente" em PDF.
+(Sem palavra-código: a aula fica gravada no YouTube, então a gravação não serve de recompensa. Decisão da Gisele, 18/10.)
 "Obrigado por esses 27 anos. Obrigado a cada aluno e à nossa equipe. Boa noite, SerHumanologistas."
 
 ---
@@ -193,5 +193,4 @@ Palavra-código para quem ficou até o fim: "Normal para quem?" vira a senha. Qu
 - [GABRIEL] História real de 1999 e a foto.
 - [GABRIEL] Fatos e fontes sobre a faixa de referência (bloco 4.1) e o caso clínico do iceberg.
 - [EQUIPE] Stories da tarde: "traz papel e caneta para a live".
-- [EQUIPE] Modelo da folha da paciente em PDF e a gravação, para a palavra-código.
 - Sem sorteio (decisão da Gisele, 18/10).
