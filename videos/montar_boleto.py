@@ -55,7 +55,7 @@ for blk in open(V+'/principal.srt',encoding='utf-8').read().strip().split('\n\n'
     tot=sum(len(c) for c in ch); t=a
     for c in ch:
         dt=(b-a)*len(c)/tot; ev.append((t,t+dt,c)); t+=dt
-lin=[f'Dialogue: 0,{fmt(a)},{fmt(b)},Leg,,0,0,0,,{c.upper()}' for a,b,c in ev]
+lin=[f'Dialogue: 0,{fmt(a)},{fmt(b)},Leg,,0,0,0,,{c}' for a,b,c in ev]
 ass=f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {W}
@@ -71,7 +71,7 @@ Style: Arroba,Merriweather,40,&H30ECE8EA,&H30ECE8EA,&H00000000,&H8C000000,0,1,0,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,{fmt(0)},{fmt(HOOK_FIM)},Topo,,0,0,0,,{{\\fad(150,200)}}A MULHER QUE PAGA TUDO EM DIA É A MAIS ENDIVIDADA DA FAMÍLIA.
+Dialogue: 1,{fmt(0)},{fmt(HOOK_FIM)},Topo,,0,0,0,,{{\\fad(150,200)}}A mulher que paga tudo em dia é a mais endividada da família.
 Dialogue: 1,{fmt(m(8.40))},{fmt(HOOK_FIM)},Cursiva,,0,0,0,,{{\\fad(120,200)}}em culpa.
 Dialogue: 1,{fmt(HOOK_FIM)},{fmt(TOT)},Arroba,,0,0,0,,@giselehedler
 """+'\n'.join(lin)+'\n'
