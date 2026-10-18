@@ -110,3 +110,8 @@ Horas do Olimpo sem repetição: 234 + 72 = 306h → "mais de 300 h".
 - Checkouts Hotmart: Hipócrates F108056177M (não aluno off=rpg9gyuf, aluno off=g79fruer); Galeno O108057608J (ua1x0dvm / 74ban1lc); Olimpo Q108057881S (0ebdbcf4 / 8chqcjwl), todos com checkoutMode=10.
 - Tags na página: Meta Pixel 455815738170857, GA4 G-20YMZPGYCZ, Hotmart launcher, Lead Tracker lt25616.
 - 18/10: endereço oficial da página é https://black.saudeavancada.com (todas as peças e anúncios usam esse). black-fsa.pages.dev só para teste. Página liberada para o Google (sem noindex). Frase "Introduziu a Nutrição Funcional no Brasil em 1999": Gisele confirmou que tem prova.
+
+## Preço de aluno por faixa (decidido em 18/10, no ar desde 19/10)
+- Contam só 4 formações: NF, Suplementação, Exames, Hormonal. Versão antiga, acesso vencido, Curso de Extensão em NF (inclui Fundamentos), Interpretação de Exames (turmas) e Clube Veteranos (NF e Exames) contam. Certificação Base não conta. FSA ONE = desconto máximo em tudo.
+- Hipócrates/Galeno: 0 das 2 = R$ 5.297; 1 = R$ 4.697; 2 = R$ 3.997. Olimpo: 0-1 das 4 = R$ 8.947; 2-3 = R$ 7.947; 4 = R$ 6.947.
+- Base: relatório Hotmart (só aprovadas/completas), 18.542 compradores, 14.897 com faixa acima de zero. Tabela privado.faixas (hash igual ao de privado.alunos). Não falar na live.
