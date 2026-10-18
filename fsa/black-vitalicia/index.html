@@ -395,11 +395,11 @@ tr.total td{font-weight:700;color:var(--creme)}
 .dep-video figcaption{padding:0 22px}
 .dep figcaption span{display:block;font-weight:400;font-size:14px;color:var(--suave)}
 /* plataforma */
-.plat-grid{display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center;margin-top:32px}
+.plat-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;margin-top:32px}
 .plat-grid > *{min-width:0}
 .print{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
 .pendente{border:2px dashed var(--destaque);color:var(--destaque);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px;background:rgba(220,68,124,.06)}
-.plat-lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+.plat-lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:20px 40px}
 .plat-lista li{border-left:2px solid var(--destaque);padding-left:16px}
 .plat-lista b{color:var(--creme)}
 /* barra fixa no celular */
@@ -423,7 +423,7 @@ footer a{color:var(--suave);text-underline-offset:3px}
 footer a:hover,footer a:focus-visible{color:var(--creme)}
 
 @media (max-width:900px){
-  .gabriel,.plat-grid{grid-template-columns:1fr;gap:28px}
+  .gabriel,.plat-grid,.plat-lista{grid-template-columns:1fr;gap:28px}
   .deps{grid-template-columns:1fr}
   .mosaico{grid-template-columns:1fr 1fr;grid-template-rows:220px 180px 180px}
   .m-aula{grid-column:1 / span 2;grid-row:1}
@@ -863,7 +863,6 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <div class="eyebrow">Como é por dentro</div>
   <h2>Do seu celular, <span class="ital">no seu ritmo</span></h2>
   <div class="plat-grid">
-    <div class="print pendente" role="img" aria-label="Espaço para o print da plataforma">PENDENTE: print da plataforma de cursos</div>
     <ul class="plat-lista">
       <li><b>Aulas 100% gravadas.</b> Assista no computador ou no celular, entre um atendimento e outro.</li>
       <li><b>Dúvidas pela plataforma.</b> A equipe pedagógica responde às suas perguntas sobre o conteúdo.</li>
