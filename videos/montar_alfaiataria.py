@@ -44,7 +44,7 @@ def m(t):
 
 # zoom (tempo de origem): ela gravou de longe, então parte já aproximado e vai chegando devagar;
 # afastamento rápido em dois respiros da história
-KS=[(1.74,1.30),(20.6,1.46),(21.0,1.32),(46.5,1.52),(49.43,1.38),(59.62,1.60),(60.6,1.42),(TOT+50,1.58)]
+KS=[(1.74,1.30),(20.6,1.46),(21.0,1.32),(59.62,1.62),(60.6,1.42),(TOT+50,1.58)]   # do remendo até "nua" é uma aproximação lenta só, a tensão sobe sem corte
 K=[]
 for t,z in KS:
     ot=m(t) if t<100 else TOT
@@ -69,7 +69,7 @@ def ts(s):
     h,mi,r=s.split(':'); sec,ms=r.split(','); return int(h)*3600+int(mi)*60+int(sec)+int(ms)/1000
 def fmt(t): return f'{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}'
 HOOK_FIM=round(m(8.3),2)
-PRETA=[('E bastou um fio.',m(49.43),m(51.18))]
+PRETA=[]   # tela preta testada e tirada: no clímax quem faz o peso é o silêncio da música
 ev=[]
 for blk in open(V+'/alfaiataria.srt',encoding='utf-8').read().strip().split('\n\n'):
     l=blk.split('\n'); a,b=[ts(x.strip()) for x in l[1].split('-->')]; txt=' '.join(l[2:])
@@ -109,14 +109,14 @@ fc=''.join(f"[0:v]trim={a}:{b},setpts=PTS-STARTPTS,fps=30[v{i}];[0:a]atrim={a}:{
 fc+=''.join(f"[v{i}][a{i}]" for i in range(len(SEG)))+f"concat=n={len(SEG)}:v=1:a=1[v][a]"
 run(['ffmpeg','-loglevel','error','-y','-i',P,'-filter_complex',fc,'-map','[v]','-map','[a]',
      '-c:v','libx264','-preset','veryfast','-crf','14','-c:a','pcm_s16le',V+'/base.mov'])
-PG='+'.join(f'between(t,{p0:.3f},{p1:.3f})' for _,p0,p1 in PRETA)
 run(['ffmpeg','-loglevel','error','-y','-i',V+'/base.mov','-map','0:a','-af','aresample=48000,loudnorm=I=-14:TP=-1.5:LRA=11','-c:a','pcm_s16le',V+'/ln.wav'])
-run(['ffmpeg','-loglevel','error','-y','-i',V+'/ln.wav','-i',S+'/boleto/musica.wav','-filter_complex',
-     f"[0:a]asplit=3[v0][w0][sc];"
-     f"[v0]volume='1-({PG})':eval=frame[seco];[w0]volume='{PG}':eval=frame,aecho=0.8:0.85:90|180|270:0.45|0.30|0.18,highpass=f=180,volume=1.3[eco];"
-     f"[seco][eco]amix=inputs=2:normalize=0:duration=first[voz];"
-     f"[1:a]aresample=48000,atrim=0:{TOT},volume=0.20,afade=t=out:st={TOT-1.5}:d=1.5[mus];"
-     f"[mus][sc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=400[musd];"
+# caixinha de música: cresce até "E bastou um fio", silêncio no clímax, volta em tom maior em "E a Verdade passou"
+run(['python3','/home/user/laboratorio-conteudo/videos/musica_caixinha.py',
+     str(TOT),f'{m(49.43):.3f}',f'{m(60.55):.3f}',V+'/caixinha.wav'])
+run(['ffmpeg','-loglevel','error','-y','-i',V+'/ln.wav','-i',V+'/caixinha.wav','-filter_complex',
+     f"[0:a]asplit=2[voz][sc];"
+     f"[1:a]aresample=48000,atrim=0:{TOT},volume=0.18,afade=t=out:st={TOT-1.0}:d=1.0[mus];"
+     f"[mus][sc]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=400[musd];"
      f"[voz][musd]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.89",'-c:a','pcm_s16le',V+'/audio_final.wav'])
 
 # palavras em cursiva grande pegando o topo da cabeça (recorte da pessoa quadro a quadro)
