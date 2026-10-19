@@ -20,10 +20,10 @@ Um pedido: traz papel e caneta para a live.
 Antes de qualquer Black, o Gabriel vai dar uma aula de verdade, uns 40 minutos, com um exercício que só funciona se você fizer junto, na hora. Não vai ser a mesma coisa assistindo a gravação depois.
 
 ## 4 · 20h
-Faltam 27 minutos. Pega o papel, a caneta, e vem: [LINK DO YOUTUBE]
+Faltam 27 minutos. Pega o papel, a caneta, e vem: https://youtube.com/live/Ope3_-3YGRM
 
 ## 5 · 20h27
-Começou. Entra agora: [LINK DO YOUTUBE]
+Começou. Entra agora: https://youtube.com/live/Ope3_-3YGRM
 
 ## 6 · Depois da revelação (só quando o Gabriel mostrar o preço)
 O fim da Narrativa Cega. O começo de uma geração de SeresHumanologistas®.
