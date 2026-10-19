@@ -7,7 +7,7 @@ Voz da Gisele, primeira pessoa. Antes da live: NÃO falar "vitalício" (é a rev
 
 Vocês ficam sabendo antes de todo mundo, então vou contar um pouco mais. Eu e o Gabriel juntamos as formações da FSA em três pacotes, com um preço que a gente nunca fez. E tem uma coisa que, em 27 anos ensinando, o Gabriel nunca fez. Essa parte só ele conta, no final da live.
 
-E quem já é aluna ou aluno da FSA: tem um valor ainda mais especial para vocês. Também mostro hoje à noite.
+E quem já é aluna ou aluno da FSA: tem um valor ainda mais especial para vocês. Hoje à noite eu explico como ver o seu.
 
 ## 2 · Enquete (logo depois)
 Você vai estar na live hoje às 20h27?
