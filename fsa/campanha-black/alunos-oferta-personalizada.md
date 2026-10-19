@@ -4,7 +4,7 @@ Remetente: Gabriel de Carvalho (foto dele). Tudo em "você" (base nacional).
 Listas (dados pessoais, ficam fora do Drive e do repositório): `black-alunos-email.csv` e `black-alunos-whatsapp.csv`, 28.379 alunos.
 Antes de CADA envio: tirar da lista quem já comprou a Black (exportar compradores na Hotmart e remover pelo e-mail).
 
-Variáveis da lista: `primeiro_nome` · `abertura` ("Você já fez Nutrição Funcional e Suplementação comigo." / "Você já estudou comigo.") · `destaque` (pacote) · `destaque_separado` · `destaque_preco_publico` · `destaque_parcela` · `destaque_vista` · `destaque_economia_vs_separado` · `destaque_link` · `hipocrates_/galeno_/olimpo_` + `parcela/vista/link` · WhatsApp: `botao_sufixo`.
+Variáveis da lista: `primeiro_nome` · `abertura` ("Você já fez Nutrição Funcional e Suplementação comigo." / "Você já estudou comigo.") · `destaque` (pacote) · `destaque_conteudo` (o que vem no pacote) · `destaque_separado` · `destaque_preco_publico` · `destaque_parcela` · `destaque_vista` · `destaque_economia_vs_separado` · `destaque_link` · `hipocrates_/galeno_/olimpo_` + `parcela/vista/link` · WhatsApp: `botao_sufixo`.
 
 ## Calendário
 | Dia | E-mail | WhatsApp |
@@ -38,6 +38,8 @@ Se você não estava na live, talvez ainda não saiba. Por isso estou te escreve
 
 {{abertura}} E quem já estudou comigo não paga o preço da página.
 
+**O que vem no Pacote {{destaque}}:** {{destaque_conteudo}} Todas com acesso vitalício e certificado.
+
 **O seu valor no Pacote {{destaque}}**
 Comprando as formações separadas: ~~{{destaque_separado}}~~
 Na Black, para quem ainda não é FSA: ~~{{destaque_preco_publico}}~~
@@ -48,15 +50,18 @@ São {{destaque_economia_vs_separado}} a menos. E é seu para sempre.
 
 Por que vitalício? Porque o caso difícil não avisa quando chega. Pode ser no mês que vem, pode ser daqui a cinco anos. Quando ele chegar, a aula vai estar lá. Sem prazo vencendo, sem comprar de novo.
 
+Quer ver tudo com calma antes de decidir? Na página da Black estão as aulas de cada formação, os depoimentos e as perguntas frequentes: black.saudeavancada.com/?utm_source=email&utm_medium=alunos&sck=email_alunos
+(Lá aparece o preço geral. O seu valor de aluno é o deste e-mail, ou é só colocar o seu e-mail na página.)
+
 Esse valor é só para quem já é FSA e vale até sábado, 31/10, às 23h59. Depois disso, o vitalício fecha.
 
 Um abraço,
 Gabriel de Carvalho
 
 P.S. Prefere outro pacote? O seu valor em cada um:
-Hipócrates (a base): {{hipocrates_parcela}} ou {{hipocrates_vista}} → {{hipocrates_link}}
-Galeno (além da referência): {{galeno_parcela}} ou {{galeno_vista}} → {{galeno_link}}
-Olimpo (tudo, mais a Formação Avançada): {{olimpo_parcela}} ou {{olimpo_vista}} → {{olimpo_link}}
+Hipócrates (a base: NF 3.0, Suplementação, Jejum e Hemograma): {{hipocrates_parcela}} ou {{hipocrates_vista}} → {{hipocrates_link}}
+Galeno (além da referência: Exames 2.0, Saúde Hormonal, Fertilidade e Gestação, Alergias): {{galeno_parcela}} ou {{galeno_vista}} → {{galeno_link}}
+Olimpo (tudo isso, sem repetir aula, mais a Formação Avançada): {{olimpo_parcela}} ou {{olimpo_vista}} → {{olimpo_link}}
 15 dias de garantia incondicional em todos.
 
 ---
@@ -82,6 +87,8 @@ O que fecha no dia 31 não é a aula. É a chance de ter para sempre.
 (Comprando separado, seriam {{destaque_separado}}.)
 
 [ Garantir o meu valor ] → {{destaque_link}}
+
+O que vem em cada pacote: black.saudeavancada.com/?utm_source=email&utm_medium=alunos&sck=email_alunos
 
 Gabriel
 
@@ -110,6 +117,9 @@ Faltam 5 dias para o vitalício fechar. O seu valor de aluno continua aqui:
 **Pacote {{destaque}}: {{destaque_parcela}}, ou {{destaque_vista}} à vista.**
 
 [ Quero o meu {{destaque}} vitalício ] → {{destaque_link}}
+
+No Pacote {{destaque}}: {{destaque_conteudo}}
+Ver tudo na página: black.saudeavancada.com/?utm_source=email&utm_medium=alunos&sck=email_alunos
 
 Gabriel
 
@@ -177,7 +187,7 @@ Gabriel
 
 ## WhatsApp (modelos para a API, categoria Marketing)
 Regra da Meta: o texto não pode começar nem terminar com variável. Por isso todos começam com "Gabriel aqui", que já é o gancho: é a primeira coisa que aparece na notificação.
-Variáveis: {{1}} primeiro_nome · {{2}} abertura · {{3}} destaque · {{4}} destaque_separado · {{5}} destaque_parcela · {{6}} destaque_vista · botão (URL dinâmica https://pay.hotmart.com/{{1}}): botao_sufixo
+Variáveis: {{1}} primeiro_nome · {{2}} abertura · {{3}} destaque · {{4}} destaque_separado · {{5}} destaque_parcela · {{6}} destaque_vista · {{7}} destaque_conteudo · botão (URL dinâmica https://pay.hotmart.com/{{1}}): botao_sufixo
 
 ### W1 · Quarta 21/10, 11h
 Gabriel aqui, {{1}}. Separei o seu valor de aluno na Black que acabamos de lançar.
@@ -186,7 +196,7 @@ Pela primeira vez, as formações da FSA têm acesso vitalício: são suas para 
 
 {{2}} Por isso, o seu valor é ainda mais especial:
 
-Pacote {{3}}
+Pacote {{3}}: {{7}}
 Comprando separado: {{4}}
 Para você: {{5}}, ou {{6}} à vista.
 
@@ -217,6 +227,7 @@ Botão: "Garantir hoje"
 ---
 
 ## Notas
+- Botão principal = checkout direto (quem já é aluno conhece a FSA; menos cliques, mais conversão). Para não comprar no escuro: o e-mail diz o que vem no pacote e sempre traz o link da página para quem quer ver tudo antes. Na página aparece o preço geral; o valor de aluno aparece colocando o e-mail.
 - Os três modelos de WhatsApp precisam ser aprovados pela Meta antes. Submeter os três de uma vez.
 - Nada de "nunca mais" ou "não volta". A urgência é sempre "o vitalício fecha dia 31/10, às 23h59".
 - E3 usa o caso de Barranquilla, que é do próprio Gabriel: ele confirma antes do envio.
