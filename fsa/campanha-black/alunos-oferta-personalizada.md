@@ -1,66 +1,222 @@
-# Black Vitalícia · Oferta personalizada para quem já é FSA
+# Black Vitalícia · Sequência personalizada para quem já é FSA (voz do Gabriel)
 
-Listas (dados pessoais, NÃO vão para o repositório): `black-alunos-email.csv` e `black-alunos-whatsapp.csv`, 28.379 alunos, uma linha por e-mail.
-Os links levam direto ao checkout do valor da pessoa, com o e-mail preenchido e a origem marcada (`sck=email_alunos` ou `sck=whatsapp_alunos`).
+Remetente: Gabriel de Carvalho (foto dele). Tudo em "você" (base nacional).
+Listas (dados pessoais, ficam fora do Drive e do repositório): `black-alunos-email.csv` e `black-alunos-whatsapp.csv`, 28.379 alunos.
+Antes de CADA envio: tirar da lista quem já comprou a Black (exportar compradores na Hotmart e remover pelo e-mail).
 
-## Campos da lista (para usar como variáveis)
-- `primeiro_nome`, `email`
-- `segmento`: todas_4 (1.802) · ja_fez_3 (577) · ja_fez_2 (2.399) · ja_fez_1 (10.119) · aluno_outros_cursos (13.482)
-- `abertura`: "Você já fez Nutrição Funcional e Suplementação com a gente." ou "Você já estudou com a gente."
-- `destaque`: o pacote com o maior benefício para a pessoa (Hipócrates, Galeno ou Olimpo)
-- `destaque_parcela`, `destaque_vista`, `destaque_separado`, `destaque_preco_publico`, `destaque_economia_vs_separado`, `destaque_link`
-- `hipocrates_parcela/vista/link`, `galeno_...`, `olimpo_...`: o valor da pessoa nos três pacotes
-- só no WhatsApp: `botao_sufixo` (final do link do botão)
+Variáveis da lista: `primeiro_nome` · `abertura` ("Você já fez Nutrição Funcional e Suplementação comigo." / "Você já estudou comigo.") · `destaque` (pacote) · `destaque_separado` · `destaque_preco_publico` · `destaque_parcela` · `destaque_vista` · `destaque_economia_vs_separado` · `destaque_link` · `hipocrates_/galeno_/olimpo_` + `parcela/vista/link` · WhatsApp: `botao_sufixo`.
 
-## E-mail
+## Calendário
+| Dia | E-mail | WhatsApp |
+|---|---|---|
+| Ter 20/10, 8h | E1 · Lançamento + seu valor | |
+| Qua 21/10, 11h | | W1 · Seu valor saiu |
+| Qui 22/10, 8h | E2 · "Não tenho tempo agora" | |
+| Seg 26/10, 8h | E3 · Normal para quem? | |
+| Ter 27/10, 11h | | W2 · Faltam 4 dias |
+| Sex 30/10, 8h | E4 · Amanhã fecha | |
+| Sáb 31/10, 8h | E5 · Último dia | W3 (10h) · Fecha hoje |
+| Sáb 31/10, 19h | E6 · Faltam 5 horas | |
 
-**Assunto (A):** {{primeiro_nome}}, o seu valor na Black Vitalícia
-**Assunto (B):** Só para quem já é FSA: o seu {{destaque}} por {{destaque_vista}}
-**Pré-cabeçalho:** Separado, {{destaque_separado}}. Para você, {{destaque_vista}}. Com acesso vitalício.
+---
 
-Olá, {{primeiro_nome}}.
+## E1 · Terça 20/10, 8h · Lançamento + seu valor
+**Assuntos (testar):**
+- A: {{primeiro_nome}}, o seu valor não é o da página
+- B: Ontem eu fiz algo que nunca fiz em 27 anos
+- C: {{destaque_separado}} por {{destaque_vista}}. Só para você.
 
-{{abertura}} Por isso, nesta Black, o seu valor não é o da página. É ainda mais especial.
+**Pré-cabeçalho:** Acabamos de lançar a Black Vitalícia. Separei um valor só para quem já estudou comigo.
 
-Pela primeira vez, as formações da FSA têm acesso vitalício. Elas ficam com você para sempre, com todas as atualizações. Quando aquele caso difícil chegar, daqui a um mês ou daqui a cinco anos, a aula vai estar lá.
+{{primeiro_nome}},
+
+Ontem à noite, ao vivo, na festa dos 27 anos da Nutrição Funcional, eu abri a nossa Black. E ela não é como as outras.
+
+Pela primeira vez, as formações da FSA têm **acesso vitalício**. Você compra uma vez, e elas ficam com você. Para sempre. Com todas as atualizações.
+
+Se você não estava na live, talvez ainda não saiba. Por isso estou te escrevendo pessoalmente: o seu caso é diferente.
+
+{{abertura}} E quem já estudou comigo não paga o preço da página.
 
 **O seu valor no Pacote {{destaque}}**
 Comprando as formações separadas: ~~{{destaque_separado}}~~
 Na Black, para quem ainda não é FSA: ~~{{destaque_preco_publico}}~~
-**Para você: {{destaque_parcela}}, ou {{destaque_vista}} à vista com desconto**
-Você economiza {{destaque_economia_vs_separado}}.
+**Para você: {{destaque_parcela}}, ou {{destaque_vista}} à vista com desconto.**
+São {{destaque_economia_vs_separado}} a menos. E é seu para sempre.
 
 [ Quero o {{destaque}} com o meu valor ] → {{destaque_link}}
 
-Prefere outro pacote? O seu valor em cada um:
-- Hipócrates (a base): {{hipocrates_parcela}} ou {{hipocrates_vista}} → {{hipocrates_link}}
-- Galeno (além da referência): {{galeno_parcela}} ou {{galeno_vista}} → {{galeno_link}}
-- Olimpo (tudo, mais a Formação Avançada): {{olimpo_parcela}} ou {{olimpo_vista}} → {{olimpo_link}}
+Por que vitalício? Porque o caso difícil não avisa quando chega. Pode ser no mês que vem, pode ser daqui a cinco anos. Quando ele chegar, a aula vai estar lá. Sem prazo vencendo, sem comprar de novo.
 
-Esse valor é exclusivo para quem já estudou na FSA e vale até 31/10, às 23h59, quando o vitalício fecha.
-15 dias de garantia incondicional.
-Ficou com dúvida? Fala com a equipe no WhatsApp: (51) 98983-1882.
+Esse valor é só para quem já é FSA e vale até sábado, 31/10, às 23h59. Depois disso, o vitalício fecha.
 
-Gisele e Gabriel
+Um abraço,
+Gabriel de Carvalho
 
-## WhatsApp (modelo para a API, categoria Marketing)
-Precisa ser aprovado pela Meta antes do envio (de minutos a 24 h).
+P.S. Prefere outro pacote? O seu valor em cada um:
+Hipócrates (a base): {{hipocrates_parcela}} ou {{hipocrates_vista}} → {{hipocrates_link}}
+Galeno (além da referência): {{galeno_parcela}} ou {{galeno_vista}} → {{galeno_link}}
+Olimpo (tudo, mais a Formação Avançada): {{olimpo_parcela}} ou {{olimpo_vista}} → {{olimpo_link}}
+15 dias de garantia incondicional em todos.
 
-Oi, {{1}}! Aqui é a Gisele, da FSA.
+---
 
-{{2}} Por isso, na Black Vitalícia, o seu valor é ainda mais especial.
+## E2 · Quinta 22/10, 8h · A objeção do tempo
+**Assuntos (testar):**
+- A: {{primeiro_nome}}, e se você não tiver tempo agora?
+- B: A pergunta que eu mais recebi desde segunda
 
-Pacote {{3}}, com acesso vitalício:
+**Pré-cabeçalho:** A resposta curta: é vitalício. Não tem relógio correndo.
+
+{{primeiro_nome}},
+
+Desde que a gente lançou a Black Vitalícia, na segunda, a pergunta que mais chegou foi esta: "Gabriel, eu quero, mas não tenho tempo agora."
+
+Eu entendo. E é justamente por isso que eu fiz vitalício.
+
+Até hoje, quem comprava uma formação tinha 1 ou 2 anos para estudar. O relógio começava a correr no dia da compra. Agora não tem relógio. Você pode começar em janeiro. Pode estudar um módulo por mês. Pode voltar numa aula daqui a três anos, quando aparecer aquela paciente.
+
+O que fecha no dia 31 não é a aula. É a chance de ter para sempre.
+
+**O seu valor de aluno no Pacote {{destaque}}: {{destaque_parcela}}, ou {{destaque_vista}} à vista.**
+(Comprando separado, seriam {{destaque_separado}}.)
+
+[ Garantir o meu valor ] → {{destaque_link}}
+
+Gabriel
+
+---
+
+## E3 · Segunda 26/10, 8h · Normal para quem?
+**Assuntos (testar):**
+- A: O exame veio normal. E a paciente?
+- B: Normal para quem?
+
+**Pré-cabeçalho:** Um caso que eu estudo há 20 anos. E faltam 5 dias para o vitalício fechar.
+
+{{primeiro_nome}},
+
+Vou te contar um caso que eu apresentei num congresso em Barranquilla, na Colômbia.
+
+Uma paciente com obesidade. TSH, hemoglobina, ácido úrico, gama GT, perfil lipídico, glicose, insulina, HOMA-IR. Tudo dentro da referência. Tudo "normal".
+
+Agora, olhando os mesmos números nas faixas funcionais: sinais precoces de resistência à insulina, sobrecarga do fígado, inflamação de baixo grau.
+
+Não mudou o exame. Mudou quem estava olhando.
+
+É isso que eu chamo de Narrativa Cega: contar a história do paciente a partir do laudo, e não da pessoa. E é isso que as formações da FSA ensinam a desfazer.
+
+Faltam 5 dias para o vitalício fechar. O seu valor de aluno continua aqui:
+**Pacote {{destaque}}: {{destaque_parcela}}, ou {{destaque_vista}} à vista.**
+
+[ Quero o meu {{destaque}} vitalício ] → {{destaque_link}}
+
+Gabriel
+
+---
+
+## E4 · Sexta 30/10, 8h · Amanhã fecha
+**Assuntos (testar):**
+- A: {{primeiro_nome}}, amanhã o seu valor de aluno acaba
+- B: Amanhã às 23h59 o vitalício fecha
+
+**Pré-cabeçalho:** Depois de amanhã, as formações voltam a ter 1 ou 2 anos de acesso.
+
+{{primeiro_nome}},
+
+Amanhã, às 23h59, o vitalício fecha. E o seu valor de aluno fecha junto.
+
+Depois disso, as formações voltam ao formato de sempre: 1 ou 2 anos de acesso.
+
+Hoje ainda dá:
+**Pacote {{destaque}}: {{destaque_parcela}}, ou {{destaque_vista}} à vista.**
+Comprando separado: {{destaque_separado}}. São {{destaque_economia_vs_separado}} a menos, e para sempre.
+
+[ Garantir antes de fechar ] → {{destaque_link}}
+
+Gabriel
+
+---
+
+## E5 · Sábado 31/10, 8h · Último dia
+**Assuntos (testar):**
+- A: Hoje às 23h59
+- B: Último dia, {{primeiro_nome}}
+
+**Pré-cabeçalho:** O vitalício fecha hoje. O seu valor de aluno também.
+
+{{primeiro_nome}},
+
+É hoje. Às 23h59, o vitalício fecha.
+
+Se você ainda está pensando, faça esta conta: em 6 anos, estudando as mesmas formações e comprando de novo a cada 2 anos, o Olimpo custaria R$ 59.910. Hoje, para você, ele sai por {{olimpo_vista}}, uma vez só. E é seu para sempre.
+
+**O seu valor no Pacote {{destaque}}: {{destaque_parcela}}, ou {{destaque_vista}} à vista.**
+
+[ Quero garantir hoje ] → {{destaque_link}}
+
+15 dias de garantia incondicional. Se não for para você, é só pedir o dinheiro de volta.
+
+Gabriel
+
+---
+
+## E6 · Sábado 31/10, 19h · Faltam 5 horas
+**Assunto:** Faltam 5 horas
+**Pré-cabeçalho:** Depois das 23h59, não consigo mais te dar esse valor.
+
+{{primeiro_nome}}, faltam 5 horas.
+
+Às 23h59, o vitalício fecha, e o seu valor de aluno ({{destaque_vista}} no Pacote {{destaque}}) fecha junto.
+
+[ Garantir agora ] → {{destaque_link}}
+
+Gabriel
+
+---
+
+## WhatsApp (modelos para a API, categoria Marketing)
+Regra da Meta: o texto não pode começar nem terminar com variável. Por isso todos começam com "Gabriel aqui", que já é o gancho: é a primeira coisa que aparece na notificação.
+Variáveis: {{1}} primeiro_nome · {{2}} abertura · {{3}} destaque · {{4}} destaque_separado · {{5}} destaque_parcela · {{6}} destaque_vista · botão (URL dinâmica https://pay.hotmart.com/{{1}}): botao_sufixo
+
+### W1 · Quarta 21/10, 11h
+Gabriel aqui, {{1}}. Separei o seu valor de aluno na Black que acabamos de lançar.
+
+Pela primeira vez, as formações da FSA têm acesso vitalício: são suas para sempre, com todas as atualizações.
+
+{{2}} Por isso, o seu valor é ainda mais especial:
+
+Pacote {{3}}
 Comprando separado: {{4}}
 Para você: {{5}}, ou {{6}} à vista.
 
-Esse valor é só para quem já é FSA e vale até 31/10, às 23h59.
+Vale só para quem já é FSA, até 31/10, às 23h59. Toca no botão para ver.
 
-Botão (URL dinâmica): "Ver o meu valor" → https://pay.hotmart.com/{{1}}
+Botão: "Ver o meu valor"
 
-Variáveis: {{1}} primeiro_nome · {{2}} abertura · {{3}} destaque · {{4}} destaque_separado · {{5}} destaque_parcela · {{6}} destaque_vista · botão: botao_sufixo
+### W2 · Terça 27/10, 11h
+Gabriel aqui, {{1}}. Faltam 4 dias para o vitalício fechar.
 
-## Ordem de envio sugerida
-1. E-mail para todos: terça 20/10, de manhã (quem viu a live já tem o contexto; quem não viu recebe o próprio valor).
-2. WhatsApp: quinta 22/10, só para quem NÃO comprou. Começar pelos segmentos de maior desconto (todas_4, ja_fez_3, ja_fez_2: 4.778 pessoas). Os outros, só se o custo valer.
-3. Antes de cada envio, tirar da lista quem já comprou (exportar compradores da Black na Hotmart e remover pelo e-mail).
+Se o que está te segurando é tempo: é vitalício. Não tem prazo para começar nem para terminar.
+
+O seu valor de aluno no Pacote {{3}} continua: {{5}}, ou {{6}} à vista. Comprando separado seriam {{4}}.
+
+Fecha sábado, 31/10, às 23h59.
+
+Botão: "Garantir o meu valor"
+
+### W3 · Sábado 31/10, 10h
+Gabriel aqui, {{1}}. Hoje, às 23h59, o vitalício fecha.
+
+O seu valor de aluno no Pacote {{3}} ({{6}} à vista, ou {{5}}) fecha junto. Depois disso, as formações voltam a ter 1 ou 2 anos de acesso.
+
+Se é para você, hoje é o dia.
+
+Botão: "Garantir hoje"
+
+---
+
+## Notas
+- Os três modelos de WhatsApp precisam ser aprovados pela Meta antes. Submeter os três de uma vez.
+- Nada de "nunca mais" ou "não volta". A urgência é sempre "o vitalício fecha dia 31/10, às 23h59".
+- E3 usa o caso de Barranquilla, que é do próprio Gabriel: ele confirma antes do envio.
