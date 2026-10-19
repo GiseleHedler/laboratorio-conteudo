@@ -6,7 +6,7 @@ Regras aplicadas: mesma frase central e mesmo prazo da página; vitalício é o 
 
 Formato de gravação: celular na vertical, Gabriel olhando para a câmera, de 30 a 60 segundos. O texto em [TELA] entra como legenda grande nos 3 primeiros segundos.
 
-CTA: duas versões. Use "Comenta VITALÍCIO" só se houver automação (ManyChat ou similar) mandando o link na DM; sem automação, use "o link está na bio".
+CTA: "Comenta BLACK + letra" (BLACKA a BLACKF, uma letra por criativo). A automação manda o link na DM, e a letra mostra qual vídeo trouxe cada pessoa. Na automação: uma regra por palavra (BLACKA, BLACKB...) e uma regra geral "contém BLACK" para quem digitar só BLACK ou com espaço.
 
 ---
 
@@ -22,7 +22,7 @@ Galeno: além da referência. Exames Laboratoriais 2.0, Saúde Hormonal, Fertili
 E o Olimpo: os dois juntos, sem repetir aula, mais a Formação Avançada. Mais de 300 horas.
 Para sempre, pagando até 50% menos do que comprando as formações separadas.
 O vitalício fecha dia 31 de outubro.
-Comenta VITALÍCIO que eu te mando o link."
+Comenta BLACKA que eu te mando o link."
 
 P.S. falado (opcional, 5 s): "E se você já estudou comigo: coloca o seu e-mail na página. O seu valor é ainda mais especial."
 
@@ -40,7 +40,7 @@ Cinco: Saúde Hormonal.
 Seis: Fertilidade e Gestação.
 Sete: a Formação Avançada em Nutrição Funcional, que estava fora de venda e volta só aqui.
 Comprando separado, R$ 19.970. Na Black, 12 de R$ 969,11. E é vitalício.
-O vitalício fecha dia 31/10. Comenta OLIMPO que eu te mando o link."
+O vitalício fecha dia 31/10. Comenta BLACKB que eu te mando o link."
 
 ---
 
@@ -51,7 +51,7 @@ O vitalício fecha dia 31/10. Comenta OLIMPO que eu te mando o link."
 Até hoje, quem comprava uma formação tinha um ou dois anos para estudar. O relógio começava a correr no dia da compra.
 Agora não tem relógio. Você pode começar em janeiro. Estudar um módulo por mês. Voltar numa aula daqui a três anos, quando aparecer aquela paciente.
 O que fecha no dia 31 não é a aula. É a chance de ter para sempre.
-Comenta VITALÍCIO que eu te mando o link."
+Comenta BLACKC que eu te mando o link."
 
 ---
 
@@ -62,7 +62,7 @@ Comenta VITALÍCIO que eu te mando o link."
 Na Black Vitalícia, quem já é FSA tem um valor só seu. E quanto mais formações você já fez, menor fica.
 Para ver o seu: entra na página da Black, escolhe o pacote e coloca o e-mail que você usa na plataforma. O seu valor aparece na hora.
 E a formação que você já tem vem vitalícia dentro do pacote.
-O vitalício fecha dia 31/10. Link na bio."
+O vitalício fecha dia 31/10. Comenta BLACKD que eu te mando o link."
 
 ---
 
@@ -74,7 +74,7 @@ Se você estudar as formações do Olimpo por seis anos, comprando de novo a cad
 Na Black, você paga uma vez: 12 de R$ 969,11. E é seu para sempre, com todas as atualizações.
 O Hipócrates e o Galeno saem por 12 de R$ 579,40 cada.
 E tem 15 dias de garantia incondicional.
-O vitalício fecha dia 31/10. Comenta VITALÍCIO."
+O vitalício fecha dia 31/10. Comenta BLACKE que eu te mando o link."
 
 ---
 
@@ -84,7 +84,7 @@ O vitalício fecha dia 31/10. Comenta VITALÍCIO."
 "[Faltam X dias / É hoje.] O vitalício fecha dia 31, às 23h59.
 Depois disso, as formações voltam ao formato de sempre: um ou dois anos de acesso.
 Se você estava esperando o momento certo para começar, esse é o único momento em que dá para ter para sempre.
-Comenta VITALÍCIO que eu te mando o link."
+Comenta BLACKF que eu te mando o link."
 
 ---
 
