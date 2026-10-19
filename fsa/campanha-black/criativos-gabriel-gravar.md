@@ -88,8 +88,32 @@ Comenta BLACK26 que eu te mando o link."
 
 ---
 
+## 7 · Normal para quem?
+[TELA] "SEU EXAME ESTÁ NORMAL." NORMAL PARA QUEM?
+
+"Uma paciente com obesidade chega com os exames. TSH, glicose, insulina, perfil lipídico, gama GT. Tudo dentro da referência. Tudo normal.
+Só que, olhando os mesmos números com outro raciocínio, aparecem sinais precoces de resistência à insulina, sobrecarga do fígado e inflamação.
+O exame não mudou. Mudou quem estava olhando.
+A faixa de referência mostra o que é comum na população. Não mostra o que é saudável para aquela pessoa.
+É isso que eu ensino há 27 anos. E pela primeira vez, as formações da FSA têm acesso vitalício.
+O vitalício fecha dia 31/10. Comenta BLACK26 que eu te mando o link."
+
+---
+
+## 8 · As 3 perguntas que mais chegaram
+[TELA] 3 PERGUNTAS SOBRE A BLACK VITALÍCIA
+
+"As três perguntas que mais chegaram desde a live. Resposta rápida.
+Um: 'Vitalício é para sempre mesmo?' É. Você compra uma vez e a formação fica com você, com todas as atualizações dela.
+Dois: 'Eu já tenho uma das formações. Vale a pena?' Vale. Ela vem vitalícia dentro do pacote, e quem já é aluno da FSA tem um valor ainda mais especial. É só colocar o seu e-mail na página.
+Três: 'E se eu não gostar?' Você tem 15 dias de garantia incondicional.
+O vitalício fecha dia 31/10. Comenta BLACK26 que eu te mando o link."
+
+---
+
 ## Notas para a Gisele
 - O modelo funciona por três coisas: o tom de anúncio ("pronunciamento oficial"), a lista numerada que mostra volume e o "comenta" que faz o algoritmo empurrar. Mantive as três.
 - O que NÃO copiei: "a única Black com preço de Black do mercado" (comparação com concorrente, não temos como provar) e "11 cursos pelo preço de 1" (para nós não é verdade; a nossa prova é "até 50% menos").
 - Diferença importante: a Black dele ainda não abriu (lista de espera). A nossa já está aberta desde a live; por isso os CTAs levam direto ao link.
 - O criativo 2 cita "R$ 19.970" e o 5 cita "R$ 59.910": são os mesmos números da página e dos e-mails.
+- O criativo 7 usa o caso de Barranquilla, que é do próprio Gabriel (mesmo caso do e-mail E3 e da live): ele confirma antes de gravar.
