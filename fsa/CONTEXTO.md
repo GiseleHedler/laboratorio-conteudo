@@ -3,6 +3,9 @@
 Marca: Faculdade de Saúde Avançada® (sempre com ®). Site: https://saudeavancada.com.br/
 Natural Pure ficou fora deste laboratório (decisão da Gisele, 12/10/2026).
 
+## REGRA DE CRÉDITOS (Gisele, 19/10/2026)
+Nenhuma geração paga (vídeo, imagem, voz) roda sem a Gisele aprovar AQUELA peça: mostrar o roteiro/prompt exato e o custo, e esperar o "ok". "Pode gastar créditos" NÃO é aprovação de peça. Em 19/10 rodei 2 reels (32 créditos) sem aprovação: erro meu.
+
 ## Perfis (dois, analisados separadamente)
 - @fsa_saudeavancada: institucional.
 - @gabrieldecarvalho_professor: Gabriel de Carvalho, cofundador e professor.
