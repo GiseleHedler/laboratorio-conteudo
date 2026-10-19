@@ -5,7 +5,7 @@ Voz da Gisele, primeira pessoa. Antes da live: NÃO falar "vitalício" (é a rev
 ## 1 · Manhã (até 11h)
 É hoje. 20h27, ao vivo no YouTube: a Festa dos 27 anos da Nutrição Funcional, com o Gabriel.
 
-Vocês são as primeiras a saber, então vou contar um pouco mais. Eu e o Gabriel juntamos as formações da FSA em três pacotes, com um preço que a gente nunca fez. E tem uma coisa que, em 27 anos ensinando, o Gabriel nunca fez. Essa parte só ele conta, no final da live.
+Vocês ficam sabendo antes de todo mundo, então vou contar um pouco mais. Eu e o Gabriel juntamos as formações da FSA em três pacotes, com um preço que a gente nunca fez. E tem uma coisa que, em 27 anos ensinando, o Gabriel nunca fez. Essa parte só ele conta, no final da live.
 
 E quem já é aluna ou aluno da FSA: tem um valor ainda mais especial para vocês. Também mostro hoje à noite.
 
