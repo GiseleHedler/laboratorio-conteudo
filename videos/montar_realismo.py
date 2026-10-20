@@ -128,10 +128,14 @@ for b0,b1 in BIPE:
     x[i0:i1]=(0.35*32767*np.sin(2*np.pi*1000*t)*env)[:,None]
 w=wave.open(V+'/ln.wav','wb'); w.setnchannels(ch); w.setsampwidth(2); w.setframerate(sr); w.writeframes(np.clip(x,-32768,32767).astype(np.int16).tobytes()); w.close()
 # trilha de piano suave (mesma do boleto, gerada no comprimento do vídeo)
-run(['python3',S+'/tools/musica_realismo.py'])
+# trilha por partes: suspense no gancho, mistério, aceleração no estudo, susto no debate, sombrio na crença, resolução no fim
+CORTES=[0,m(12.5),m(46.4),m(67.6),m(71.3),m(125.6),TOT]
+CLIMAS=['suspense','misterio','aceleracao','susto','sombrio','resolucao']
+run(['python3','/home/user/laboratorio-conteudo/videos/musica_secoes.py',V+'/musica.wav',str(TOT)]+
+    [f'{a:.3f}:{b:.3f}:{c}' for a,b,c in zip(CORTES,CORTES[1:],CLIMAS)])
 run(['ffmpeg','-loglevel','error','-y','-i',V+'/ln.wav','-i',V+'/musica.wav','-filter_complex',
      f"[0:a]asplit=2[voz][sc];"
-     f"[1:a]aresample=48000,atrim=0:{TOT},volume=0.16,afade=t=out:st={TOT-1.0}:d=1.0[mus];"
+     f"[1:a]aresample=48000,atrim=0:{TOT},volume=0.32,afade=t=out:st={TOT-1.0}:d=1.0[mus];"
      f"[mus][sc]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=400[musd];"
      f"[voz][musd]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.89",'-c:a','pcm_s16le',V+'/audio_final.wav'])
 
@@ -144,22 +148,23 @@ DEB=(m(67.78),m(71.22)); FUT=(m(49.40),m(63.30))
 run(['ffmpeg','-loglevel','error','-y','-ss','4','-t',f'{DEB[1]-DEB[0]+0.2:.3f}','-i',B+'/debate.mov','-an','-vf',
      f"crop='ih*1.125':ih:'(iw-ih*1.125)/2':0,scale={W}:{H//2}:flags=lanczos,fps=30,setsar=1",'-c:v','libx264','-crf','16',V+'/deb.mp4'])
 dd=FUT[1]-FUT[0]+0.2
-# jogo real de 1951 (o do estudo): sem as faixas pretas, inteiro no meio da tela, com ele mesmo desfocado no fundo
+# jogo real de 1951 (o do estudo), na metade de cima: sem as faixas pretas, com ele mesmo desfocado no fundo
+HM=H//2; JH=int(W*654/1062)//2*2
 run(['ffmpeg','-loglevel','error','-y','-ss','0.3','-t',f'{dd:.3f}','-i',B+'/jogo1951.mov','-an','-filter_complex',
      f"[0:v]crop=1062:654:72:4,fps=30,split=2[a][b];"
-     f"[a]scale=-2:{H}:flags=lanczos,crop={W}:{H},gblur=sigma=28,eq=brightness=-0.18[fundo];"
-     f"[b]scale={W}:-2:flags=lanczos,scale={int(W*2.2)}:-2,zoompan=z='1.0+0.05*on/({dd}*30)':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s={W}x{int(W*654/1062)//2*2}:fps=30[jogo];"
-     f"[fundo][jogo]overlay=0:(H-h)/2-120,setsar=1",
+     f"[a]scale=-2:{HM}:flags=lanczos,crop={W}:{HM},gblur=sigma=28,eq=brightness=-0.18[fundo];"
+     f"[b]scale={int(W*2.2)}:-2:flags=lanczos,zoompan=z='1.0+0.05*on/({dd}*30)':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s={W}x{JH}:fps=30[jogo];"
+     f"[fundo][jogo]overlay=0:{HM-JH},setsar=1",
      '-c:v','libx264','-crf','16',V+'/fut.mp4'])
 fc=(f"[0:v]scale={2*W}:{2*H}:flags=lanczos,zoompan=z='{expr}':x='iw/2-iw/zoom/2':y='(ih-ih/zoom)*0.57':d=1:s={W}x{H}:fps=30,setsar=1,split=2[z0][z1];"
     f"[z1]crop={W}:{H//2}:0:{int(H*0.27)}[ela];"
     f"[1:v]setpts=PTS-STARTPTS+{DEB[0]}/TB[deb];[2:v]setpts=PTS-STARTPTS+{FUT[0]}/TB[fut];"
     f"[z0][deb]overlay=0:0:enable='between(t,{DEB[0]},{DEB[1]})':eof_action=pass[a1];"
-    f"[ela]setpts=PTS[ela2];[a1][ela2]overlay=0:{H//2}:enable='between(t,{DEB[0]},{DEB[1]})'[a2];"
+    f"[ela]setpts=PTS[ela2];[a1][ela2]overlay=0:{H//2}:enable='between(t,{DEB[0]},{DEB[1]})+between(t,{FUT[0]},{FUT[1]})'[a2];"
     f"[a2][fut]overlay=0:0:enable='between(t,{FUT[0]},{FUT[1]})':eof_action=pass[a3];"
     # referência do estudo (Hastorf & Cantril, 1954) no alto da tela enquanto o jogo passa
-    f"[3:v]format=rgba,fade=t=in:st={FUT[0]+0.3:.2f}:d=0.4:alpha=1,fade=t=out:st={FUT[1]-0.4:.2f}:d=0.3:alpha=1[card];"
-    f"[a3][card]overlay=(W-w)/2:110:enable='between(t,{FUT[0]},{FUT[1]})'[v]")
+    f"[3:v]format=rgba,scale=iw*0.72:-1,fade=t=in:st={FUT[0]+0.3:.2f}:d=0.4:alpha=1,fade=t=out:st={FUT[1]-0.4:.2f}:d=0.3:alpha=1[card];"
+    f"[a3][card]overlay=(W-w)/2:6:enable='between(t,{FUT[0]},{FUT[1]})'[v]")
 p1=subprocess.Popen(['ffmpeg','-loglevel','error','-i',V+'/base.mov','-i',V+'/deb.mp4','-i',V+'/fut.mp4','-loop','1','-t',str(TOT),'-i',B+'/estudo_card.png','-filter_complex',fc,'-map','[v]','-t',str(TOT),
      '-f','rawvideo','-pix_fmt','rgb24','-'],stdout=subprocess.PIPE)
 p2=subprocess.Popen(['ffmpeg','-loglevel','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r','30','-i','-',
