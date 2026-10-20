@@ -130,9 +130,10 @@ for b0,b1 in BIPE:
     x[i0:i1]=(0.35*32767*np.sin(2*np.pi*1000*t)*env)[:,None]
 w=wave.open(V+'/ln.wav','wb'); w.setnchannels(ch); w.setsampwidth(2); w.setframerate(sr); w.writeframes(np.clip(x,-32768,32767).astype(np.int16).tobytes()); w.close()
 # trilha de piano suave (mesma do boleto, gerada no comprimento do vídeo)
-# trilha por partes: suspense no gancho, mistério, aceleração no estudo, susto no debate, sombrio na crença, resolução no fim
-CORTES=[0,m(12.5),m(46.4),m(67.6),m(71.3),m(125.6),TOT]
-CLIMAS=['suspense','misterio','aceleracao','susto','sombrio','resolucao']
+# trilha por partes: mistério, aceleração no estudo, susto no debate, sombrio na crença, resolução no fim
+# gancho sem música (pedido dela): a trilha começa no mistério
+CORTES=[m(12.5),m(46.4),m(67.6),m(71.3),m(125.6),TOT]
+CLIMAS=['misterio','aceleracao','susto','sombrio','resolucao']
 run(['python3','/home/user/laboratorio-conteudo/videos/musica_secoes.py',V+'/musica.wav',str(TOT)]+
     [f'{a:.3f}:{b:.3f}:{c}' for a,b,c in zip(CORTES,CORTES[1:],CLIMAS)])
 run(['ffmpeg','-loglevel','error','-y','-i',V+'/ln.wav','-i',V+'/musica.wav','-filter_complex',
