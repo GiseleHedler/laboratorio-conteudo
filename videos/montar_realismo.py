@@ -73,7 +73,7 @@ def ts(s):
 def fmt(t): return f'{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}'
 BIPE=[(4.98,5.24),(10.94,11.36)]
 HOOK_FIM=round(m(11.9),2)   # título no topo durante o gancho; a legenda corre junto
-PRETA=[('A tua experiência segue as tuas expectativas.',m(112.45),m(115.95))]   # frase do método: tela preta, letra branca grande
+PRETA=[('A tua experiência segue as tuas|expectativas.',m(112.45),m(115.95))]   # depois do | vai em cursiva rose gold   # frase do método: tela preta, letra branca grande
 ev=[]
 for blk in open(V+'/realismo.srt',encoding='utf-8').read().strip().split('\n\n'):
     l=blk.split('\n'); a,b=[ts(x.strip()) for x in l[1].split('-->')]; txt=' '.join(l[2:])
@@ -211,14 +211,18 @@ while True:
         fr=Image.new('RGB',(W,H),(0,0,0)); d=ImageDraw.Draw(fr); fo=ImageFont.truetype(F+'/ArchivoBlack.ttf',tam)
         # quebra a frase em linhas que caibam na largura, centralizadas no meio da tela
         linhas=[]; atual=''
-        for pal in pr[0].split():
+        texto,_,cursiva=pr[0].partition('|')
+        for pal in texto.split():
             teste=(atual+' '+pal).strip()
             if d.textlength(teste,font=fo)>W-120 and atual: linhas.append(atual); atual=pal
             else: atual=teste
         linhas.append(atual)
-        alt=int(tam*1.18); y=(H-alt*len(linhas))//2-80
+        fc=ImageFont.truetype(F+'/Satisfy-400-normal.ttf',int(tam*1.75)); altc=int(tam*1.9) if cursiva else 0
+        alt=int(tam*1.18); y=(H-alt*len(linhas)-altc)//2-80
         for ln in linhas:
             d.text(((W-d.textlength(ln,font=fo))/2,y),ln,font=fo,fill=(0xea,0xe8,0xec)); y+=alt
+        if cursiva:
+            d.text(((W-d.textlength(cursiva,font=fc))/2,y-int(tam*0.25)),cursiva,font=fc,fill=(0xe2,0x9f,0x8e))
         p2.stdin.write(fr.tobytes()); continue
     if FUNDO is not None and t<FUNDO_FIM:
         im=np.frombuffer(buf,np.uint8).reshape(H,W,3).astype(np.float32)
