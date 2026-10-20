@@ -156,8 +156,11 @@ fc=(f"[0:v]scale={2*W}:{2*H}:flags=lanczos,zoompan=z='{expr}':x='iw/2-iw/zoom/2'
     f"[1:v]setpts=PTS-STARTPTS+{DEB[0]}/TB[deb];[2:v]setpts=PTS-STARTPTS+{FUT[0]}/TB[fut];"
     f"[z0][deb]overlay=0:0:enable='between(t,{DEB[0]},{DEB[1]})':eof_action=pass[a1];"
     f"[ela]setpts=PTS[ela2];[a1][ela2]overlay=0:{H//2}:enable='between(t,{DEB[0]},{DEB[1]})'[a2];"
-    f"[a2][fut]overlay=0:0:enable='between(t,{FUT[0]},{FUT[1]})':eof_action=pass[v]")
-p1=subprocess.Popen(['ffmpeg','-loglevel','error','-i',V+'/base.mov','-i',V+'/deb.mp4','-i',V+'/fut.mp4','-filter_complex',fc,'-map','[v]','-t',str(TOT),
+    f"[a2][fut]overlay=0:0:enable='between(t,{FUT[0]},{FUT[1]})':eof_action=pass[a3];"
+    # referência do estudo (Hastorf & Cantril, 1954) no alto da tela enquanto o jogo passa
+    f"[3:v]format=rgba,fade=t=in:st={FUT[0]+0.3:.2f}:d=0.4:alpha=1,fade=t=out:st={FUT[1]-0.4:.2f}:d=0.3:alpha=1[card];"
+    f"[a3][card]overlay=(W-w)/2:110:enable='between(t,{FUT[0]},{FUT[1]})'[v]")
+p1=subprocess.Popen(['ffmpeg','-loglevel','error','-i',V+'/base.mov','-i',V+'/deb.mp4','-i',V+'/fut.mp4','-loop','1','-t',str(TOT),'-i',B+'/estudo_card.png','-filter_complex',fc,'-map','[v]','-t',str(TOT),
      '-f','rawvideo','-pix_fmt','rgb24','-'],stdout=subprocess.PIPE)
 p2=subprocess.Popen(['ffmpeg','-loglevel','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r','30','-i','-',
      '-loop','1','-t',str(TOT),'-i',V+'/degrade.png','-i',V+'/audio_final.wav',
