@@ -182,12 +182,13 @@ def camada(txt,tam,topo_cabeca):
 import os
 FUNDO=None
 if os.path.exists(S+'/fotos/lula.jpg') and os.path.exists(S+'/fotos/bolsonaro.jpg'):
-    def metade(f):
+    def metade(f,fx):
+        # fx: onde está o rosto na largura da foto (0 a 1), para o recorte estreito não cortar a pessoa
         im=Image.open(f).convert('RGB'); w0,h0=im.size; alvo=(W//2)/H
-        if w0/h0>alvo: nw=int(h0*alvo); im=im.crop(((w0-nw)//2,0,(w0-nw)//2+nw,h0))
+        if w0/h0>alvo: nw=int(h0*alvo); x0=int(min(max(fx*w0-nw/2,0),w0-nw)); im=im.crop((x0,0,x0+nw,h0))
         else: nh=int(w0/alvo); y0=int((h0-nh)*0.25); im=im.crop((0,y0,w0,y0+nh))
         return im.resize((W//2,H),Image.LANCZOS)
-    fu=Image.new('RGB',(W,H)); fu.paste(metade(S+'/fotos/lula.jpg'),(0,0)); fu.paste(metade(S+'/fotos/bolsonaro.jpg'),(W//2,0))
+    fu=Image.new('RGB',(W,H)); fu.paste(metade(S+'/fotos/lula.jpg',0.39),(0,0)); fu.paste(metade(S+'/fotos/bolsonaro.jpg',0.62),(W//2,0))
     FUNDO=np.array(fu).astype(np.float32)*0.85
 FUNDO_FIM=m(11.40)
 FB=W*H*3; n=0; ativo=None; prev=None
