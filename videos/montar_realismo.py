@@ -73,7 +73,9 @@ def ts(s):
 def fmt(t): return f'{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}'
 BIPE=[(4.98,5.24),(10.94,11.36)]
 HOOK_FIM=round(m(11.9),2)   # título no topo durante o gancho; a legenda corre junto
-PRETA=[('A tua experiência segue as tuas|expectativas.',m(112.45),m(115.95))]   # depois do | vai em cursiva rose gold   # frase do método: tela preta, letra branca grande
+# telas pretas: trechos entre | se alternam entre letra branca e cursiva rose gold
+PRETA=[('A|crença|chega com cara de óbvio.',m(77.10),m(80.35)),
+       ('A tua experiência segue as tuas|expectativas.',m(112.45),m(115.95))]   # frase do método: tela preta, letra branca grande
 ev=[]
 for blk in open(V+'/realismo.srt',encoding='utf-8').read().strip().split('\n\n'):
     l=blk.split('\n'); a,b=[ts(x.strip()) for x in l[1].split('-->')]; txt=' '.join(l[2:])
@@ -140,7 +142,7 @@ run(['ffmpeg','-loglevel','error','-y','-i',V+'/ln.wav','-i',V+'/musica.wav','-f
      f"[voz][musd]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.89",'-c:a','pcm_s16le',V+'/audio_final.wav'])
 
 # palavras em cursiva grande pegando o topo da cabeça (recorte da pessoa quadro a quadro)
-ATRAS=[('cego.',m(15.2),m(18.2),360),('crença',m(75.6),m(79.0),340),
+ATRAS=[('cego.',m(15.2),m(18.2),360),('crença',m(75.3),m(77.1),340),
        ('bolha',m(83.0),m(86.0),360),('certeza',m(131.0),m(134.0),330)]
 # cenas de apoio: tela dividida com o debate (sem áudio) e o jogo de futebol na explicação do experimento
 B=S+'/broll'
@@ -209,20 +211,22 @@ while True:
     if pr:
         k=min(1,(t-pr[1])/0.35); tam=int(112*(1.10-0.10*(3*k*k-2*k**3)))
         fr=Image.new('RGB',(W,H),(0,0,0)); d=ImageDraw.Draw(fr); fo=ImageFont.truetype(F+'/ArchivoBlack.ttf',tam)
-        # quebra a frase em linhas que caibam na largura, centralizadas no meio da tela
-        linhas=[]; atual=''
-        texto,_,cursiva=pr[0].partition('|')
-        for pal in texto.split():
-            teste=(atual+' '+pal).strip()
-            if d.textlength(teste,font=fo)>W-120 and atual: linhas.append(atual); atual=pal
-            else: atual=teste
-        linhas.append(atual)
-        fc=ImageFont.truetype(F+'/Satisfy-400-normal.ttf',int(tam*1.75)); altc=int(tam*1.9) if cursiva else 0
-        alt=int(tam*1.18); y=(H-alt*len(linhas)-altc)//2-80
-        for ln in linhas:
-            d.text(((W-d.textlength(ln,font=fo))/2,y),ln,font=fo,fill=(0xea,0xe8,0xec)); y+=alt
-        if cursiva:
-            d.text(((W-d.textlength(cursiva,font=fc))/2,y-int(tam*0.25)),cursiva,font=fc,fill=(0xe2,0x9f,0x8e))
+        # trechos alternados: branco (quebrado em linhas que caibam na largura) e cursiva rose gold (uma linha)
+        fc=ImageFont.truetype(F+'/Satisfy-400-normal.ttf',int(tam*1.75)); blocos=[]
+        for n_,trecho in enumerate(pr[0].split('|')):
+            if n_%2: blocos.append(('c',trecho.strip())); continue
+            atual=''
+            for pal in trecho.split():
+                teste=(atual+' '+pal).strip()
+                if d.textlength(teste,font=fo)>W-120 and atual: blocos.append(('b',atual)); atual=pal
+                else: atual=teste
+            if atual: blocos.append(('b',atual))
+        altura={'b':int(tam*1.18),'c':int(tam*1.9)}
+        y=(H-sum(altura[k_] for k_,_ in blocos))//2-80
+        for k_,ln in blocos:
+            if k_=='b': d.text(((W-d.textlength(ln,font=fo))/2,y),ln,font=fo,fill=(0xea,0xe8,0xec))
+            else: d.text(((W-d.textlength(ln,font=fc))/2,y-int(tam*0.25)),ln,font=fc,fill=(0xe2,0x9f,0x8e))
+            y+=altura[k_]
         p2.stdin.write(fr.tobytes()); continue
     if FUNDO is not None and t<FUNDO_FIM:
         im=np.frombuffer(buf,np.uint8).reshape(H,W,3).astype(np.float32)
