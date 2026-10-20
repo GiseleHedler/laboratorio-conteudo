@@ -144,8 +144,12 @@ DEB=(m(67.78),m(71.22)); FUT=(m(49.40),m(63.30))
 run(['ffmpeg','-loglevel','error','-y','-ss','4','-t',f'{DEB[1]-DEB[0]+0.2:.3f}','-i',B+'/debate.mov','-an','-vf',
      f"crop='ih*1.125':ih:'(iw-ih*1.125)/2':0,scale={W}:{H//2}:flags=lanczos,fps=30,setsar=1",'-c:v','libx264','-crf','16',V+'/deb.mp4'])
 dd=FUT[1]-FUT[0]+0.2
-run(['ffmpeg','-loglevel','error','-y','-ss','1.5','-t',f'{dd:.3f}','-i',B+'/futebol.mov','-an','-vf',
-     f"scale={W}:-2:flags=lanczos,crop={W}:{H},scale={2*W}:{2*H},zoompan=z='1.0+0.06*on/({dd}*30)':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s={W}x{H}:fps=30,setsar=1",
+# jogo real de 1951 (o do estudo): sem as faixas pretas, inteiro no meio da tela, com ele mesmo desfocado no fundo
+run(['ffmpeg','-loglevel','error','-y','-ss','0.3','-t',f'{dd:.3f}','-i',B+'/jogo1951.mov','-an','-filter_complex',
+     f"[0:v]crop=1062:654:72:4,fps=30,split=2[a][b];"
+     f"[a]scale=-2:{H}:flags=lanczos,crop={W}:{H},gblur=sigma=28,eq=brightness=-0.18[fundo];"
+     f"[b]scale={W}:-2:flags=lanczos,scale={int(W*2.2)}:-2,zoompan=z='1.0+0.05*on/({dd}*30)':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=1:s={W}x{int(W*654/1062)//2*2}:fps=30[jogo];"
+     f"[fundo][jogo]overlay=0:(H-h)/2-120,setsar=1",
      '-c:v','libx264','-crf','16',V+'/fut.mp4'])
 fc=(f"[0:v]scale={2*W}:{2*H}:flags=lanczos,zoompan=z='{expr}':x='iw/2-iw/zoom/2':y='(ih-ih/zoom)*0.57':d=1:s={W}x{H}:fps=30,setsar=1,split=2[z0][z1];"
     f"[z1]crop={W}:{H//2}:0:{int(H*0.27)}[ela];"
