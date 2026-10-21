@@ -404,6 +404,15 @@ tr.total td{font-weight:700;color:var(--creme)}
 .plat-lista b{color:var(--creme)}
 /* barra fixa no celular */
 .fixo{display:none}
+/* bloco vitalicio */
+.vital-explica{padding-block:34px}
+.vital-explica .caixa{display:flex;gap:28px;align-items:center;border:1px solid var(--rosa);border-radius:18px;padding:28px 34px;background:linear-gradient(90deg,rgba(199,62,92,.14),rgba(43,7,57,.35))}
+.vital-explica .inf{font-family:var(--display);font-size:84px;line-height:.8;color:var(--destaque);flex:none}
+.vital-explica h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.2vw,40px);margin:0 0 8px;color:var(--creme)}
+.vital-explica p{margin:0;font-size:18px;color:var(--texto);max-width:70ch}
+.vital-explica p b{color:var(--creme)}
+.vital-explica small{display:block;margin-top:10px;font-size:14px;color:var(--suave)}
+@media (max-width:640px){.vital-explica .caixa{flex-direction:column;align-items:flex-start;gap:10px;padding:22px 20px}.vital-explica .inf{font-size:64px}}
 /* faq */
 .faq details{border-top:1px solid var(--linha);padding-block:18px}
 .faq summary{cursor:pointer;font-family:var(--display);font-size:24px;font-weight:600;list-style:none}
@@ -581,6 +590,15 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <div><b>300 h+</b><span>de aula no Olimpo</span></div>
   <div><b>100%</b><span>online e gravado</span></div>
 </div></div>
+
+<section class="vital-explica" aria-label="O que é o acesso vitalício"><div class="wrap"><div class="caixa">
+  <div class="inf" aria-hidden="true">∞</div>
+  <div>
+    <h2>Vitalício é sem prazo de validade.</h2>
+    <p><b>Não é 5 anos, não é 10.</b> Você compra uma vez e a formação é sua, com todas as atualizações dela. Não precisa renovar, não tem data para acabar. É diferente do FSA ONE, que tinha 5 anos de acesso.</p>
+    <small>Acesso garantido enquanto a plataforma de cursos da FSA estiver ativa.</small>
+  </div>
+</div></div></section>
 
 <section class="video-gabriel"><div class="wrap">
   <div class="vg-frame">
@@ -927,8 +945,8 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
 <section class="sec faq tom-vinho"><div class="wrap">
   <div class="eyebrow">Perguntas</div>
   <h2>Antes de escolher</h2>
+  <details open><summary>Vitalício é por quanto tempo? São 5 anos?</summary><p>Não. Vitalício é sem prazo de validade: não é 5 anos, não é 10. Você compra uma vez e o acesso não tem data para acabar e não precisa ser renovado. É diferente do FSA ONE, que tinha 5 anos de acesso. Enquanto a plataforma de cursos da FSA estiver ativa, as formações do seu pacote ficam disponíveis para você assistir quantas vezes quiser, com todas as atualizações delas.</p></details>
   <details><summary>Até quando dá para comprar com acesso vitalício?</summary><p>Até 31 de outubro de 2026, às 23h59 (horário de Brasília). Quem compra até lá fica com o acesso vitalício, sem data para acabar. Depois disso, as formações voltam a ser vendidas com acesso de 2 anos, e os cursos de Hemograma e Alergias Alimentares, com 1 ano.</p></details>
-  <details><summary>O que quer dizer acesso vitalício?</summary><p>Quer dizer que o seu acesso não tem data para acabar e não precisa ser renovado. Enquanto existir a plataforma de cursos da FSA, as formações do seu pacote ficam disponíveis para você assistir quantas vezes quiser.</p></details>
   <details><summary>As aulas são ao vivo?</summary><p>Não. Todas as formações são 100% gravadas. Você assiste no ritmo da sua agenda e volta a cada aula sempre que precisar.</p></details>
   <details><summary>Quando sair uma versão nova da formação, eu recebo?</summary><p>Você recebe todas as atualizações da formação que comprou: aulas revisadas e conteúdos novos que entrarem nela ficam no seu acesso, sem custo extra. Se um dia a FSA lançar uma formação nova, com outro nome ou outra versão (por exemplo, uma 4.0), ela é um produto à parte.</p></details>
   <details><summary>Posso parcelar?</summary><p>Sim, em até 12x no cartão: 12x de R$ 579,40 no Hipócrates ou no Galeno e 12x de R$ 969,11 no Olimpo. E à vista, inclusive no Pix, você tem desconto: R$ 5.947 no Hipócrates ou no Galeno e R$ 9.947 no Olimpo.</p></details>
