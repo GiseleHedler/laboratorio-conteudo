@@ -179,6 +179,7 @@ WrapStyle: 0
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Leg,Merriweather Black,78,&H00ECE8EA,&H00ECE8EA,&H00000000,&H8C000000,0,0,0,0,100,100,1,0,1,0,3,2,80,80,520,1
+Style: Gancho,Archivo Black,96,&H00ECE8EA,&H00ECE8EA,&H00000000,&H99000000,0,0,0,0,100,100,0,0,1,0,5,8,70,70,170,1
 Style: Topo,Merriweather Black,84,&H00ECE8EA,&H00ECE8EA,&H00000000,&H8C000000,0,0,0,0,100,100,1,0,1,0,3,8,70,70,100,1
 Style: Cima,Archivo Black,72,&H00ECE8EA,&H00ECE8EA,&H00000000,&H8C000000,0,0,0,0,100,100,1,0,1,0,3,8,80,80,300,1
 Style: Baixo,Cormorant Garamond,96,&H00ECE8EA,&H00ECE8EA,&H00000000,&H8C000000,1,1,0,0,100,100,0,0,1,0,3,2,70,70,330,1
@@ -187,6 +188,7 @@ Style: Arroba,Merriweather,38,&H30ECE8EA,&H30ECE8EA,&H00000000,&H8C000000,0,1,0,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,{fmt(0)},{fmt(ini['gancho'][1])},Gancho,,0,0,0,,{{\\fad(0,200)}}Abuso nem sempre\\Ncomeça com um {{\\c&H8E9FE2&}}tapa.
 Dialogue: 1,{fmt(CAV[0])},{fmt(CAV[1])},Topo,,0,0,0,,{{\\fad(150,200)}}Gorda e caveira. Em segundos.
 Dialogue: 1,{fmt(CTA[0])},{fmt(CTA[1])},Topo,,0,0,0,,{{\\fad(150,200)}}Escreve 5524
 """+arroba+'\n'.join(lin)+'\n'
