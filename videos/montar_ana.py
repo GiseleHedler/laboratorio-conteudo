@@ -207,10 +207,11 @@ g.save(T+'/degrade.png')
 run(['ffmpeg','-loglevel','error','-y','-i',T+'/base.mov','-map','0:a','-af','alimiter=limit=0.89','-c:a','pcm_s16le',T+'/audio_final.wav'])
 
 # palavras em cursiva grande pegando o topo da cabeça (recorte da pessoa quadro a quadro)
+SEM_SOMBRA='+'.join(f'between(t,{x:.3f},{y:.3f})' for x,y in DIVIDIDAS)   # sem sombra na tela dividida: cairia no rosto dela
 p1=subprocess.Popen(['ffmpeg','-loglevel','error','-i',T+'/base.mov','-map','0:v','-f','rawvideo','-pix_fmt','rgb24','-'],stdout=subprocess.PIPE)
 p2=subprocess.Popen(['ffmpeg','-loglevel','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r','30','-i','-',
      '-loop','1','-t',str(TOT),'-i',T+'/degrade.png','-i',T+'/audio_final.wav',
-     '-filter_complex',f"[0:v][1:v]overlay=enable='not({'+'+'.join(f'between(t,{x:.3f},{y:.3f})' for x,y in DIVIDIDAS)})'[v4];[v4]ass={T}/leg.ass:fontsdir={F}[v]",'-map','[v]','-map','2:a','-t',str(TOT),
+     '-filter_complex',f"[0:v][1:v]overlay=enable='not({SEM_SOMBRA})'[v4];[v4]ass={T}/leg.ass:fontsdir={F}[v]",'-map','[v]','-map','2:a','-t',str(TOT),
      '-c:v','libx264','-preset','medium','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',
      G+'/reel-ana.mp4'],stdin=subprocess.PIPE)
 import mediapipe as mp
