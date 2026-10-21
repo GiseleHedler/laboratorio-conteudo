@@ -30,7 +30,7 @@ ROTEIRO=[('cheia','gancho'),('ela',10.82,16.46),('dividida','caveira',(48.2,54.3
          ('preta',97.15,101.83,'O que a menina aprendeu em casa, a mulher, quando cresce, reconhece como|casa.'),
          ('dividida','ninguem',(105.8,111.6)),('ela',111.75,116.97),('dividida','chega',(121.2,124.0)),('ela',124.42,164.34),
          ('final',3.8,'Se você está com medo agora, liga|180.|É gratuito, funciona 24 horas e é sigiloso.')]
-CORTA=[(65.24,68.25)]   # "umas de cada vez, devagar o ba--": ela repetiu a frase
+CORTA=[(65.24,68.25),(33.95,42.90)]   # "umas de cada vez, devagar o ba--" (ela repetiu a frase) e "e ela riu... na frente dos outros" (ela tirou)
 PRE,POS=0.10,0.12
 r=subprocess.run(['ffmpeg','-i',P,'-af','silencedetect=n=-40dB:d=0.25','-f','null','-'],capture_output=True,text=True).stderr
 sil=list(zip([float(x) for x in re.findall(r'silence_start: ([0-9.]+)',r)],[float(x) for x in re.findall(r'silence_end: ([0-9.]+)',r)]))
@@ -39,7 +39,8 @@ def ts(s):
     h,mi,rr=s.split(':'); sec,ms=rr.split(','); return int(h)*3600+int(mi)*60+int(sec)+int(ms)/1000
 LEG=[]
 for blk in open(G+'/voz.srt',encoding='utf-8').read().strip().split('\n\n'):
-    l=blk.split('\n'); a,b=[ts(x.strip()) for x in l[1].split('-->')]; LEG.append((a,b,' '.join(l[2:])))
+    l=blk.split('\n'); a,b=[ts(x.strip()) for x in l[1].split('-->')]
+    if not any(c0<=a<c1 for c0,c1 in CORTA): LEG.append((a,b,' '.join(l[2:])))
 def falas(a,b):
     """trechos com fala entre a e b, sem as pausas"""
     seg=[]; cur=a-PRE
@@ -120,7 +121,7 @@ for i,p in enumerate(ROTEIRO):
                 ht=int(subprocess.run(['ffprobe','-v','error','-show_entries','stream=height','-of','csv=p=0',s+'_ana.mov'],capture_output=True,text=True).stdout.split()[0])
                 topo=f"[0:v]scale={W}:{ht}[topo];"; he,ye=H-ht,700   # rosto dela mais para cima
             else:
-                topo=f"[0:v]crop=810:720:{x0-405}:0,scale={W}:{HM}:flags=lanczos[topo];"; he,ye=HM,560
+                topo=f"[0:v]crop=810:720:{x0-405}:0,scale={W}:{HM}:flags=lanczos[topo];"; he,ye=HM,740   # corta a planta acima dela e sobe o rosto
             fc=(topo+f"[1:v]trim={l0}:{l1},setpts=PTS-STARTPTS,fps=30,scale={int(W*1.4)}:{int(H*1.4)}:flags=lanczos,"
                 f"crop={W}:{he}:{int((W*1.4-W)/2)}:{ye}"+(",split[f][r];[r]reverse[rr];[f][rr]concat=n=2:v=1:a=0" if vv else "")+
                 f",setpts=PTS*{f:.4f},fps=30[ela];[topo][ela]vstack,setsar=1[v]")
