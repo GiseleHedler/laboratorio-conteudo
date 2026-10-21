@@ -116,13 +116,13 @@ for i,p in enumerate(ROTEIRO):
         else:
             l0,l1=p[2][:2]; vv=len(p[2])>2
             f=d/((l1-l0)*(2 if vv else 1))   # a pausa dela é esticada ou encurtada para durar o mesmo que o trecho da Ana
-            if x0 is None:   # vídeo vertical do Instagram: inteiro na largura, ele mesmo desfocado atrás
-                topo=(f"[0:v]split=2[a][b];[a]scale=-2:{HM},crop={W}:{HM},gblur=sigma=28,eq=brightness=-0.2[fu];"
-                      f"[b]scale={W}:-2:flags=lanczos[t];[fu][t]overlay=0:(H-h)/2[topo];")
+            if x0 is None:   # vídeo do Instagram: inteiro na largura, colado no topo, e ela ocupa o resto (sem faixa desfocada no meio)
+                ht=int(subprocess.run(['ffprobe','-v','error','-show_entries','stream=height','-of','csv=p=0',s+'_ana.mov'],capture_output=True,text=True).stdout.split()[0])
+                topo=f"[0:v]scale={W}:{ht}[topo];"; he,ye=H-ht,700   # rosto dela mais para cima
             else:
-                topo=f"[0:v]crop=810:720:{x0-405}:0,scale={W}:{HM}:flags=lanczos[topo];"
+                topo=f"[0:v]crop=810:720:{x0-405}:0,scale={W}:{HM}:flags=lanczos[topo];"; he,ye=HM,560
             fc=(topo+f"[1:v]trim={l0}:{l1},setpts=PTS-STARTPTS,fps=30,scale={int(W*1.4)}:{int(H*1.4)}:flags=lanczos,"
-                f"crop={W}:{HM}:{int((W*1.4-W)/2)}:560"+(",split[f][r];[r]reverse[rr];[f][rr]concat=n=2:v=1:a=0" if vv else "")+
+                f"crop={W}:{he}:{int((W*1.4-W)/2)}:{ye}"+(",split[f][r];[r]reverse[rr];[f][rr]concat=n=2:v=1:a=0" if vv else "")+
                 f",setpts=PTS*{f:.4f},fps=30[ela];[topo][ela]vstack,setsar=1[v]")
             run(['ffmpeg','-loglevel','error','-y','-i',s+'_ana.mov','-i',P,'-filter_complex',fc,'-map','[v]','-map','0:a','-t',f'{d:.3f}']+ENC+[s+'.mov'])
             DIVIDIDAS.append((o,o+d))
