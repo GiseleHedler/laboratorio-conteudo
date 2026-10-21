@@ -1,5 +1,6 @@
 # Reel "Ana Hickmann" (Quinta da Mente): falas da Gisele intercaladas com trechos da entrevista da Ana
-# gancho com a Ana em tela cheia; nos outros trechos, Ana em cima e a Gisele ouvindo embaixo
+# gancho com a Ana ocupando a tela inteira; nos outros trechos, Ana em cima e a Gisele ouvindo embaixo (parada, olhando a câmera)
+# sem música: ela coloca a trilha depois
 import subprocess, re, numpy as np, wave
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 S='/tmp/claude-0/-home-user/f19a087c-4085-5aef-b35a-89b81156bb55/scratchpad'
@@ -23,10 +24,11 @@ TRECHOS={
  'chega':(ANA,[(763.97,764.40),(765.73,767.58)],[(0,0.5,'Chega.'),(0.6,2.28,'Eu não sou um objeto.')],560),
 }
 # roteiro na ordem: falas dela (tempo da gravação), trechos da Ana com ela ouvindo (pausa da gravação usada embaixo)
-ROTEIRO=[('cheia','gancho'),('ela',10.12,16.46),('dividida','caveira',(85.6,97.1)),('ela',26.50,44.67),
-         ('dividida','velha',(47.3,55.9)),('ela',56.25,71.39),('dividida','marca',(16.8,26.2)),('ela',78.05,85.53),
+# pausa dela usada embaixo: só trechos em que está parada; 'vv' = vai e volta, quando a pausa é mais curta que o trecho
+ROTEIRO=[('cheia','gancho'),('ela',10.82,16.46),('dividida','caveira',(48.2,54.3,'vv')),('ela',26.50,44.67),
+         ('dividida','velha',(117.5,121.0)),('ela',56.25,71.39),('dividida','marca',(16.5,20.8,'vv')),('ela',78.05,85.53),
          ('preta',97.15,101.83,'O que a menina aprendeu em casa, a mulher, quando cresce, reconhece como|casa.'),
-         ('dividida','ninguem',(102.1,111.5)),('ela',111.75,116.97),('dividida','chega',(117.3,124.2)),('ela',124.42,164.34),
+         ('dividida','ninguem',(105.8,111.6)),('ela',111.75,116.97),('dividida','chega',(121.2,124.0)),('ela',124.42,164.34),
          ('final',3.8,'Se você está com medo agora, liga|180.|É gratuito, funciona 24 horas e é sigiloso.')]
 CORTA=[(65.24,68.25)]   # "umas de cada vez, devagar o ba--": ela repetiu a frase
 PRE,POS=0.10,0.12
@@ -108,22 +110,23 @@ for i,p in enumerate(ROTEIRO):
         src,tr,leg,x0=TRECHOS[p[1]]
         corta(src,tr,s+'_ana',af=VOZ); d=dur(s+'_ana.mov')
         if p[0]=='cheia':
-            # Ana grande no centro (recorte nela) com ela mesma desfocada no fundo
-            fc=(f"[0:v]split=2[a][b];[a]crop=ih*9/16:ih:(iw-ih*9/16)/2:0,scale={W}:{H},gblur=sigma=30,eq=brightness=-0.2[fundo];"
-                f"[b]scale=-2:1100:flags=lanczos,crop={W}:1100:315:0[ana];[fundo][ana]overlay=0:180,setsar=1[v]")
+            # Ana cobrindo a tela inteira: recorte vertical nela, acima da tarja da TV
+            fc=f"[0:v]crop=324:576:397:0,scale={W}:{H}:flags=lanczos,unsharp=5:5:0.6,setsar=1[v]"
             run(['ffmpeg','-loglevel','error','-y','-i',s+'_ana.mov','-filter_complex',fc,'-map','[v]','-map','0:a']+ENC+[s+'.mov'])
         else:
-            l0,l1=p[2]; f=d/(l1-l0)   # a pausa dela é esticada ou encurtada para durar o mesmo que o trecho da Ana
+            l0,l1=p[2][:2]; vv=len(p[2])>2
+            f=d/((l1-l0)*(2 if vv else 1))   # a pausa dela é esticada ou encurtada para durar o mesmo que o trecho da Ana
             if x0 is None:   # vídeo vertical do Instagram: inteiro na largura, ele mesmo desfocado atrás
                 topo=(f"[0:v]split=2[a][b];[a]scale=-2:{HM},crop={W}:{HM},gblur=sigma=28,eq=brightness=-0.2[fu];"
                       f"[b]scale={W}:-2:flags=lanczos[t];[fu][t]overlay=0:(H-h)/2[topo];")
             else:
                 topo=f"[0:v]crop=810:720:{x0-405}:0,scale={W}:{HM}:flags=lanczos[topo];"
-            fc=(topo+f"[1:v]trim={l0}:{l1},setpts=(PTS-STARTPTS)*{f:.4f},fps=30,scale={int(W*1.4)}:{int(H*1.4)}:flags=lanczos,"
-                f"crop={W}:{HM}:{int((W*1.4-W)/2)}:420[ela];[topo][ela]vstack,setsar=1[v]")
+            fc=(topo+f"[1:v]trim={l0}:{l1},setpts=PTS-STARTPTS,fps=30,scale={int(W*1.4)}:{int(H*1.4)}:flags=lanczos,"
+                f"crop={W}:{HM}:{int((W*1.4-W)/2)}:560"+(",split[f][r];[r]reverse[rr];[f][rr]concat=n=2:v=1:a=0" if vv else "")+
+                f",setpts=PTS*{f:.4f},fps=30[ela];[topo][ela]vstack,setsar=1[v]")
             run(['ffmpeg','-loglevel','error','-y','-i',s+'_ana.mov','-i',P,'-filter_complex',fc,'-map','[v]','-map','0:a','-t',f'{d:.3f}']+ENC+[s+'.mov'])
             DIVIDIDAS.append((o,o+d))
-        for a,b,txt in leg: EV.append((o+a,o+min(b,d),txt))
+        for a,b,txt in leg: EV.append((o+a,o+min(b,d),txt,'Leg' if p[0]=='cheia' else 'Ana'))   # na tela dividida, legenda perto da Ana
         PECAS.append((p[1],o,o+d))
     d=dur(s+'.mov'); o+=d
     if p[0]=='ela': PECAS.append(('ela',o-d,o))
@@ -140,13 +143,18 @@ def m(t):
     return best[1]
 ini={k:(a,b) for k,a,b in PECAS if k!='ela'}
 
-# legendas: blocos de até 4 palavras
+ATRAS=[('o corpo',m(32.6),m(34.0),330),('normal',m(70.1),m(71.39),360),('acordada',m(146.6),m(148.38),320),('gaveta',m(150.6),m(153.4),360)]
+CAV=m(26.6),m(30.1); CTA=m(153.95),m(164.34)
+# legendas dela mudam de lugar e de fonte a cada frase (embaixo, em cima, mais baixo); em cima só quando não briga com título ou cursiva
+k=0
 for a,b,txt in LEG:
     if any(p[0]=='preta' and p[1]-0.3<=a<=p[2] for p in ROTEIRO): continue
-    EV.append((m(a),m(b),txt))
+    a,b=m(a),m(b); st=['Leg','Cima','Baixo'][k%3]; k+=1
+    if st=='Cima' and any(x0<b and x1>a for x0,x1 in [w[1:3] for w in ATRAS]+[CAV,CTA]): st='Baixo'
+    EV.append((a,b,txt,st))
 def fmt(t): return f'{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}'
 lin=[]
-for a,b,txt in sorted(EV):
+for a,b,txt,st in sorted(EV):
     pal=txt.split(); n=len(pal); ch=[]; i=0
     while i<n:
         k=min(4,n-i)
@@ -155,13 +163,12 @@ for a,b,txt in sorted(EV):
     tot=sum(len(c) for c in ch); t=a
     for c in ch:
         dt=(b-a)*len(c)/tot
-        if dt>0.1: lin.append(f'Dialogue: 0,{fmt(t)},{fmt(t+dt)},Leg,,0,0,0,,{c}')
+        if dt>0.1: lin.append(f'Dialogue: 0,{fmt(t)},{fmt(t+dt)},{st},,0,0,0,,{c}')
         t+=dt
-LIVRE=sorted(PRETAS+DIVIDIDAS); arroba=''; c0=ini['gancho'][1]
+LIVRE=sorted(PRETAS); arroba=''; c0=ini['gancho'][1]
 for a,b in LIVRE:
     if a>c0: arroba+=f'Dialogue: 1,{fmt(c0)},{fmt(a)},Arroba,,0,0,0,,@giselehedler\n'
     c0=b
-CAV=m(26.6),m(30.1); CTA=m(153.95),m(164.34)
 ass=f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {W}
@@ -172,7 +179,10 @@ WrapStyle: 0
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Leg,Merriweather Black,78,&H00ECE8EA,&H00ECE8EA,&H00000000,&H8C000000,0,0,0,0,100,100,1,0,1,0,3,2,80,80,520,1
 Style: Topo,Merriweather Black,84,&H00ECE8EA,&H00ECE8EA,&H00000000,&H8C000000,0,0,0,0,100,100,1,0,1,0,3,8,70,70,100,1
-Style: Arroba,Merriweather,40,&H30ECE8EA,&H30ECE8EA,&H00000000,&H8C000000,0,1,0,0,100,100,1,0,1,0,2,2,70,70,440,1
+Style: Cima,Archivo Black,72,&H00ECE8EA,&H00ECE8EA,&H00000000,&H8C000000,0,0,0,0,100,100,1,0,1,0,3,8,80,80,300,1
+Style: Baixo,Cormorant Garamond,96,&H00ECE8EA,&H00ECE8EA,&H00000000,&H8C000000,1,1,0,0,100,100,0,0,1,0,3,2,70,70,330,1
+Style: Ana,Archivo Black,64,&H00ECE8EA,&H00ECE8EA,&H00000000,&H66140A1E,0,0,0,0,100,100,1,0,3,14,0,2,90,90,1150,1
+Style: Arroba,Merriweather,38,&H30ECE8EA,&H30ECE8EA,&H00000000,&H8C000000,0,1,0,0,100,100,1,0,1,0,2,2,70,70,50,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -190,20 +200,10 @@ for y in range(H):
     dr.line([(0,y),(W,y)],fill=(0,0,0,a))
 g.save(T+'/degrade.png')
 
-# áudio: trilha por partes (gancho sem música), abaixa quando alguém fala
-run(['ffmpeg','-loglevel','error','-y','-i',T+'/base.mov','-map','0:a','-c:a','pcm_s16le',T+'/voz.wav'])
-CORTES=[ini['gancho'][1],m(56.3),ini['ninguem'][0],m(124.5),TOT]
-CLIMAS=['misterio','sombrio','susto','resolucao']
-run(['python3','/home/user/laboratorio-conteudo/videos/musica_secoes.py',T+'/musica.wav',str(TOT)]+
-    [f'{a:.3f}:{b:.3f}:{c}' for a,b,c in zip(CORTES,CORTES[1:],CLIMAS)])
-run(['ffmpeg','-loglevel','error','-y','-i',T+'/voz.wav','-i',T+'/musica.wav','-filter_complex',
-     f"[0:a]asplit=2[voz][sc];"
-     f"[1:a]aresample=48000,atrim=0:{TOT},volume=0.32,afade=t=out:st={TOT-1.5}:d=1.5[mus];"
-     f"[mus][sc]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=400[musd];"
-     f"[voz][musd]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.89",'-c:a','pcm_s16le',T+'/audio_final.wav'])
+# áudio: só as vozes (a trilha ela põe na edição)
+run(['ffmpeg','-loglevel','error','-y','-i',T+'/base.mov','-map','0:a','-af','alimiter=limit=0.89','-c:a','pcm_s16le',T+'/audio_final.wav'])
 
 # palavras em cursiva grande pegando o topo da cabeça (recorte da pessoa quadro a quadro)
-ATRAS=[('o corpo',m(32.6),m(34.0),330),('normal',m(70.1),m(71.39),360),('acordada',m(146.6),m(148.38),320),('gaveta',m(150.6),m(153.4),360)]
 p1=subprocess.Popen(['ffmpeg','-loglevel','error','-i',T+'/base.mov','-map','0:v','-f','rawvideo','-pix_fmt','rgb24','-'],stdout=subprocess.PIPE)
 p2=subprocess.Popen(['ffmpeg','-loglevel','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r','30','-i','-',
      '-loop','1','-t',str(TOT),'-i',T+'/degrade.png','-i',T+'/audio_final.wav',
