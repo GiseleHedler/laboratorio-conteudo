@@ -39,14 +39,16 @@ for bi,(z,balao,subs) in enumerate(BL):
             pcs=pausas_fala.pedacos(WAV,a,b)
             X=0.06; V=1.08
             fcs=[];vs=[];as_=[]
+            pds=[]
             for q,(pa,pb) in enumerate(pcs):
-                fcs.append(f"[0:v]trim={pa-a:.3f}:{pb-a:.3f},setpts=PTS-STARTPTS,{vf(z)}[pv{q}]")
-                fcs.append(f"[0:a]aresample=48000,atrim={pa-a:.3f}:{pb-a:.3f},asetpts=PTS-STARTPTS[pa{q}]")
-            R=pcs[0][1]-pcs[0][0]; v='pv0'; au='pa0'
+                pd=round((pb-pa)*30)/30; pds.append(pd)
+                fcs.append(f"[0:v]trim={pa-a:.3f}:{pa-a+pd+0.1:.3f},setpts=PTS-STARTPTS,{vf(z)},tpad=stop_mode=clone:stop_duration=0.2,trim=0:{pd:.4f},setpts=PTS-STARTPTS[pv{q}]")
+                fcs.append(f"[0:a]aresample=48000,atrim={pa-a:.3f}:{pa-a+pd:.4f},asetpts=PTS-STARTPTS,apad,atrim=0:{pd:.4f}[pa{q}]")
+            R=pds[0]; v='pv0'; au='pa0'
             for q in range(1,len(pcs)):
-                fcs.append(f"[{v}][pv{q}]xfade=transition=fade:duration={X}:offset={R-X:.3f}[xv{q}]")
+                fcs.append(f"[{v}][pv{q}]xfade=transition=fade:duration={X}:offset={R-X:.4f}[xv{q}]")
                 fcs.append(f"[{au}][pa{q}]acrossfade=d={X}[xa{q}]")
-                v,au=f'xv{q}',f'xa{q}'; R+=pcs[q][1]-pcs[q][0]-X
+                v,au=f'xv{q}',f'xa{q}'; R+=pds[q]-X
             d=round(round(R/V*30)/30,4)
             fcs.append(f"[{v}]setpts=PTS/{V},fps=30,trim=0:{d},tpad=stop_mode=clone:stop_duration=0.2,trim=0:{d},setpts=PTS-STARTPTS[v]")
             fcs.append(f"[{au}]atempo={V},atrim=0:{d},asetpts=PTS-STARTPTS,afade=t=in:d=0.02,afade=t=out:st={d-0.03:.3f}:d=0.03,apad,atrim=0:{d}[a]")
@@ -55,6 +57,8 @@ for bi,(z,balao,subs) in enumerate(BL):
             linha.append(('leg',t,t+d,txt))
             if selo: linha.append(('selo',t))
         subprocess.run(cmd,check=True); pecas.append(out); t+=d; n+=1
+        dd=subprocess.run(['ffprobe','-v','error','-show_entries','stream=duration','-of','csv=p=0',out],capture_output=True,text=True).stdout.split()
+        if len(dd)>=2 and abs(float(dd[0])-float(dd[1]))>0.05: print('AVISO dessincronia',out,dd)
     if balao: linha.append(('balao',ini_bloco,balao))
     if bi==len(BL)-1: linha.append(('fim',ini_bloco+1.1))
 TOTAL=t
