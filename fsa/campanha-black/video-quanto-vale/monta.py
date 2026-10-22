@@ -63,7 +63,9 @@ for bi,(z,balao,subs) in enumerate(BL):
             linha.append(('leg',t,t+d,txt))
             if txt.startswith('O vitalício termina'): FIM_T=t
             if selo: linha.append(('selo',t))
-        subprocess.run(cmd,check=True); pecas.append(out); t+=d; n+=1
+        import hashlib; hsh=hashlib.md5(' '.join(map(str,cmd)).encode()).hexdigest()[:8]; cache=out.replace('.mov',f'_{hsh}.mov'); cmd[-1]=cache
+        if not os.path.exists(cache): subprocess.run(cmd,check=True)
+        out=cache; pecas.append(out); t+=d; n+=1
         dd=subprocess.run(['ffprobe','-v','error','-show_entries','stream=duration','-of','csv=p=0',out],capture_output=True,text=True).stdout.split()
         if len(dd)>=2 and abs(float(dd[0])-float(dd[1]))>0.05: print('AVISO dessincronia',out,dd)
     if balao: linha.append(('balao',ini_bloco,balao))
@@ -109,13 +111,15 @@ for e in linha:
         add(e[3],e[1]+0.2,e[2],'(W-w)/2',960); pops.append(e[1]+0.2)
     elif e[0]=='pop': pops.append(e[1])
 fc.append(f"[{prev}]ass={TMP}/leg.ass:fontsdir=/root/.fonts[vout]")
-ins+=['-i',P+'pop.wav','-i','trilha/sweet-piano.mp3']; pi=k; mi=k+1
-fc.append("[0:a]highpass=f=80,loudnorm=I=-14:TP=-1.5,aresample=48000,asplit=2[voz][sc]")
-fc.append(f"[{mi}:a]aresample=48000,atrim=0:{TOTAL:.3f},volume=0.22,afade=t=in:d=0.8,afade=t=out:st={TOTAL-1.5:.3f}:d=1.5[mus0]")
-fc.append("[mus0][sc]sidechaincompress=threshold=0.04:ratio=6:attack=20:release=400[mus]")
-fc.append(f"[{pi}:a]asplit={len(pops)}"+''.join(f'[p{j}]' for j in range(len(pops))))
-for j,T in enumerate(pops): fc.append(f"[p{j}]adelay={int(T*1000)}:all=1,volume=0.4[q{j}]")
-fc.append('[voz][mus]'+''.join(f'[q{j}]' for j in range(len(pops)))+f"amix=inputs={len(pops)+2}:normalize=0:duration=first,alimiter=limit=0.9,apad,atrim=0:{TOTAL:.3f}[aout]")
+# audio mixado a parte (voz + trilha com ducking + pops) e depois juntado ao video
+afc=['[0:a]highpass=f=80,loudnorm=I=-14:TP=-1.5,aresample=48000,asplit=2[voz][sc]',
+     f'[2:a]aresample=48000,atrim=0:{TOTAL:.3f},volume=0.22,afade=t=in:d=0.8,afade=t=out:st={TOTAL-1.5:.3f}:d=1.5[mus0]',
+     '[mus0][sc]sidechaincompress=threshold=0.04:ratio=6:attack=20:release=400[mus]',
+     f'[1:a]asplit={len(pops)}'+''.join(f'[p{j}]' for j in range(len(pops)))]
+for j,T in enumerate(pops): afc.append(f'[p{j}]adelay={int(T*1000)}:all=1,volume=0.4[q{j}]')
+afc.append('[voz][mus]'+''.join(f'[q{j}]' for j in range(len(pops)))+f'amix=inputs={len(pops)+2}:normalize=0:duration=first,alimiter=limit=0.9,apad,atrim=0:{TOTAL:.3f}[aout]')
+subprocess.run(['ffmpeg','-v','error','-y','-i',f'{TMP}/base.mov','-i',P+'pop.wav','-i','trilha/sweet-piano.mp3','-filter_complex',';'.join(afc),'-map','[aout]','-c:a','pcm_s16le','-ar','48000',f'{TMP}/mix.wav'],check=True)
+ins+=['-i',f'{TMP}/mix.wav']; ai=k
 out=f'video-quanto-vale-{VERSAO}.mp4'
-subprocess.run(['ffmpeg','-v','error','-y',*ins,'-filter_complex',';'.join(fc),'-map','[vout]','-map','[aout]','-c:v','libx264','-crf','20','-preset','medium','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart','-t',f'{TOTAL:.2f}',out],check=True)
+subprocess.run(['ffmpeg','-v','error','-y',*ins,'-filter_complex',';'.join(fc),'-map','[vout]','-map',f'{ai}:a','-c:v','libx264','-crf','20','-preset','medium','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart','-t',f'{TOTAL:.2f}',out],check=True)
 print('ok',out)
