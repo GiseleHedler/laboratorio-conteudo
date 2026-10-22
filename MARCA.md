@@ -27,6 +27,13 @@ Apoio:
 - **Merriweather** (serifada): textos e títulos. Títulos em negrito (peso 800 a 900), texto no peso normal, itálico em frases de apoio.
 - **Satisfy** (cursiva): só em palavras-chave, grande. Rose gold em fundo escuro; em fundo claro, framboesa. Nunca em frase longa.
 
+### Reels e capas (escolhidas pela Gisele, arquivos em `marca/fontes/`)
+
+- **Poppins Black** (letra redonda e grossa): títulos, capas e frases para chamar atenção. Grande, branca, em minúsculas, letras um pouco mais juntas que o normal.
+- **Poppins Medium** (a mesma, sem negrito): legendas escritas e textos de apoio no vídeo, em tamanho menor.
+- **Pinyon Script** (cursiva fina e inclinada, a do "luxo"): uma palavra-chave por título, grande, rose gold, levemente girada para cima e cruzando a parte de baixo da linha anterior, como assinatura. Exemplo: "hoje tem quinta da mente, *madame.*"
+- A Pinyon tem traço fino: só funciona grande e com sombra escura atrás. Em palavra pequena ou em cima de fundo rosa/claro ela some; nesses casos, usar a Satisfy.
+
 ## Regras de uso
 
 - Fundo escuro: texto branco, destaque rose gold.
