@@ -203,8 +203,31 @@ for y in range(H):
     dr.line([(0,y),(W,y)],fill=(0,0,0,a))
 g.save(T+'/degrade.png')
 
-# áudio: só as vozes (a trilha ela põe na edição)
-run(['ffmpeg','-loglevel','error','-y','-i',T+'/base.mov','-map','0:a','-af','alimiter=limit=0.89','-c:a','pcm_s16le',T+'/audio_final.wav'])
+# áudio: trilhas do Envato Elements que ela escolheu, uma por parte da história (gancho sem música);
+# a trilha abaixa quando alguém fala e volta nas pausas
+run(['ffmpeg','-loglevel','error','-y','-i',T+'/base.mov','-map','0:a','-c:a','pcm_s16le',T+'/voz.wav'])
+M=S+'/trilhas'
+TRILHAS=[  # (início no vídeo, fim, arquivo, onde começar na música)
+ (ini['gancho'][1],m(56.3),M+'/cold/gentlejammers_cold-revenge_main-03_underscore.wav',4),    # a história: tensão contida
+ (m(56.3),ini['ninguem'][0],M+'/sad/Top Flow - Emotional.wav',0),                            # como o abuso começa, a marca, a menina
+ (ini['ninguem'][0],ini['chega'][1],M+'/cold/gentlejammers_cold-revenge_main-01_full.wav',88), # ninguém percebeu, sobe até o "chega"
+ (ini['chega'][1],CTA[0],M+'/heart/alexgrohl_heart_main_full.wav',40),                        # ela fala com quem assiste
+ (CTA[0],TOT,M+'/hope/Hope for Humanity/Hope for Humanity.wav',24)]                          # convite para a Quinta
+SR=48000; mus=np.zeros((int(SR*(TOT+1)),2),np.float32); XF=0.8
+for a0,b0,f,off in TRILHAS:
+    d=b0-a0+XF
+    raw=subprocess.run(['ffmpeg','-loglevel','error','-ss',str(off),'-t',f'{d:.3f}','-i',f,'-ac','2','-ar',str(SR),'-f','f32le','-'],capture_output=True).stdout
+    x=np.frombuffer(raw,np.float32).reshape(-1,2).copy()
+    x*=0.12/(np.sqrt(np.mean(x**2))+1e-9)                    # mesmo volume percebido entre as trilhas
+    nf=int(XF*SR); x[:nf]*=np.linspace(0,1,nf)[:,None]; x[-nf:]*=np.linspace(1,0,nf)[:,None]
+    i=int(max(0,a0-XF/2)*SR); j=min(len(mus),i+len(x)); mus[i:j]+=x[:j-i]
+with wave.open(T+'/musica.wav','wb') as w:
+    w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(mus,-1,1)*32767).astype(np.int16).tobytes())
+run(['ffmpeg','-loglevel','error','-y','-i',T+'/voz.wav','-i',T+'/musica.wav','-filter_complex',
+     f"[0:a]asplit=2[voz][sc];"
+     f"[1:a]atrim=0:{TOT},volume=0.65,afade=t=out:st={TOT-2.0}:d=2.0[mus];"
+     f"[mus][sc]sidechaincompress=threshold=0.04:ratio=4:attack=20:release=450[musd];"
+     f"[voz][musd]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.89",'-c:a','pcm_s16le',T+'/audio_final.wav'])
 
 # palavras em cursiva grande pegando o topo da cabeça (recorte da pessoa quadro a quadro)
 SEM_SOMBRA='+'.join(f'between(t,{x:.3f},{y:.3f})' for x,y in DIVIDIDAS)   # sem sombra na tela dividida: cairia no rosto dela
