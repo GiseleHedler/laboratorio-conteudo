@@ -18,10 +18,17 @@ BL=[
  (1.12,None,[(130.75,136.40,'A criança que reage a tudo que come, ou aquele adulto que tá sempre passando mal depois das refeições.',0),(137.05,138.60,'Alergias Alimentares.',0,P+'arte-ale.png')]),
  (1.00,None,[(146.00,149.20,'E o caso que junta tudo isso ao mesmo tempo:',0),(149.20,153.00,'Formação Avançada em Nutrição Funcional.',0,P+'arte-ava.png')]),
  (1.12,None,[(170.35,175.55,'Não é um curso, são formações completas pra enxergar o ser humano inteiro.',0)]),
- (1.00,None,[(192.70,195.35,'E agora com uma diferença: é vitalício.',0,P+'pill-vit.png'),(195.70,201.25,'Cada um desses casos pode chegar amanhã, na semana que vem ou daqui a cinco anos.',0),(205.45,207.95,'Quando chegar, a aula vai tá lá.',0)]),
+ (1.00,None,[(192.70,195.35,'E agora com uma diferença: é vitalício.',0),(195.70,201.25,'Cada um desses casos pode chegar amanhã, na semana que vem ou daqui a cinco anos.',0),(205.45,207.95,'Quando chegar, a aula vai tá lá.',0)]),
  (1.12,None,[(241.15,246.20,'Comprando as formações separadas, seria R$ 19.970.',0,P+'pill-preco.png'),(247.05,250.75,'Na Black Vitalícia, menos da metade.',0,P+'pill-preco.png'),(251.20,256.10,'Todas as formações tuas pra sempre, pro resto da tua vida.',0)]),
  (1.00,None,[(300.65,305.00,'Se tu já estudou na FSA, o teu valor é ainda mais especial.',0),(305.80,308.40,'15 dias de garantia incondicional.',0),(326.95,330.20,'O vitalício termina dia 31/10.',0)]+([(330.75,333.75,'Comenta BLACK26 que eu te mando o link.',0)] if VERSAO=='organico' else [('HOLD',2.2,330.20)])),
 ]
+# frases fortes: texto animado ao lado do Gabriel, linha a linha ('|' quebra, '*' = itálico grande)
+KIN={14.90:'QUANTO|*vale*|SABER|O QUE FAZER|COM CADA|*paciente?*',
+     18.85:'QUE ENTRA|NO TEU|*consultório?*',
+     170.35:'NÃO É|UM CURSO.|SÃO|*formações*|COMPLETAS.',
+     192.70:'E AGORA|É|*vitalício.*',
+     205.45:'QUANDO|CHEGAR,|*a aula*|VAI TÁ LÁ.',
+     251.20:'TODAS|AS FORMAÇÕES|*pra*|*sempre.*'}
 def vf(z):
     w=int(2160/z)//2*2;h=int(3840/z)//2*2;x=(2160-w)//2;y=int(min(max(0.40*3840-h/2,0),3840-h))
     return f"transpose=1,crop={w}:{h}:{x}:{y},scale=1080:1920:flags=lanczos,setsar=1,fps=30,format=yuv420p"
@@ -60,7 +67,7 @@ for bi,(z,balao,subs) in enumerate(BL):
             fcs.append(f"[{au}]atempo={V},atrim=0:{d},asetpts=PTS-STARTPTS,afade=t=in:d=0.02,afade=t=out:st={d-0.03:.3f}:d=0.03,apad,atrim=0:{d}[a]")
             if len(s)>4: linha.append(('arte',t,t+d,s[4]))
             cmd=['ffmpeg','-v','error','-y','-ss',str(a),'-t',str(b-a+0.3),'-i',SRC,'-filter_complex',';'.join(fcs),'-map','[v]','-map','[a]','-c:v','libx264','-crf','16','-preset','fast','-c:a','pcm_s16le','-ar','48000',out]
-            linha.append(('leg',t,t+d,txt))
+            linha.append(('kin',t,t+d,KIN[a],txt) if a in KIN else ('leg',t,t+d,txt))
             if txt.startswith('O vitalício termina'): FIM_T=t
             if selo: linha.append(('selo',t))
         import hashlib; hsh=hashlib.md5(' '.join(map(str,cmd)).encode()).hexdigest()[:8]; cache=out.replace('.mov',f'_{hsh}.mov'); cmd[-1]=cache
@@ -83,6 +90,19 @@ ass=["[Script Info]","ScriptType: v4.00+","PlayResX: 1080","PlayResY: 1920","Wra
 fim_t=[e[1] for e in linha if e[0]=='fim'][0]
 for e in linha:
     if e[0]=='leg' and e[1]<fim_t-0.05: ass.append(f"Dialogue: 0,{ts(e[1])},{ts(min(e[2],fim_t))},L,,0,0,0,,{{\\fad(60,60)}}{e[3]}")
+ass.insert(9,"Style: K,Archivo Black,96,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1")
+for e in linha:
+    if e[0]!='kin': continue
+    T0,T1,ls=e[1],e[2],e[3].split('|'); tot=sum(len(l) for l in ls); acc=0; y=330; fr=e[4].lower(); pos=0
+    for l in ls:
+        w=l.replace('*','').lower().rstrip('.,?'); i=fr.find(w,pos)
+        if i>=0: pos=i+len(w); T=T0+(T1-T0)*max(i-1,0)/len(fr)
+        else: T=T0+0.85*(T1-T0)*acc/tot
+        acc+=len(l)
+        it=l.startswith('*'); tx=l.replace('*','')
+        fs=260 if it else 140; fn='Cormorant Garamond Light' if it else 'Archivo Black'
+        ass.append(f"Dialogue: 1,{ts(T)},{ts(T1)},K,,0,0,0,,{{\\pos(60,{y})\\fn{fn}\\fs{fs}\\i{int(it)}\\b{int(it)}\\bord6\\3c&H000000&\\3a&HA0&\\blur8\\fscx40\\fscy40\\alpha&HFF&\\t(0,200,\\fscx108\\fscy108\\alpha&H00&)\\t(200,320,\\fscx100\\fscy100)\\fad(0,120)}}{tx}")
+        y+=int(fs*(0.92 if it else 1.0))
 open(f'{TMP}/leg.ass','w').write('\n'.join(ass)+'\n')
 # overlays
 ins=['-i',f'{TMP}/base.mov']; fc=[]; prev='0:v'; k=1; pops=[]
