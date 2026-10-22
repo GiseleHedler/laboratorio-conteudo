@@ -8,7 +8,7 @@ B='baloes/'; P='pecas/'
 BL=[
  (1.00,B+'balao-0a-dois-anos-e-pouco.png',[(132.60,135.25,'Acesso de 2 anos é pouco?',0),(136.25,137.10,'Resolvido.',1),(137.60,139.60,'Não vão ser dois, nem cinco.',0),(140.20,142.90,'Acesso vitalício, teu pra sempre.',0)]),
  (1.12,B+'balao-0b-nao-tenho-tempo.png',[(148.20,150.95,'Mas eu não tenho tempo agora.',0),(151.80,153.80,'Resolvido também, é teu pra sempre.',1),(154.25,160.35,'Começa quando quiser, estuda no teu ritmo e vai ter os cursos quando aquele caso difícil aparecer.',0)]),
- (1.00,B+'balao-1-so-queria-exames.png',[(172.95,175.70,'Mas eu só queria o de exames.',0),(176.00,178.25,'Resolvido, tem o Galeno.',1),(178.75,185.05,'Exames Laboratoriais, Fertilidade e Gestação, Saúde Hormonal e Alergias.',0)]),
+ (1.00,B+'balao-1-so-queria-exames.png',[(172.95,175.70,'Mas eu só queria o de exames.',0),(176.00,178.25,'Resolvido, tem o Galeno.',1),(178.75,185.05,'Exames Laboratoriais, Fertilidade e Gestação, Saúde Hormonal e Alergias.',0,P+'card-gal.png')]),
  (1.12,B+'balao-2-e-se-eu-quiser-tudo.png',[(216.30,217.95,'E se eu quiser tudo?',0),(218.65,219.70,'Olimpo.',1),('CARD',P+'olimpo.png',2.8,219.70),(227.00,229.45,'São mais de 300 horas aula.',0)]),
  (1.00,B+'balao-3-deve-ser-carissima.png',[(238.50,240.75,'Deve ser caríssimo.',0),('CARD',P+'cinquenta.png',2.4,240.75),(248.55,253.15,'E se tu é ou já foi aluno da FSA, tem um valor ainda mais especial.',0)]),
  (1.12,B+'balao-4-e-se-eu-nao-gostar.png',[(279.60,280.85,'E se eu não gostar?',0),(281.90,283.95,'15 dias de garantia incondicional.',1)]),
@@ -26,15 +26,17 @@ for bi,(z,balao,subs) in enumerate(BL):
             _,card,dur,ft=s
             cmd=['ffmpeg','-v','error','-y','-ss',str(ft),'-i',SRC,'-loop','1','-i',card,'-f','lavfi','-i','anullsrc=r=48000:cl=stereo',
                  '-filter_complex',f"[0:v]trim=end_frame=1,{vf(z)},tpad=stop_mode=clone:stop_duration={dur},trim=0:{dur}[b];[1:v]format=rgba,fade=t=in:d=0.15:alpha=1[c];[b][c]overlay=0:0:shortest=1,trim=0:{dur},setpts=PTS-STARTPTS[v]",
-                 '-map','[v]','-map','2:a','-t',str(dur),'-c:v','libx264','-crf','16','-preset','fast','-c:a','pcm_s16le',out]
+                 '-map','[v]','-map','2:a','-t',str(dur),'-ar','48000','-c:v','libx264','-crf','16','-preset','fast','-c:a','pcm_s16le',out]
             linha.append(('pop',t)); d=dur
         elif s[0]=='HOLD':
             _,dur,ft=s
-            cmd=['ffmpeg','-v','error','-y','-ss',str(ft),'-i',SRC,'-f','lavfi','-i','anullsrc=r=48000:cl=stereo','-filter_complex',f"[0:v]trim=end_frame=1,{vf(z)},tpad=stop_mode=clone:stop_duration={dur},trim=0:{dur},setpts=PTS-STARTPTS[v]",'-map','[v]','-map','1:a','-t',str(dur),'-c:v','libx264','-crf','16','-preset','fast','-c:a','pcm_s16le',out]
+            cmd=['ffmpeg','-v','error','-y','-ss',str(ft),'-i',SRC,'-f','lavfi','-i','anullsrc=r=48000:cl=stereo','-filter_complex',f"[0:v]trim=end_frame=1,{vf(z)},tpad=stop_mode=clone:stop_duration={dur},trim=0:{dur},setpts=PTS-STARTPTS[v]",'-map','[v]','-map','1:a','-t',str(dur),'-ar','48000','-c:v','libx264','-crf','16','-preset','fast','-c:a','pcm_s16le',out]
             d=dur
         else:
-            a,b,txt,selo=s; d=round(b-a,3)
-            cmd=['ffmpeg','-v','error','-y','-ss',str(a),'-t',str(d),'-i',SRC,'-vf',vf(z),'-af','afade=t=in:d=0.02,afade=t=out:st=%.3f:d=0.03'%(d-0.03),'-c:v','libx264','-crf','16','-preset','fast','-c:a','pcm_s16le','-ar','48000',out]
+            a,b,txt,selo=s[:4]; d=round(round((b-a)*30)/30,4)
+            if len(s)>4: linha.append(('arte',t,t+d,s[4]))
+            fcs=f"[0:v]{vf(z)},trim=0:{d},tpad=stop_mode=clone:stop_duration=0.2,trim=0:{d},setpts=PTS-STARTPTS[v];[0:a]aresample=48000,atrim=0:{d},asetpts=PTS-STARTPTS,afade=t=in:d=0.02,afade=t=out:st={d-0.03:.3f}:d=0.03,apad,atrim=0:{d}[a]"
+            cmd=['ffmpeg','-v','error','-y','-ss',str(a),'-t',str(d+0.3),'-i',SRC,'-filter_complex',fcs,'-map','[v]','-map','[a]','-c:v','libx264','-crf','16','-preset','fast','-c:a','pcm_s16le','-ar','48000',out]
             linha.append(('leg',t,t+d,txt))
             if selo: linha.append(('selo',t))
         subprocess.run(cmd,check=True); pecas.append(out); t+=d; n+=1
@@ -50,8 +52,9 @@ ass=["[Script Info]","ScriptType: v4.00+","PlayResX: 1080","PlayResY: 1920","Wra
 "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
 "Style: L,Archivo Black,58,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,5,2,2,80,80,430,1","","[Events]",
 "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
+fim_t=[e[1] for e in linha if e[0]=='fim'][0]
 for e in linha:
-    if e[0]=='leg': ass.append(f"Dialogue: 0,{ts(e[1])},{ts(e[2])},L,,0,0,0,,{{\\fad(60,60)}}{e[3]}")
+    if e[0]=='leg' and e[1]<fim_t-0.05: ass.append(f"Dialogue: 0,{ts(e[1])},{ts(min(e[2],fim_t))},L,,0,0,0,,{{\\fad(60,60)}}{e[3]}")
 open(f'{TMP}/leg.ass','w').write('\n'.join(ass)+'\n')
 # overlays
 ins=['-i',f'{TMP}/base.mov']; fc=[]; prev='0:v'; k=1; pops=[]
@@ -73,14 +76,20 @@ for e in linha:
     elif e[0]=='selo':
         add(P+'selo.png',e[1]+0.05,e[1]+1.5,'(W-w)/2',1000); pops.append(e[1]+0.05)
     elif e[0]=='fim':
-        add(P+('fim.png' if VERSAO=='organico' else 'fim2.png'),e[1],TOTAL,0,1000); pops.append(e[1])
+        add(P+('fim.png' if VERSAO=='organico' else 'fim2.png'),e[1],TOTAL,0,740); pops.append(e[1])
+        for j,c in enumerate(['card-hip-p.png','card-gal-p.png','card-oli-p.png']):
+            add(P+c,e[1]+0.3+0.35*j,TOTAL,'(W-w)/2',950+190*j); pops.append(e[1]+0.3+0.35*j)
+    elif e[0]=='arte':
+        add(e[3],e[1]+0.2,e[2],'(W-w)/2',960); pops.append(e[1]+0.2)
     elif e[0]=='pop': pops.append(e[1])
 fc.append(f"[{prev}]ass={TMP}/leg.ass:fontsdir=/root/.fonts[vout]")
-ins+=['-i',P+'pop.wav']; pi=k
-fc.append("[0:a]highpass=f=80,loudnorm=I=-14:TP=-1.5,aresample=48000[voz]")
+ins+=['-i',P+'pop.wav','-i','trilha/Uplifting.mp3']; pi=k; mi=k+1
+fc.append("[0:a]highpass=f=80,loudnorm=I=-14:TP=-1.5,aresample=48000,asplit=2[voz][sc]")
+fc.append(f"[{mi}:a]aresample=48000,atrim=0:{TOTAL:.3f},volume=0.22,afade=t=in:d=0.8,afade=t=out:st={TOTAL-1.5:.3f}:d=1.5[mus0]")
+fc.append("[mus0][sc]sidechaincompress=threshold=0.04:ratio=6:attack=20:release=400[mus]")
 fc.append(f"[{pi}:a]asplit={len(pops)}"+''.join(f'[p{j}]' for j in range(len(pops))))
 for j,T in enumerate(pops): fc.append(f"[p{j}]adelay={int(T*1000)}:all=1,volume=0.4[q{j}]")
-fc.append('[voz]'+''.join(f'[q{j}]' for j in range(len(pops)))+f"amix=inputs={len(pops)+1}:normalize=0:duration=first,alimiter=limit=0.9,apad,atrim=0:{TOTAL:.3f}[aout]")
+fc.append('[voz][mus]'+''.join(f'[q{j}]' for j in range(len(pops)))+f"amix=inputs={len(pops)+2}:normalize=0:duration=first,alimiter=limit=0.9,apad,atrim=0:{TOTAL:.3f}[aout]")
 out=f'video-resolvido-{VERSAO}.mp4'
 subprocess.run(['ffmpeg','-v','error','-y',*ins,'-filter_complex',';'.join(fc),'-map','[vout]','-map','[aout]','-c:v','libx264','-crf','20','-preset','medium','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart','-t',f'{TOTAL:.2f}',out],check=True)
 print('ok',out)
