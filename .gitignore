@@ -3,3 +3,7 @@
 __pycache__/
 dados/
 videos/*.mp4
+
+# videos editados ficam no Drive, nao no GitHub
+fsa/campanha-black/**/*.mp4
+fsa/campanha-black/**/*.mov
