@@ -188,7 +188,7 @@ Style: Arroba,Merriweather,38,&H30ECE8EA,&H30ECE8EA,&H00000000,&H8C000000,0,1,0,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,{fmt(0)},{fmt(ini['gancho'][1])},Gancho,,0,0,0,,{{\\fad(0,200)}}abuso nem sempre\\Ncomeça com um {{\\fnPlayfair Display\\b1\\i1\\fs150\\c&H8E9FE2&}}tapa.
+Dialogue: 1,{fmt(0)},{fmt(ini['gancho'][1])},Gancho,,0,0,0,,{{\\fad(0,200)\\q2}}abuso nem sempre\\Ncomeça com um\\N{{\\fnPlayfair Display\\b1\\i1\\fs210\\c&H8E9FE2&\\shad7\\4a&H30&\\frz6}}tapa.
 Dialogue: 1,{fmt(CAV[0])},{fmt(CAV[1])},Topo,,0,0,0,,{{\\fad(150,200)}}Gorda e caveira. Em segundos.
 Dialogue: 1,{fmt(CTA[0])},{fmt(CTA[1])},Topo,,0,0,0,,{{\\fad(150,200)}}Escreve 5524
 """+arroba+'\n'.join(lin)+'\n'
