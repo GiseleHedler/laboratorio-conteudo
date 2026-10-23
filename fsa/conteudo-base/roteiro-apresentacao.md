@@ -39,7 +39,7 @@ Pergunta de checagem: "Se numa semana só der para fazer uma coisa, qual tu faz?
 YouTube:
 
 - **Shorts:** os mesmos 5 reels da semana, repostados com título próprio para o YouTube.
-- **A live da semana:** ela sobe a gravação e cuida do título (com a palavra que a pessoa buscaria), da capa com foto real e texto grande, e da descrição com o resumo, os momentos principais e o link da newsletter. Uns 30 minutos por semana.
+- **A live da semana:** ela sobe a gravação e cuida do título (com a palavra que a pessoa buscaria), da thumb (regras abaixo) e da descrição com o resumo, os momentos principais e o link da newsletter. Uns 30 minutos por semana.
 - **Vídeo roteirizado (1 por semana):** de 8 a 15 minutos, com o Gabriel ou a Liliane, sobre o MESMO tema da newsletter, mais aprofundado. A pesquisa já está feita para a newsletter; o trabalho novo é o roteiro. A promessa do vídeo tem que aparecer nos primeiros 30 segundos.
 - **Thumb (capa) de todo vídeo:** sempre com ROSTO, nunca só nome ou texto. Rosto grande, com expressão que chama atenção (surpresa, dúvida, preocupação, apontando), em foto real feita para a thumb. Até 4 palavras em letra grande. Flecha ou círculo apontando para o elemento principal. Tem que dar para ler no tamanho do celular. O número que mostra se a thumb funciona é a taxa de cliques (CTR), no YouTube Studio.
 - Todo vídeo leva para a newsletter: link na descrição e no comentário fixado.
@@ -64,7 +64,7 @@ A automação da DM é montada pela pessoa das automações. Ela passa a palavra
 
 Toda sexta, ela manda **uma mensagem só** para a Gisele, com:
 
-1. **O pacote da semana seguinte:** os roteiros, os carrosséis, a newsletter e a captura, para aprovar.
+1. **O pacote da semana seguinte:** os roteiros dos reels, os carrosséis, a newsletter, a captura, o roteiro do vídeo do YouTube e as thumbs, para aprovar.
 2. **O relatório da semana que passou:** a aba 5 da planilha preenchida.
 
 Nada de mandar peça por peça durante a semana. A Gisele aprova tudo de uma vez, na sexta.
