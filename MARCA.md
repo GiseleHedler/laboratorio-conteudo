@@ -32,6 +32,8 @@ Apoio:
 - **Poppins Black** (letra redonda e grossa): títulos, capas e frases para chamar atenção. Grande, branca, em minúsculas, letras um pouco mais juntas que o normal.
 - **Poppins Medium** (a mesma, sem negrito): legendas escritas e textos de apoio no vídeo, em tamanho menor.
 - **Pinyon Script** (cursiva fina e inclinada, a do "luxo"): uma palavra-chave por título, grande, rose gold, levemente girada para cima e cruzando a parte de baixo da linha anterior, como assinatura. Exemplo: "hoje tem quinta da mente, *madame.*"
+- No fundo rosa, a cursiva vai em branco. No fundo roxo ou sobre foto, em rose gold.
+- Carrossel: alternar fundo roxo e fundo rosa, misturar Poppins Black com Medium em cada tela, cursiva só em uma ou duas telas (detalhe, nunca em todas) e uma ou duas telas com foto.
 - A Pinyon tem traço fino: só funciona grande e com sombra escura atrás. Em palavra pequena ou em cima de fundo rosa/claro ela some; nesses casos, usar a Satisfy.
 
 ## Regras de uso
@@ -94,6 +96,8 @@ Se for "trauma, gatilho, ferida da infância" sem essa virada, é genérico e n�
 - Saúde: doença e tratamento são fatos; o que muda é a travessia e a conclusão sobre si. Nunca "cura", nunca causa emocional de doença.
 - Herança se honra e se transforma; nunca se joga fora a família (evitar tom de ruptura ou de "a culpa é da mãe").
 - Ganchos: seguir a skill ganchos-gisele (filtro do dedo).
+- Crítica sempre na primeira pessoa do plural ("a gente", "façamos"), incluindo a Gisele. Elogio vai para "você", no singular.
+- Legenda com posição clara e crítica direta: ela gosta de abrir com um ditado ou frase popular quando couber. A crítica vai no comportamento e na cultura, nunca na pessoa; fatos de terceiros vêm atribuídos à fonte.
 - Nada de travessão.
 
 ## Antes de entregar
