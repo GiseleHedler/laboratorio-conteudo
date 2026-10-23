@@ -1,6 +1,6 @@
 # Roteiro para apresentar o novo jeito de trabalhar do conteúdo
 
-Para a gerente usar com a responsável pelo conteúdo. Tempo: uns 45 minutos. Material: a planilha "okr-conteudo-fsa" e a prévia da newsletter.
+Para a gerente usar com a responsável pelo conteúdo. Tempo: uma hora. Material: a planilha "okr-conteudo-fsa" e a prévia da newsletter.
 
 Dica: não mande a planilha antes da conversa. Apresente primeiro, mande depois.
 
