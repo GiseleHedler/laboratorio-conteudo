@@ -26,6 +26,8 @@ rows=[
 ('CAMADA 2 · A PONTE','Criativo de captura ("comenta e recebe"). Leva a pessoa do Instagram para dentro da base.'),
 ('CAMADA 3 · O COMBUSTÍVEL','Reels e carrosséis. Atraem gente nova e aquecem quem já segue. Uns 3 por semana no tema da semana; o resto nos assuntos fixos ligados às formações (para o perfil não ficar repetitivo).'),
 ('CARROSSEL DA NEWSLETTER','NUNCA abrir com "o tema da newsletter desta semana". A capa é a ideia mais surpreendente que está DENTRO da newsletter, algo que quebra a cabeça e faz rolar. Só no último slide a pessoa descobre que aquilo é um pedaço da newsletter: "Isso saiu na nossa newsletter desta semana. Quer receber as próximas? Comenta NEWS."'),
+('COMO SOMOS MEDIDOS (3 níveis)','1) TODA SEMANA, ENTREGAS (aba 3): fiz o que combinei? Meta 100%. 2) TODA SEMANA, KPIs (aba 5): os números que mostram se a operação está saudável (seguidores novos, engajados, e-mails novos, cliques). Eu trago e comparo com a semana anterior. 3) TODO MÊS, OKR (aba 2): a meta de RESULTADO do mês. É o que diz se o trabalho trouxe resultado. E em cada peça, o PLACAR (aba 4): gancho, retenção e conversão de cada reel e carrossel.'),
+('OKR x KPI','OKR é o que queremos MUDAR no mês (crescer a base, aumentar cliques). KPI é o que não podemos deixar PIORAR toda semana. OKR muda a cada mês; KPI é sempre o mesmo painel.'),
 ('VISÃO','Reaquecer a base da FSA e deixá-la pronta para a próxima oferta. Instagram atrai e aquece; e-mail (newsletter) é a base que é nossa.'),
 ('RESPONSÁVEL','Uma pessoa: roteiros de reels, carrosséis, newsletter e criativo de captura. Ajuda na copy quando a Gisele pedir.'),
 ('QUEM APARECE','Reels e carrosséis divididos entre o Gabriel de Carvalho e a professora Liliane. Ela distribui entre os dois.'),
