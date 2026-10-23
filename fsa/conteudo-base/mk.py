@@ -21,16 +21,22 @@ ws=wb.active; ws.title='1. Como funciona'
 ws.column_dimensions['A'].width=28; ws.column_dimensions['B'].width=95
 ws['A1']='Conteúdo e Base FSA · Como funciona'; ws['A1'].font=T
 rows=[
+('AS CAMADAS (ler primeiro)','O PRINCIPAL DA SEMANA é transformar seguidor em base (e-mail). O número que mais importa: e-mails novos + cliques na newsletter.'),
+('CAMADA 1 · O CENTRO','Tema da semana (vem da live) → NEWSLETTER. É o produto da semana e o que mantém a base quente.'),
+('CAMADA 2 · A PONTE','Criativo de captura ("comenta e recebe"). Leva a pessoa do Instagram para dentro da base.'),
+('CAMADA 3 · O COMBUSTÍVEL','Reels e carrosséis. Atraem gente nova e aquecem quem já segue. Uns 3 por semana no tema da semana; o resto nos assuntos fixos ligados às formações (para o perfil não ficar repetitivo).'),
+('CARROSSEL DA NEWSLETTER','NUNCA abrir com "o tema da newsletter desta semana". A capa é a ideia mais surpreendente que está DENTRO da newsletter, algo que quebra a cabeça e faz rolar. Só no último slide a pessoa descobre que aquilo é um pedaço da newsletter: "Isso saiu na nossa newsletter desta semana. Quer receber as próximas? Comenta NEWS."'),
 ('VISÃO','Reaquecer a base da FSA e deixá-la pronta para a próxima oferta. Instagram atrai e aquece; e-mail (newsletter) é a base que é nossa.'),
 ('RESPONSÁVEL','Uma pessoa: roteiros de reels, carrosséis, newsletter e criativo de captura. Ajuda na copy quando a Gisele pedir.'),
 ('QUEM APARECE','Reels e carrosséis divididos entre o Gabriel de Carvalho e a professora Liliane. Ela distribui entre os dois.'),
 ('O CENTRO DA SEMANA','A live semanal (aberta para toda a base). O tema da live vira a newsletter da semana. NÃO usar cortes da live como reels.'),
 ('ENTREGAS DA SEMANA','5 roteiros de reels + 4 carrosséis + 1 newsletter. Um dos reels ou carrosséis é o criativo de captura ("comenta X e recebe Y").'),
 ('CRIATIVO DE CAPTURA (rodízio)','Semana 1: fica na DM (engajamento). Semana 2: DM pede o e-mail e o material chega por e-mail (base). Semana 3: carrossel com o tema da newsletter + convite "comenta NEWS". Semana 4: DM para e-mail com material de outra formação.'),
-('MATERIAL DE CAPTURA','Sempre ligado a uma formação (exames, suplementação, hormonal, fertilidade, jejum, alergias). Nada genérico. Conteúdo técnico validado pelo professor.'),
-('ROTINA (D = dia da live)','D+1: transcrição (Descript) e rascunho da newsletter. D+2: revisão técnica do professor da live + pacote da semana para a Gisele aprovar. D+3: newsletter enviada. D+3 a D+6: reels, carrosséis e captura publicados. Toda semana: preencher abas 4 e 5 (15 min).'),
+('MATERIAL DE CAPTURA','Sempre ligado a uma formação (exames, suplementação, hormonal, fertilidade, jejum, alergias). Nada genérico. Conteúdo técnico tirado do material da FSA (live ou aula), nunca de fonte de fora sem checar.'),
+('ROTINA (D = dia da live)','D+1: transcrição (Descript) e rascunho da newsletter. D+2: pacote da semana para a Gisele aprovar. D+3: newsletter enviada. D+3 a D+6: reels, carrosséis e captura publicados. Toda semana: preencher abas 4 e 5 (15 min).'),
 ('IMAGENS (responsabilidade dela)','Todo roteiro e carrossel sai com as imagens escolhidas, não só o texto. Imagem REAL, nunca de IA: professores, aulas, bastidores, prova (depoimentos e prints de alunos), e imagem daquilo que se está falando (o exame, o suplemento, o alimento). Muita imagem.'),
-('BANCO DE IMAGENS','Manter uma pasta no Drive organizada por tema (professores, aulas, bastidores, prova, exames, alimentos). Quando faltar imagem de um tema, pedir foto ao professor ou à equipe com antecedência.'),
+('BANCO DE IMAGENS','Usar primeiro os bancos próprios da FSA (fotos e vídeos de professores, aulas, bastidores, prova). O Elements só para o que é genérico (alimento, laboratório, fundo).'),
+('ARTE COM IA','Pode usar IA para montar a arte do carrossel (layout, tipografia, cores). As FOTOS dentro da arte são reais, nunca geradas por IA.'),
 ('AUTORIZAÇÃO DE IMAGEM','Depoimento e print de aluno só com autorização. Exame de paciente só sem nome, data de nascimento ou qualquer dado que identifique.'),
 ('APROVAÇÃO','Tudo passa pela Gisele antes de sair, em LOTE: uma vez por semana, o pacote inteiro.'),
 ('PRIORIDADE SE O TEMPO APERTAR','1) Newsletter  2) Criativo de captura  3) Carrosséis  4) Reels'),
@@ -131,7 +137,8 @@ items=['GANCHO: escrevi 3 opções de abertura e escolhi a mais forte.',
 'RETENÇÃO: marquei onde entra mudança visual (corte, texto, imagem) a cada 3 a 5 segundos.',
 'CONVERSÃO: tem UM pedido só no final (comentar, salvar, seguir, compartilhar ou ir para a newsletter).',
 'CONVERSÃO: se é captura, a palavra-chave e o material estão claros e a automação está pronta.',
-'FATOS: todo dado técnico tem fonte e foi validado pelo professor.',
+'FATOS: todo dado técnico vem do material da FSA (live, aula) ou tem fonte.',
+'CARROSSEL DA NEWSLETTER: a capa NÃO diz "tema da newsletter". Abre com a ideia que quebra a cabeça; a newsletter só aparece no último slide.',
 'REGRAS: sem promessa de cura ou resultado garantido; dentro das regras do conselho.',
 'CAMPANHA: se fala de oferta, diz exatamente o que a página de destino diz (mesma frase, número, prazo).']
 for i,t in enumerate(items,3):
@@ -140,7 +147,7 @@ for i,t in enumerate(items,3):
 # 7 CAPTURA
 ws=wb.create_sheet('7. Calendário de captura')
 ws['A1']='Calendário de captura (1 por semana, em rodízio)'; ws['A1'].font=T
-head(ws,3,['Semana','Tipo','Formação ligada','Palavra-chave','Material (o que a pessoa recebe)','Validado pelo professor?','Comentários','E-mails gerados'],[14,20,22,16,50,14,12,12])
+head(ws,3,['Semana','Tipo','Formação ligada','Palavra-chave','Material (o que a pessoa recebe)','Tirado de qual material?','Comentários','E-mails gerados'],[14,20,22,16,50,14,12,12])
 tipos=['Fica na DM','DM para e-mail','Convite newsletter','DM para e-mail']
 for r in range(4,12):
     ws.cell(r,2,tipos[(r-4)%4])
