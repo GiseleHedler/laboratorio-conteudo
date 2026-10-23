@@ -36,7 +36,7 @@ rows=[
 ('ROTINA (D = dia da live)','D+1: transcrição (Descript) e rascunho da newsletter. D+2: pacote da semana para a Gisele aprovar. D+3: newsletter enviada. D+3 a D+6: reels, carrosséis e captura publicados. Toda semana: preencher abas 4 e 5 (15 min).'),
 ('IMAGENS (responsabilidade dela)','Todo roteiro e carrossel sai com as imagens escolhidas, não só o texto. Imagem REAL, nunca de IA: professores, aulas, bastidores, prova (depoimentos e prints de alunos), e imagem daquilo que se está falando (o exame, o suplemento, o alimento). Muita imagem.'),
 ('BANCO DE IMAGENS','Usar primeiro os bancos próprios da FSA (fotos e vídeos de professores, aulas, bastidores, prova). O Elements só para o que é genérico (alimento, laboratório, fundo).'),
-('ARTE COM IA','Pode usar IA para montar a arte do carrossel (layout, tipografia, cores). As FOTOS dentro da arte são reais, nunca geradas por IA.'),
+('ARTE DO CARROSSEL','A Claude monta o carrossel (skill carrossel FSA) a partir do texto e das fotos que ELA envia. Nenhuma imagem é gerada por IA: as fotos vêm sempre dos bancos da FSA ou do Elements.'),
 ('AUTORIZAÇÃO DE IMAGEM','Depoimento e print de aluno só com autorização. Exame de paciente só sem nome, data de nascimento ou qualquer dado que identifique.'),
 ('APROVAÇÃO','Tudo passa pela Gisele antes de sair, em LOTE: uma vez por semana, o pacote inteiro.'),
 ('PRIORIDADE SE O TEMPO APERTAR','1) Newsletter  2) Criativo de captura  3) Carrosséis  4) Reels'),
