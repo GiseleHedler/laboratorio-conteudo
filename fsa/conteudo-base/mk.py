@@ -194,7 +194,7 @@ for i,(n,t) in enumerate([('[Pós 1]','Pós'),('[Pós 2]','Pós')]+[(f'[Curso {k
 ws.column_dimensions['A'].width=26; ws.column_dimensions['C'].width=40; ws.column_dimensions['D'].width=36; ws.column_dimensions['E'].width=36
 
 # 9 STORIES
-ws=wb.create_sheet('9. Stories: exemplos')
+ws=wb.create_sheet('9. Stories de venda')
 ws['A1']='Sequência de venda nos stories (seg, qua, sex)'; ws['A1'].font=T
 ws.column_dimensions['A'].width=10; ws.column_dimensions['B'].width=26; ws.column_dimensions['C'].width=80
 head(ws,3,['Story','Função','Exemplo (produto da semana: formação de exames)'])

@@ -36,7 +36,7 @@ A frase que ela precisa guardar:
 
 Por quê: o seguidor é do Instagram, que decide quem vê o post. O e-mail é nosso.
 
-Pergunta de checagem: "Se numa semana só der para fazer uma coisa, qual tu faz?" A resposta certa: os stories do dia (com o de venda). Depois, a newsletter. Depois, as 2 peças de venda. Depois, a captura. Depois, o vídeo roteirizado do YouTube. Depois, os carrosséis e os reels. Por último, a live e os Shorts no YouTube.
+Pergunta de checagem: "Se numa semana só der para fazer uma coisa, qual tu faz?" A resposta certa: os stories do dia. Depois, a newsletter. Depois, as 2 peças de venda. Depois, a captura. Depois, o vídeo roteirizado do YouTube. Depois, os carrosséis e os reels. Por último, a live e os Shorts no YouTube.
 
 ## 3. O que ela entrega toda semana (10 min)
 
@@ -80,15 +80,30 @@ Depois da Black, a FSA vende tudo o que tem, **sem oferta e com preço cheio:** 
 - **Novembro:** as 2 primeiras semanas são só conteúdo, porque a base acabou de receber muita oferta na Black. A venda contínua começa na 3ª semana. Nada de desconto nem "última chance".
 - **Links com rastreio:** cada canal (bio, stories, newsletter, YouTube) tem o seu link, para a Hotmart mostrar de onde veio cada venda. A pessoa das automações monta.
 
-## 3C. Stories, todo dia (5 min)
+## 3C. Stories, todo dia, e a regra de venda (10 min)
 
-Ela planeja e roteiriza os stories da semana; quem aparece grava. Sequência diária de 5 a 8 stories:
+Ela planeja e roteiriza os stories da semana; quem aparece grava.
 
-1. Bastidor ou rotina (gente real)
-2. Conteúdo rápido
-3. Interação: enquete, caixinha, quiz
-4. Prova: depoimento, print autorizado
-5. Venda do produto da semana, com link
+- **Todo dia:** bastidor ou rotina, conteúdo rápido, interação (enquete, caixinha, quiz).
+- **Segunda, quarta e sexta:** entra a sequência de venda. Nos outros dias, nada de link de venda. Fim de semana: bastidor e leveza.
+
+**As regras de venda nos stories:**
+
+1. Venda nunca aparece sozinha: antes dela vêm pelo menos 2 stories do mesmo assunto.
+2. O link só entra no último story da sequência.
+3. No máximo 1 em cada 4 stories do dia é venda.
+4. Pessoa vende melhor que arte: a venda é falada pelo Gabriel, pela Liliane ou por um aluno.
+5. Proibido: arte solta com "compre agora", urgência falsa, preço sem contexto.
+6. Quem responde a enquete ou a caixinha sobre o tema recebe DM. Conversa vende mais que botão.
+
+Exemplo de sequência (produto da semana: formação de exames):
+
+1. Enquete: "Já atendeu paciente com o exame todo normal e cheio de sintomas?"
+2. Gabriel, 15 segundos: "Quando o exame vem normal, eu não paro na faixa de referência. Eu olho como um marcador conversa com o outro."
+3. Print autorizado de aluna: "Depois da formação, nunca mais li hemograma do mesmo jeito."
+4. Gabriel: "É isso que a gente ensina na Formação em Exames Laboratoriais. O link tá aqui." + link
+
+Termômetro: se muita gente sai justo no story de venda, a venda está agressiva demais.
 
 ## 4. O dia de entregar: sexta-feira (5 min)
 
@@ -174,7 +189,7 @@ Se ela não souber responder alguma, volte naquele ponto. É melhor descobrir ag
 
 ## Combinados finais
 
-- O objetivo final é venda. Toda semana tem venda: 2 peças no feed, 1 story por dia, o bloco da newsletter.
+- O objetivo final é venda. Toda semana tem venda: 2 peças no feed, a sequência de venda nos stories 3 vezes por semana, o bloco da newsletter.
 - Toda sexta, uma mensagem só: pacote da próxima semana + relatório.
 - A primeira entrega é na segunda, 26/10.
 - As 2 primeiras semanas viram a média dela. As metas do mês são definidas depois, junto com ela.
