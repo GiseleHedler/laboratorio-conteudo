@@ -29,11 +29,12 @@ rows=[
 ('CARROSSEL DA NEWSLETTER','NUNCA abrir com "o tema da newsletter desta semana". A capa é a ideia mais surpreendente que está DENTRO da newsletter, algo que quebra a cabeça e faz rolar. Só no último slide a pessoa descobre que aquilo é um pedaço da newsletter: "Isso saiu na nossa newsletter desta semana. Quer receber as próximas? Comenta NEWS."'),
 ('COMO SOMOS MEDIDOS (3 níveis)','1) TODA SEMANA, ENTREGAS (aba 3): fiz o que combinei? Meta 100%. 2) TODA SEMANA, KPIs (aba 5): os números que mostram se a operação está saudável (seguidores novos, engajados, e-mails novos, cliques). Eu trago e comparo com a semana anterior. 3) TODO MÊS, OKR (aba 2): a meta de RESULTADO do mês. É o que diz se o trabalho trouxe resultado. E em cada peça, o PLACAR (aba 4): gancho, retenção e conversão de cada reel e carrossel.'),
 ('OKR x KPI','OKR é o que queremos MUDAR no mês (crescer a base, aumentar cliques). KPI é o que não podemos deixar PIORAR toda semana. OKR muda a cada mês; KPI é sempre o mesmo painel.'),
-('RITMO DE VENDA','Toda semana tem venda. Feed: das 9 peças, 2 são de venda (caso real, depoimento, "isso a gente ensina na formação X"), umas 7 são conteúdo. Stories: todo dia pelo menos 1 story de venda, com link. Newsletter: sempre com o bloco da formação ligada ao tema. YouTube: link da formação na descrição.'),
+('RITMO DE VENDA','Toda semana tem venda. Feed: das 9 peças, 2 são de venda (caso real, depoimento, "isso a gente ensina na formação X"), umas 7 são conteúdo. Stories: sequência de venda 3 vezes por semana (seg, qua, sex), seguindo as regras. Newsletter: sempre com o bloco da formação ligada ao tema. YouTube: link da formação na descrição.'),
 ('PRODUTO DA SEMANA','Depois da Black, a FSA vende tudo o que tem, sem oferta: 2 pós, 7 cursos e a mentoria. Cada semana tem UM produto em destaque, ligado ao tema da live (live de exames → formação de exames). É esse produto que aparece nas 2 peças de venda, no story de venda e no bloco da newsletter. Calendário na aba 8.'),
 ('DEPOIS DA BLACK (01/11 em diante)','As 2 primeiras semanas de novembro são só conteúdo, sem venda: a base acabou de receber muita oferta. A venda contínua começa na 3ª semana. Nada de desconto nem "última chance": preço cheio, valor explicado.'),
 ('MENTORIA','É venda de alto valor: não vai para link de compra direto. A chamada leva para conversa (aplicação ou WhatsApp). Entra como produto da semana 1 vez por mês.'),
-('STORIES (todo dia)','Ela planeja e roteiriza os stories da semana; quem aparece grava. Sequência diária de 5 a 8 stories: 1) bastidor ou rotina (gente real); 2) conteúdo rápido; 3) interação (enquete, caixinha, quiz); 4) prova (depoimento, print autorizado); 5) venda do produto da semana, com link.'),
+('STORIES (todo dia)','Ela planeja e roteiriza os stories da semana; quem aparece grava. Todo dia: bastidor ou rotina, conteúdo rápido, interação (enquete, caixinha, quiz). Segunda, quarta e sexta: entra a sequência de venda (ver REGRAS DE VENDA NOS STORIES).'),
+('REGRAS DE VENDA NOS STORIES','1) Venda nunca aparece sozinha: antes dela vêm pelo menos 2 stories do mesmo assunto (pergunta, caso, prova). 2) O link só entra no ÚLTIMO story da sequência. 3) No máximo 1 em cada 4 stories do dia é venda. 4) Pessoa vende melhor que arte: a venda é falada pelo Gabriel, pela Liliane ou por um aluno; a arte do produto só complementa. 5) Proibido: arte solta com "compre agora", urgência falsa ("últimas vagas" sem ser verdade), preço sem contexto. 6) Sequência completa de venda 3 vezes por semana (seg, qua, sex); nos outros dias, só conteúdo e interação, sem link de venda. Fim de semana: bastidor e leveza. 7) Quem responde enquete ou caixinha sobre o tema recebe DM: conversa vende mais que botão. Exemplos na aba 9.'),
 ('LINKS COM RASTREIO','Cada canal tem link próprio com rastreio (UTM): bio, stories, newsletter, YouTube. Assim a Hotmart mostra de onde veio cada venda. A pessoa das automações monta. Sem isso, não dá para saber qual conteúdo vendeu.'),
 ('VISÃO','Reaquecer a base da FSA e deixá-la pronta para a próxima oferta. Instagram atrai e aquece; e-mail (newsletter) é a base que é nossa.'),
 ('RESPONSÁVEL','Uma pessoa: roteiros de reels, carrosséis, newsletter e criativo de captura. Ajuda na copy quando a Gisele pedir.'),
@@ -159,6 +160,7 @@ items=['GANCHO: escrevi 3 opções de abertura e escolhi a mais forte.',
 'YOUTUBE (thumb): tem rosto grande com expressão forte, até 4 palavras, flecha ou círculo no elemento principal, e dá para ler no celular. Nunca só nome ou texto.',
 'YOUTUBE (vídeo roteirizado): a promessa do vídeo aparece nos primeiros 30 segundos.',
 'YOUTUBE (live): título com a palavra que a pessoa buscaria, capa com foto real e texto grande, descrição com resumo, momentos principais e link da newsletter, comentário fixado com o link.',
+'STORIES DE VENDA: tem pelo menos 2 stories de contexto antes; o link está só no último; é falado por uma pessoa; não tem urgência falsa nem preço solto.',
 'CAMPANHA: se fala de oferta, diz exatamente o que a página de destino diz (mesma frase, número, prazo).']
 for i,t in enumerate(items,3):
     ws.cell(i,1,'☐'); ws.cell(i,2,t).alignment=W
@@ -190,5 +192,23 @@ for i,(n,t) in enumerate([('[Pós 1]','Pós'),('[Pós 2]','Pós')]+[(f'[Curso {k
     for c in range(1,6): ws.cell(i,c).border=BD
     for c in (1,3,4,5): ws.cell(i,c).fill=IN
 ws.column_dimensions['A'].width=26; ws.column_dimensions['C'].width=40; ws.column_dimensions['D'].width=36; ws.column_dimensions['E'].width=36
+
+# 9 STORIES
+ws=wb.create_sheet('9. Stories: exemplos')
+ws['A1']='Sequência de venda nos stories (seg, qua, sex)'; ws['A1'].font=T
+ws.column_dimensions['A'].width=10; ws.column_dimensions['B'].width=26; ws.column_dimensions['C'].width=80
+head(ws,3,['Story','Função','Exemplo (produto da semana: formação de exames)'])
+ex=[('1','Pergunta (interação)','Enquete: "Já atendeu paciente com o exame todo normal e cheio de sintomas?" Sim / Toda semana'),
+('2','Conteúdo (pessoa falando)','Gabriel, 15 segundos: "Quando o exame vem normal, eu não paro na faixa de referência. Eu olho como um marcador conversa com o outro."'),
+('3','Prova','Print autorizado de aluna: "Depois da formação, nunca mais li hemograma do mesmo jeito." (sem dados de paciente)'),
+('4','Venda, com link (só aqui)','Gabriel: "É isso que a gente ensina na Formação em Exames Laboratoriais. O link tá aqui." + figurinha de link com rastreio'),
+('','',''),
+('ERRADO','Venda solta','Arte do curso com "COMPRE AGORA" e o link, sem nenhum story antes sobre o assunto.'),
+('ERRADO','Urgência falsa','"Últimas vagas!" quando não é verdade.'),
+('ERRADO','Venda todo dia','Link de compra em todos os dias da semana: a audiência aprende a pular.')]
+for i,(a,b,c) in enumerate(ex,4):
+    ws.cell(i,1,a).font=B; ws.cell(i,2,b); ws.cell(i,3,c).alignment=W; ws.row_dimensions[i].height=34
+ws['A14']='Termômetro: se a taxa de saída no story de venda for bem maior que nos outros stories do dia, a venda está agressiva demais. Ajustar o contexto antes dela.'
+ws['A14'].alignment=W
 
 wb.save('okr-conteudo-fsa.xlsx')
