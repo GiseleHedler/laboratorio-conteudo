@@ -26,20 +26,22 @@ A frase que ela precisa guardar:
 
 Por quê: o seguidor é do Instagram, que decide quem vê o post. O e-mail é nosso.
 
-Pergunta de checagem: "Se numa semana só der para fazer uma coisa, qual tu faz?" A resposta certa é a newsletter. Depois, a captura. Depois, os carrosséis. Depois, os reels. Por último, o YouTube.
+Pergunta de checagem: "Se numa semana só der para fazer uma coisa, qual tu faz?" A resposta certa é a newsletter. Depois, a captura. Depois, o vídeo roteirizado do YouTube. Depois, os carrosséis e os reels. Por último, a live e os Shorts no YouTube.
 
 ## 3. O que ela entrega toda semana (10 min)
 
 - 5 roteiros de reels
 - 4 carrosséis
 - 1 newsletter
-- YouTube: os 5 reels também sobem como Shorts, e a gravação da live sobe toda semana
+- YouTube: os 5 reels também sobem como Shorts, 1 vídeo roteirizado por semana e a gravação da live
 - Um desses reels ou carrosséis é o criativo de captura
 
-YouTube, sem trabalho novo de roteiro:
+YouTube:
 
 - **Shorts:** os mesmos 5 reels da semana, repostados com título próprio para o YouTube.
 - **A live da semana:** ela sobe a gravação e cuida do título (com a palavra que a pessoa buscaria), da capa com foto real e texto grande, e da descrição com o resumo, os momentos principais e o link da newsletter. Uns 30 minutos por semana.
+- **Vídeo roteirizado (1 por semana):** de 8 a 15 minutos, com o Gabriel ou a Liliane, sobre o MESMO tema da newsletter, mais aprofundado. A pesquisa já está feita para a newsletter; o trabalho novo é o roteiro. A promessa do vídeo tem que aparecer nos primeiros 30 segundos.
+- **Thumb (capa) de todo vídeo:** sempre com ROSTO, nunca só nome ou texto. Rosto grande, com expressão que chama atenção (surpresa, dúvida, preocupação, apontando), em foto real feita para a thumb. Até 4 palavras em letra grande. Flecha ou círculo apontando para o elemento principal. Tem que dar para ler no tamanho do celular. O número que mostra se a thumb funciona é a taxa de cliques (CTR), no YouTube Studio.
 - Todo vídeo leva para a newsletter: link na descrição e no comentário fixado.
 
 Regras:
@@ -79,7 +81,7 @@ São 3 níveis:
 | KPIs (aba 5) | Os números estão saudáveis? | Toda semana, no relatório de sexta |
 | OKR (aba 2) | O trabalho trouxe resultado? | Todo mês |
 
-No relatório de sexta entram também os números do YouTube: inscritos novos, visualizações, horas assistidas e cliques no link da newsletter.
+No relatório de sexta entram também os números do YouTube: inscritos novos, visualizações, horas assistidas, taxa de cliques da thumb (CTR) e cliques no link da newsletter.
 
 E o **placar por peça (aba 4):** cada reel e carrossel tem uma linha. Uma semana depois de postar, ela tira os números do Instagram e a planilha calcula:
 
