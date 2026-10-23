@@ -100,7 +100,7 @@ Exemplo de sequência (produto da semana: formação de exames):
 
 1. Enquete: "Já atendeu paciente com o exame todo normal e cheio de sintomas?"
 2. Gabriel, 15 segundos: "Quando o exame vem normal, eu não paro na faixa de referência. Eu olho como um marcador conversa com o outro."
-3. Print autorizado de aluna: "Depois da formação, nunca mais li hemograma do mesmo jeito."
+3. Print REAL de aluna, autorizado, falando do que mudou na leitura de exames (nunca um depoimento inventado).
 4. Gabriel: "É isso que a gente ensina na Formação em Exames Laboratoriais. O link tá aqui." + link
 
 Termômetro: se muita gente sai justo no story de venda, a venda está agressiva demais.

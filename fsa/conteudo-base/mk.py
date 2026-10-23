@@ -200,7 +200,7 @@ ws.column_dimensions['A'].width=10; ws.column_dimensions['B'].width=26; ws.colum
 head(ws,3,['Story','Função','Exemplo (produto da semana: formação de exames)'])
 ex=[('1','Pergunta (interação)','Enquete: "Já atendeu paciente com o exame todo normal e cheio de sintomas?" Sim / Toda semana'),
 ('2','Conteúdo (pessoa falando)','Gabriel, 15 segundos: "Quando o exame vem normal, eu não paro na faixa de referência. Eu olho como um marcador conversa com o outro."'),
-('3','Prova','Print autorizado de aluna: "Depois da formação, nunca mais li hemograma do mesmo jeito." (sem dados de paciente)'),
+('3','Prova','Print REAL de aluna, autorizado, falando do que mudou na leitura de exames. Nunca um depoimento inventado. Sem dados de paciente.'),
 ('4','Venda, com link (só aqui)','Gabriel: "É isso que a gente ensina na Formação em Exames Laboratoriais. O link tá aqui." + figurinha de link com rastreio'),
 ('','',''),
 ('ERRADO','Venda solta','Arte do curso com "COMPRE AGORA" e o link, sem nenhum story antes sobre o assunto.'),
