@@ -18,7 +18,7 @@ Desenhe três círculos, um dentro do outro.
 
 - **Centro: a newsletter.** Sai toda semana, a partir do tema da live. É o que mantém a base quente.
 - **Ponte: o criativo de captura** ("comenta tal palavra e recebe tal coisa"). Leva a pessoa do Instagram para dentro da nossa base.
-- **Combustível: reels e carrosséis.** Atraem gente nova e aquecem quem já segue.
+- **Combustível: reels, carrosséis e YouTube.** Atraem gente nova e aquecem quem já segue.
 
 A frase que ela precisa guardar:
 
@@ -26,14 +26,21 @@ A frase que ela precisa guardar:
 
 Por quê: o seguidor é do Instagram, que decide quem vê o post. O e-mail é nosso.
 
-Pergunta de checagem: "Se numa semana só der para fazer uma coisa, qual tu faz?" A resposta certa é a newsletter. Depois, a captura. Depois, os carrosséis. Por último, os reels.
+Pergunta de checagem: "Se numa semana só der para fazer uma coisa, qual tu faz?" A resposta certa é a newsletter. Depois, a captura. Depois, os carrosséis. Depois, os reels. Por último, o YouTube.
 
 ## 3. O que ela entrega toda semana (10 min)
 
 - 5 roteiros de reels
 - 4 carrosséis
 - 1 newsletter
+- YouTube: os 5 reels também sobem como Shorts, e a gravação da live sobe toda semana
 - Um desses reels ou carrosséis é o criativo de captura
+
+YouTube, sem trabalho novo de roteiro:
+
+- **Shorts:** os mesmos 5 reels da semana, repostados com título próprio para o YouTube.
+- **A live da semana:** ela sobe a gravação e cuida do título (com a palavra que a pessoa buscaria), da capa com foto real e texto grande, e da descrição com o resumo, os momentos principais e o link da newsletter. Uns 30 minutos por semana.
+- Todo vídeo leva para a newsletter: link na descrição e no comentário fixado.
 
 Regras:
 
@@ -71,6 +78,8 @@ São 3 níveis:
 | Entregas (aba 3) | Fiz o que combinei? | Toda semana. Meta: 100% |
 | KPIs (aba 5) | Os números estão saudáveis? | Toda semana, no relatório de sexta |
 | OKR (aba 2) | O trabalho trouxe resultado? | Todo mês |
+
+No relatório de sexta entram também os números do YouTube: inscritos novos, visualizações, horas assistidas e cliques no link da newsletter.
 
 E o **placar por peça (aba 4):** cada reel e carrossel tem uma linha. Uma semana depois de postar, ela tira os números do Instagram e a planilha calcula:
 

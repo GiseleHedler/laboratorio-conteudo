@@ -24,7 +24,7 @@ rows=[
 ('AS CAMADAS (ler primeiro)','O PRINCIPAL DA SEMANA é transformar seguidor em base (e-mail). O número que mais importa: e-mails novos + cliques na newsletter.'),
 ('CAMADA 1 · O CENTRO','Tema da semana (vem da live) → NEWSLETTER. É o produto da semana e o que mantém a base quente.'),
 ('CAMADA 2 · A PONTE','Criativo de captura ("comenta e recebe"). Leva a pessoa do Instagram para dentro da base.'),
-('CAMADA 3 · O COMBUSTÍVEL','Reels e carrosséis. Atraem gente nova e aquecem quem já segue. Uns 3 por semana no tema da semana; o resto nos assuntos fixos ligados às formações (para o perfil não ficar repetitivo).'),
+('CAMADA 3 · O COMBUSTÍVEL','Reels, carrosséis e YouTube. Atraem gente nova e aquecem quem já segue. Uns 3 por semana no tema da semana; o resto nos assuntos fixos ligados às formações (para o perfil não ficar repetitivo).'),
 ('CARROSSEL DA NEWSLETTER','NUNCA abrir com "o tema da newsletter desta semana". A capa é a ideia mais surpreendente que está DENTRO da newsletter, algo que quebra a cabeça e faz rolar. Só no último slide a pessoa descobre que aquilo é um pedaço da newsletter: "Isso saiu na nossa newsletter desta semana. Quer receber as próximas? Comenta NEWS."'),
 ('COMO SOMOS MEDIDOS (3 níveis)','1) TODA SEMANA, ENTREGAS (aba 3): fiz o que combinei? Meta 100%. 2) TODA SEMANA, KPIs (aba 5): os números que mostram se a operação está saudável (seguidores novos, engajados, e-mails novos, cliques). Eu trago e comparo com a semana anterior. 3) TODO MÊS, OKR (aba 2): a meta de RESULTADO do mês. É o que diz se o trabalho trouxe resultado. E em cada peça, o PLACAR (aba 4): gancho, retenção e conversão de cada reel e carrossel.'),
 ('OKR x KPI','OKR é o que queremos MUDAR no mês (crescer a base, aumentar cliques). KPI é o que não podemos deixar PIORAR toda semana. OKR muda a cada mês; KPI é sempre o mesmo painel.'),
@@ -32,7 +32,10 @@ rows=[
 ('RESPONSÁVEL','Uma pessoa: roteiros de reels, carrosséis, newsletter e criativo de captura. Ajuda na copy quando a Gisele pedir.'),
 ('QUEM APARECE','Reels e carrosséis divididos entre o Gabriel de Carvalho e a professora Liliane. Ela distribui entre os dois.'),
 ('O CENTRO DA SEMANA','A live semanal (aberta para toda a base). O tema da live vira a newsletter da semana. NÃO usar cortes da live como reels.'),
-('ENTREGAS DA SEMANA','5 roteiros de reels + 4 carrosséis + 1 newsletter. Um dos reels ou carrosséis é o criativo de captura ("comenta X e recebe Y").'),
+('ENTREGAS DA SEMANA','5 roteiros de reels + 4 carrosséis + 1 newsletter + YouTube (5 Shorts + a live da semana). Um dos reels ou carrosséis é o criativo de captura ("comenta X e recebe Y").'),
+('YOUTUBE: SHORTS','Os 5 reels da semana sobem também como Shorts no YouTube. Sem roteiro novo: é repostar, com título próprio para o YouTube.'),
+('YOUTUBE: A LIVE DA SEMANA','A gravação da live sobe no YouTube toda semana. O trabalho dela: título forte (com a palavra que a pessoa buscaria no Google), capa com foto real e texto grande, descrição com o resumo, os momentos principais e o link da newsletter. Tempo: uns 30 minutos.'),
+('YOUTUBE: O PAPEL','Quem busca no YouTube quer conteúdo longo e pesquisa por assunto. Todo vídeo leva para a newsletter: link na descrição e no comentário fixado. No futuro, se der resultado, pode entrar 1 vídeo roteirizado por semana; nesse caso, sai 2 reels para abrir espaço.'),
 ('CRIATIVO DE CAPTURA (rodízio)','Semana 1: fica na DM (engajamento). Semana 2: DM pede o e-mail e o material chega por e-mail (base). Semana 3: carrossel com o tema da newsletter + convite "comenta NEWS". Semana 4: DM para e-mail com material de outra formação.'),
 ('MATERIAL DE CAPTURA','Sempre ligado a uma formação (exames, suplementação, hormonal, fertilidade, jejum, alergias). Nada genérico. Conteúdo técnico tirado do material da FSA (live ou aula), nunca de fonte de fora sem checar.'),
 ('ROTINA (D = dia da live)','D+1: transcrição (Descript) e rascunho da newsletter. SEXTA-FEIRA: manda numa mensagem só o PACOTE DA PRÓXIMA SEMANA (roteiros, carrosséis, newsletter, captura) + o RELATÓRIO DA SEMANA (aba 5 preenchida). Segunda a quinta: produz, publica e preenche o placar (aba 4). Newsletter: escrita a partir da live, enviada até 2 dias depois dela.'),
@@ -41,7 +44,7 @@ rows=[
 ('ARTE DO CARROSSEL','A Claude monta o carrossel (skill carrossel FSA) a partir do texto e das fotos que ELA envia. Nenhuma imagem é gerada por IA: as fotos vêm sempre dos bancos da FSA ou do Elements.'),
 ('AUTORIZAÇÃO DE IMAGEM','Depoimento e print de aluno só com autorização. Exame de paciente só sem nome, data de nascimento ou qualquer dado que identifique.'),
 ('APROVAÇÃO','Tudo passa pela Gisele antes de sair, em LOTE, uma vez por semana: na SEXTA, o pacote da semana seguinte. A primeira entrega é na segunda-feira, 26/10.'),
-('PRIORIDADE SE O TEMPO APERTAR','1) Newsletter  2) Criativo de captura  3) Carrosséis  4) Reels'),
+('PRIORIDADE SE O TEMPO APERTAR','1) Newsletter  2) Criativo de captura  3) Carrosséis  4) Reels  5) Live no YouTube  6) Shorts'),
 ('A META É RESULTADO','Toda peça tem placar (aba 4). Gancho, retenção e conversão são medidos em cada reel. Não basta entregar: tem que superar a própria média.'),
 ('TODA SEMANA, 3 LINHAS','O que funcionou. O que não funcionou. O que vou testar na semana que vem. (aba 5)'),
 ('REGRAS QUE NÃO MUDAM','Mesma mensagem da página de destino em toda peça de campanha. Fatos com fonte. Sem promessa de cura ou resultado. Respeitar as regras do conselho. Sem travessão. Português do Brasil.'),
@@ -74,14 +77,14 @@ ws['A14']='Regra:'; ws['A14'].font=B; ws['B14']='No 1º mês, as duas primeiras 
 # 3 ENTREGAS
 ws=wb.create_sheet('3. Entregas da semana')
 ws['A1']='Entregas da semana (meta: 100%, sob controle dela)'; ws['A1'].font=T
-cols=['Semana (início)','Reels roteirizados (meta 5)','Carrosséis (meta 4)','Newsletter enviada (1)','Captura publicada (1)','Tipo de captura','% entregue','Pacote enviado p/ aprovação no prazo?','Observação']
-head(ws,3,cols,[16,16,14,14,14,22,12,18,40])
+cols=['Semana (início)','Reels roteirizados (meta 5)','Carrosséis (meta 4)','Newsletter enviada (1)','Captura publicada (1)','Tipo de captura','% entregue','Pacote enviado p/ aprovação no prazo?','Observação','Shorts no YouTube (meta 5)','Live no YouTube (1)']
+head(ws,3,cols,[16,16,14,14,14,22,12,18,40,14,14])
 dv=DataValidation(type='list',formula1='"Fica na DM,DM para e-mail,Convite newsletter"'); ws.add_data_validation(dv)
 dv2=DataValidation(type='list',formula1='"Sim,Não"'); ws.add_data_validation(dv2)
 for r in range(4,17):
-    for c in range(1,10): ws.cell(r,c).border=BD
-    for c in (1,2,3,4,5,6,8,9): ws.cell(r,c).fill=IN
-    ws.cell(r,7,f'=IF(A{r}="","",(MIN(B{r},5)+MIN(C{r},4)+MIN(D{r},1)+MIN(E{r},1))/11)').number_format='0%'
+    for c in range(1,12): ws.cell(r,c).border=BD
+    for c in (1,2,3,4,5,6,8,9,10,11): ws.cell(r,c).fill=IN
+    ws.cell(r,7,f'=IF(A{r}="","",(MIN(B{r},5)+MIN(C{r},4)+MIN(D{r},1)+MIN(E{r},1)+MIN(J{r},5)+MIN(K{r},1))/17)').number_format='0%'
     ws.cell(r,7).fill=FO
     dv.add(f'F{r}'); dv2.add(f'H{r}')
 
@@ -94,7 +97,7 @@ cols=['Semana','Data','Tipo','Quem aparece','Tema','Gancho (o que é dito/escrit
 'Imagens reais? (Sim/Não)','É captura?','E-mails gerados','CAPTURA % (e-mails ÷ comentários)','Acima da linha de base?','O que aprendi']
 head(ws,4,cols,[10,11,11,13,22,40,18,10,10,9,10,11,10,10,12,10,13,11,9,10,12,12,34])
 ws.row_dimensions[4].height=60
-dvT=DataValidation(type='list',formula1='"Reel,Carrossel,Newsletter"'); dvP=DataValidation(type='list',formula1='"Gabriel,Liliane,Outro"'); dvC=DataValidation(type='list',formula1='"Sim,Não"')
+dvT=DataValidation(type='list',formula1='"Reel,Carrossel,Newsletter,Short,Live YouTube"'); dvP=DataValidation(type='list',formula1='"Gabriel,Liliane,Outro"'); dvC=DataValidation(type='list',formula1='"Sim,Não"')
 for d in (dvT,dvP,dvC): ws.add_data_validation(d)
 ws['X2']='Linha de base de retenção %:'; ws['Y2'].fill=IN; ws['Y2'].number_format='0%'
 ws['X3']='Linha de base de conversão %:'; ws['Y3'].fill=IN; ws['Y3'].number_format='0.0%'
@@ -112,13 +115,13 @@ ws.freeze_panes='F5'
 # 5 KPIs
 ws=wb.create_sheet('5. KPIs da semana')
 ws['A1']='Relatório da semana (ela traz toda semana)'; ws['A1'].font=T
-cols=['Semana (início)','Seguidores (total)','Seguidores novos','Contas engajadas','Alcance','E-mails novos (captura)','Newsletter: abertura %','Newsletter: cliques %','Descadastros','Spam %','Reels acima da linha de base','O que funcionou','O que não funcionou','O que vou testar na semana que vem']
-head(ws,3,cols,[14,12,12,12,12,13,12,12,11,9,14,34,34,34])
+cols=['Semana (início)','Seguidores (total)','Seguidores novos','Contas engajadas','Alcance','E-mails novos (captura)','Newsletter: abertura %','Newsletter: cliques %','Descadastros','Spam %','Reels acima da linha de base','YouTube: inscritos novos','YouTube: visualizações','YouTube: horas assistidas','YouTube: cliques no link da newsletter','O que funcionou','O que não funcionou','O que vou testar na semana que vem']
+head(ws,3,cols,[14,12,12,12,12,13,12,12,11,9,14,12,12,12,14,34,34,34])
 ws.row_dimensions[3].height=45
 for r in range(4,17):
-    for c in range(1,15): ws.cell(r,c).border=BD; ws.cell(r,c).fill=IN
+    for c in range(1,19): ws.cell(r,c).border=BD; ws.cell(r,c).fill=IN
     ws.cell(r,11,f"=IF(A{r}=\"\",\"\",COUNTIFS('4. Placar por peça'!A:A,A{r},'4. Placar por peça'!C:C,\"Reel\",'4. Placar por peça'!V:V,\"Sim\")&\" de \"&COUNTIFS('4. Placar por peça'!A:A,A{r},'4. Placar por peça'!C:C,\"Reel\"))"); ws.cell(r,11).fill=FO
-    for c in (12,13,14): ws.cell(r,c).alignment=W
+    for c in (16,17,18): ws.cell(r,c).alignment=W
 ws['A19']='Atenção: olhar mais os CLIQUES do que a abertura (o iPhone marca e-mail como aberto sozinho). Spam acima de 0,1%: parar e avisar a Gisele.'
 ws['A20']='Na coluna "Semana" das abas 3, 4 e 5, usar sempre a mesma data (a segunda-feira da semana), para as contas cruzarem.'
 
@@ -142,6 +145,7 @@ items=['GANCHO: escrevi 3 opções de abertura e escolhi a mais forte.',
 'FATOS: todo dado técnico vem do material da FSA (live, aula) ou tem fonte.',
 'CARROSSEL DA NEWSLETTER: a capa NÃO diz "tema da newsletter". Abre com a ideia que quebra a cabeça; a newsletter só aparece no último slide.',
 'REGRAS: sem promessa de cura ou resultado garantido; dentro das regras do conselho.',
+'YOUTUBE (live): título com a palavra que a pessoa buscaria, capa com foto real e texto grande, descrição com resumo, momentos principais e link da newsletter, comentário fixado com o link.',
 'CAMPANHA: se fala de oferta, diz exatamente o que a página de destino diz (mesma frase, número, prazo).']
 for i,t in enumerate(items,3):
     ws.cell(i,1,'☐'); ws.cell(i,2,t).alignment=W
