@@ -10,7 +10,17 @@ O que dizer:
 
 "Anos atrás, a maior parte das vendas da FSA vinha do e-mail. Funcionava porque a base recebia conteúdo toda semana e estava sempre quente. Hoje a base só recebe e-mail quando tem oferta, e esfriou.
 
-A partir de agora, o teu trabalho tem um objetivo claro: reaquecer a nossa base e deixá-la pronta para a próxima oferta. O teu conteúdo é o que faz a próxima venda acontecer."
+A partir de agora, o teu trabalho tem um objetivo final claro: VENDA. Para vender, a gente precisa de gente nova chegando (seguidores, engajamento) e de uma base aquecida, que confia na FSA. O teu conteúdo faz as duas coisas, e toda semana também vende."
+
+Desenhe uma escada:
+
+```
+VENDA  ← o objetivo final
+  ↑
+BASE AQUECIDA (seguidores que confiam + e-mail)
+  ↑
+ALCANCE E ENGAJAMENTO (seguidores novos, comentários, salvamentos)
+```
 
 ## 2. O principal da semana: as 3 camadas (10 min)
 
@@ -22,11 +32,11 @@ Desenhe três círculos, um dentro do outro.
 
 A frase que ela precisa guardar:
 
-**"O principal da semana é transformar seguidor em e-mail."**
+**"Tudo é para vender. No dia a dia, o trabalho é trazer gente nova e transformar seguidor em e-mail, e toda semana tem venda."**
 
 Por quê: o seguidor é do Instagram, que decide quem vê o post. O e-mail é nosso.
 
-Pergunta de checagem: "Se numa semana só der para fazer uma coisa, qual tu faz?" A resposta certa é a newsletter. Depois, a captura. Depois, o vídeo roteirizado do YouTube. Depois, os carrosséis e os reels. Por último, a live e os Shorts no YouTube.
+Pergunta de checagem: "Se numa semana só der para fazer uma coisa, qual tu faz?" A resposta certa: os stories do dia (com o de venda). Depois, a newsletter. Depois, as 2 peças de venda. Depois, a captura. Depois, o vídeo roteirizado do YouTube. Depois, os carrosséis e os reels. Por último, a live e os Shorts no YouTube.
 
 ## 3. O que ela entrega toda semana (10 min)
 
@@ -60,11 +70,31 @@ O criativo de captura gira em 4 semanas:
 
 A automação da DM é montada pela pessoa das automações. Ela passa a palavra-chave e o material com antecedência.
 
+## 3B. Quando a gente vende (10 min)
+
+Depois da Black, a FSA vende tudo o que tem, **sem oferta e com preço cheio:** 2 pós, 7 cursos e a mentoria.
+
+- **Toda semana tem venda.** Das 9 peças do feed, 2 são de venda e umas 7 são conteúdo. Venda com conteúdo: um caso real, um depoimento, "isso a gente ensina na formação X".
+- **Produto da semana:** cada semana tem UM produto em destaque, ligado ao tema da live. Live de exames, semana da formação de exames. É ele que aparece nas peças de venda, no story de venda e no bloco da newsletter. O calendário fica na aba 8.
+- **Mentoria:** é venda de alto valor. Não vai para link de compra, vai para conversa. Entra 1 vez por mês.
+- **Novembro:** as 2 primeiras semanas são só conteúdo, porque a base acabou de receber muita oferta na Black. A venda contínua começa na 3ª semana. Nada de desconto nem "última chance".
+- **Links com rastreio:** cada canal (bio, stories, newsletter, YouTube) tem o seu link, para a Hotmart mostrar de onde veio cada venda. A pessoa das automações monta.
+
+## 3C. Stories, todo dia (5 min)
+
+Ela planeja e roteiriza os stories da semana; quem aparece grava. Sequência diária de 5 a 8 stories:
+
+1. Bastidor ou rotina (gente real)
+2. Conteúdo rápido
+3. Interação: enquete, caixinha, quiz
+4. Prova: depoimento, print autorizado
+5. Venda do produto da semana, com link
+
 ## 4. O dia de entregar: sexta-feira (5 min)
 
 Toda sexta, ela manda **uma mensagem só** para a Gisele, com:
 
-1. **O pacote da semana seguinte:** os roteiros dos reels, os carrosséis, a newsletter, a captura, o roteiro do vídeo do YouTube e as thumbs, para aprovar.
+1. **O pacote da semana seguinte:** os roteiros dos reels, os carrosséis, a newsletter, a captura, o roteiro do vídeo do YouTube, as thumbs e o plano de stories, para aprovar.
 2. **O relatório da semana que passou:** a aba 5 da planilha preenchida.
 
 Nada de mandar peça por peça durante a semana. A Gisele aprova tudo de uma vez, na sexta.
@@ -79,9 +109,9 @@ São 3 níveis:
 |---|---|---|
 | Entregas (aba 3) | Fiz o que combinei? | Toda semana. Meta: 100% |
 | KPIs (aba 5) | Os números estão saudáveis? | Toda semana, no relatório de sexta |
-| OKR (aba 2) | O trabalho trouxe resultado? | Todo mês |
+| OKR (aba 2) | O trabalho trouxe resultado? O primeiro resultado-chave é VENDA vinda do conteúdo; o segundo, seguidores novos | Todo mês |
 
-No relatório de sexta entram também os números do YouTube: inscritos novos, visualizações, horas assistidas, taxa de cliques da thumb (CTR) e cliques no link da newsletter.
+No relatório de sexta entram também os números do YouTube: inscritos novos, visualizações, horas assistidas, taxa de cliques da thumb (CTR) e cliques no link da newsletter. E os stories (visualizações, respostas, cliques no link) e as vendas por canal.
 
 E o **placar por peça (aba 4):** cada reel e carrossel tem uma linha. Uma semana depois de postar, ela tira os números do Instagram e a planilha calcula:
 
@@ -129,9 +159,10 @@ Exemplo (o tema real sempre vem da live da semana):
 
 Peça para ela responder, com as palavras dela:
 
-1. Qual é o principal da semana?
+1. Qual é o objetivo final de tudo? E o que tu faz primeiro se o tempo apertar?
 2. O que tu manda na sexta, e para quem?
 3. Como tu vai saber se um reel funcionou?
+4. Qual é o produto da semana que vem, e onde ele aparece?
 
 Se ela não souber responder alguma, volte naquele ponto. É melhor descobrir agora do que daqui a um mês.
 
@@ -143,7 +174,7 @@ Se ela não souber responder alguma, volte naquele ponto. É melhor descobrir ag
 
 ## Combinados finais
 
-- O principal da semana é transformar seguidor em e-mail.
+- O objetivo final é venda. Toda semana tem venda: 2 peças no feed, 1 story por dia, o bloco da newsletter.
 - Toda sexta, uma mensagem só: pacote da próxima semana + relatório.
 - A primeira entrega é na segunda, 26/10.
 - As 2 primeiras semanas viram a média dela. As metas do mês são definidas depois, junto com ela.

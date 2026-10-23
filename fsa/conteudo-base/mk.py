@@ -21,13 +21,20 @@ ws=wb.active; ws.title='1. Como funciona'
 ws.column_dimensions['A'].width=28; ws.column_dimensions['B'].width=95
 ws['A1']='Conteúdo e Base FSA · Como funciona'; ws['A1'].font=T
 rows=[
-('AS CAMADAS (ler primeiro)','O PRINCIPAL DA SEMANA é transformar seguidor em base (e-mail). O número que mais importa: e-mails novos + cliques na newsletter.'),
+('OBJETIVO FINAL (ler primeiro)','VENDA. Tudo existe para vender mais: alcance e engajamento trazem gente nova; a base aquecida (seguidores que confiam + e-mail) é quem compra. Venda ← base aquecida ← alcance e engajamento.'),
+('AS CAMADAS','No dia a dia, o trabalho principal é transformar seguidor em base (e-mail) e aquecer essa base. Mas toda semana também tem venda (ver RITMO DE VENDA).'),
 ('CAMADA 1 · O CENTRO','Tema da semana (vem da live) → NEWSLETTER. É o produto da semana e o que mantém a base quente.'),
 ('CAMADA 2 · A PONTE','Criativo de captura ("comenta e recebe"). Leva a pessoa do Instagram para dentro da base.'),
 ('CAMADA 3 · O COMBUSTÍVEL','Reels, carrosséis e YouTube. Atraem gente nova e aquecem quem já segue. Uns 3 por semana no tema da semana; o resto nos assuntos fixos ligados às formações (para o perfil não ficar repetitivo).'),
 ('CARROSSEL DA NEWSLETTER','NUNCA abrir com "o tema da newsletter desta semana". A capa é a ideia mais surpreendente que está DENTRO da newsletter, algo que quebra a cabeça e faz rolar. Só no último slide a pessoa descobre que aquilo é um pedaço da newsletter: "Isso saiu na nossa newsletter desta semana. Quer receber as próximas? Comenta NEWS."'),
 ('COMO SOMOS MEDIDOS (3 níveis)','1) TODA SEMANA, ENTREGAS (aba 3): fiz o que combinei? Meta 100%. 2) TODA SEMANA, KPIs (aba 5): os números que mostram se a operação está saudável (seguidores novos, engajados, e-mails novos, cliques). Eu trago e comparo com a semana anterior. 3) TODO MÊS, OKR (aba 2): a meta de RESULTADO do mês. É o que diz se o trabalho trouxe resultado. E em cada peça, o PLACAR (aba 4): gancho, retenção e conversão de cada reel e carrossel.'),
 ('OKR x KPI','OKR é o que queremos MUDAR no mês (crescer a base, aumentar cliques). KPI é o que não podemos deixar PIORAR toda semana. OKR muda a cada mês; KPI é sempre o mesmo painel.'),
+('RITMO DE VENDA','Toda semana tem venda. Feed: das 9 peças, 2 são de venda (caso real, depoimento, "isso a gente ensina na formação X"), umas 7 são conteúdo. Stories: todo dia pelo menos 1 story de venda, com link. Newsletter: sempre com o bloco da formação ligada ao tema. YouTube: link da formação na descrição.'),
+('PRODUTO DA SEMANA','Depois da Black, a FSA vende tudo o que tem, sem oferta: 2 pós, 7 cursos e a mentoria. Cada semana tem UM produto em destaque, ligado ao tema da live (live de exames → formação de exames). É esse produto que aparece nas 2 peças de venda, no story de venda e no bloco da newsletter. Calendário na aba 8.'),
+('DEPOIS DA BLACK (01/11 em diante)','As 2 primeiras semanas de novembro são só conteúdo, sem venda: a base acabou de receber muita oferta. A venda contínua começa na 3ª semana. Nada de desconto nem "última chance": preço cheio, valor explicado.'),
+('MENTORIA','É venda de alto valor: não vai para link de compra direto. A chamada leva para conversa (aplicação ou WhatsApp). Entra como produto da semana 1 vez por mês.'),
+('STORIES (todo dia)','Ela planeja e roteiriza os stories da semana; quem aparece grava. Sequência diária de 5 a 8 stories: 1) bastidor ou rotina (gente real); 2) conteúdo rápido; 3) interação (enquete, caixinha, quiz); 4) prova (depoimento, print autorizado); 5) venda do produto da semana, com link.'),
+('LINKS COM RASTREIO','Cada canal tem link próprio com rastreio (UTM): bio, stories, newsletter, YouTube. Assim a Hotmart mostra de onde veio cada venda. A pessoa das automações monta. Sem isso, não dá para saber qual conteúdo vendeu.'),
 ('VISÃO','Reaquecer a base da FSA e deixá-la pronta para a próxima oferta. Instagram atrai e aquece; e-mail (newsletter) é a base que é nossa.'),
 ('RESPONSÁVEL','Uma pessoa: roteiros de reels, carrosséis, newsletter e criativo de captura. Ajuda na copy quando a Gisele pedir.'),
 ('QUEM APARECE','Reels e carrosséis divididos entre o Gabriel de Carvalho e a professora Liliane. Ela distribui entre os dois.'),
@@ -46,7 +53,7 @@ rows=[
 ('ARTE DO CARROSSEL','A Claude monta o carrossel (skill carrossel FSA) a partir do texto e das fotos que ELA envia. Nenhuma imagem é gerada por IA: as fotos vêm sempre dos bancos da FSA ou do Elements.'),
 ('AUTORIZAÇÃO DE IMAGEM','Depoimento e print de aluno só com autorização. Exame de paciente só sem nome, data de nascimento ou qualquer dado que identifique.'),
 ('APROVAÇÃO','Tudo passa pela Gisele antes de sair, em LOTE, uma vez por semana: na SEXTA, o pacote da semana seguinte. A primeira entrega é na segunda-feira, 26/10.'),
-('PRIORIDADE SE O TEMPO APERTAR','1) Newsletter  2) Criativo de captura  3) Vídeo roteirizado do YouTube  4) Carrosséis  5) Reels  6) Live no YouTube  7) Shorts'),
+('PRIORIDADE SE O TEMPO APERTAR','1) Stories do dia (com o de venda)  2) Newsletter  3) As 2 peças de venda  4) Criativo de captura  5) Vídeo roteirizado do YouTube  6) Carrosséis e reels  7) Live e Shorts no YouTube'),
 ('A META É RESULTADO','Toda peça tem placar (aba 4). Gancho, retenção e conversão são medidos em cada reel. Não basta entregar: tem que superar a própria média.'),
 ('TODA SEMANA, 3 LINHAS','O que funcionou. O que não funcionou. O que vou testar na semana que vem. (aba 5)'),
 ('REGRAS QUE NÃO MUDAM','Mesma mensagem da página de destino em toda peça de campanha. Fatos com fonte. Sem promessa de cura ou resultado. Respeitar as regras do conselho. Sem travessão. Português do Brasil.'),
@@ -60,33 +67,35 @@ for i,(a,b) in enumerate(rows,3):
 ws=wb.create_sheet('2. OKR do mês')
 ws['A1']='OKR do mês'; ws['A1'].font=T
 ws['A2']='Mês:'; ws['B2'].fill=IN
-ws['A3']='Objetivo:'; ws['B3']='Reaquecer a base da FSA e deixá-la pronta para a próxima oferta.'; ws['B3'].font=B
+ws['A3']='Objetivo:'; ws['B3']='Vender mais com o conteúdo: crescer a audiência, aquecer a base e converter em vendas dos nossos produtos.'; ws['B3'].font=B
 head(ws,5,['Resultado-chave','Como medir','Linha de base (mês anterior)','Meta do mês','Realizado','% atingido','Comentário'],[34,46,18,14,14,12,40])
-krs=[('KR1. Gancho e retenção dos reels','% dos reels do mês com retenção (tempo médio ÷ duração) acima da linha de base'),
-('KR2. Base nova vinda do Instagram','E-mails novos gerados pelos criativos de captura no mês'),
-('KR3. Engajamento que importa','(Comentários + salvamentos + compartilhamentos) ÷ alcance, média do mês'),
-('KR4. Newsletter viva','Taxa média de cliques das newsletters do mês'),
-('KR5. Base reativada','Contatos parados que voltaram a abrir ou clicar no mês')]
+krs=[('KR1. Vendas vindas do conteúdo','Vendas no mês com origem em bio, stories, newsletter e YouTube (links com rastreio na Hotmart)'),
+('KR2. Seguidores novos','Seguidores novos no mês (Instagram + inscritos no YouTube)'),
+('KR3. Gancho e retenção dos reels','% dos reels do mês com retenção (tempo médio ÷ duração) acima da linha de base'),
+('KR4. Base nova vinda do Instagram','E-mails novos gerados pelos criativos de captura no mês'),
+('KR5. Engajamento que importa','(Comentários + salvamentos + compartilhamentos) ÷ alcance, média do mês'),
+('KR6. Newsletter viva','Taxa média de cliques das newsletters do mês'),
+('KR7. Base reativada','Contatos parados que voltaram a abrir ou clicar no mês')]
 for i,(a,b) in enumerate(krs,6):
     ws.cell(i,1,a).font=B; ws.cell(i,2,b).alignment=W
     for c in (3,4,5): ws.cell(i,c).fill=IN
     ws.cell(i,6,f'=IFERROR(E{i}/D{i},"")').number_format='0%'
     for c in range(1,8): ws.cell(i,c).border=BD
     ws.row_dimensions[i].height=32
-ws['A12']='Indicador de apoio (não é meta):'; ws['A12'].font=B; ws['B12']='Seguidores novos no mês. Acompanhar, mas não perseguir: meta de seguidor puxa conteúdo que viraliza e não vende.'; ws['B12'].alignment=W
-ws['A14']='Regra:'; ws['A14'].font=B; ws['B14']='No 1º mês, as duas primeiras semanas viram a linha de base. A partir do 2º mês, a meta é superar a linha de base do mês anterior. Bater 70% do OKR já é bom resultado.'; ws['B14'].alignment=W
+ws['A15']='Atenção:'; ws['A15'].font=B; ws['B15']='Seguidor é meta, mas sempre junto com engajamento e venda. Seguidor que vem de conteúdo viral sem relação com a FSA não compra.'; ws['B15'].alignment=W
+ws['A17']='Regra:'; ws['A17'].font=B; ws['B17']='No 1º mês, as duas primeiras semanas viram a linha de base. A partir do 2º mês, a meta é superar a linha de base do mês anterior. Bater 70% do OKR já é bom resultado.'; ws['B17'].alignment=W
 
 # 3 ENTREGAS
 ws=wb.create_sheet('3. Entregas da semana')
 ws['A1']='Entregas da semana (meta: 100%, sob controle dela)'; ws['A1'].font=T
-cols=['Semana (início)','Reels roteirizados (meta 5)','Carrosséis (meta 4)','Newsletter enviada (1)','Captura publicada (1)','Tipo de captura','% entregue','Pacote enviado p/ aprovação no prazo?','Observação','Shorts no YouTube (meta 5)','Live no YouTube (1)','Vídeo roteirizado no YouTube (1)']
-head(ws,3,cols,[16,16,14,14,14,22,12,18,40,14,14,16])
+cols=['Semana (início)','Reels roteirizados (meta 5)','Carrosséis (meta 4)','Newsletter enviada (1)','Captura publicada (1)','Tipo de captura','% entregue','Pacote enviado p/ aprovação no prazo?','Observação','Shorts no YouTube (meta 5)','Live no YouTube (1)','Vídeo roteirizado no YouTube (1)','Dias com stories planejados (meta 7)','Peças de venda no feed (meta 2)']
+head(ws,3,cols,[16,16,14,14,14,22,12,18,40,14,14,16,16,16])
 dv=DataValidation(type='list',formula1='"Fica na DM,DM para e-mail,Convite newsletter"'); ws.add_data_validation(dv)
 dv2=DataValidation(type='list',formula1='"Sim,Não"'); ws.add_data_validation(dv2)
 for r in range(4,17):
-    for c in range(1,13): ws.cell(r,c).border=BD
-    for c in (1,2,3,4,5,6,8,9,10,11,12): ws.cell(r,c).fill=IN
-    ws.cell(r,7,f'=IF(A{r}="","",(MIN(B{r},5)+MIN(C{r},4)+MIN(D{r},1)+MIN(E{r},1)+MIN(J{r},5)+MIN(K{r},1)+MIN(L{r},1))/18)').number_format='0%'
+    for c in range(1,15): ws.cell(r,c).border=BD
+    for c in (1,2,3,4,5,6,8,9,10,11,12,13,14): ws.cell(r,c).fill=IN
+    ws.cell(r,7,f'=IF(A{r}="","",(MIN(B{r},5)+MIN(C{r},4)+MIN(D{r},1)+MIN(E{r},1)+MIN(J{r},5)+MIN(K{r},1)+MIN(L{r},1)+MIN(M{r},7)+MIN(N{r},2))/27)').number_format='0%'
     ws.cell(r,7).fill=FO
     dv.add(f'F{r}'); dv2.add(f'H{r}')
 
@@ -99,7 +108,7 @@ cols=['Semana','Data','Tipo','Quem aparece','Tema','Gancho (o que é dito/escrit
 'Imagens reais? (Sim/Não)','É captura?','E-mails gerados','CAPTURA % (e-mails ÷ comentários)','Acima da linha de base?','O que aprendi']
 head(ws,4,cols,[10,11,11,13,22,40,18,10,10,9,10,11,10,10,12,10,13,11,9,10,12,12,34])
 ws.row_dimensions[4].height=60
-dvT=DataValidation(type='list',formula1='"Reel,Carrossel,Newsletter,Short,Live YouTube,Vídeo YouTube"'); dvP=DataValidation(type='list',formula1='"Gabriel,Liliane,Outro"'); dvC=DataValidation(type='list',formula1='"Sim,Não"')
+dvT=DataValidation(type='list',formula1='"Reel,Carrossel,Newsletter,Short,Live YouTube,Vídeo YouTube,Venda (feed)"'); dvP=DataValidation(type='list',formula1='"Gabriel,Liliane,Outro"'); dvC=DataValidation(type='list',formula1='"Sim,Não"')
 for d in (dvT,dvP,dvC): ws.add_data_validation(d)
 ws['X2']='Linha de base de retenção %:'; ws['Y2'].fill=IN; ws['Y2'].number_format='0%'
 ws['X3']='Linha de base de conversão %:'; ws['Y3'].fill=IN; ws['Y3'].number_format='0.0%'
@@ -117,13 +126,13 @@ ws.freeze_panes='F5'
 # 5 KPIs
 ws=wb.create_sheet('5. KPIs da semana')
 ws['A1']='Relatório da semana (ela traz toda semana)'; ws['A1'].font=T
-cols=['Semana (início)','Seguidores (total)','Seguidores novos','Contas engajadas','Alcance','E-mails novos (captura)','Newsletter: abertura %','Newsletter: cliques %','Descadastros','Spam %','Reels acima da linha de base','YouTube: inscritos novos','YouTube: visualizações','YouTube: horas assistidas','YouTube: CTR da thumb %','YouTube: cliques no link da newsletter','O que funcionou','O que não funcionou','O que vou testar na semana que vem']
-head(ws,3,cols,[14,12,12,12,12,13,12,12,11,9,14,12,12,12,12,14,34,34,34])
+cols=['Semana (início)','Seguidores (total)','Seguidores novos','Contas engajadas','Alcance','E-mails novos (captura)','Newsletter: abertura %','Newsletter: cliques %','Descadastros','Spam %','Reels acima da linha de base','YouTube: inscritos novos','YouTube: visualizações','YouTube: horas assistidas','YouTube: CTR da thumb %','YouTube: cliques no link da newsletter','Stories: visualizações médias','Stories: respostas (enquete/caixinha)','Stories: cliques no link','Vendas: bio','Vendas: stories','Vendas: newsletter','Vendas: YouTube','O que funcionou','O que não funcionou','O que vou testar na semana que vem']
+head(ws,3,cols,[14,12,12,12,12,13,12,12,11,9,14,12,12,12,12,14,12,12,12,10,10,10,10,34,34,34])
 ws.row_dimensions[3].height=45
 for r in range(4,17):
-    for c in range(1,20): ws.cell(r,c).border=BD; ws.cell(r,c).fill=IN
+    for c in range(1,27): ws.cell(r,c).border=BD; ws.cell(r,c).fill=IN
     ws.cell(r,11,f"=IF(A{r}=\"\",\"\",COUNTIFS('4. Placar por peça'!A:A,A{r},'4. Placar por peça'!C:C,\"Reel\",'4. Placar por peça'!V:V,\"Sim\")&\" de \"&COUNTIFS('4. Placar por peça'!A:A,A{r},'4. Placar por peça'!C:C,\"Reel\"))"); ws.cell(r,11).fill=FO
-    for c in (17,18,19): ws.cell(r,c).alignment=W
+    for c in (24,25,26): ws.cell(r,c).alignment=W
 ws['A19']='Atenção: olhar mais os CLIQUES do que a abertura (o iPhone marca e-mail como aberto sozinho). Spam acima de 0,1%: parar e avisar a Gisele.'
 ws['A20']='Na coluna "Semana" das abas 3, 4 e 5, usar sempre a mesma data (a segunda-feira da semana), para as contas cruzarem.'
 
@@ -163,4 +172,23 @@ for r in range(4,12):
     ws.cell(r,2,tipos[(r-4)%4])
     for c in range(1,9): ws.cell(r,c).border=BD
     for c in (1,3,4,5,6,7,8): ws.cell(r,c).fill=IN
+
+# 8 PRODUTO DA SEMANA
+ws=wb.create_sheet('8. Produto da semana')
+ws['A1']='Produto da semana (venda sem oferta, preço cheio)'; ws['A1'].font=T
+ws['A2']='Novembro: semanas 1 e 2 só conteúdo (pós-Black). Venda contínua a partir da 3ª semana. Mentoria: 1 vez por mês.'
+head(ws,4,['Semana (início)','Tema da live','Produto em destaque','Tipo','2 peças de venda no feed (quais)','Story de venda todo dia?','Bloco na newsletter?','Vendas do produto na semana','Observação'],[14,26,28,12,40,14,14,14,30])
+dvTp=DataValidation(type='list',formula1='"Pós,Curso,Mentoria,Só conteúdo"'); dvSN=DataValidation(type='list',formula1='"Sim,Não"')
+ws.add_data_validation(dvTp); ws.add_data_validation(dvSN)
+for r in range(5,21):
+    for c in range(1,10): ws.cell(r,c).border=BD; ws.cell(r,c).fill=IN
+    dvTp.add(f'D{r}'); dvSN.add(f'F{r}'); dvSN.add(f'G{r}')
+ws['A23']='Nossos produtos'; ws['A23'].font=T
+head(ws,24,['Produto','Tipo','Link de venda (com rastreio por canal)','Para quem é (1 linha)','Temas de live ligados'],[14,26,28,12,40])
+for i,(n,t) in enumerate([('[Pós 1]','Pós'),('[Pós 2]','Pós')]+[(f'[Curso {k}]','Curso') for k in range(1,8)]+[('Mentoria','Mentoria')],25):
+    ws.cell(i,1,n); ws.cell(i,2,t)
+    for c in range(1,6): ws.cell(i,c).border=BD
+    for c in (1,3,4,5): ws.cell(i,c).fill=IN
+ws.column_dimensions['A'].width=26; ws.column_dimensions['C'].width=40; ws.column_dimensions['D'].width=36; ws.column_dimensions['E'].width=36
+
 wb.save('okr-conteudo-fsa.xlsx')
