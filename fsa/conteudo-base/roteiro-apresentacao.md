@@ -80,28 +80,31 @@ Depois da Black, a FSA vende tudo o que tem, **sem oferta e com preço cheio:** 
 - **Novembro:** as 2 primeiras semanas são só conteúdo, porque a base acabou de receber muita oferta na Black. A venda contínua começa na 3ª semana. Nada de desconto nem "última chance".
 - **Links com rastreio:** cada canal (bio, stories, newsletter, YouTube) tem o seu link, para a Hotmart mostrar de onde veio cada venda. A pessoa das automações monta.
 
-## 3C. Stories, todo dia, e a regra de venda (10 min)
+## 3C. Stories: um formato por dia (10 min)
 
-Ela planeja e roteiriza os stories da semana; quem aparece grava.
+Ela planeja e roteiriza os stories da semana; quem aparece grava. A regra é variar: nenhum formato todo dia. O cardápio completo, com exemplos, está na aba 9.
 
-- **Todo dia:** bastidor ou rotina, conteúdo rápido, interação (enquete, caixinha, quiz).
-- **Segunda, quarta e sexta:** entra a sequência de venda. Nos outros dias, nada de link de venda. Fim de semana: bastidor e leveza.
+| Dia | Formato | Tem venda? |
+|---|---|---|
+| Segunda | **Vitrine:** uma tese que o público reconhece, depois um pilar da formação por story, com o professor em aula real, e o convite | Sim |
+| Terça | **Caso com quiz:** um exame ou caso sem dados do paciente, "o que tu olharia primeiro?", e a resposta no story seguinte | Não |
+| Quarta | **Consultoria na caixinha:** o Gabriel pede "tua formação, há quanto tempo atende e o caso que mais te trava", responde em 2 ou 3 ações + 1 frase de efeito, e uma resposta vira convite | Sim |
+| Quinta | **Bastidor:** gravação de aula, equipe, preparação da live | Não |
+| Sexta | **Prova + objeção:** print real de aluno e o Gabriel respondendo uma objeção ("não tenho tempo"), com convite para o consultor | Sim |
+| Fim de semana | Bastidor e leveza | Não |
+
+Caixinha de perguntas: no máximo 2 vezes por semana, senão cansa.
+
+**Escassez** (aviso, abertura, últimas vagas, fechou, lista de espera) só entra quando houver turma ou prazo de verdade.
 
 **As regras de venda nos stories:**
 
-1. Venda nunca aparece sozinha: antes dela vêm pelo menos 2 stories do mesmo assunto.
-2. O link só entra no último story da sequência.
-3. No máximo 1 em cada 4 stories do dia é venda.
-4. Pessoa vende melhor que arte: a venda é falada pelo Gabriel, pela Liliane ou por um aluno.
-5. Proibido: arte solta com "compre agora", urgência falsa, preço sem contexto.
-6. Quem responde a enquete ou a caixinha sobre o tema recebe DM. Conversa vende mais que botão.
-
-Exemplo de sequência (produto da semana: formação de exames):
-
-1. Enquete: "Já atendeu paciente com o exame todo normal e cheio de sintomas?"
-2. Gabriel, 15 segundos: "Quando o exame vem normal, eu não paro na faixa de referência. Eu olho como um marcador conversa com o outro."
-3. Print REAL de aluna, autorizado, falando do que mudou na leitura de exames (nunca um depoimento inventado).
-4. Gabriel: "É isso que a gente ensina na Formação em Exames Laboratoriais. O link tá aqui." + link
+1. Antes do primeiro link, sempre tem valor: pelo menos 2 stories do assunto.
+2. Numa sequência longa, o link pode aparecer no meio e se repetir, desde que entre um e outro tenha mais valor.
+3. Pessoa vende melhor que arte: a venda é falada pelo Gabriel, pela Liliane ou por um aluno.
+4. Proibido: arte solta com "compre agora", urgência falsa, preço sem contexto, depoimento inventado.
+5. Para pós e mentoria, o convite é para conversar com o consultor, não para preencher formulário.
+6. Quem responde enquete, quiz ou caixinha sobre o tema recebe DM. Conversa vende mais que botão.
 
 Termômetro: se muita gente sai justo no story de venda, a venda está agressiva demais.
 
@@ -189,7 +192,7 @@ Se ela não souber responder alguma, volte naquele ponto. É melhor descobrir ag
 
 ## Combinados finais
 
-- O objetivo final é venda. Toda semana tem venda: 2 peças no feed, a sequência de venda nos stories 3 vezes por semana, o bloco da newsletter.
+- O objetivo final é venda. Toda semana tem venda: 2 peças no feed, venda nos stories na segunda, quarta e sexta, cada dia num formato diferente, o bloco da newsletter.
 - Toda sexta, uma mensagem só: pacote da próxima semana + relatório.
 - A primeira entrega é na segunda, 26/10.
 - As 2 primeiras semanas viram a média dela. As metas do mês são definidas depois, junto com ela.

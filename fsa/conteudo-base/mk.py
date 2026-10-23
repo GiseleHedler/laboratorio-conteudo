@@ -33,8 +33,8 @@ rows=[
 ('PRODUTO DA SEMANA','Depois da Black, a FSA vende tudo o que tem, sem oferta: 2 pós, 7 cursos e a mentoria. Cada semana tem UM produto em destaque, ligado ao tema da live (live de exames → formação de exames). É esse produto que aparece nas 2 peças de venda, no story de venda e no bloco da newsletter. Calendário na aba 8.'),
 ('DEPOIS DA BLACK (01/11 em diante)','As 2 primeiras semanas de novembro são só conteúdo, sem venda: a base acabou de receber muita oferta. A venda contínua começa na 3ª semana. Nada de desconto nem "última chance": preço cheio, valor explicado.'),
 ('MENTORIA','É venda de alto valor: não vai para link de compra direto. A chamada leva para conversa (aplicação ou WhatsApp). Entra como produto da semana 1 vez por mês.'),
-('STORIES (todo dia)','Ela planeja e roteiriza os stories da semana; quem aparece grava. Todo dia: bastidor ou rotina, conteúdo rápido, interação (enquete, caixinha, quiz). Segunda, quarta e sexta: entra a sequência de venda (ver REGRAS DE VENDA NOS STORIES).'),
-('REGRAS DE VENDA NOS STORIES','1) Venda nunca aparece sozinha: antes dela vêm pelo menos 2 stories do mesmo assunto (pergunta, caso, prova). 2) O link só entra no ÚLTIMO story da sequência. 3) No máximo 1 em cada 4 stories do dia é venda. 4) Pessoa vende melhor que arte: a venda é falada pelo Gabriel, pela Liliane ou por um aluno; a arte do produto só complementa. 5) Proibido: arte solta com "compre agora", urgência falsa ("últimas vagas" sem ser verdade), preço sem contexto. 6) Sequência completa de venda 3 vezes por semana (seg, qua, sex); nos outros dias, só conteúdo e interação, sem link de venda. Fim de semana: bastidor e leveza. 7) Quem responde enquete ou caixinha sobre o tema recebe DM: conversa vende mais que botão. Exemplos na aba 9.'),
+('STORIES (todo dia)','Ela planeja e roteiriza os stories da semana; quem aparece grava. Cada dia tem um formato diferente (aba 9). Venda na segunda (vitrine), quarta (consultoria na caixinha) e sexta (prova + objeção). Terça, quinta e fim de semana sem link de venda.'),
+('STORIES: FORMATOS E REGRAS','Ver a aba 9: cardápio de formatos, a semana e as regras de venda. Caixinha de perguntas no máximo 2 vezes por semana; nenhum formato todo dia.'),
 ('LINKS COM RASTREIO','Cada canal tem link próprio com rastreio (UTM): bio, stories, newsletter, YouTube. Assim a Hotmart mostra de onde veio cada venda. A pessoa das automações monta. Sem isso, não dá para saber qual conteúdo vendeu.'),
 ('VISÃO','Reaquecer a base da FSA e deixá-la pronta para a próxima oferta. Instagram atrai e aquece; e-mail (newsletter) é a base que é nossa.'),
 ('RESPONSÁVEL','Uma pessoa: roteiros de reels, carrosséis, newsletter e criativo de captura. Ajuda na copy quando a Gisele pedir.'),
@@ -160,7 +160,7 @@ items=['GANCHO: escrevi 3 opções de abertura e escolhi a mais forte.',
 'YOUTUBE (thumb): tem rosto grande com expressão forte, até 4 palavras, flecha ou círculo no elemento principal, e dá para ler no celular. Nunca só nome ou texto.',
 'YOUTUBE (vídeo roteirizado): a promessa do vídeo aparece nos primeiros 30 segundos.',
 'YOUTUBE (live): título com a palavra que a pessoa buscaria, capa com foto real e texto grande, descrição com resumo, momentos principais e link da newsletter, comentário fixado com o link.',
-'STORIES DE VENDA: tem pelo menos 2 stories de contexto antes; o link está só no último; é falado por uma pessoa; não tem urgência falsa nem preço solto.',
+'STORIES: o formato do dia é o da aba 9; antes do primeiro link tem pelo menos 2 stories de valor; a venda é falada por uma pessoa; sem urgência falsa nem preço solto.',
 'CAMPANHA: se fala de oferta, diz exatamente o que a página de destino diz (mesma frase, número, prazo).']
 for i,t in enumerate(items,3):
     ws.cell(i,1,'☐'); ws.cell(i,2,t).alignment=W
@@ -194,21 +194,33 @@ for i,(n,t) in enumerate([('[Pós 1]','Pós'),('[Pós 2]','Pós')]+[(f'[Curso {k
 ws.column_dimensions['A'].width=26; ws.column_dimensions['C'].width=40; ws.column_dimensions['D'].width=36; ws.column_dimensions['E'].width=36
 
 # 9 STORIES
-ws=wb.create_sheet('9. Stories de venda')
-ws['A1']='Sequência de venda nos stories (seg, qua, sex)'; ws['A1'].font=T
-ws.column_dimensions['A'].width=10; ws.column_dimensions['B'].width=26; ws.column_dimensions['C'].width=80
-head(ws,3,['Story','Função','Exemplo (produto da semana: formação de exames)'])
-ex=[('1','Pergunta (interação)','Enquete: "Já atendeu paciente com o exame todo normal e cheio de sintomas?" Sim / Toda semana'),
-('2','Conteúdo (pessoa falando)','Gabriel, 15 segundos: "Quando o exame vem normal, eu não paro na faixa de referência. Eu olho como um marcador conversa com o outro."'),
-('3','Prova','Print REAL de aluna, autorizado, falando do que mudou na leitura de exames. Nunca um depoimento inventado. Sem dados de paciente.'),
-('4','Venda, com link (só aqui)','Gabriel: "É isso que a gente ensina na Formação em Exames Laboratoriais. O link tá aqui." + figurinha de link com rastreio'),
-('','',''),
-('ERRADO','Venda solta','Arte do curso com "COMPRE AGORA" e o link, sem nenhum story antes sobre o assunto.'),
-('ERRADO','Urgência falsa','"Últimas vagas!" quando não é verdade.'),
-('ERRADO','Venda todo dia','Link de compra em todos os dias da semana: a audiência aprende a pular.')]
-for i,(a,b,c) in enumerate(ex,4):
-    ws.cell(i,1,a).font=B; ws.cell(i,2,b); ws.cell(i,3,c).alignment=W; ws.row_dimensions[i].height=34
-ws['A14']='Termômetro: se a taxa de saída no story de venda for bem maior que nos outros stories do dia, a venda está agressiva demais. Ajustar o contexto antes dela.'
-ws['A14'].alignment=W
+ws=wb.create_sheet('9. Stories (formatos)')
+ws['A1']='Cardápio de formatos de stories'; ws['A1'].font=T
+ws['A2']='Variar é a regra: nenhum formato todo dia. Caixinha de perguntas no máximo 2 vezes por semana.'
+ws.column_dimensions['A'].width=26; ws.column_dimensions['B'].width=58; ws.column_dimensions['C'].width=62; ws.column_dimensions['D'].width=26
+head(ws,4,['Formato','Como funciona','Exemplo na FSA','Frequência'])
+fm=[('VITRINE (venda)','Story 1: uma tese que o público reconhece + os 3 pilares + "vem ver como é por dentro". Stories 2 a 4: um pilar por story, com o professor em foto ou vídeo real de aula e 3 ou 4 ✅ do que se aprende. Último: o convite (link ou DM para o consultor). Pode abrir com uma enquete.','"Chega uma hora em que o nutricionista precisa dominar mais do que o protocolo." Pilares da [formação da semana], cada um com o [professor] em aula. Convite: link ou "manda [PALAVRA] na DM".','Segunda (produto da semana)'),
+('CONSULTORIA NA CAIXINHA (venda + leads)','Selfie sem produção convidando. Caixinha que QUALIFICA. Respostas curtas: 2 ou 3 ações + 1 frase de efeito. Uma pergunta vira convite ("isso a gente aprofunda na formação X", com link). Depois continua respondendo. Quem respondeu recebe DM do vendedor.','Gabriel: "Tua formação, há quanto tempo atende e o caso que mais te trava 👇". Responde como raciocínio clínico para profissionais, nunca prescrição para o paciente de alguém.','Quarta (1 vez; no máximo 2 por semana)'),
+('CASO COM QUIZ (engajamento)','Mostra um caso ou um exame (sem dados do paciente). Quiz ou enquete: "o que tu olharia primeiro?". No story seguinte, a resposta e o raciocínio. Sem link de venda.','Hemograma de um caso real anonimizado. Quiz com 3 opções. Gabriel ou Liliane explicam a resposta em 15 segundos.','Terça'),
+('BASTIDOR (conexão)','Gente real e rotina: aula sendo gravada, equipe, professor preparando a live, aluno na sala. Leve, sem venda. Uma enquete divertida ajuda.','"Hoje é dia de gravação da aula de [tema]", com vídeo curto do estúdio ou da sala.','Quinta e fim de semana'),
+('PROVA + OBJEÇÃO (venda)','Depoimento ou print REAL de aluno (autorizado), resultado de turma, e uma objeção respondida pelo Gabriel ("não tenho tempo", "é caro"). Fecha com convite para o consultor.','Print real de aluna + Gabriel respondendo "Gabriel, eu não tenho tempo" + "manda [PALAVRA] na DM que o consultor te ajuda a escolher".','Sexta'),
+('ESCASSEZ COM 2ª CHANCE (venda)','Aviso antes, abertura, "últimas vagas", fechou, nova porta (lista de espera). Print da página real como prova. Story repetido só com o link.','Turma de pós abrindo: "as inscrições da turma [X] abrem dia [data]. Entra na lista e fala antes com o consultor."','SÓ quando houver turma ou prazo de verdade'),
+('ENQUETE DE OPINIÃO (engajamento)','Uma pergunta que divide opiniões do público profissional. Quem vota recebe DM com um conteúdo sobre o tema.','"Ferritina baixa com hemoglobina normal: tu suplementa?" Sim / Depende','Qualquer dia, como abertura')]
+for i,(a,b,c,d) in enumerate(fm,5):
+    ws.cell(i,1,a).font=B
+    for k,v in ((2,b),(3,c),(4,d)): ws.cell(i,k,v).alignment=W
+    ws.cell(i,1).alignment=W; ws.row_dimensions[i].height=95
+    for k in range(1,5): ws.cell(i,k).border=BD
+r=len(fm)+7
+ws.cell(r,1,'A SEMANA').font=T
+sem=[('Segunda','Vitrine do produto da semana (venda)'),('Terça','Caso com quiz (sem link de venda)'),('Quarta','Consultoria na caixinha (venda + leads para o vendedor)'),('Quinta','Bastidor (sem link de venda)'),('Sexta','Prova + objeção (venda)'),('Sábado e domingo','Bastidor e leveza')]
+for k,(a,b) in enumerate(sem,r+1):
+    ws.cell(k,1,a).font=B; ws.cell(k,2,b)
+r=r+len(sem)+2
+ws.cell(r,1,'REGRAS').font=T
+regras=['Antes do primeiro link, sempre tem valor (pelo menos 2 stories do assunto).','Numa sequência longa, o link pode aparecer no meio e se repetir, desde que entre um e outro tenha mais valor.','Pessoa vende melhor que arte: a venda é falada pelo Gabriel, pela Liliane ou por um aluno.','Proibido: arte solta com "compre agora", urgência falsa, preço sem contexto, depoimento inventado.','Para pós e mentoria, o convite é para conversar com o consultor (DM ou WhatsApp), não para um formulário.','Quem responde enquete, quiz ou caixinha sobre o tema recebe DM. Conversa vende mais que botão.','Termômetro: se muita gente sai justo no story de venda, a venda está agressiva demais.']
+for k,t in enumerate(regras,r+1):
+    ws.cell(k,1,f'{k-r}.'); ws.cell(k,2,t).alignment=W
+    ws.merge_cells(start_row=k,start_column=2,end_row=k,end_column=3)
 
 wb.save('okr-conteudo-fsa.xlsx')
