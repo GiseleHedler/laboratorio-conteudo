@@ -1,6 +1,6 @@
 # Reel do posicionamento na eleição (Lula x Flávio): falas dela sem pausas nem tomadas repetidas,
 # trecho verificado da reportagem sobre a anulação dos processos e a oração do Flávio no fim, com som
-# sem música: ela coloca a trilha depois
+# trilhas do Envato dela: tensão nos argumentos, esperança a partir do voto no Flávio (gancho sem música)
 import subprocess, re, sys
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 S='/tmp/claude-0/-home-user/f19a087c-4085-5aef-b35a-89b81156bb55/scratchpad'
@@ -152,8 +152,26 @@ for y in range(H):
     if y<640: a=max(a,int(120*(1-y/640)))
     dr.line([(0,y),(W,y)],fill=(0,0,0,a))
 g.save(T+'/degrade.png')
+import numpy as np, wave
+M=S+'/trilhas'
+t_flavio=next(x[0] for x in EV if x[2]=='Eu voto no Flávio.')
+TRILHAS=[(EV[0][1],t_flavio,M+'/cold/gentlejammers_cold-revenge_main-03_underscore.wav',4),
+         (t_flavio,TOT,M+'/hope/Hope for Humanity/Hope for Humanity.wav',24)]
+run(['ffmpeg','-loglevel','error','-y','-i',T+'/base.mov','-map','0:a','-c:a','pcm_s16le',T+'/voz.wav'])
+SR=48000; mus=np.zeros((int(SR*(TOT+1)),2),np.float32); XF=0.8
+for a0,b0,f,off in TRILHAS:
+    raw=subprocess.run(['ffmpeg','-loglevel','error','-ss',str(off),'-t',f'{b0-a0+XF:.3f}','-i',f,'-ac','2','-ar',str(SR),'-f','f32le','-'],capture_output=True).stdout
+    x=np.frombuffer(raw,np.float32).reshape(-1,2).copy(); x*=0.12/(np.sqrt(np.mean(x**2))+1e-9)
+    nf=int(XF*SR); x[:nf]*=np.linspace(0,1,nf)[:,None]; x[-nf:]*=np.linspace(1,0,nf)[:,None]
+    i=int(max(0,a0-XF/2)*SR); j=min(len(mus),i+len(x)); mus[i:j]+=x[:j-i]
+with wave.open(T+'/musica.wav','wb') as w:
+    w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(mus,-1,1)*32767).astype(np.int16).tobytes())
+run(['ffmpeg','-loglevel','error','-y','-i',T+'/voz.wav','-i',T+'/musica.wav','-filter_complex',
+     f"[0:a]asplit=2[voz][sc];[1:a]atrim=0:{TOT},volume=0.6,afade=t=out:st={TOT-2.0}:d=2.0[mus];"
+     f"[mus][sc]sidechaincompress=threshold=0.04:ratio=4:attack=20:release=450[musd];"
+     f"[voz][musd]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.89",'-c:a','pcm_s16le',T+'/audio_final.wav'])
 SEM='+'.join(f'between(t,{x:.3f},{y:.3f})' for x,y in DE_FORA)
-run(['ffmpeg','-loglevel','error','-y','-i',T+'/base.mov','-loop','1','-t',str(TOT),'-i',T+'/degrade.png','-filter_complex',
-     f"[0:v][1:v]overlay=enable='not({SEM})'[v1];[v1]ass={T}/leg.ass:fontsdir={F}[v]",'-map','[v]','-map','0:a','-t',str(TOT),
-     '-af','alimiter=limit=0.89','-c:v','libx264','-preset','medium','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',E+'/reel-eleicao.mp4'])
+run(['ffmpeg','-loglevel','error','-y','-i',T+'/base.mov','-loop','1','-t',str(TOT),'-i',T+'/degrade.png','-i',T+'/audio_final.wav','-filter_complex',
+     f"[0:v][1:v]overlay=enable='not({SEM})'[v1];[v1]ass={T}/leg.ass:fontsdir={F}[v]",'-map','[v]','-map','2:a','-t',str(TOT),
+     '-c:v','libx264','-preset','medium','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',E+'/reel-eleicao.mp4'])
 print('ok',TOT)
