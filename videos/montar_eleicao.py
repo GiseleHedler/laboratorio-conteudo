@@ -22,36 +22,29 @@ FALAS=[
  (66.23,70.34,'Em segunda instância, e 580 dias de prisão.'),
  (76.96,81.53,'E o STF anulou os processos. Por quê? Porque corriam no tribunal errado.'),
  (88.46,90.93,'E o que aconteceu depois? Eles prescreveram.'),
- (101.36,105.05,'Veja: ninguém julgou o Lula inocente.'),
  (108.47,114.23,'Processo anulado e inocentado são palavras e coisas completamente diferentes.'),
  ('LULA',),
- (127.66,129.21,'Isso não é pessoal, tá?'),
  (156.45,163.70,'O mesmo partido já governou o Brasil por 18 anos. Mais quatro anos, seriam 22.'),
  (171.07,177.65,'Eu não sei você, mas eu desconfio de qualquer grupo, de qualquer lado, que queira ficar tanto tempo assim no poder.'),
  (202.32,207.84,'Porque alternância é o que impede um país de virar propriedade de alguém.'),
  (232.59,239.49,'Eu não sei se tu sabe, mas dois anos atrás ele fez uma cirurgia intracraniana de emergência.'),
- (247.32,253.09,'Pensa no final do mandato dele: ele teria 85 anos.'),
  (260.01,278.95,'E no último debate a gente conseguiu ver que talvez esse problema não deixe ele mais firme. Ele está muito lúcido, está muito bem, sim, é verdade. Mas será o suficiente para governar um país? Do meu ponto de vista, e ele é só meu.'),
  (286.06,287.18,'Eu voto no Flávio.'),
  (322.48,332.88,'Veja, a dívida do país saiu de 71% nesses quatro anos para 83% do PIB, e sem pandemia alguma para justificar isso.'),
  (344.00,348.64,'E o Flávio colocou essa conta, esse problema, no centro do jogo dele.'),
  (383.30,389.99,'A ideia dele é implementar algumas regras, inclusive diminuir o número de ministérios e esses supersalários.'),
- (395.25,401.61,'Olha, vou ser sincera: eu não espero um salvador nem um santo. Até porque política não é lugar de santo.'),
  (420.78,424.78,'Quem procura santo na política aceita qualquer pecado do seu lado.'),
  (458.48,468.84,'Acho que vale uma pergunta pra mim e pra ti antes de votar: eu sei em quem eu estou votando, ou só estou escolhendo votar nesse porque sou contra aquele?'),
  (490.36,505.64,'Pode discordar de mim, óbvio. Mas se a tua forma de discordar de mim é em forma de xingamento, tu não discordas de mim: tu só mostrou que faltou argumento.'),
- (517.38,519.75,'E se você vai votar no Lula, tá tudo certo.'),
- (525.55,530.78,'Eu não sou tua inimiga por conta disso. Tu tem todo o direito de votar em quem tu quiser.'),
- (532.31,535.81,'Assim como eu tenho o direito de expressar aqui na minha rede social aquilo que eu penso.'),
  (539.81,548.85,'E se tu tá em cima do muro: em cima do muro ninguém é neutro. Só fica mais fácil de alguém te empurrar.'),
  ('FLAVIO',),
 ]
 # trecho verificado da reportagem: Lula dizendo que foi inocentado e juristas explicando a anulação
-LULA=[(S+'/reelpol/lula.mp4',36.2,47.62,'"Eu fui julgado, fui considerado inocente." Não, não foi. A pior e maior mentira dessa eleição é dizer que Lula foi inocentado.'),
-      (S+'/reelpol/lula.mp4',59.78,75.75,'O Supremo não inocentou. O Supremo assentou a nulidade dos processos, o que implica o retorno à fase inicial.')]
+LULA=[(S+'/reelpol/lula.mp4',0,5.2,'Nunca antes no país um ocupante da presidência tinha sido condenado por crime comum.'),
+      (S+'/reelpol/lula.mp4',10.15,19.95,'A condenação de Lula no caso do triplex está confirmada por três instâncias da justiça. Lula é o primeiro ex-presidente da República preso.'),
+      (S+'/reelpol/lula.mp4',36.2,47.62,'"Eu fui julgado, fui considerado inocente." Não, não foi. A pior e maior mentira dessa eleição é dizer que Lula foi inocentado.')]
 # oração do Flávio na igreja, com som, e o "amém" da multidão no fim
-FLAVIO=[(S+'/reelflavio2/f.mp4',62.9,75.3,'Que o Senhor me dê muita sabedoria, coragem, saúde, discernimento, para causar um avivamento nessa nação.'),
-        (S+'/painosso/f.mp4',18.4,23.0,'Amém!')]
+FLAVIO=[(S+'/painosso/f.mp4',2.4,23.0,'Pai nosso que estais nos céus, santificado seja o vosso nome. Venha a nós o vosso reino, seja feita a vossa vontade, assim na terra como no céu. O pão nosso de cada dia nos dai hoje. Perdoai as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido. E não nos deixeis cair em tentação, mas livrai-nos do mal. Amém!')]   # Pai Nosso da multidão em Manaus, com o Flávio no meio
 
 PRE,POS=0.10,0.12
 r=subprocess.run(['ffmpeg','-i',P,'-af','silencedetect=n=-38dB:d=0.3','-f','null','-'],capture_output=True,text=True).stderr
@@ -139,7 +132,7 @@ Style: Arroba,Merriweather,38,&H30ECE8EA,&H30ECE8EA,&H00000000,&H8C000000,0,1,0,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,{fmt(0)},{fmt(GANCHO)},Gancho,,0,0,0,,{{\\fad(0,200)\\q2}}em quem eu voto\\Namanhã,\\N{{\\fnPinyon Script\\fs230\\c&H8E9FE2&\\shad6\\frz6}}e por quê.
+Dialogue: 1,{fmt(0)},{fmt(GANCHO)},Gancho,,0,0,0,,{{\\fad(0,200)\\q2}}em quem eu voto\\Namanhã,\\N{{\\c&H8E9FE2&}}e por quê.
 Dialogue: 1,{fmt(0)},{fmt(TOT)},Arroba,,0,0,0,,@giselehedler
 """+'\n'.join(lin)+'\n'
 open(T+'/leg.ass','w',encoding='utf-8').write(ass)
