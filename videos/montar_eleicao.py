@@ -164,8 +164,12 @@ run(['ffmpeg','-loglevel','error','-y','-i',T+'/voz.wav','-i',T+'/musica.wav','-
      f"[0:a]asplit=2[voz][sc];[1:a]atrim=0:{TOT},volume=0.6,afade=t=out:st={TOT-2.0}:d=2.0[mus];"
      f"[mus][sc]sidechaincompress=threshold=0.04:ratio=4:attack=20:release=450[musd];"
      f"[voz][musd]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.89",'-c:a','pcm_s16le',T+'/audio_final.wav'])
+DIV=next((x[0],x[1]) for x in EV if x[2].startswith('Veja, a dívida'))   # cartão com os números da dívida enquanto ela fala deles
+CARTAO=S+'/divida/cartao_divida.png'
 SEM='+'.join(f'between(t,{x:.3f},{y:.3f})' for x,y in DE_FORA)
-run(['ffmpeg','-loglevel','error','-y','-i',T+'/base.mov','-loop','1','-t',str(TOT),'-i',T+'/degrade.png','-i',T+'/audio_final.wav','-filter_complex',
-     f"[0:v][1:v]overlay=enable='not({SEM})'[v1];[v1]ass={T}/leg.ass:fontsdir={F}[v]",'-map','[v]','-map','2:a','-t',str(TOT),
+run(['ffmpeg','-loglevel','error','-y','-i',T+'/base.mov','-loop','1','-t',str(TOT),'-i',T+'/degrade.png','-i',T+'/audio_final.wav','-loop','1','-t',str(TOT),'-i',CARTAO,'-filter_complex',
+     f"[0:v][1:v]overlay=enable='not({SEM})'[v1];[v1]ass={T}/leg.ass:fontsdir={F}[v2];"
+     f"[3:v]format=rgba,scale=540:-1,fade=t=in:st={DIV[0]+0.3:.2f}:d=0.35:alpha=1,fade=t=out:st={DIV[1]-0.3:.2f}:d=0.3:alpha=1[ct];"
+     f"[v2][ct]overlay=(W-w)/2:110:enable='between(t,{DIV[0]},{DIV[1]})'[v]",'-map','[v]','-map','2:a','-t',str(TOT),
      '-c:v','libx264','-preset','medium','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',E+'/reel-eleicao.mp4'])
 print('ok',TOT)
