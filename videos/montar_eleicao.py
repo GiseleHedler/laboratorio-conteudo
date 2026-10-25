@@ -133,7 +133,7 @@ Style: Arroba,Merriweather,38,&H30ECE8EA,&H30ECE8EA,&H00000000,&H8C000000,0,1,0,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,{fmt(0)},{fmt(GANCHO)},Gancho,,0,0,0,,{{\\fad(0,200)\\q2}}em quem eu voto\\Namanhã,\\N{{\\c&H8E9FE2&}}e por quê.
+Dialogue: 1,{fmt(0)},{fmt(GANCHO)},Gancho,,0,0,0,,{{\\fad(0,200)\\q2}}não sou\\Nbolsonarista,\\N{{\\c&H8E9FE2&}}nem lulista.
 Dialogue: 1,{fmt(0)},{fmt(TOT)},Arroba,,0,0,0,,@giselehedler
 """+'\n'.join(lin)+'\n'
 open(T+'/leg.ass','w',encoding='utf-8').write(ass)
