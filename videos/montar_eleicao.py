@@ -128,7 +128,7 @@ WrapStyle: 0
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Leg,Poppins Medium,74,&H00FFFFFF,&H00FFFFFF,&H00000000,&H8C000000,0,0,0,0,100,100,0,0,1,0,4,2,80,80,470,1
 Style: Fora,Poppins Medium,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H66140A1E,0,0,0,0,100,100,0,0,3,14,0,2,90,90,1260,1
-Style: Gancho,Poppins Black,100,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,-1,0,1,0,5,8,70,70,190,1
+Style: Gancho,Poppins Black,108,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,-1,0,1,0,6,5,70,70,0,1
 Style: Arroba,Merriweather,38,&H30ECE8EA,&H30ECE8EA,&H00000000,&H8C000000,0,1,0,0,100,100,1,0,1,0,2,2,70,70,50,1
 
 [Events]
