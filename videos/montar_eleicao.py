@@ -33,6 +33,7 @@ FALAS=[
  (322.48,332.88,'Veja, a dívida do país saiu de 71% nesses quatro anos para 83% do PIB, e sem pandemia alguma para justificar isso.'),
  (344.00,348.64,'E o Flávio colocou essa conta, esse problema, no centro do jogo dele.'),
  (383.30,389.99,'A ideia dele é implementar algumas regras, inclusive diminuir o número de ministérios e esses supersalários.'),
+ (395.25,401.61,'Olha, vou ser sincera: eu não espero um salvador nem um santo. Até porque política não é lugar de santo.'),
  (420.78,424.78,'Quem procura santo na política aceita qualquer pecado do seu lado.'),
  (458.48,468.84,'Acho que vale uma pergunta pra mim e pra ti antes de votar: eu sei em quem eu estou votando, ou só estou escolhendo votar nesse porque sou contra aquele?'),
  (490.36,505.64,'Pode discordar de mim, óbvio. Mas se a tua forma de discordar de mim é em forma de xingamento, tu não discordas de mim: tu só mostrou que faltou argumento.'),
