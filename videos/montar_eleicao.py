@@ -36,14 +36,15 @@ FALAS=[
  (420.78,424.78,'Quem procura santo na política aceita qualquer pecado do seu lado.'),
  (458.48,468.84,'Acho que vale uma pergunta pra mim e pra ti antes de votar: eu sei em quem eu estou votando, ou só estou escolhendo votar nesse porque sou contra aquele?'),
  (490.36,505.64,'Pode discordar de mim, óbvio. Mas se a tua forma de discordar de mim é em forma de xingamento, tu não discordas de mim: tu só mostrou que faltou argumento.'),
+ (517.38,519.75,'E se você vai votar no Lula, tá tudo certo.'),
+ (525.55,530.78,'Eu não sou tua inimiga por conta disso. Tu tem todo o direito de votar em quem tu quiser.'),
  (539.81,548.85,'E se tu tá em cima do muro: em cima do muro ninguém é neutro. Só fica mais fácil de alguém te empurrar.'),
  ('FLAVIO',),
 ]
 # trecho verificado da reportagem: Lula dizendo que foi inocentado e juristas explicando a anulação
-LULA=[(S+'/reelpol/lula.mp4',0,5.2,'Nunca antes no país um ocupante da presidência tinha sido condenado por crime comum.'),
-      (S+'/reelpol/lula.mp4',10.15,19.95,'A condenação de Lula no caso do triplex está confirmada por três instâncias da justiça. Lula é o primeiro ex-presidente da República preso.'),
-      (S+'/reelpol/lula.mp4',36.2,47.62,'"Eu fui julgado, fui considerado inocente." Não, não foi. A pior e maior mentira dessa eleição é dizer que Lula foi inocentado.')]
-# oração do Flávio na igreja, com som, e o "amém" da multidão no fim
+LULA=[(S+'/reelpol/lula.mp4',5.25,10.1,'Existem provas de que Lula cometeu os crimes de corrupção passiva e lavagem de dinheiro.'),
+      (S+'/reelpol/lula.mp4',10.15,16.2,'A condenação de Lula no caso do triplex está confirmada por três instâncias da justiça.')]   # só a notícia da época, sem opinião
+# fecho: o Pai Nosso da multidão, com som
 FLAVIO=[(S+'/painosso/f.mp4',2.4,23.0,'Pai nosso que estais nos céus, santificado seja o vosso nome. Venha a nós o vosso reino, seja feita a vossa vontade, assim na terra como no céu. O pão nosso de cada dia nos dai hoje. Perdoai as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido. E não nos deixeis cair em tentação, mas livrai-nos do mal. Amém!')]   # Pai Nosso da multidão em Manaus, com o Flávio no meio
 
 PRE,POS=0.10,0.12
