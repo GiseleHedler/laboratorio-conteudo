@@ -16,7 +16,6 @@ VOZ='loudnorm=I=-14:TP=-1.5:LRA=11'
 # melhores tomadas (tempo da gravação) e a legenda de cada uma
 FALAS=[
  (2.87,13.58,'Na minha bio está escrito: vida morna não combina com soberania. Seria muito incoerente eu ser morna justamente agora, numa eleição como essa.'),
- (21.42,26.32,'E quem se diz neutro numa eleição como essa escolheu justamente não olhar.'),
  (37.79,41.08,'Eu não voto no Lula. Foram duas condenações:'),
  (53.01,57.55,'Lava Jato, triplex e sítio de Atibaia, todas confirmadas, tá?'),
  (66.23,70.34,'Em segunda instância, e 580 dias de prisão.'),
