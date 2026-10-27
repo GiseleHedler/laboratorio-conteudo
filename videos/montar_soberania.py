@@ -31,7 +31,7 @@ FALAS=[
  ([(214.56,217.32)],'Não muda nada. Isso só muda a gente.'),
  ([(226.42,243.10)],'Então, se por acaso tu percebeu que tu tá em ruminação de pensamentos, que tu tá se sentindo inflamada, experimenta sair desses grupos do WhatsApp, parar de seguir essas pessoas que estão te inflamando, estimulando vocês a ficarem com raiva, se sentirem injustiçadas e inflamadas.'),
  ([(253.68,258.24)],'Já é tão difícil a gente desinflamar o nosso corpo, pra que ficar inflamando a nossa mente?'),
- ([(264.76,271.20)],'E a Bíblia manda a gente orar por aqueles que governam, quer a gente goste ou não deles.'),
+ ([(265.44,271.20)],'A Bíblia manda a gente orar por aqueles que governam, quer a gente goste ou não deles.'),
  ([(277.60,280.30)],'O nosso coração precisa de paz.'),
  ([(284.68,287.92)],'E tudo bem, tu tem o teu favorito. Eu tenho o meu.'),
  ([(295.38,299.38)],'Mas a tua vida, a minha, não acaba por causa de um ou por causa de outro.'),
