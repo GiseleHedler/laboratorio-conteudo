@@ -47,6 +47,7 @@ Apoio:
 - Capa com letra bem grande.
 - Vídeo: @giselehedler no centro, logo abaixo da frase, em Merriweather itálico pequeno. Nunca no canto (é fácil de cortar).
 - O @giselehedler aparece sempre: em toda capa (no alto, centralizado) e em toda tela de carrossel.
+- Posição da legenda falada: na maior parte do vídeo, logo acima do topo da cabeça; de vez em quando muda para o meio da tela (sem tapar o rosto). Muito embaixo, não.
 - Legenda e texto na tela de vídeo: nunca em caixa alta (CAPS LOCK). Escrever normal, com maiúscula só no início da frase e nos nomes. Sem borda nas letras (sombra suave + degradê atrás).
 
 ## Ideia central (vale para todo conteúdo)
