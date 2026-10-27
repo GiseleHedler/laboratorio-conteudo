@@ -40,9 +40,9 @@ FALAS=[
  ([(357.18,362.20)],'Se tu quer a minha ajuda nisso, toda quinta-feira eu faço uma aula ao vivo, a Quinta da Mente,'),
  ([(369.96,374.78)],'pra você aprender a iluminar a sua mente, fazendo pequenas mudanças e tendo resultados impressionantes.'),
  ([(376.44,380.22)],'Se tu escrever 5524 aqui nos comentários, eu vou te mandar o link.'),
- ([(386.10,398.56)],'E não deixa nada nem ninguém abalar a tua confiança. A tua confiança é a coisa mais importante que tu tem.'),
+ ([(386.10,392.30),(396.26,398.56)],'E não deixa nada nem ninguém abalar a tua confiança. Confiança é a coisa mais importante que tu tem.')   # sem o "A tua": rosto ainda virando,
 ]
-MEIO={4,8,13,17,21,25}   # falas com a legenda na altura do peito; o resto vai acima da cabeça
+MEIO={4,8,13,17,21}   # falas com a legenda na altura do peito; o resto vai acima da cabeça
 # imagens dela por cima da fala, em tela cheia: (índice da fala, arquivo, fração inicial e final da fala, início no vídeo)
 # enchente: gravação de tela do drone (sem crédito, a pedido dela); depois a selfie no hospital
 FOTOS=[x for x in [(4,E+'/fotos/enchente_rec.mp4',0.0,0.52,1.5),(4,E+'/fotos/doente.jpg',0.52,1.0,0),
@@ -155,6 +155,11 @@ Style: Arroba,Merriweather,38,&H30ECE8EA,&H30ECE8EA,&H00000000,&H8C000000,0,1,0,
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 1,{fmt(0)},{fmt(TOT)},Arroba,,0,0,0,,@giselehedler
 """+'\n'.join(lin)+'\n'
+# 5524 em destaque enquanto ela fala do código e mais um pouquinho depois
+CTA=next(x for x in EV if '5524' in x[2])
+ass=ass.replace('Style: Arroba','Style: Codigo,Poppins Black,230,&H008E9FE2,&H008E9FE2,&H00000000,&H99000000,0,0,0,0,100,100,2,0,1,0,6,5,60,60,0,1\nStyle: CodigoSub,Poppins Medium,56,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,1,0,1,0,4,5,60,60,0,1\nStyle: Arroba')
+ass+=f"Dialogue: 3,{fmt(CTA[0]+0.3)},{fmt(CTA[1]+1.5)},Codigo,,0,0,0,,{{\\pos(540,1240)\\fad(250,300)\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)}}5524\n"
+ass+=f"Dialogue: 3,{fmt(CTA[0]+0.5)},{fmt(CTA[1]+1.5)},CodigoSub,,0,0,0,,{{\\pos(540,1400)\\fad(250,300)}}comenta aqui\n"
 JAN=[]   # janela de cada imagem no tempo do reel
 for idx,arq,f0,f1,ss in FOTOS:
     a,b=EV[idx][0],EV[idx][1]; JAN.append((a+(b-a)*f0,a+(b-a)*f1))
