@@ -31,13 +31,13 @@ FALAS=[
  ([(214.56,217.32)],'Não muda nada. Isso só muda a gente.'),
  ([(226.42,243.10)],'Então, se por acaso tu percebeu que tu tá em ruminação de pensamentos, que tu tá se sentindo inflamada, experimenta sair desses grupos do WhatsApp, parar de seguir essas pessoas que estão te inflamando, estimulando vocês a ficarem com raiva, se sentirem injustiçadas e inflamadas.'),
  ([(253.68,258.24)],'Já é tão difícil a gente desinflamar o nosso corpo, pra que ficar inflamando a nossa mente?'),
- ([(265.44,271.20)],'A Bíblia manda a gente orar por aqueles que governam, quer a gente goste ou não deles.'),
+ ([(265.32,271.20)],'A Bíblia manda a gente orar por aqueles que governam, quer a gente goste ou não deles.'),
  ([(277.60,280.30)],'O nosso coração precisa de paz.'),
- ([(284.68,287.92)],'E tudo bem, tu tem o teu favorito. Eu tenho o meu.'),
- ([(295.38,299.38)],'Mas a tua vida, a minha, não acaba por causa de um ou por causa de outro.'),
+ ([(285.22,287.92)],'Tudo bem, tu tem o teu favorito. Eu tenho o meu.'),
+ ([(295.88,299.38)],'A tua vida, a minha, não acaba por causa de um ou por causa de outro.'),
  ([(309.14,319.12)],'Ela continua. Em momentos grandes como esse, que a gente se posiciona perante a nossa vida, a gente mostra pra vida quem a gente é.'),
  ([(326.84,337.02)],'Então, madame, vamos trabalhar, vamos cuidar do nosso dinheiro, do nosso relacionamento, do nosso marido, dos nossos filhos, da nossa casa, da gente, do nosso corpo.'),
- ([(356.72,362.20)],'E se tu quer a minha ajuda nisso, toda quinta-feira eu faço uma aula ao vivo, a Quinta da Mente,'),
+ ([(357.18,362.20)],'Se tu quer a minha ajuda nisso, toda quinta-feira eu faço uma aula ao vivo, a Quinta da Mente,'),
  ([(369.96,374.78)],'pra você aprender a iluminar a sua mente, fazendo pequenas mudanças e tendo resultados impressionantes.'),
  ([(376.44,380.22)],'Se tu escrever 5524 aqui nos comentários, eu vou te mandar o link.'),
  ([(386.10,398.56)],'E não deixa nada nem ninguém abalar a tua confiança. A tua confiança é a coisa mais importante que tu tem.'),
@@ -106,6 +106,7 @@ def corta(trechos,saida,vf,af):
     open(saida+'.txt','w').write('\n'.join(partes)+'\n')
     run(['ffmpeg','-loglevel','error','-y','-f','concat','-safe','0','-i',saida+'.txt','-vf',vf,'-af',af]+ENC+[saida+'.mov'])
 
+EXATO={265.32,285.22,295.88,357.18}   # começos cortados a pedido dela ("E", "E", "Mas", "E" com o rosto virando): sem folga
 def folga(a,b):
     """estica o começo e o fim da tomada até perto da palavra vizinha (o tempo do whisper corta o fim da última palavra)"""
     ant=max([y for x,y in PAL if y<=a+0.05]+[a-0.3]); prox=min([x for x,y in PAL if x>=b-0.05]+[b+0.6])
@@ -113,7 +114,9 @@ def folga(a,b):
 EV=[]; o=0.0; LISTA=[]
 for i,(trs,txt) in enumerate(FALAS):
     s=f'{T}/p{i:02d}'
-    a0,b0=folga(trs[0][0],trs[-1][1]); trs=[(a0 if k==0 else a,b0 if k==len(trs)-1 else b) for k,(a,b) in enumerate(trs)]   # folga só nas pontas da fala; cortes internos (palavra repetida) ficam exatos
+    a0,b0=folga(trs[0][0],trs[-1][1])
+    if trs[0][0] in EXATO: a0=trs[0][0]
+    trs=[(a0 if k==0 else a,b0 if k==len(trs)-1 else b) for k,(a,b) in enumerate(trs)]   # folga só nas pontas da fala; cortes internos (palavra repetida) ficam exatos
     seg=[x for a,b in trs for x in sem_pausas(a,b)]; d=sum(y-x for x,y in seg)
     z0,z1=(1.00,1.08) if i%2==0 else (1.06,1.14)
     corta(seg,s,zoom(d,z0,z1),VOZ)
