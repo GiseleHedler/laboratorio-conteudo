@@ -16,7 +16,7 @@ VOZ='highpass=f=80,loudnorm=I=-14:TP=-1.5:LRA=11'
 # melhores tomadas: lista de (início, fim) da gravação e a legenda corrigida
 FALAS=[
  ([(4.60,10.38)],'Eu fui dormir muito mal no domingo, e na segunda-feira eu precisei inclusive de um remédio para dor de cabeça.'),
- ([(18.98,24.28),(24.44,24.96)],'A maioria de vocês sabe as minhas preferências políticas, então eu entendo muito bem quem está com raiva.'),
+ ([(18.98,24.28),(24.44,40.22)],'A maioria de vocês sabe as minhas preferências políticas, então eu entendo muito bem quem está com raiva, quem está se sentindo oprimido, quem está se sentindo sem esperança, quem está se sentindo muito chateado.'),
  ([(44.08,47.44)],'Eu não vou dizer pra ti não se sentir injustiçado.'),
  ([(52.66,56.58)],'Mas eu vou te dizer uma coisa que eu precisei dizer pra mim na segunda-feira de manhã.'),
  ([(64.10,73.64)],'Em 2024, Porto Alegre, a cidade onde eu morava, onde eu estou agora, ficou embaixo d\'água. E eu estava, naquela época, em fase terminal de uma doença grave.'),
@@ -29,13 +29,13 @@ FALAS=[
  ([(191.98,195.66)],'O que tiver que ser apurado vai ser apurado.'),
  ([(200.08,205.76)],'Mas a nossa raiva no grupo do WhatsApp, infelizmente, não muda o presidente eleito.'),
  ([(214.56,217.32)],'Não muda nada. Isso só muda a gente.'),
- ([(226.42,235.28)],'Então, se por acaso tu percebeu que tu tá em ruminação de pensamentos, que tu tá se sentindo inflamada, experimenta sair desses grupos do WhatsApp.'),
+ ([(226.42,243.10)],'Então, se por acaso tu percebeu que tu tá em ruminação de pensamentos, que tu tá se sentindo inflamada, experimenta sair desses grupos do WhatsApp, parar de seguir essas pessoas que estão te inflamando, estimulando vocês a ficarem com raiva, se sentirem injustiçadas e inflamadas.'),
  ([(253.68,258.24)],'Já é tão difícil a gente desinflamar o nosso corpo, pra que ficar inflamando a nossa mente?'),
  ([(264.76,271.20)],'E a Bíblia manda a gente orar por aqueles que governam, quer a gente goste ou não deles.'),
  ([(277.60,280.30)],'O nosso coração precisa de paz.'),
  ([(284.68,287.92)],'E tudo bem, tu tem o teu favorito. Eu tenho o meu.'),
  ([(295.38,299.38)],'Mas a tua vida, a minha, não acaba por causa de um ou por causa de outro.'),
- ([(309.14,310.10)],'Ela continua.'),
+ ([(309.14,319.12)],'Ela continua. Em momentos grandes como esse, que a gente se posiciona perante a nossa vida, a gente mostra pra vida quem a gente é.'),
  ([(326.84,337.02)],'Então, madame, vamos trabalhar, vamos cuidar do nosso dinheiro, do nosso relacionamento, do nosso marido, dos nossos filhos, da nossa casa, da gente, do nosso corpo.'),
  ([(356.72,362.20)],'E se tu quer a minha ajuda nisso, toda quinta-feira eu faço uma aula ao vivo, a Quinta da Mente,'),
  ([(369.96,374.78)],'pra você aprender a iluminar a sua mente, fazendo pequenas mudanças e tendo resultados impressionantes.'),
@@ -61,7 +61,7 @@ for t,yaw,pitch in OL:
         else: LADO.append([t-0.15,t+0.1])
 LADO=[(x,y) for x,y in LADO if y-x>0.8]   # viradas curtas no meio da fala ficam (cortar comeria palavra)
 # nunca corta em cima de palavra: tira das viradas os trechos em que ela está falando
-PAL=[(float(x),float(y)) for l in open(E+'/transc.txt') for x,y in re.findall(r'\[([\d.]+)-([\d.]+)\]',l)]
+PAL=[(float(x),min(float(y),float(x)+1.0)) for l in open(E+'/transc.txt') for x,y in re.findall(r'\[([\d.]+)-([\d.]+)\]',l)]   # palavra com mais de 1 s no whisper é pausa colada nela
 def menos_fala(x,y):
     res=[(x,y)]
     for p0,p1 in PAL:
