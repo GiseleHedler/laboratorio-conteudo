@@ -40,7 +40,7 @@ FALAS=[
  ([(357.18,362.20)],'Se tu quer a minha ajuda nisso, toda quinta-feira eu faço uma aula ao vivo, a Quinta da Mente,'),
  ([(369.96,374.78)],'pra você aprender a iluminar a sua mente, fazendo pequenas mudanças e tendo resultados impressionantes.'),
  ([(376.44,380.22)],'Se tu escrever 5524 aqui nos comentários, eu vou te mandar o link.'),
- ([(386.10,392.30),(396.36,398.56)],'E não deixa nada nem ninguém abalar a tua confiança. Confiança é a coisa mais importante que tu tem.')   # sem o "A tua": rosto ainda virando,
+ ([(386.10,392.30),(396.48,398.56)],'E não deixa nada nem ninguém abalar a tua confiança. Confiança é a coisa mais importante que tu tem.')   # sem o "A tua": rosto ainda virando,
 ]
 MEIO={4,8,13,17,21}   # falas com a legenda na altura do peito; o resto vai acima da cabeça
 # imagens dela por cima da fala, em tela cheia: (índice da fala, arquivo, fração inicial e final da fala, início no vídeo)
