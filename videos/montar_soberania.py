@@ -22,9 +22,9 @@ FALAS=[
  ([(64.10,73.64)],'Em 2024, Porto Alegre, a cidade onde eu morava, onde eu estou agora, ficou embaixo d\'água. E eu estava, naquela época, em fase terminal de uma doença grave.'),
  ([(78.76,83.64)],'Ninguém veio no meu ouvido dizer assim: fica tranquila, isso vai ser resolvido.'),
  ([(88.84,92.24)],'Eu peguei o meu carro. Eu mesma precisei sair dali.'),
- ([(107.34,120.70)],'Fui pra São Paulo e conheci uma médica que eu paguei do meu bolso, e ela me deu exames pra fazer pra eu poder entrar numa lista do SUS, pra ter esperança de ter um transplante.'),
+ ([(107.34,111.24),(114.40,120.70)],'Fui pra São Paulo e conheci uma médica que eu paguei do meu bolso. Ela me deu exames pra fazer pra eu poder entrar numa lista do SUS, pra ter esperança de ter um transplante.'),
  ([(129.52,142.88)],'Eu consegui, e eu sou muito grata por isso. Mas o SUS não pertence a nenhum presidente. O SUS pertence a mim, pertence a ti, pertence à gente. É um direito nosso.'),
- ([(147.44,149.42),(167.30,168.80)],'Nenhum presidente me colocou naquele carro. De nenhum partido.'),
+ ([(147.44,149.66),(167.30,168.80)],'Nenhum presidente me colocou naquele carro. De nenhum partido.'),
  ([(172.32,176.46),(184.18,185.18)],'Quem foi atrás, quem enfrentou, quem fez os exames, quem fez o tratamento, fui eu.'),
  ([(191.98,195.66)],'O que tiver que ser apurado vai ser apurado.'),
  ([(200.08,205.76)],'Mas a nossa raiva no grupo do WhatsApp, infelizmente, não muda o presidente eleito.'),
@@ -202,5 +202,5 @@ for n,((idx,arq,f0,f1,ss),(a,b)) in enumerate(zip(FOTOS,JAN)):
     ult=f'v{n+1}'
 fc+=f"[{ult}]ass={T}/leg.ass:fontsdir={F}[v]"
 run(['ffmpeg','-loglevel','error','-y']+ins+['-filter_complex',fc,'-map','[v]','-map','2:a','-t',str(TOT),
-     '-c:v','libx264','-preset','medium','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',E+'/reel-soberania.mp4'])
+     '-c:v','libx264','-preset','medium','-crf','22','-maxrate','8M','-bufsize','16M','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',E+'/reel-soberania.mp4'])
 print('ok',TOT,'fotos:',len(FOTOS))
