@@ -48,8 +48,8 @@ MEIO={4,8,13,17,21,25}   # falas com a legenda na altura do peito; o resto vai a
 FOTOS=[x for x in [(4,E+'/fotos/enchente_rec.mp4',0.0,0.52,1.5),(4,E+'/fotos/doente.jpg',0.52,1.0,0),
                    (7,E+'/fotos/hospital.jpg',0.0,1.0,0)] if os.path.exists(x[1])]
 
-PRE,POS=0.10,0.12
-r=subprocess.run(['ffmpeg','-i',P,'-vn','-af','silencedetect=n=-35dB:d=0.25','-f','null','-'],capture_output=True,text=True).stderr
+PRE,POS=0.10,0.22   # folga depois da última palavra antes de cada pausa, pra não engolir o fim
+r=subprocess.run(['ffmpeg','-i',P,'-vn','-af','silencedetect=n=-37dB:d=0.25','-f','null','-'],capture_output=True,text=True).stderr
 sil=list(zip([float(x) for x in re.findall(r'silence_start: ([0-9.]+)',r)],[float(x) for x in re.findall(r'silence_end: ([0-9.]+)',r)]))
 # trechos com o rosto virado (lendo o texto): cabeça girada mais de 22 graus ou fora do quadro; olhar de lado sem virar o rosto fica
 import numpy as np
@@ -106,9 +106,14 @@ def corta(trechos,saida,vf,af):
     open(saida+'.txt','w').write('\n'.join(partes)+'\n')
     run(['ffmpeg','-loglevel','error','-y','-f','concat','-safe','0','-i',saida+'.txt','-vf',vf,'-af',af]+ENC+[saida+'.mov'])
 
+def folga(a,b):
+    """estica o começo e o fim da tomada até perto da palavra vizinha (o tempo do whisper corta o fim da última palavra)"""
+    ant=max([y for x,y in PAL if y<=a+0.05]+[a-0.3]); prox=min([x for x,y in PAL if x>=b-0.05]+[b+0.6])
+    return max(a-0.12,ant+0.05),min(b+0.35,prox-0.08)
 EV=[]; o=0.0; LISTA=[]
 for i,(trs,txt) in enumerate(FALAS):
     s=f'{T}/p{i:02d}'
+    a0,b0=folga(trs[0][0],trs[-1][1]); trs=[(a0 if k==0 else a,b0 if k==len(trs)-1 else b) for k,(a,b) in enumerate(trs)]   # folga só nas pontas da fala; cortes internos (palavra repetida) ficam exatos
     seg=[x for a,b in trs for x in sem_pausas(a,b)]; d=sum(y-x for x,y in seg)
     z0,z1=(1.00,1.08) if i%2==0 else (1.06,1.14)
     corta(seg,s,zoom(d,z0,z1),VOZ)
