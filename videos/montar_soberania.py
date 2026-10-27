@@ -59,7 +59,20 @@ for t,yaw,pitch in OL:
     if abs(yaw)>22:
         if LADO and t-LADO[-1][1]<0.35: LADO[-1][1]=t+0.1
         else: LADO.append([t-0.15,t+0.1])
-LADO=[(x,y) for x,y in LADO if y-x>0.3]
+LADO=[(x,y) for x,y in LADO if y-x>0.8]   # viradas curtas no meio da fala ficam (cortar comeria palavra)
+# nunca corta em cima de palavra: tira das viradas os trechos em que ela está falando
+PAL=[(float(x),float(y)) for l in open(E+'/transc.txt') for x,y in re.findall(r'\[([\d.]+)-([\d.]+)\]',l)]
+def menos_fala(x,y):
+    res=[(x,y)]
+    for p0,p1 in PAL:
+        nv=[]
+        for u,v in res:
+            if p1<=u or p0>=v: nv.append((u,v)); continue
+            if p0>u: nv.append((u,p0-0.05))
+            if p1<v: nv.append((p1+0.05,v))
+        res=nv
+    return [(u,v) for u,v in res if v-u>0.2]
+LADO=[z for x,y in LADO for z in menos_fala(x,y)]
 def tira_olhar(seg):
     out=[]
     for a,b in seg:
