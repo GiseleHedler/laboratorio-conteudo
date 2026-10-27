@@ -123,7 +123,11 @@ for i,(trs,txt) in enumerate(FALAS):
     d=dur(s+'.mov'); EV.append((o,o+d,txt,i)); LISTA.append(f"file '{s}.mov'"); o+=d
 TOT=round(o,2); print('duração',TOT)
 open(T+'/lista.txt','w').write('\n'.join(LISTA)+'\n')
-run(['ffmpeg','-loglevel','error','-y','-f','concat','-safe','0','-i',T+'/lista.txt','-c','copy',T+'/base.mov'])
+run(['ffmpeg','-loglevel','error','-y','-f','concat','-safe','0','-i',T+'/lista.txt','-c','copy',T+'/fala.mov'])
+# fim: segura o último quadro 2,5 s com "leia a legenda." (só música)
+FIM=2.5
+run(['ffmpeg','-loglevel','error','-y','-i',T+'/fala.mov','-vf',f'tpad=stop_mode=clone:stop_duration={FIM}','-af',f'apad=pad_dur={FIM}']+ENC+[T+'/base.mov'])
+FALA_FIM=TOT; TOT=round(TOT+FIM,2)
 
 # legendas: blocos de até 4 palavras, Poppins Medium; acima da cabeça (teto escuro do carro) ou no peito
 def fmt(t): return f'{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}'
@@ -160,6 +164,8 @@ CTA=next(x for x in EV if '5524' in x[2])
 ass=ass.replace('Style: Arroba','Style: Codigo,Poppins Black,230,&H008E9FE2,&H008E9FE2,&H00000000,&H99000000,0,0,0,0,100,100,2,0,1,0,6,5,60,60,0,1\nStyle: CodigoSub,Poppins Medium,56,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,1,0,1,0,4,5,60,60,0,1\nStyle: Arroba')
 ass+=f"Dialogue: 3,{fmt(CTA[0]+0.3)},{fmt(CTA[1]+1.5)},Codigo,,0,0,0,,{{\\pos(540,1240)\\fad(250,300)\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)}}5524\n"
 ass+=f"Dialogue: 3,{fmt(CTA[0]+0.5)},{fmt(CTA[1]+1.5)},CodigoSub,,0,0,0,,{{\\pos(540,1400)\\fad(250,300)}}comenta aqui\n"
+ass=ass.replace('Style: Arroba','Style: Legenda,Poppins Black,120,&H00FFFFFF,&H00FFFFFF,&H00000000,&H99000000,0,0,0,0,100,100,-2,0,1,0,6,5,60,60,0,1\nStyle: Arroba')
+ass+=f"Dialogue: 3,{fmt(FALA_FIM+0.1)},{fmt(TOT)},Legenda,,0,0,0,,{{\\pos(540,1150)\\fad(300,0)}}leia a\\N{{\\c&H8E9FE2&}}legenda.\n"
 JAN=[]   # janela de cada imagem no tempo do reel
 for idx,arq,f0,f1,ss in FOTOS:
     a,b=EV[idx][0],EV[idx][1]; JAN.append((a+(b-a)*f0,a+(b-a)*f1))
