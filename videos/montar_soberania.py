@@ -44,7 +44,7 @@ FALAS=[
 ]
 MEIO={4,8,13,17,21,25}   # falas com a legenda na altura do peito; o resto vai acima da cabeça
 # imagens dela por cima da fala, em tela cheia: (índice da fala, arquivo, fração inicial e final da fala, início no vídeo)
-# enchente: gravação de tela do drone do @papogremista (crédito na tela); depois a selfie no hospital
+# enchente: gravação de tela do drone (sem crédito, a pedido dela); depois a selfie no hospital
 FOTOS=[x for x in [(4,E+'/fotos/enchente_rec.mp4',0.0,0.52,1.5),(4,E+'/fotos/doente.jpg',0.52,1.0,0),
                    (7,E+'/fotos/hospital.jpg',0.0,1.0,0)] if os.path.exists(x[1])]
 
@@ -117,9 +117,6 @@ Dialogue: 1,{fmt(0)},{fmt(TOT)},Arroba,,0,0,0,,@giselehedler
 JAN=[]   # janela de cada imagem no tempo do reel
 for idx,arq,f0,f1,ss in FOTOS:
     a,b=EV[idx][0],EV[idx][1]; JAN.append((a+(b-a)*f0,a+(b-a)*f1))
-for (idx,arq,f0,f1,ss),(a,b) in zip(FOTOS,JAN):
-    if arq.endswith('.mp4'): ass+=f"Dialogue: 2,{fmt(a)},{fmt(b)},Credito,,0,0,0,,imagens: @papogremista\n"
-ass=ass.replace('Style: Arroba','Style: Credito,Poppins Medium,30,&H40FFFFFF,&H40FFFFFF,&H00000000,&H8C000000,0,0,0,0,100,100,1,0,1,0,2,3,50,50,120,1\nStyle: Arroba')
 open(T+'/leg.ass','w',encoding='utf-8').write(ass)
 
 # sombra suave atrás das legendas (topo e peito)
