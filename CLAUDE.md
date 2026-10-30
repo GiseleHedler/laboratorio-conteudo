@@ -7,5 +7,8 @@ Antes de entregar qualquer peça, confira se ela promete exatamente o que a pág
 - Black Vitalícia hoje: título "O fim da Narrativa Cega. O começo de uma geração de SeresHumanologistas®." e oferta "Para sempre, pagando até 50% menos do que o valor das formações compradas separadas." O vitalício é o herói; o desconto é prova; a urgência é "o vitalício fecha dia X".
 - Mudou o topo da página? Liste as peças que precisam mudar junto.
 
+## Entregas (regra pedida pela Gisele em 30/10/2026)
+Todo texto entregue (e-mails, mensagens, roteiros, legendas) vai também para um Google Doc no Drive dela, com o link na resposta. Arquivos grandes demais para o Drive (vídeos) vão pelo chat, avisando que não foram para o Drive.
+
 ## Demais regras
 Ver `fsa/CONTEXTO.md` (custos com confirmação prévia, fatos com fonte, regras de conselho, sem travessão, PT-BR).
