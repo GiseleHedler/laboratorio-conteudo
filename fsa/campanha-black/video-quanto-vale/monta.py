@@ -124,7 +124,7 @@ for e in linha:
     elif e[0]=='selo':
         add(P+'selo.png',e[1]+0.05,e[1]+1.5,'(W-w)/2',1000); pops.append(e[1]+0.05)
     elif e[0]=='fim':
-        add(P+('fim.png' if VERSAO=='organico' else 'fim2.png'),e[1],TOTAL,0,740); pops.append(e[1])
+        add(P+{'organico':'fim.png','whatsapp':'fim3.png'}.get(VERSAO,'fim2.png'),e[1],TOTAL,0,740); pops.append(e[1])
         for j,c in enumerate(['card-hip-p.png','card-gal-p.png','card-oli-p.png']):
             add(P+c,e[1]+0.3+0.35*j,TOTAL,'(W-w)/2',950+190*j); pops.append(e[1]+0.3+0.35*j)
     elif e[0]=='arte':
