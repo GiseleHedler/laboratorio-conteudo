@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<script>/* fim da Black: depois das 23h59 de 31/10, a página leva para o site da FSA */(function(){var f=new Date("2026-10-31T23:59:00-03:00");if(new Date()>=f){location.replace("https://saudeavancada.com.br/");}else{setTimeout(function(){location.replace("https://saudeavancada.com.br/");},f-new Date());}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Black Friday Vitalícia FSA: pela primeira vez, as formações da Faculdade de Saúde Avançada com acesso vitalício. Três pacotes. O vitalício fecha dia 31/10.">
 <meta property="og:title" content="Black Friday Vitalícia FSA">
@@ -546,6 +547,25 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
 .dep-av figcaption img{grid-row:span 2;width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--destaque)}
 .deps-v{grid-template-columns:repeat(2,1fr)}
 @media (max-width:860px){.deps3,.deps-v{grid-template-columns:1fr}}
+
+/* contagem regressiva grande (último dia) */
+.flipcd{margin:26px 0 10px}
+.flipcd .fc-tit{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:14px;color:#fff}
+.flipcd .fc-tit b{color:var(--destaque)}
+.fc-pulse{width:12px;height:12px;border-radius:50%;background:var(--destaque);box-shadow:0 0 0 0 rgba(220,68,124,.7);animation:fcpulse 1.4s infinite}
+@keyframes fcpulse{0%{box-shadow:0 0 0 0 rgba(220,68,124,.7)}70%{box-shadow:0 0 0 14px rgba(220,68,124,0)}100%{box-shadow:0 0 0 0 rgba(220,68,124,0)}}
+.fc-row{display:flex;align-items:flex-start;gap:12px;margin-top:12px;perspective:600px}
+.fc-grp{display:flex;flex-direction:column;align-items:center;gap:8px}
+.fc-dig{display:flex;gap:6px}
+.fc-d{width:64px;height:86px;border-radius:12px;background:linear-gradient(180deg,#3a1030 0%,#2a0b22 49.5%,#1a0514 50.5%,#14020D 100%);border:1px solid #5a2348;color:#fff;font-family:var(--body);font-weight:700;font-size:58px;line-height:1;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 10px 24px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08);font-variant-numeric:tabular-nums;transform-origin:50% 50%}
+.fc-d::after{content:'';position:absolute;left:0;right:0;top:50%;height:2px;background:rgba(0,0,0,.6)}
+.fc-d.vira{animation:fcvira .5s ease}
+@keyframes fcvira{0%{transform:rotateX(0)}45%{transform:rotateX(88deg);filter:brightness(1.8)}100%{transform:rotateX(0)}}
+.fc-sep{font-size:48px;font-weight:700;color:var(--destaque);line-height:86px}
+.fc-lab{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--suave)}
+.fc-fim{font-weight:700;font-size:22px;color:var(--destaque);margin-top:12px}
+.flipcd.centro .fc-tit,.flipcd.centro .fc-row{justify-content:center}
+@media (max-width:520px){.fc-d{width:44px;height:62px;font-size:40px;border-radius:9px}.fc-sep{line-height:62px;font-size:32px}.fc-row{gap:6px}.fc-dig{gap:4px}.flipcd .fc-tit{font-size:12px}}
 </style>
 </head>
 <body>
@@ -563,10 +583,10 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
     <div class="marca"><img src="logo-fsa-escuro.png" width="480" height="256" alt="FSA"><span class="eyebrow">Faculdade de<br>Saúde Avançada®</span></div>
     <h1><span class="l1">O fim da</span><span class="l2">Narrativa Cega.</span><span class="l3">O começo de uma geração de <em>SeresHumanologistas®</em>.</span></h1>
     <p class="sub">Chega de olhar só o número do laudo e o protocolo pronto. É hora de enxergar o ser humano inteiro.</p>
+    <div class="flipcd"><div class="fc-tit"><span class="fc-pulse" aria-hidden="true"></span><span>O vitalício fecha <b class="fc-quando">hoje, às 23h59</b>. Faltam:</span></div><div class="fc-row" role="timer" aria-live="off"><div class="fc-grp"><div class="fc-dig"><span class="fc-d" data-k="h0">0</span><span class="fc-d" data-k="h1">0</span></div><span class="fc-lab">horas</span></div><span class="fc-sep">:</span><div class="fc-grp"><div class="fc-dig"><span class="fc-d" data-k="m0">0</span><span class="fc-d" data-k="m1">0</span></div><span class="fc-lab">minutos</span></div><span class="fc-sep">:</span><div class="fc-grp"><div class="fc-dig"><span class="fc-d" data-k="s0">0</span><span class="fc-d" data-k="s1">0</span></div><span class="fc-lab">segundos</span></div></div></div>
     <div class="vital-tag"><b>Acesso vitalício</b><span>Pela primeira vez nas formações da FSA</span></div>
     <p class="hero-preco"><span class="hp-12"><b>Para sempre,</b> pagando até 50% menos</span><span class="hp-av">do que o valor das formações compradas separadas.</span></p>
     <a class="btn" href="#pacotes">Ver os pacotes <span aria-hidden="true">→</span></a>
-    <p class="cd-linha">O vitalício fecha em <b class="cd">31 de outubro</b></p>
     <div class="meta">3 pacotes · mais de 300 h de aula · 100% gravadas</div>
   </div>
   <div class="figure">
@@ -668,6 +688,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
 <section class="sec" id="pacotes"><div class="wrap">
   <div class="eyebrow">Escolha o seu pacote</div>
   <h2>Três pacotes. <span class="ital">Acesso vitalício</span> em todos.</h2>
+  <div class="flipcd centro"><div class="fc-tit"><span class="fc-pulse" aria-hidden="true"></span><span>O vitalício fecha <b class="fc-quando">hoje, às 23h59</b>. Faltam:</span></div><div class="fc-row" role="timer" aria-live="off"><div class="fc-grp"><div class="fc-dig"><span class="fc-d" data-k="h0">0</span><span class="fc-d" data-k="h1">0</span></div><span class="fc-lab">horas</span></div><span class="fc-sep">:</span><div class="fc-grp"><div class="fc-dig"><span class="fc-d" data-k="m0">0</span><span class="fc-d" data-k="m1">0</span></div><span class="fc-lab">minutos</span></div><span class="fc-sep">:</span><div class="fc-grp"><div class="fc-dig"><span class="fc-d" data-k="s0">0</span><span class="fc-d" data-k="s1">0</span></div><span class="fc-lab">segundos</span></div></div></div>
   <p class="intro-pac">Escolha o Hipócrates, o Galeno ou não escolha: o Olimpo é os dois juntos, com desconto.</p>
 
   <div class="pacotes">
@@ -962,6 +983,7 @@ footer a:hover,footer a:focus-visible{color:var(--creme)}
   <div class="eyebrow">Black Friday Vitalícia FSA</div>
   <h2>O fim da Narrativa Cega. <span class="ital">O começo de uma geração de SeresHumanologistas®.</span></h2>
   <p class="fim-sub">Profissionais que enxergam o ser humano inteiro, e não só o exame.</p>
+  <div class="flipcd centro"><div class="fc-tit"><span class="fc-pulse" aria-hidden="true"></span><span>O vitalício fecha <b class="fc-quando">hoje, às 23h59</b>. Faltam:</span></div><div class="fc-row" role="timer" aria-live="off"><div class="fc-grp"><div class="fc-dig"><span class="fc-d" data-k="h0">0</span><span class="fc-d" data-k="h1">0</span></div><span class="fc-lab">horas</span></div><span class="fc-sep">:</span><div class="fc-grp"><div class="fc-dig"><span class="fc-d" data-k="m0">0</span><span class="fc-d" data-k="m1">0</span></div><span class="fc-lab">minutos</span></div><span class="fc-sep">:</span><div class="fc-grp"><div class="fc-dig"><span class="fc-d" data-k="s0">0</span><span class="fc-d" data-k="s1">0</span></div><span class="fc-lab">segundos</span></div></div></div>
   <a class="btn" href="#pacotes">Escolher meu pacote <span aria-hidden="true">→</span></a>
 </div></section>
 
@@ -1012,6 +1034,23 @@ function tick(){
   document.querySelectorAll(".cd").forEach(function(c){ c.textContent = t; });
 }
 tick(); setInterval(tick, 1000);
+// contagem grande com números que viram
+function flipTick(){
+  if(!FIM) return;
+  var ms=new Date(FIM)-new Date();
+  document.querySelectorAll('.flipcd').forEach(function(b){
+    if(ms<=0){ if(!b.dataset.fim){ b.dataset.fim=1; b.querySelector('.fc-row').outerHTML='<p class="fc-fim">O vitalício encerrou.</p>'; b.querySelector('.fc-tit span:last-child').textContent='Black Vitalícia FSA'; } return; }
+    var h=Math.floor(ms/36e5), m=Math.floor(ms/6e4)%60, s=Math.floor(ms/1e3)%60;
+    var v={h:String(Math.min(h,99)).padStart(2,'0'),m:String(m).padStart(2,'0'),s:String(s).padStart(2,'0')};
+    b.querySelectorAll('.fc-d').forEach(function(d){
+      var k=d.dataset.k, n=v[k[0]][+k[1]];
+      if(d.textContent!==n){ d.textContent=n; d.classList.remove('vira'); void d.offsetWidth; d.classList.add('vira'); }
+    });
+  });
+}
+(function(){var dia=new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit'}).format(new Date());var w=dia==='31'?'hoje, às 23h59':(dia==='30'?'amanhã, sábado, às 23h59':'sábado, 31/10, às 23h59');document.querySelectorAll('.fc-quando').forEach(function(e){e.textContent=w;});})();
+flipTick(); setInterval(flipTick,1000);
+
 
 // barra fixa do celular: some quando o hero, os pacotes ou o fim estão na tela
 (function(){
