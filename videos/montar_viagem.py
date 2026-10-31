@@ -61,7 +61,7 @@ PP={p['n']:p for p in P}
 def peso(p,a):
     if a<p['ini']: return 0.0
     w=suave((a-p['ini'])/2.5) if p['ini']>-90 else 1.0
-    if p.get('sai') is not None and p['fim'] is None: w*=1-suave((a-(p['sai']-2.5))/2.5)
+    if p.get('sai') is not None and p['fim'] is None: w*=1-suave((a-(p['sai']-1.0))/2.0)
     if p['fim'] is not None and a>p['fim']: w*=1-suave((a-p['fim'])/3.0)
     return w
 _cache={}
@@ -74,13 +74,17 @@ def pos(n,a):
             res[m]=cx+(acc+w/2-tot/2)*esp; acc+=w
         _cache[k]=res
         if len(_cache)>20000: _cache.clear()
-    return _cache[k][n]
+    x=_cache[k][n]; q=PP[n]
+    if q.get('sai') is not None and q['fim'] is None and a>q['sai']-3:   # quem sai da vida vai embora inteiro, pelo lado
+        u=suave((a-(q['sai']-3))/3); borda=-160 if x<560 else W+160
+        x=x+(borda-x)*u
+    return x
 def cresce(p,a):   # quem nasce chega pequeno e vai crescendo
     return 1.0 if p['ini']<-90 or p['n'] not in ('eu','irmã','filho','neta') else 0.3+0.7*suave((a-p['ini'])/18)
 
 F=lambda f,s: ImageFont.truetype(f,s)
 FN=F(M+'/Poppins-Medium.ttf',27); FT=F(M+'/Poppins-Medium.ttf',48); FB=F(M+'/Poppins-Black.ttf',100); FV=F(M+'/Poppins-Medium.ttf',60)
-FR=F(S+'/fonts/Merriweather-400-italic.ttf',30); FA=F(M+'/Poppins-Medium.ttf',26)
+FR=F(S+'/fonts/Merriweather-400-italic.ttf',30); FW=F(S+'/fonts/Merriweather-400-italic.ttf',50); FA=F(M+'/Poppins-Medium.ttf',26)
 
 # céu de fundo: roxo profundo, nebulosa ameixa, estrelinhas
 def ceu():
@@ -133,7 +137,7 @@ def quadro(t):
         while Y0+V*tau<H+20:
             a=T(t-tau)
             if vivo(p,a):
-                pts.append((pos(p['n'],a),Y0+V*tau,cor(p,a),cresce(p,a)*max(0.25,peso(p,a) if p['fim'] is None else 1)))
+                pts.append((pos(p['n'],a),Y0+V*tau,cor(p,a),cresce(p,a)))
             else:
                 if pts: break
             tau+=1/30
@@ -147,7 +151,7 @@ def quadro(t):
             if al>4: dl.line((balanco(x0,y0,g0),y0,balanco(x1,y1,g1),y1),fill=c0+(al,),width=wd)
         # cabeça e nome
         if vivo(p,a_now):
-            x=pos(p['n'],a_now); c=cor(p,a_now); g=cresce(p,a_now); wv=peso(p,a_now) if p['fim'] is None else 1
+            x=pos(p['n'],a_now); c=cor(p,a_now); g=cresce(p,a_now); wv=1
             if -40<x<W+40 and wv>0.15:
                 dl.line((x,Y0-ALT[p['n']]+30,x,Y0-14),fill=c+(90,),width=1) if ALT[p['n']]>58 else None
                 r1=9*(0.55+0.45*g); r2=16*(0.55+0.45*g)
@@ -207,7 +211,7 @@ def quadro(t):
     texto(dt,'a viagem da vida termina.',1010,FV,fade(t,64.0,DUR+5,1.0))
     fa=fade(t,67.8,DUR+5,0.9)
     texto(dt,'você continua.',1100,FB,fade(t,66.4,DUR+5,1.2))
-    w=dt.textlength('@giselehedler',font=FR); dt.text(((W-w)/2,H-90),'@giselehedler',font=FR,fill=(234,232,236,190))
+    w=dt.textlength('@giselehedler',font=FW); dt.text(((W-w)/2,1290),'@giselehedler',font=FW,fill=(234,232,236,105))   # no meio, maior e translúcido: difícil de recortar
     im.alpha_composite(txt)
     if t<0.8: im=Image.blend(Image.new('RGBA',(W,H),(0,0,0,255)),im,t/0.8)
     return im.convert('RGB')
