@@ -33,27 +33,30 @@ def cor_eu(a):   # a cor dela muda com a vida; quem chega, chega da cor dela naq
 
 # pessoas: nome, cor, nasce (idade dela), parte (None = segue), trajetória x
 P=[
- dict(n='avó',  c=hexrgb('#b9a6ff'), ini=-99, fim=22, kf=[(-99,130),(22,150)]),
- dict(n='mãe',  c=hexrgb('#ff7eb3'), ini=-99, fim=60, kf=[(-99,320),(10,300),(40,290),(60,300)]),
- dict(n='pai',  c=hexrgb('#6aa8ff'), ini=-99, fim=52, kf=[(-99,760),(30,860),(52,860)]),
- dict(n='avô',  c=hexrgb('#8fe3ff'), ini=-99, fim=12, kf=[(-99,960),(12,980)]),
+ dict(n='avó',  c=hexrgb('#b9a6ff'), ini=-99, fim=18, kf=[(-99,130),(18,150)]),
+ dict(n='mãe',  c=hexrgb('#ff7eb3'), ini=-99, fim=63, kf=[(-99,320),(10,300),(40,290),(63,300)]),
+ dict(n='pai',  c=hexrgb('#6aa8ff'), ini=-99, fim=42, kf=[(-99,760),(30,860),(42,860)]),
+ dict(n='avô',  c=hexrgb('#8fe3ff'), ini=-99, fim=10, kf=[(-99,960),(10,980)]),
  dict(n='eu',   c=hexrgb('#f2b49f'), ini=0,   fim=85, kf=[(0,540),(25,540),(32,520),(60,530),(85,540)]),
  dict(n='irmã', c=hexrgb('#c77dff'), ini=3,   fim=79, kf=[(3,300),(6,420),(40,420),(65,380),(79,380)]),
- dict(n='amiga de infância', c=hexrgb('#ffd166'), ini=6, fim=None, sai=17, kf=[(5.5,1180),(8,670),(14,670),(17,-80)]),
- dict(n='primeiro amor',     c=hexrgb('#ff5d73'), ini=15, fim=None, sai=19, kf=[(14.5,1180),(16.5,600),(17.5,598),(19,1180)]),
- dict(n='mentora', c=hexrgb('#4ee3c1'), ini=22, fim=None, sai=33, kf=[(21.5,1180),(24,770),(30,770),(33,1180)]),
+ dict(n='amiga de infância', c=hexrgb('#ffd166'), ini=6, fim=None, sai=15, kf=[(5.5,1180),(8,670),(12,670),(15,1180)]),
+ dict(n='primeiro amor',     c=hexrgb('#ff5d73'), ini=15, fim=None, sai=18.5, kf=[(14.5,1180),(16.5,600),(17.2,598),(18.5,1180)]),
+ dict(n='amiga da faculdade', c=hexrgb('#ffa94d'), ini=19, fim=None, sai=55, kf=[(18.5,-120),(21,190),(50,200),(55,-120)]),
+ dict(n='professora', c=hexrgb('#4ee3c1'), ini=21, fim=None, sai=27, kf=[(20.5,1180),(22.5,780),(25,780),(27,1180)]),
  dict(n='marido',  c=hexrgb('#9be37a'), ini=27, fim=74, kf=[(26.5,1180),(29.5,690),(60,690),(74,680)]),
- dict(n='filho',   c=hexrgb('#5ad1ff'), ini=31, fim=None, kf=[(31,600),(34,615),(70,615),(86,615),(95,540)]),
+ dict(n='filho',   c=hexrgb('#5ad1ff'), ini=31, fim=None, kf=[(31,600),(34,615),(70,615),(86,615),(95,470)]),
+ dict(n='sócia',   c=hexrgb('#f78fff'), ini=44, fim=None, sai=58, kf=[(43.5,1180),(46,880),(55,880),(58,1180)]),
+ dict(n='neta',    c=hexrgb('#ffe08a'), ini=62, fim=None, kf=[(62,615),(65,780),(80,780),(95,630)]),
 ]
 def cor(p,a): return p['c']
 def vivo(p,a):
     fim=p['fim'] if p['fim'] is not None else p.get('sai',999)
     return p['ini']<=a<=fim
 # estrela de quem parte: posição no céu
-ESTRELA={'avô':(900,250),'avó':(190,300),'pai':(800,430),'mãe':(300,470),'marido':(660,320),'eu':(470,200),'irmã':(150,580)}
+ESTRELA={'avô':(900,250),'avó':(190,300),'pai':(820,440),'mãe':(300,470),'marido':(680,330),'eu':(520,210),'irmã':(150,580)}
 
 F=lambda f,s: ImageFont.truetype(f,s)
-FN=F(M+'/Poppins-Medium.ttf',27); FT=F(M+'/Poppins-Medium.ttf',48); FB=F(M+'/Poppins-Black.ttf',84)
+FN=F(M+'/Poppins-Medium.ttf',27); FT=F(M+'/Poppins-Medium.ttf',48); FB=F(M+'/Poppins-Black.ttf',100); FV=F(M+'/Poppins-Medium.ttf',60)
 FR=F(S+'/fonts/Merriweather-400-italic.ttf',30); FA=F(M+'/Poppins-Medium.ttf',26)
 
 # céu de fundo: roxo profundo, nebulosa ameixa, estrelinhas
@@ -85,6 +88,7 @@ def quadro(t):
     im=CEU.copy().convert('RGBA'); a_now=T(t)
     lin=Image.new('RGBA',(W,H),(0,0,0,0)); dl=ImageDraw.Draw(lin)
     txt=Image.new('RGBA',(W,H),(0,0,0,0)); dt=ImageDraw.Draw(txt)
+    luz=Image.new('RGBA',(W,H),(0,0,0,0)); dz=ImageDraw.Draw(luz)   # clarões: só entram desfocados
     for x,y,ph,sp in PISCA:
         b=int(110+100*(0.5+0.5*math.sin(t*sp+ph))); dl.ellipse((x-1.6,y-1.6,x+1.6,y+1.6),fill=(b,b,255,b))
     # régua de anos (idade dela), à esquerda
@@ -134,13 +138,19 @@ def quadro(t):
         e=t-tf
         lenta=1.8 if p['n']=='eu' else 1.0
         e=e/lenta
+        G=2.6 if p['n']=='eu' else 1.0   # a partida dela é maior
+        if p['n']=='eu' and e<2.4:   # luz que toma a tela
+            k=max(0,1-e/2.4); R=int(700*suave(min(1,e/0.6)))
+            dz.ellipse((x0-R,Y0-R,x0+R,Y0+R),fill=(255,226,214,int(70*k)))
+            dz.ellipse((x0-R*0.4,Y0-R*0.4,x0+R*0.4,Y0+R*0.4),fill=(255,244,236,int(170*k)))
         if e<1.6:   # explosão: clarão, anel e faíscas
-            fl=max(0,1-e/0.5); r=40+260*suave(e/1.6)
-            dl.ellipse((x0-90*fl-10,Y0-90*fl-10,x0+90*fl+10,Y0+90*fl+10),fill=(255,255,255,int(200*fl)))
-            dl.ellipse((x0-r,Y0-r,x0+r,Y0+r),outline=c+(int(200*(1-e/1.6)),),width=4)
+            fl=max(0,1-e/0.5); r=40+260*G*suave(e/1.6)
+            dz.ellipse((x0-90*G*fl-10,Y0-90*G*fl-10,x0+90*G*fl+10,Y0+90*G*fl+10),fill=(255,255,255,int(230*fl)))
+            dl.ellipse((x0-r,Y0-r,x0+r,Y0+r),outline=c+(int(200*(1-e/1.6)),),width=int(3+G))
+            if G>1: dl.ellipse((x0-r*0.6,Y0-r*0.6,x0+r*0.6,Y0+r*0.6),outline=(255,255,255,int(160*(1-e/1.6))),width=3)
             rnd=random.Random(sum(map(ord,p['n'])))
-            for k in range(90 if p['n']=='eu' else 46):
-                ang=rnd.random()*6.283; sp=rnd.uniform(120,420); vida=rnd.uniform(0.8,1.6)
+            for k in range(220 if p['n']=='eu' else 46):
+                ang=rnd.random()*6.283; sp=rnd.uniform(120,420)*G; vida=rnd.uniform(0.8,1.6)
                 if e<vida:
                     d=sp*e*(1-e/(2*vida)); xx=x0+math.cos(ang)*d; yy=Y0+math.sin(ang)*d+40*e*e
                     rr=2.6*(1-e/vida)+0.6; dl.ellipse((xx-rr,yy-rr,xx+rr,yy+rr),fill=c+(int(255*(1-e/vida)),))
@@ -164,14 +174,15 @@ def quadro(t):
     # brilho
     glow=lin.filter(ImageFilter.GaussianBlur(10)); glow2=lin.filter(ImageFilter.GaussianBlur(3))
     im.alpha_composite(glow); im.alpha_composite(glow); im.alpha_composite(glow2); im.alpha_composite(lin)
+    if luz.getbbox(): im.alpha_composite(luz.filter(ImageFilter.GaussianBlur(60)))
     # textos
     texto(dt,'a viagem não começa',300,FT,fade(t,0.4,4.2)); texto(dt,'quando você nasce.',366,FT,fade(t,0.4,4.2))
     texto(dt,'a família certa',1500,FT,fade(t,7.5,12.5)); texto(dt,'pro que você veio aprender.',1566,FT,fade(t,7.5,12.5))
     texto(dt,'ninguém chegou na sua vida',1500,FT,fade(t,tdeT(27),tdeT(36),0.8,0.8)); texto(dt,'por acaso.',1566,FT,fade(t,tdeT(27),tdeT(36),0.8,0.8))
     texto(dt,'nem você.',1660,FB,fade(t,tdeT(29.5),tdeT(36),0.8,0.8))
-    texto(dt,'a viagem da vida termina.',1360,FT,fade(t,63.6,DUR+5,1.0))
+    texto(dt,'a viagem da vida termina.',1010,FV,fade(t,64.0,DUR+5,1.0))
     fa=fade(t,67.8,DUR+5,0.9)
-    texto(dt,'você continua.',1450,FB,fade(t,66.2,DUR+5,1.2))
+    texto(dt,'você continua.',1100,FB,fade(t,66.4,DUR+5,1.2))
     w=dt.textlength('@giselehedler',font=FR); dt.text(((W-w)/2,H-90),'@giselehedler',font=FR,fill=(234,232,236,190))
     im.alpha_composite(txt)
     if t<0.8: im=Image.blend(Image.new('RGBA',(W,H),(0,0,0,255)),im,t/0.8)
