@@ -53,7 +53,7 @@ def vivo(p,a):
     fim=p['fim'] if p['fim'] is not None else p.get('sai',999)
     return p['ini']<=a<=fim
 # estrela de quem parte: posição no céu
-ESTRELA={'avô':(900,250),'avó':(190,300),'pai':(820,440),'mãe':(300,470),'marido':(680,330),'eu':(520,210),'irmã':(150,580)}
+ESTRELA={'avô':(900,250),'avó':(190,300),'pai':(820,440),'mãe':(300,470),'marido':(680,330),'eu':(520,210),'irmã':(100,400)}
 
 # posição: cada um tem um lugar na fila; quem chega abre espaço ao lado de quem tem a ver com ele
 ORDEM=['avó','mãe','irmã','amiga de infância','amiga da faculdade','professora','sócia','eu','primeiro amor','filho','neta','marido','pai','avô']
@@ -205,13 +205,13 @@ def quadro(t):
     if luz.getbbox(): im.alpha_composite(luz.filter(ImageFilter.GaussianBlur(60)))
     # textos
     texto(dt,'a viagem não começa',300,FT,fade(t,0.4,4.2)); texto(dt,'quando você nasce.',366,FT,fade(t,0.4,4.2))
-    texto(dt,'a família certa',1500,FT,fade(t,7.5,12.5)); texto(dt,'pro que você veio aprender.',1566,FT,fade(t,7.5,12.5))
-    texto(dt,'ninguém chegou na sua vida',1500,FT,fade(t,tdeT(27),tdeT(36),0.8,0.8)); texto(dt,'por acaso.',1566,FT,fade(t,tdeT(27),tdeT(36),0.8,0.8))
-    texto(dt,'nem você.',1660,FB,fade(t,tdeT(29.5),tdeT(36),0.8,0.8))
-    texto(dt,'a viagem da vida termina.',1010,FV,fade(t,64.0,DUR+5,1.0))
+    texto(dt,'a família certa',560,FT,fade(t,7.5,12.5)); texto(dt,'pro que você veio aprender.',626,FT,fade(t,7.5,12.5))
+    texto(dt,'ninguém chegou na sua vida',500,FT,fade(t,tdeT(27),tdeT(36),0.8,0.8)); texto(dt,'por acaso.',566,FT,fade(t,tdeT(27),tdeT(36),0.8,0.8))
+    texto(dt,'nem você.',640,FB,fade(t,tdeT(29.5),tdeT(36),0.8,0.8))
+    texto(dt,'a viagem da vida termina.',560,FV,fade(t,64.0,DUR+5,1.0))
     fa=fade(t,67.8,DUR+5,0.9)
-    texto(dt,'você continua.',1100,FB,fade(t,66.4,DUR+5,1.2))
-    w=dt.textlength('@giselehedler',font=FW); dt.text(((W-w)/2,1290),'@giselehedler',font=FW,fill=(234,232,236,105))   # no meio, maior e translúcido: difícil de recortar
+    texto(dt,'você continua.',650,FB,fade(t,66.4,DUR+5,1.2))
+    w=dt.textlength('@giselehedler',font=FW); dt.text(((W-w)/2,1150),'@giselehedler',font=FW,fill=(234,232,236,105))   # no meio, maior e translúcido: difícil de recortar
     im.alpha_composite(txt)
     if t<0.8: im=Image.blend(Image.new('RGBA',(W,H),(0,0,0,255)),im,t/0.8)
     return im.convert('RGB')
