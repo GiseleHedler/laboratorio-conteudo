@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+@font-face{font-family:'Archivo Black';src:url(file:///root/.fonts/archivoblack.ttf)}@font-face{font-family:'Archivo';src:url(file:///root/.fonts/archivo.ttf)}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root{
+  --roxo:#2B0739;
+  --vinho:#14020D;
+  --destaque:#DC447C;
+  --magenta:#C73E5C;
+  --creme:#ece4d8;
+}
+
+body{ background:#555; }
+
+.slide{
+  width:1080px;
+  height:1350px;
+  position:relative;
+  overflow:hidden;
+  font-family:'Archivo', sans-serif;
+  display:flex;
+  flex-direction:column;
+}
+
+/* === FUNDOS (alternar entre os 3) === */
+.bg-roxo{ background:var(--roxo); }
+.bg-magenta{ background:var(--magenta); }
+.bg-creme{ background:var(--creme); }
+
+/* === FUNDOS TEXTURIZADOS (dão profundidade, opcional) ===
+   Use no lugar de bg-* para um visual menos chapado. */
+.tex-grad-roxo{ background:
+  radial-gradient(circle at 75% 20%, rgba(199,62,92,0.55), transparent 55%),
+  radial-gradient(circle at 20% 85%, rgba(199,62,92,0.30), transparent 50%),
+  var(--roxo); }
+.tex-grad-magenta{ background:
+  radial-gradient(circle at 25% 15%, rgba(236,228,216,0.30), transparent 55%),
+  radial-gradient(circle at 85% 80%, rgba(43,7,57,0.45), transparent 55%),
+  var(--magenta); }
+.tex-grad-creme{ background:
+  radial-gradient(circle at 80% 25%, rgba(199,62,92,0.22), transparent 55%),
+  radial-gradient(circle at 15% 90%, rgba(43,7,57,0.12), transparent 50%),
+  var(--creme); }
+.tex-linhas-roxo{ background:
+  repeating-linear-gradient(115deg, rgba(199,62,92,0.10) 0 2px, transparent 2px 46px),
+  var(--roxo); }
+.tex-pontos-magenta{ background:
+  radial-gradient(rgba(255,255,255,0.10) 2px, transparent 2px),
+  var(--magenta); background-size:auto, 40px 40px; }
+
+/* === MARCA TOPO === */
+.marca{
+  text-align:center;
+  padding-top:60px;
+  font-weight:400;
+  font-size:30px;
+  letter-spacing:0.5px;
+}
+.marca b{ font-weight:700; }
+.marca-claro{ color:var(--creme); }
+.marca-claro b{ color:#fff; }
+.marca-escuro{ color:var(--roxo); }
+
+/* === TITULO (caixas tipo Vick) === */
+.titulo-wrap{ padding:50px 70px 0 70px; margin-top:30px; }
+.titulo{
+  font-family:'Archivo Black', sans-serif;
+  font-size:96px;
+  line-height:1.02;
+  text-transform:uppercase;
+  display:inline;
+}
+.titulo .linha{
+  display:inline;
+  padding:6px 14px;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+
+/* === COMENTARIO === */
+.comentario-wrap{ padding:0 70px; margin-top:38px; }
+.comentario{
+  display:inline;
+  font-weight:400;
+  font-size:46px;
+  line-height:1.45;
+  padding:8px 16px;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+.comentario b{ font-weight:700; }
+
+/* === CAIXAS (combinacoes texto/fundo) === */
+.cx-creme{ background:var(--creme); color:var(--roxo); }
+.cx-magenta{ background:var(--magenta); color:#fff; }
+.cx-roxo{ background:var(--roxo); color:var(--creme); }
+
+/* === DOTS PAGINACAO === */
+.dots{ position:absolute; bottom:55px; left:0; right:0; display:flex; justify-content:center; gap:14px; }
+.dot{ width:13px; height:13px; border-radius:50%; }
+.dot.on-claro{ background:var(--creme); }
+.dot.off-claro{ background:rgba(236,228,216,0.35); }
+.dot.on-escuro{ background:var(--roxo); }
+.dot.off-escuro{ background:rgba(43,7,57,0.3); }
+
+/* === CAPA === */
+.capa .titulo-wrap{ margin-top:180px; }
+.capa .titulo{ font-size:110px; }
+
+/* === NUMERO DECORATIVO === */
+.num{
+  position:absolute;
+  bottom:130px;
+  right:70px;
+  font-family:'Archivo Black', sans-serif;
+  font-size:340px;
+  line-height:0.8;
+  opacity:0.12;
+}
+.num-claro{ color:var(--creme); }
+.num-escuro{ color:var(--roxo); }
+
+/* === SLIDE COM FOTO DE FUNDO (texto por cima) === */
+.foto-fundo{ position:absolute; inset:0; }
+.foto-fundo img{ width:100%; height:100%; object-fit:cover; }
+.foto-fundo::after{ content:''; position:absolute; inset:0; background:rgba(43,7,57,0.25); }
+
+/* === SLIDE COLAGEM 2x2 === */
+.grid{ position:absolute; inset:0; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; }
+.grid div{ overflow:hidden; }
+.grid img{ width:100%; height:100%; object-fit:cover; display:block; }
+.marca-sobre{ position:absolute; top:38px; left:0; right:0; text-align:center; z-index:5;
+  font-weight:400; font-size:30px; color:#fff; text-shadow:0 1px 6px rgba(0,0,0,0.5); }
+.marca-sobre b{ font-weight:700; }
+.titulo-centro{ position:absolute; top:50%; left:50px; right:50px; transform:translateY(-50%); z-index:6; }
+
+/* === SLIDE COM FOTO-DESTAQUE (produto/objeto centralizado) === */
+.destaque{ position:absolute; bottom:0; left:50%; transform:translateX(-50%); max-height:62%; }
+.destaque img{ max-height:100%; width:auto; display:block; }
+
+.spacer{ flex:1; }
+</style>
+</head>
+<body><div class="slide tex-grad-roxo capa"><div class="marca marca-claro">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div><div class="titulo-wrap"><span class="titulo" style="font-size:104px"><span class="linha cx-magenta">ATENÇÃO</span><br><span class="linha cx-creme">HOJE, ÀS 23H59,</span><br><span class="linha cx-creme">O NOSSO</span><br><span class="linha cx-creme">VITALÍCIO</span><br><span class="linha cx-magenta">MORRE.</span></span></div><div class="dots"><span class="dot on-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span></div></div>
+<div class="slide tex-grad-magenta"><div class="marca marca-claro">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div><div class="titulo-wrap"><span class="titulo" style="font-size:84px"><span class="linha cx-creme">ÀS 23H59</span><br><span class="linha cx-creme">ENCERRA A ÚLTIMA</span><br><span class="linha cx-creme">OPORTUNIDADE</span></span></div><div class="comentario-wrap"><span class="comentario cx-creme">de ter as formações da Faculdade de Saúde Avançada® <b>para sempre</b>, pagando até 50% menos do que comprando separadas. Foi a primeira vez que isso aconteceu, e hoje é o último dia.</span></div><div class="num num-claro">2</div><div class="dots"><span class="dot off-claro"></span><span class="dot on-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span></div></div>
+<div class="slide tex-grad-creme"><div class="marca marca-escuro">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div><div class="titulo-wrap"><span class="titulo"><span class="linha cx-roxo">AMANHÃ,</span><br><span class="linha cx-roxo">O RELÓGIO</span><br><span class="linha cx-magenta">VOLTA</span></span></div><div class="comentario-wrap"><span class="comentario cx-roxo">As formações voltam ao acesso de <b>1 ou 2 anos</b>. Quando o prazo acaba, estudar de novo significa comprar de novo.</span></div><div class="num num-escuro">3</div><div class="dots"><span class="dot off-escuro"></span><span class="dot off-escuro"></span><span class="dot on-escuro"></span><span class="dot off-escuro"></span><span class="dot off-escuro"></span><span class="dot off-escuro"></span></div></div>
+<div class="slide tex-grad-magenta"><div class="marca marca-claro">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div><div class="titulo-wrap"><span class="titulo"><span class="linha cx-creme">SEM PRAZO</span><br><span class="linha cx-creme">CORRENDO</span></span></div><div class="comentario-wrap"><span class="comentario cx-creme">Você garante hoje e começa quando puder. Em janeiro, um módulo por mês, ou daqui a três anos, <b>quando aquela paciente chegar</b> e você precisar voltar na aula.</span></div><div class="num num-claro">4</div><div class="dots"><span class="dot off-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span><span class="dot on-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span></div></div>
+<div class="slide tex-grad-creme"><div class="marca marca-escuro">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div><div class="titulo-wrap"><span class="titulo" style="font-size:82px"><span class="linha cx-roxo">NA ERA DO CHATGPT,</span><br><span class="linha cx-magenta">PROFUNDIDADE</span><br><span class="linha cx-roxo">É RARIDADE</span></span></div><div class="comentario-wrap"><span class="comentario cx-roxo" style="font-size:40px">A inteligência artificial espalha um oceano de respostas com dois dedos de profundidade. Qualquer um molha os pés. Poucos sabem mergulhar até o ponto onde o exame, o sono, o intestino e a história de uma pessoa se encontram. <b>Conhecimento profundo e verdadeiro virou a vantagem competitiva mais alta da sua carreira.</b></span></div><div class="num num-escuro">5</div><div class="dots"><span class="dot off-escuro"></span><span class="dot off-escuro"></span><span class="dot off-escuro"></span><span class="dot off-escuro"></span><span class="dot on-escuro"></span><span class="dot off-escuro"></span></div></div>
+<div class="slide tex-grad-roxo"><div class="marca marca-claro">Faculdade de <b>Saúde Avançada</b><sup style="font-size:0.55em">&reg;</sup></div><div class="titulo-wrap"><span class="titulo"><span class="linha cx-creme">VOCÊ TEM</span><br><span class="linha cx-magenta">ATÉ AS 23H59</span></span></div><div class="comentario-wrap"><span class="comentario cx-creme">Depois disso, não poderemos fazer mais nada. <b>Toque no link da bio.</b> Já é aluno? Coloque o seu e-mail na página e veja o seu valor, que é ainda mais especial. E são 15 dias de garantia incondicional.</span></div><div class="num num-claro">6</div><div class="dots"><span class="dot off-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span><span class="dot off-claro"></span><span class="dot on-claro"></span></div></div>
+</body></html>
