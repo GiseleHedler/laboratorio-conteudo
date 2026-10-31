@@ -65,6 +65,8 @@ def peso(p,a):
     if p['fim'] is not None and a>p['fim']: w*=1-suave((a-p['fim'])/3.0)
     return w
 _cache={}
+# de que lado chega quem vem de outra família (sai pelo lado oposto)
+ENTRA={'amiga de infância':-160,'primeiro amor':W+160,'amiga da faculdade':-160,'professora':W+160,'sócia':-160,'marido':W+160}
 def pos(n,a):
     k=round(a,2)
     if k not in _cache:
@@ -75,8 +77,10 @@ def pos(n,a):
         _cache[k]=res
         if len(_cache)>20000: _cache.clear()
     x=_cache[k][n]; q=PP[n]
-    if q.get('sai') is not None and q['fim'] is None and a>q['sai']-3:   # quem sai da vida vai embora inteiro, pelo lado
-        u=suave((a-(q['sai']-3))/3); borda=-160 if x<560 else W+160
+    if n in ENTRA and a<q['ini']+3:   # quem não nasceu nesta família chega de um lado...
+        u=suave((a-q['ini'])/3); x=ENTRA[n]+(x-ENTRA[n])*u
+    if q.get('sai') is not None and q['fim'] is None and a>q['sai']-3:   # ...fica um tempo e sai inteiro pelo outro
+        u=suave((a-(q['sai']-3))/3); borda=W+160 if ENTRA.get(n,0)<0 else -160
         x=x+(borda-x)*u
     return x
 def cresce(p,a):   # quem nasce chega pequeno e vai crescendo
