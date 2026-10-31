@@ -53,10 +53,10 @@ def vivo(p,a):
     fim=p['fim'] if p['fim'] is not None else p.get('sai',999)
     return p['ini']<=a<=fim
 # estrela de quem parte: posição no céu
-ESTRELA={'avô':(900,250),'avó':(190,300),'pai':(820,440),'mãe':(300,470),'marido':(680,330),'eu':(520,210),'irmã':(100,400)}
+ESTRELA={'avô':(900,250),'avó':(280,290),'pai':(820,440),'mãe':(300,470),'marido':(680,330),'eu':(520,210),'irmã':(985,510)}
 
 # posição: cada um tem um lugar na fila; quem chega abre espaço ao lado de quem tem a ver com ele
-ORDEM=['avó','mãe','irmã','amiga de infância','amiga da faculdade','professora','sócia','eu','primeiro amor','filho','neta','marido','pai','avô']
+ORDEM=['avó','mãe','irmã','amiga de infância','amiga da faculdade','professora','sócia','marido','eu','primeiro amor','filho','neta','pai','avô']
 PP={p['n']:p for p in P}
 def peso(p,a):
     if a<p['ini']: return 0.0
@@ -66,11 +66,11 @@ def peso(p,a):
     return w
 _cache={}
 # de que lado chega quem vem de outra família (sai pelo lado oposto)
-ENTRA={'amiga de infância':-160,'primeiro amor':W+160,'amiga da faculdade':-160,'professora':W+160,'sócia':-160,'marido':W+160}
+ENTRA={'amiga de infância':-160,'primeiro amor':W+160,'amiga da faculdade':-160,'professora':W+160,'sócia':-160,'marido':-160}
 def pos(n,a):
     k=round(a,2)
     if k not in _cache:
-        ws=[(m,peso(PP[m],k)) for m in ORDEM]; tot=sum(w for _,w in ws); esp=min(150,860/max(tot,1)); cx=560
+        ws=[(m,peso(PP[m],k)) for m in ORDEM]; tot=sum(w for _,w in ws); esp=min(140,780/max(tot,1)); cx=610
         acc=0; res={}
         for m,w in ws:
             res[m]=cx+(acc+w/2-tot/2)*esp; acc+=w
@@ -88,7 +88,7 @@ def cresce(p,a):   # quem nasce chega pequeno e vai crescendo
 
 F=lambda f,s: ImageFont.truetype(f,s)
 FN=F(M+'/Poppins-Medium.ttf',27); FT=F(M+'/Poppins-Medium.ttf',48); FB=F(M+'/Poppins-Black.ttf',100); FV=F(M+'/Poppins-Medium.ttf',60)
-FR=F(S+'/fonts/Merriweather-400-italic.ttf',30); FW=F(S+'/fonts/Merriweather-400-italic.ttf',50); FA=F(M+'/Poppins-Medium.ttf',26)
+FR=F(S+'/fonts/Merriweather-400-italic.ttf',30); FW=F(S+'/fonts/Merriweather-400-italic.ttf',50); FA=F(M+'/Poppins-Medium.ttf',32)
 
 # céu de fundo: roxo profundo, nebulosa ameixa, estrelinhas
 def ceu():
@@ -123,13 +123,13 @@ def quadro(t):
     for x,y,ph,sp in PISCA:
         b=int(110+100*(0.5+0.5*math.sin(t*sp+ph))); dl.ellipse((x-1.6,y-1.6,x+1.6,y+1.6),fill=(b,b,255,b))
     # régua de anos (idade dela), à esquerda
-    dt.text((36,40),'anos',font=FA,fill=(200,190,220,150))
+    dt.text((92,120),'anos',font=FA,fill=(220,210,240,200))   # régua longe da borda: o instagram corta os cantos
     for ida in range(0,100,5):
         yv=Y0+V*(t-tdeT(ida))
-        if 60<yv<H-40:
-            al=int(150*min(1,max(0,(yv-60)/120)))
-            dl.line((28,yv,44,yv),fill=(200,190,220,al),width=2); dt.text((54,yv-16),str(ida),font=FA,fill=(200,190,220,al))
-    dl.line((36,90,36,H-40),fill=(200,190,220,40),width=1)
+        if 170<yv<H-40:
+            al=int(200*min(1,max(0,(yv-170)/120)))
+            dl.line((96,yv,116,yv),fill=(220,210,240,al),width=3); dt.text((126,yv-19),str(ida),font=FA,fill=(220,210,240,al))
+    dl.line((106,170,106,H-40),fill=(220,210,240,55),width=1)
     # linhas: rastro do passado descendo
     vivos=sorted([(pos(p['n'],a_now),p['n']) for p in P if vivo(p,a_now)])
     ALT={}; borda=[-999,-999,-999]   # borda direita do último nome em cada altura
