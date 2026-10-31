@@ -55,6 +55,29 @@ def vivo(p,a):
 # estrela de quem parte: posição no céu
 ESTRELA={'avô':(900,250),'avó':(190,300),'pai':(820,440),'mãe':(300,470),'marido':(680,330),'eu':(520,210),'irmã':(150,580)}
 
+# posição: cada um tem um lugar na fila; quem chega abre espaço ao lado de quem tem a ver com ele
+ORDEM=['avó','mãe','irmã','amiga de infância','amiga da faculdade','professora','sócia','eu','primeiro amor','filho','neta','marido','pai','avô']
+PP={p['n']:p for p in P}
+def peso(p,a):
+    if a<p['ini']: return 0.0
+    w=suave((a-p['ini'])/2.5) if p['ini']>-90 else 1.0
+    if p.get('sai') is not None and p['fim'] is None: w*=1-suave((a-(p['sai']-2.5))/2.5)
+    if p['fim'] is not None and a>p['fim']: w*=1-suave((a-p['fim'])/3.0)
+    return w
+_cache={}
+def pos(n,a):
+    k=round(a,2)
+    if k not in _cache:
+        ws=[(m,peso(PP[m],k)) for m in ORDEM]; tot=sum(w for _,w in ws); esp=min(150,860/max(tot,1)); cx=560
+        acc=0; res={}
+        for m,w in ws:
+            res[m]=cx+(acc+w/2-tot/2)*esp; acc+=w
+        _cache[k]=res
+        if len(_cache)>20000: _cache.clear()
+    return _cache[k][n]
+def cresce(p,a):   # quem nasce chega pequeno e vai crescendo
+    return 1.0 if p['ini']<-90 or p['n'] not in ('eu','irmã','filho','neta') else 0.3+0.7*suave((a-p['ini'])/18)
+
 F=lambda f,s: ImageFont.truetype(f,s)
 FN=F(M+'/Poppins-Medium.ttf',27); FT=F(M+'/Poppins-Medium.ttf',48); FB=F(M+'/Poppins-Black.ttf',100); FV=F(M+'/Poppins-Medium.ttf',60)
 FR=F(S+'/fonts/Merriweather-400-italic.ttf',30); FA=F(M+'/Poppins-Medium.ttf',26)
@@ -100,7 +123,7 @@ def quadro(t):
             dl.line((28,yv,44,yv),fill=(200,190,220,al),width=2); dt.text((54,yv-16),str(ida),font=FA,fill=(200,190,220,al))
     dl.line((36,90,36,H-40),fill=(200,190,220,40),width=1)
     # linhas: rastro do passado descendo
-    vivos=sorted([(interp(p['kf'],a_now),p['n']) for p in P if vivo(p,a_now)])
+    vivos=sorted([(pos(p['n'],a_now),p['n']) for p in P if vivo(p,a_now)])
     ALT={}; borda=[-999,-999,-999]   # borda direita do último nome em cada altura
     for x,n in vivos:
         w=dt.textlength(n,font=FN); nv=next((k for k in range(3) if x-w/2>borda[k]+14),2)
@@ -110,30 +133,31 @@ def quadro(t):
         while Y0+V*tau<H+20:
             a=T(t-tau)
             if vivo(p,a):
-                x=interp(p['kf'],a); pts.append((x,Y0+V*tau,cor(p,a)))
+                pts.append((pos(p['n'],a),Y0+V*tau,cor(p,a),cresce(p,a)*max(0.25,peso(p,a) if p['fim'] is None else 1)))
             else:
                 if pts: break
             tau+=1/30
         ph=(sum(map(ord,p['n']))%100)/16
-        def balanco(x,y):
-            d=min(1,max(0,(y-Y0)/(H-Y0))); amp=26*d**1.4
+        def balanco(x,y,g=1):
+            d=min(1,max(0,(y-Y0)/(H-Y0))); amp=26*d**1.4*g
             return x+amp*math.sin(t*0.9+ph+d*5.5)+0.5*amp*math.sin(t*0.55+ph*2+d*9)
         n=len(pts)
-        for k,((x0,y0,c0),(x1,y1,c1)) in enumerate(zip(pts,pts[1:])):
-            d=min(1,max(0,(y0-Y0)/(H-Y0))); al=int(240*(1-d)**1.3); wd=max(2,int(5-3*d))
-            if al>4: dl.line((balanco(x0,y0),y0,balanco(x1,y1),y1),fill=c0+(al,),width=wd)
+        for k,((x0,y0,c0,g0),(x1,y1,c1,g1)) in enumerate(zip(pts,pts[1:])):
+            d=min(1,max(0,(y0-Y0)/(H-Y0))); al=int(240*(1-d)**1.3*min(1,g0*1.4)); wd=max(1,int((5-3*d)*g0+0.5))
+            if al>4: dl.line((balanco(x0,y0,g0),y0,balanco(x1,y1,g1),y1),fill=c0+(al,),width=wd)
         # cabeça e nome
         if vivo(p,a_now):
-            x=interp(p['kf'],a_now); c=cor(p,a_now)
-            if -40<x<W+40:
+            x=pos(p['n'],a_now); c=cor(p,a_now); g=cresce(p,a_now); wv=peso(p,a_now) if p['fim'] is None else 1
+            if -40<x<W+40 and wv>0.15:
                 dl.line((x,Y0-ALT[p['n']]+30,x,Y0-14),fill=c+(90,),width=1) if ALT[p['n']]>58 else None
-                dl.ellipse((x-9,Y0-9,x+9,Y0+9),fill=(255,255,255,255)); dl.ellipse((x-16,Y0-16,x+16,Y0+16),outline=c+(200,),width=3)
+                r1=9*(0.55+0.45*g); r2=16*(0.55+0.45*g)
+                dl.ellipse((x-r1,Y0-r1,x+r1,Y0+r1),fill=(255,255,255,int(255*wv))); dl.ellipse((x-r2,Y0-r2,x+r2,Y0+r2),outline=c+(int(200*wv),),width=3)
                 nm=p['n']; w=dt.textlength(nm,font=FN)
                 if 40<x-w/2 and x+w/2<W-20: dt.text((x-w/2,Y0-ALT[nm]),nm,font=FN,fill=c+(240,))
     # quem parte: explode em luz e sobe até virar estrela
     for p in P:
         if p['fim'] is None or p['n'] not in ESTRELA: continue
-        tf=tdeT(p['fim']); sx,sy=ESTRELA[p['n']]; c=cor(p,p['fim']); x0=interp(p['kf'],p['fim'])
+        tf=tdeT(p['fim']); sx,sy=ESTRELA[p['n']]; c=cor(p,p['fim']); x0=pos(p['n'],p['fim'])
         if t<tf: continue
         e=t-tf
         lenta=1.8 if p['n']=='eu' else 1.0
